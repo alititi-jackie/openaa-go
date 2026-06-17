@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta content="#3b82f6" name="theme-color"/>
+<!-- Title & Meta (针对在美华人常搜关键词优化) -->
+<title>OpenAA · 美国华人生活入口 | 华人导航、DMV、找工作、二手</title>
+<meta content="OpenAA 为在美华人提供一站式中文导航与实用服务：DMV/移民/找工作/168招聘/二手市场/银行/生活资讯。覆盖纽约、洛杉矶、旧金山等城市，帮助在美华人快速获取本地服务与信息。" name="description"/>
+<meta content="美国华人, 美华人，meihuaren,华人openAA，美国华人168，华人导航, DMV, 移民服务, 找工作, 168招聘, 二手市场, 华人资讯, 在美生活, 华人社区" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<!-- Canonical / Alternate -->
+<link href="https://openaa.com/" rel="canonical"/>
+<link href="https://openaa.com/" hreflang="zh-CN" rel="alternate"/>
+<link href="https://openaa.com/en/" hreflang="en-US" rel="alternate"/>
+<!-- Open Graph & Twitter -->
+<meta content="zh_CN" property="og:locale">
+<meta content="OpenAA · 美国华人生活入口" property="og:title">
+<meta content="OpenAA 为在美华人提供一站式中文导航与实用服务：DMV、移民、找工作、二手、银行与地区资讯，覆盖纽约、洛杉矶等城市。" property="og:description">
+<meta content="https://openaa.com/logo.png" property="og:image">
+<meta content="https://openaa.com/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="OpenAA · 美国华人生活入口" name="twitter:title"/>
+<meta content="在美华人一站式中文导航：DMV、移民、找工作、二手、银行与生活服务。" name="twitter:description"/>
+<meta content="https://openaa.com/logo.png" name="twitter:image"/>
+<!-- Favicons (按你给定的目录结构) -->
+<link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon/site.webmanifest" rel="manifest"/>
+<link color="#5bbad5" href="/favicon/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="#2b5797" name="msapplication-TileColor"/>
+<!-- Structured Data: Organization + WebSite + SearchAction -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://openaa.com/#organization",
+        "name": "OpenAA",
+        "url": "https://openaa.com/",
+        "logo": "https://openaa.com/logo.png",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "323748@gmail.com",
+            "contactType": "customer support",
+            "availableLanguage": ["Chinese","English"]
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://openaa.com/#website",
+        "url": "https://openaa.com/",
+        "name": "OpenAA · 美国华人生活入口",
+        "inLanguage": "zh-CN",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.google.com/search?q=site:openaa.com+{search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+
+</meta></meta></meta></meta><style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(90deg, #d9dce3 0%, #eef0f4 28%, #eef0f4 72%, #d9dce3 100%);
+      color: #18181b;
+      min-height: 100vh;
+      line-height: 1.6;
+      padding-bottom: calc(64px + env(safe-area-inset-bottom));
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    [hidden] { display: none !important; }
+
+    .app-shell {
+      width: 100%;
+      max-width: 560px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background: #f4f4f7;
+      position: relative;
+      box-shadow: -32px 0 44px rgba(15, 23, 42, .14), 32px 0 44px rgba(15, 23, 42, .14);
+    }
+    .app-header {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 560px;
+      z-index: 100;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(228,228,235,.8);
+      box-shadow: -32px 0 44px rgba(15, 23, 42, .14), 32px 0 44px rgba(15, 23, 42, .14);
+    }
+    .header-inner {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      position: relative;
+    }
+    .header-location {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      color: #3f3f46;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 6px 4px;
+      border-radius: 8px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .header-location svg { width: 14px; height: 14px; color: #3b82f6; }
+    .header-location .chevron { width: 12px; height: 12px; color: #2563eb; stroke-width: 3; }
+    .header-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+    }
+    .header-logo img { width: 36px; height: 36px; border-radius: 10px; object-fit: contain; }
+    .header-logo-text { font-size: 20px; font-weight: 800; letter-spacing: -.5px; line-height: 1; }
+    .logo-blue { color: #3b82f6; }
+    .logo-dark { color: #18181b; }
+    .header-actions { display: flex; align-items: center; gap: 8px; }
+    .round-btn {
+      width: 36px;
+      height: 36px;
+      border: 1px solid #e4e4e7;
+      border-radius: 50%;
+      background: #f4f4f5;
+      color: #52525b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .round-btn svg { width: 17px; height: 17px; }
+    .header-spacer { height: 56px; }
+
+    .top-links-panel {
+      position: fixed;
+      top: 56px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-8px);
+      width: 100%;
+      max-width: 560px;
+      z-index: 98;
+      background: rgba(255,255,255,.98);
+      border-bottom: 1px solid #e4e4e7;
+      box-shadow: 0 10px 24px rgba(15,23,42,.08);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+    .top-links-panel.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+    .top-links-scroller {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 12px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .top-links-scroller::-webkit-scrollbar { display: none; }
+    .top-link-chip {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      color: #334155;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .top-link-chip:active { background: #eff6ff; color: #2563eb; }
+
+    main { padding: 14px 12px 18px; }
+    .site-intro {
+      background: #fff;
+      border: 1px solid #eceef3;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+      text-align: center;
+    }
+    .site-intro h1 {
+      font-size: 22px;
+      line-height: 1.28;
+      margin-bottom: 8px;
+      letter-spacing: -.3px;
+      color: #18181b;
+    }
+    .site-intro p { font-size: 15px; color: #52525b; line-height: 1.75; }
+
+    .nav, .categories, .card, .bookmark, .recommend, .section, .section1, .section2, .section3, .search, .ai-nav-links {
+      background: #fff;
+      margin: 0 0 12px;
+      padding: 12px;
+      width: 100%;
+      border: 1px solid #eceef3;
+      border-radius: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    }
+    .nav { text-align: center; font-size: 15px; color: #52525b; }
+    .nav strong, .section strong, .section1 strong, .section2 strong, .section3 strong, .recommend strong { color: #18181b; }
+
+    .ai-nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .ai-nav-links::-webkit-scrollbar { display: none; }
+    .ai-nav-links a, .ai-nav-links button {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 0 12px !important;
+      border-radius: 999px !important;
+      background: #eff6ff !important;
+      border: 1px solid #bfdbfe !important;
+      color: #2563eb !important;
+      font-size: 14px !important;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: none !important;
+      cursor: pointer;
+    }
+
+    .search {
+      display: block;
+      padding: 12px;
+    }
+    .search form {
+      width: 100%;
+      max-width: none;
+      display: flex;
+    }
+    .search input[type="text"] {
+      width: 100%;
+      min-height: 42px;
+      padding: 0 16px;
+      font-size: 15px;
+      border: 1px solid #e4e4e7;
+      border-radius: 999px;
+      outline: none;
+      background: #f8fafc;
+      color: #18181b;
+      box-shadow: none;
+      transition: border .15s, background .15s;
+    }
+    .search input[type="text"]:focus {
+      border-color: #93c5fd;
+      background: #fff;
+    }
+
+    .recommend, .section, .section1, .section2, .section3 {
+      font-size: 14px;
+      color: #334155;
+      line-height: 1.75;
+    }
+    .recommend a, .section a, .section1 a, .section2 a, .section3 a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      margin: 4px 4px 4px 0;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid #eef2f7;
+      color: #334155;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background .15s, color .15s, border-color .15s;
+    }
+    .recommend a:hover, .section a:hover, .section1 a:hover, .section2 a:hover, .section3 a:hover {
+      background: #eff6ff;
+      color: #2563eb;
+      border-color: #bfdbfe;
+    }
+
+    .toggle-content {
+      overflow: hidden;
+      transition: max-height .35s cubic-bezier(.4,0,.2,1);
+      max-height: 0;
+    }
+    .toggle-content.open {
+      max-height: 900px;
+      transition: max-height .5s cubic-bezier(.4,0,.2,1);
+    }
+    .toggle-header {
+      font-weight: 800;
+      cursor: pointer;
+      user-select: none;
+      padding: 2px 0 6px;
+      color: #2563eb;
+      margin-bottom: 2px;
+    }
+
+    #copyToast, .toast {
+      visibility: hidden;
+      min-width: 120px;
+      background: rgba(24,24,27,.9) !important;
+      color: #fff !important;
+      text-align: center;
+      border-radius: 999px !important;
+      padding: 10px 18px !important;
+      position: fixed;
+      z-index: 999;
+      bottom: calc(88px + env(safe-area-inset-bottom)) !important;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: 0 4px 16px rgba(0,0,0,.2);
+      white-space: nowrap;
+    }
+
+    .footer {
+      background: #fff;
+      border: 1px solid #eceef3;
+      border-radius: 16px;
+      margin: 0 0 12px;
+      padding: 16px;
+      text-align: center;
+      font-size: 12px;
+      color: #71717a;
+      line-height: 1.7;
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    }
+    .footer a { color: #2563eb; }
+
+    .bottom-nav {
+      position: fixed;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 560px;
+      z-index: 100;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid #e4e4e7;
+      display: flex;
+      align-items: stretch;
+      padding-bottom: env(safe-area-inset-bottom);
+      box-shadow: -32px 0 44px rgba(15,23,42,.14), 32px 0 44px rgba(15,23,42,.14), 0 -1px 8px rgba(0,0,0,.04);
+    }
+    .bottom-nav-item {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      padding: 8px 4px 10px;
+      color: #71717a;
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 500;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .bottom-nav-item svg { width: 24px; height: 24px; stroke: currentColor; }
+    .bottom-nav-item.active { color: #3b82f6; font-weight: 700; }
+
+    .back-top {
+      position: fixed;
+      right: calc((100vw - min(100vw, 560px)) / 2 + 14px);
+      bottom: calc(78px + env(safe-area-inset-bottom));
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid #dbeafe;
+      background: rgba(255,255,255,.95);
+      color: #2563eb;
+      box-shadow: 0 8px 24px rgba(15,23,42,.16);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 90;
+      cursor: pointer;
+    }
+    .back-top.show { display: flex; }
+    .back-top svg { width: 20px; height: 20px; }
+
+    @media (min-width: 768px) {
+      .app-shell, .app-header, .bottom-nav, .top-links-panel { max-width: 760px; }
+      .header-inner { height: 46px; }
+      .header-spacer { height: 46px; }
+      .top-links-panel { top: 46px; }
+      .back-top { right: calc((100vw - 760px) / 2 + 14px); }
+    }
+    @media (min-width: 1024px) {
+      .app-shell, .app-header, .bottom-nav, .top-links-panel { max-width: 960px; }
+      .back-top { right: calc((100vw - 960px) / 2 + 14px); }
+    }
+    @media (min-width: 1280px) {
+      .app-shell, .app-header, .bottom-nav, .top-links-panel { max-width: 1040px; }
+      .back-top { right: calc((100vw - 1040px) / 2 + 14px); }
+    }
+    @media (max-width: 600px) {
+      body { background: #f4f4f7; }
+      .app-shell, .app-header, .bottom-nav { box-shadow: none; }
+      main { padding: 12px 10px 18px; }
+      .site-intro h1 { font-size: 20px; }
+      .nav, .recommend, .section, .section1, .section2, .section3, .search, .ai-nav-links, .footer { border-radius: 14px; padding: 10px; }
+      .recommend a, .section a, .section1 a, .section2 a, .section3 a { font-size: 13px; padding: 3px 8px; }
+      .back-top { right: 14px; }
+    }
+</style></head>
+<body>
+<div class="app-shell">
+<header class="app-header">
+<div class="header-inner">
+<button aria-expanded="false" aria-label="打开顶部快捷导航" class="header-location" id="topLinksToggle" type="button">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<span>纽约</span>
+<svg class="chevron" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<a aria-label="OpenAA 首页" class="header-logo" href="https://openaa.com/">
+<img alt="OpenAA" src="https://img.openaa.com/logo.png"/>
+<span class="header-logo-text"><span class="logo-blue">Open</span><span class="logo-dark">AA</span></span>
+</a>
+<div class="header-actions">
+<a aria-label="搜索" class="round-btn" href="https://openaa.com/search">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+</a>
+<button aria-label="分享" class="round-btn" onclick="shareOpenAA()" type="button">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.59 13.51l6.83 3.98"></path><path d="M15.41 6.51 8.59 10.49"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<div aria-label="顶部快捷导航" class="top-links-panel" id="topLinksPanel">
+<div class="top-links-scroller" id="topLinksScroller">
+<a class="top-link-chip" href="https://openaa.com/navigation" target="_self">导航</a>
+<a class="top-link-chip" href="https://openaa.com/dmv" target="_self">DMV</a>
+<a class="top-link-chip" href="https://openaa.com/jobs" target="_self">招聘</a>
+<a class="top-link-chip" href="https://openaa.com/housing" target="_self">房屋</a>
+<a class="top-link-chip" href="https://openaa.com/secondhand" target="_self">二手</a>
+<a class="top-link-chip" href="https://openaa.com/news" target="_self">新闻</a>
+<a class="top-link-chip" href="https://openaa.com/services" target="_self">本地服务</a>
+</div>
+</div>
+<div class="header-spacer"></div>
+<main>
+<section class="site-intro">
+<h1>OpenAA · 美国华人生活入口</h1>
+<p>为美国华人提供导航、资讯、服务的一站式平台。</p>
+</section>
+<section class="nav" style="text-align:center; padding: 10px; font-size:15px; line-height:1.7;">
+<p><strong>OpenAA · 美国华人生活入口</strong>，<strong>华人OpenAA</strong> 为 <strong>美国华人</strong> 打造的一站式 <strong>导航、在美华人资讯、服务平台</strong>，覆盖 DMV、移民、找工作、二手市场、银行和地区生活信息（纽约/洛杉矶/旧金山 等）。</p>
+</section><nav aria-label="直达链接区块" class="ai-nav-links">
+<a href="https://openaa.com">手机版</a>
+<a href="https://openaa.com/market/number/">美国手机靓号</a>
+<a href="https://onegobuy.com/">一式站购物</a>
+<a href="https://joeabc.com/">跟Joe学英语</a>
+<a href="https://www.168worker.com/"> 招 聘 </a>
+<a href="https://openaa.com/nav/mi">📑</a>
+<button id="copy69nav" style="background-color:#007bff; color:#fff; border:none; border-radius:20px; padding:8px 16px; cursor:pointer;" title="点击复制此链接">
+    🔞69nav.com
+  </button>
+</nav><div id="copyToast" style="visibility:hidden; min-width:120px; background:#333; color:#fff; text-align:center; border-radius:8px; padding:8px; position:fixed; z-index:1; bottom:30px; left:50%; transform:translateX(-50%);">
+  已复制
+</div><script>
+  // 复制链接功能（兼容性处理）
+  (function () {
+    const btn = document.getElementById("copy69nav");
+    const toast = document.getElementById("copyToast");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        const link = "https://69nav.com/";
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(link).then(() => {
+            toast.style.visibility = "visible";
+            setTimeout(() => { toast.style.visibility = "hidden"; }, 1500);
+          }).catch(err => {
+            console.error("复制失败：", err);
+            alert("复制失败，请手动复制：" + link);
+          });
+        } else {
+          // fallback
+          const ta = document.createElement('textarea');
+          ta.value = link;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); alert('已复制'); } catch (e) { alert('请手动复制：' + link); }
+          document.body.removeChild(ta);
+        }
+      });
+    }
+  })();
+</script><div class="search">
+<form action="https://www.google.com/search" aria-label="谷歌搜索" autocomplete="off" method="get" role="search" target="_blank">
+<input aria-label="搜索内容" name="q" placeholder="华人OpenAA 搜索你感兴趣的内容..." required="" type="text"/>
+</form>
+</div><nav aria-label="推荐" class="recommend">
+<a href="https://translate.google.com/?hl=zh-cn&amp;sl=auto&amp;tl=zh-CN&amp;op=translate" rel="noopener noreferrer" target="_blank">Google翻译</a>
+<a href="https://www.us168.com/#/business-info/job-board" rel="noopener noreferrer" target="_blank">168招聘</a>
+<a href="https://www.us168.com/#/business-info/marketplace?module-code=leave_unused" rel="noopener noreferrer" target="_blank">168二手</a>
+<a href="https://niuyuegongzuo.com/" rel="noopener noreferrer" target="_blank">纽约工作网</a>
+<a href="https://www.168worker.com/" rel="noopener noreferrer" target="_blank">美国华人168</a>
+<a href="https://meiguogongzuo.com/" rel="noopener noreferrer" target="_blank">美国工作网</a>
+<a href="https://www.usahuarenjie.com/category-catid-4.html#google_vignette" rel="noopener noreferrer" target="_blank">美国华人招聘网</a>
+<a href="https://www.zhaopin311.com/" rel="noopener noreferrer" target="_blank">猪八戒美国招聘网</a>
+<a href="https://livinginny365.com/classified/category/posts?tid=17" rel="noopener noreferrer" target="_blank">纽约华人365</a>
+<a href="https://www.app718.com/" rel="noopener noreferrer" target="_blank">纽约生活</a>
+<a href="https://www.1point3acres.com/bbs/" rel="noopener noreferrer" target="_blank">一亩三分地</a>
+<a href="https://www.hungrypanda.co/zh-hans/news-center/" rel="noopener noreferrer" target="_blank">熊猫外卖</a>
+<a href="https://www.extraspace.com/" rel="noopener noreferrer" target="_blank">自助存储</a>
+<a href="https://livinginny365.com/classified/category/posts?tid=229" rel="noopener noreferrer" target="_blank">布魯克林招聘</a>
+<a href="https://www.chicagochinaren.com/" rel="noopener noreferrer" target="_blank">芝加哥华人咨讯网</a>
+<a href="https://www.chineseinla.com/" rel="noopener noreferrer" target="_blank">洛杉矶华人资讯网</a>
+<a href="https://www.chineseinsfbay.com/" rel="noopener noreferrer" target="_blank">旧金山湾区华人资讯网</a>
+<a href="https://www.huaren.us/" rel="noopener noreferrer" target="_blank">华人网 Huaren.us</a>
+<a href="https://www.backchina.com/" rel="noopener noreferrer" target="_blank">倍可亲</a>
+<a href="https://www.sinovision.net/" rel="noopener noreferrer" target="_blank">美国中文网</a>
+<a href="https://www.chinesedaily.com/" rel="noopener noreferrer" target="_blank">世界日报</a>
+<a href="https://www.chinaqw.com/" rel="noopener noreferrer" target="_blank">中国侨网</a>
+<a href="https://www.ccyp.com/" rel="noopener noreferrer" target="_blank">华人工商黄页</a>
+<a href="https://zh.dmv.ny.gov/" rel="noopener noreferrer" target="_blank">DMV NY</a>
+<a href="https://www.2redbeans.com/" rel="noopener noreferrer" target="_blank">2颗红豆</a>
+<a href="https://www.voachinese.com/" rel="noopener noreferrer" target="_blank">美国之音</a>
+<a href="https://www.nytimes.com/" rel="noopener noreferrer" target="_blank">纽约时报</a>
+<a href="https://www.jegotrip.cn/" rel="noopener noreferrer" target="_blank">无忧行</a>
+<a href="https://www.greyhound.com/" rel="noopener noreferrer" target="_blank">Greyhound Lines Inc长途巴士</a>
+<a href="https://filehelper.weixin.qq.com/?from=windows&amp;type=recommend" rel="noopener noreferrer" target="_blank">微信传输助手</a>
+<a href="https://openaa.com/nav" rel="noopener noreferrer" target="_blank">域名展示</a>
+<a href="https://www.chinabsr.org" rel="noopener noreferrer" target="_blank">ChinaBSR 中国蓝天救援</a>
+</nav><nav aria-label="主要分区" class="section">
+<div><strong>🏛️ 美国政府部门：</strong>
+<a href="https://openaa.com/nav/dmvweb">DMV (美国各州车辆管理局)</a>
+<a href="https://my.uscis.gov/accounts/annual-asylum-fee/questionnaire" rel="noopener noreferrer" target="_blank">移民局缴费页面</a>
+<a href="https://myaccount.uscis.gov/sign-in" rel="noopener noreferrer" target="_blank">USCIS 在线帐户</a>
+<a href="https://www.usa.gov/" rel="noopener noreferrer" target="_blank">USA.gov（美国政府门户）</a>
+<a href="https://www.irs.gov/" rel="noopener noreferrer" target="_blank">IRS（国税局）</a>
+<a href="https://www.ssa.gov/" rel="noopener noreferrer" target="_blank">SSA（社会安全局）</a>
+<a href="https://www.uscis.gov/" rel="noopener noreferrer" target="_blank">USCIS（移民局）</a>
+<a href="https://travel.state.gov/" rel="noopener noreferrer" target="_blank">国务院（护照/签证）</a>
+<a href="https://www.cbp.gov/" rel="noopener noreferrer" target="_blank">CBP（海关与边境保护局）</a>
+<a href="https://www.dol.gov/" rel="noopener noreferrer" target="_blank">DOL（劳工部）</a>
+<a href="https://www.ed.gov/" rel="noopener noreferrer" target="_blank">教育部</a>
+<a href="https://www.hhs.gov/" rel="noopener noreferrer" target="_blank">卫生与公共服务部</a>
+</div>
+<div style="margin-top:10px;"><strong>🏦 银行/Bank：</strong>
+<a href="https://www.bankofamerica.com/" rel="noopener noreferrer" target="_blank">美国银行</a>
+<a href="https://www.chase.com/" rel="noopener noreferrer" target="_blank">摩根大通银行</a>
+<a href="https://www.wellsfargo.com/" rel="noopener noreferrer" target="_blank">富国银行</a>
+<a href="https://www.citi.com/" rel="noopener noreferrer" target="_blank">花旗银行</a>
+<a href="https://www.usbank.com/" rel="noopener noreferrer" target="_blank">美国合众银行</a>
+<a href="https://www.capitalone.com/" rel="noopener noreferrer" target="_blank">第一资本银行</a>
+<a href="https://www.pnc.com/" rel="noopener noreferrer" target="_blank">PNC 银行</a>
+<a href="https://www.td.com/us/en/personal-banking/" rel="noopener noreferrer" target="_blank">道明银行</a>
+<a href="https://www.truist.com/" rel="noopener noreferrer" target="_blank">Truist 银行</a>
+<a href="https://www.key.com/" rel="noopener noreferrer" target="_blank">KeyBank</a>
+<a href="https://www.huntington.com/" rel="noopener noreferrer" target="_blank">Huntington 银行</a>
+<a href="https://www.bbt.com/" rel="noopener noreferrer" target="_blank">BB&amp;T 银行</a>
+<a href="https://www.synchrony.com/" rel="noopener noreferrer" target="_blank">Synchrony 银行</a>
+<a href="https://www.ally.com/" rel="noopener noreferrer" target="_blank">Ally 银行</a>
+<a href="https://www.discover.com/" rel="noopener noreferrer" target="_blank">Discover 银行</a>
+<a href="https://www.americanexpress.com/" rel="noopener noreferrer" target="_blank">美国运通银行</a>
+</div>
+<div style="margin-top:10px;"><strong>🛒 购物：</strong>
+<a href="https://openaa.com/nav/onegobuy" rel="noopener noreferrer" target="_blank">更多</a>
+<a href="https://www.sayweee.com/" rel="noopener noreferrer" target="_blank">Weee</a>
+<a href="https://www.amazon.com/" rel="noopener noreferrer" target="_blank">amazon亚马逊</a>
+<a href="https://www.walmart.com/" rel="noopener noreferrer" target="_blank">walmart沃尔玛</a>
+<a href="https://www.ebay.com/" rel="noopener noreferrer" target="_blank">ebay易趣</a>
+<a href="https://www.costco.com/" rel="noopener noreferrer" target="_blank">costco好市多</a>
+<a href="https://www.samsclub.com/" rel="noopener noreferrer" target="_blank">samsclub山姆会员店</a>
+<a href="https://us.shein.com/" rel="noopener noreferrer" target="_blank">Shein</a>
+<a href="https://www.target.com/" rel="noopener noreferrer" target="_blank">Target</a>
+<a href="https://www.aliexpress.com/" rel="noopener noreferrer" target="_blank">AliExpress</a>
+<a href="https://www.bestbuy.com/" rel="noopener noreferrer" target="_blank">BestBuy</a>
+<a href="https://www.overstock.com/" rel="noopener noreferrer" target="_blank">Overstock</a>
+<a href="https://www.newegg.com/" rel="noopener noreferrer" target="_blank">Newegg</a>
+</div>
+<div style="margin-top:10px;"><strong>📱 移动通信：</strong>
+<a href="https://tello.com/account/login?return_to=%2Faccount%2Fhome" rel="noopener noreferrer" target="_blank">Tello Mobile</a>
+<a href="https://www.t-mobile.com/" rel="noopener noreferrer" target="_blank">T-Mobile</a>
+<a href="https://www.verizon.com/" rel="noopener noreferrer" target="_blank">Verizon</a>
+<a href="https://www.att.com/" rel="noopener noreferrer" target="_blank">AT&amp;T</a>
+<a href="https://www.lycamobile.us/" rel="noopener noreferrer" target="_blank">Lycamobile</a>
+<a href="https://www.uscellular.com/" rel="noopener noreferrer" target="_blank">U.S. Cellular</a>
+<a href="https://www.mintmobile.com/" rel="noopener noreferrer" target="_blank">Mint Mobile</a>
+<a href="https://www.cricketwireless.com/" rel="noopener noreferrer" target="_blank">Cricket Wireless</a>
+<a href="https://www.boostmobile.com/" rel="noopener noreferrer" target="_blank">Boost Mobile</a>
+<a href="https://www.metropcs.com/" rel="noopener noreferrer" target="_blank">Metro by T-Mobile</a>
+<a href="https://fi.google.com/" rel="noopener noreferrer" target="_blank">google FI</a>
+<a href="https://www.xfinity.com/mobile" rel="noopener noreferrer" target="_blank">Xfinity Mobile</a>
+<a href="https://www.spectrum.com/mobile" rel="noopener noreferrer" target="_blank">Spectrum Mobile</a>
+<a href="https://www.visible.com/" rel="noopener noreferrer" target="_blank">Visible</a>
+<a href="https://tello.com/" rel="noopener noreferrer" target="_blank">Tello</a>
+<a href="https://www.consumercellular.com/" rel="noopener noreferrer" target="_blank">Consumer Cellular</a>
+</div>
+<div style="margin-top:10px;"><strong>📰 新闻：</strong>
+<a href="https://www.168worker.com/" rel="noopener noreferrer" target="_blank">美国华人168</a>
+<a href="https://meiguogongzuo.com/" rel="noopener noreferrer" target="_blank">美国工作网</a>
+<a href="https://www.nytimes.com/" rel="noopener noreferrer" target="_blank">纽约时报</a>
+<a href="https://www.voachinese.com/" rel="noopener noreferrer" target="_blank">美国之音</a>
+<a href="https://www.worldjournal.com/" rel="noopener noreferrer" target="_blank">世界日报</a>
+<a href="https://cn.wsj.com/" rel="noopener noreferrer" target="_blank">华尔街日报中文</a>
+<a href="https://www.bbc.com/zhongwen" rel="noopener noreferrer" target="_blank">BBC 中文</a>
+<a href="https://www.rfa.org/mandarin/" rel="noopener noreferrer" target="_blank">自由亚洲电台</a>
+<a href="https://www.dw.com/zh/" rel="noopener noreferrer" target="_blank">德国之声</a>
+<a href="https://www.chinatimes.com/" rel="noopener noreferrer" target="_blank">中时电子报</a>
+</div>
+</nav><nav aria-label="🤖 通用 AI" class="section1">
+<div><strong>🤖 通用 AI：</strong>
+<a href="https://chat.deepseek.com/" rel="noopener noreferrer" target="_blank">Deepseek</a>
+<a href="https://chat.openai.com/" rel="noopener noreferrer" target="_blank">ChatGPT</a>
+<a href="https://grok.com/" rel="noopener noreferrer" target="_blank">Grok</a>
+<a href="https://gemini.google.com/" rel="noopener noreferrer" target="_blank">Gemini</a>
+<a href="https://claude.ai/" rel="noopener noreferrer" target="_blank">Claude</a>
+<a href="https://copilot.microsoft.com/" rel="noopener noreferrer" target="_blank">Bing Copilot</a>
+<a href="https://perplexity.ai/" rel="noopener noreferrer" target="_blank">Perplexity</a>
+<a href="https://poe.com/" rel="noopener noreferrer" target="_blank">Poe</a>
+<a href="https://www.yiyan.baidu.com/" rel="noopener noreferrer" target="_blank">文心一言</a>
+<a href="https://kimi.moonshot.cn/" rel="noopener noreferrer" target="_blank">Kimi</a>
+<a href="https://doubao.com/" rel="noopener noreferrer" target="_blank">豆包</a>
+<a href="https://tongyi.aliyun.com/" rel="noopener noreferrer" target="_blank">通义千问</a>
+<a href="https://huggingface.co/" rel="noopener noreferrer" target="_blank">Hugging Face</a>
+<a href="/nav/aiweb" rel="noopener noreferrer" target="_self">更多AI</a>
+</div>
+<div style="margin-top:10px;"><strong>💻 编程 AI：</strong>
+<a href="https://github.com/copilot" rel="noopener noreferrer" target="_blank">Github Copilot</a>
+<a href="https://www.phind.com/" rel="noopener noreferrer" target="_blank">Phind</a>
+<a href="https://codeium.com/" rel="noopener noreferrer" target="_blank">Codeium</a>
+<a href="https://www.cursor.sh/" rel="noopener noreferrer" target="_blank">Cursor</a>
+<a href="https://www.w3schools.com/" rel="noopener noreferrer" target="_blank">w3schools</a>
+<a href="https://www.suno.ai/" rel="noopener noreferrer" target="_blank">Suno AI</a>
+</div>
+</nav><nav aria-label="移动通信" class="section1">
+<div><strong>🚗 汽车交易平台：</strong>
+<a href="https://www.autoempirellc.com/" rel="noopener noreferrer" target="_blank">Autoempirellc</a>
+<a href="https://www.cars.com/" rel="noopener noreferrer" target="_blank">cars</a>
+<a href="https://www.autotrader.com/" rel="noopener noreferrer" target="_blank">AutoTrader</a>
+<a href="https://www.carmax.com/" rel="noopener noreferrer" target="_blank">CarMax</a>
+<a href="https://www.cargurus.com/" rel="noopener noreferrer" target="_blank">CarGurus</a>
+<a href="https://offerup.com/cars/" rel="noopener noreferrer" target="_blank">OfferUp Cars</a>
+<a href="https://www.facebook.com/marketplace/" rel="noopener noreferrer" target="_blank">Facebook Marketplace</a>
+<a href="https://carfax.com" rel="noopener noreferrer" target="_blank">carfax.com</a>
+</div>
+</nav><nav aria-label="🎬 视频" class="section1">
+<div><strong>🎬 视频：</strong>
+<a href="https://www.youtube.com/" rel="noopener noreferrer" target="_blank">YouTube</a>
+<a href="https://www.douyin.com/" rel="noopener noreferrer" target="_blank">抖音</a>
+<a href="https://www.xiaohongshu.com/" rel="noopener noreferrer" target="_blank">小红书</a>
+<a href="https://www.bilibili.tv/" rel="noopener noreferrer" target="_blank">Bilibili国际版</a>
+<a href="https://www.netflix.com/" rel="noopener noreferrer" target="_blank">Netflix</a>
+<a href="https://www.hulu.com/" rel="noopener noreferrer" target="_blank">Hulu</a>
+<a href="https://www.iq.com/" rel="noopener noreferrer" target="_blank">爱奇艺</a>
+<a href="https://www.viki.com/" rel="noopener noreferrer" target="_blank">Viki</a>
+<a href="https://www.tubi.tv/" rel="noopener noreferrer" target="_blank">Tubi</a>
+<a href="https://www.peacocktv.com/" rel="noopener noreferrer" target="_blank">Peacock</a>
+<a href="https://www.crunchyroll.com/" rel="noopener noreferrer" target="_blank">Crunchyroll</a>
+<a href="https://www.mgtv.com/" rel="noopener noreferrer" target="_blank">芒果TV</a>
+</div>
+</nav><nav aria-label="👥 社交" class="section1">
+<div><strong>👥 社交：</strong>
+<a href="https://wx.qq.com/" rel="noopener noreferrer" target="_blank">微信网页版</a>
+<a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a>
+<a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a>
+<a href="https://www.X.com/" rel="noopener noreferrer" target="_blank">X</a>
+<a href="https://www.tiktok.com/" rel="noopener noreferrer" target="_blank">TikTok</a>
+<a href="https://line.me/" rel="noopener noreferrer" target="_blank">LINE</a>
+<a href="https://discord.com/" rel="noopener noreferrer" target="_blank">Discord</a>
+<a href="https://www.snapchat.com/" rel="noopener noreferrer" target="_blank">Snapchat</a>
+<a href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a href="https://www.reddit.com/" rel="noopener noreferrer" target="_blank">Reddit</a>
+<a href="https://www.wechat.com/" rel="noopener noreferrer" target="_blank">微信 WeChat</a>
+<a href="https://www.weibo.com/" rel="noopener noreferrer" target="_blank">微博 Weibo</a>
+<a href="https://www.douban.com/" rel="noopener noreferrer" target="_blank">豆瓣</a>
+</div>
+</nav><nav aria-label="🛍️ 代购平台" class="section1">
+<div><strong>🛍️ 代购平台：</strong>
+<a href="https://panli.com/" rel="noopener noreferrer" target="_blank">panli</a>
+<a href="https://cn2you.com/" rel="noopener noreferrer" target="_blank">cn2you</a>
+<a href="https://kakobuy.com/" rel="noopener noreferrer" target="_blank">kakobuy</a>
+<a href="https://allchinabuy.com/" rel="noopener noreferrer" target="_blank">allchinabuy</a>
+<a href="https://hoobuy.com/" rel="noopener noreferrer" target="_blank">hoobuy</a>
+<a href="https://pandabuy.com/" rel="noopener noreferrer" target="_blank">pandabuy</a>
+<a href="https://easybuycn.com/" rel="noopener noreferrer" target="_blank">easybuycn</a>
+<a href="https://suqibuy.com/" rel="noopener noreferrer" target="_blank">suqibuy</a>
+</div>
+</nav><nav aria-label="🎮 游戏" class="section1">
+<div><strong>🎮 游戏：</strong>
+<a href="https://store.steampowered.com/" rel="noopener noreferrer" target="_blank">Steam</a>
+<a href="https://www.roblox.com/" rel="noopener noreferrer" target="_blank">Roblox</a>
+<a href="https://www.epicgames.com/store/" rel="noopener noreferrer" target="_blank">Epic Games</a>
+<a href="https://na.leagueoflegends.com/" rel="noopener noreferrer" target="_blank">英雄联盟</a>
+<a href="https://www.blizzard.com/en-us/" rel="noopener noreferrer" target="_blank">暴雪 Battle.net</a>
+<a href="https://www.genshin.hoyoverse.com/en/" rel="noopener noreferrer" target="_blank">原神</a>
+<a href="https://www.hoyolab.com/" rel="noopener noreferrer" target="_blank">HoYoLAB</a>
+<a href="https://www.nintendo.com/" rel="noopener noreferrer" target="_blank">任天堂</a>
+<a href="https://www.playstation.com/" rel="noopener noreferrer" target="_blank">PlayStation</a>
+<a href="https://www.xbox.com/" rel="noopener noreferrer" target="_blank">Xbox</a>
+<a href="https://www.taptap.io/" rel="noopener noreferrer" target="_blank">TapTap</a>
+<a href="https://game.163.com/" rel="noopener noreferrer" target="_blank">网易游戏</a>
+<a href="https://www.4399.com/" rel="noopener noreferrer" target="_blank">4399</a>
+<a href="https://www.7k7k.com/" rel="noopener noreferrer" target="_blank">7K7K</a>
+<a href="https://www.37.com/" rel="noopener noreferrer" target="_blank">37网游</a>
+<a href="https://www.yy.com/" rel="noopener noreferrer" target="_blank">YY游戏</a>
+<a href="https://wan.360.cn/" rel="noopener noreferrer" target="_blank">360游戏</a>
+<a href="https://www.51.com/" rel="noopener noreferrer" target="_blank">51游戏</a>
+<a href="https://www.pipaw.com/" rel="noopener noreferrer" target="_blank">琵琶网</a>
+<a href="https://www.kaixin001.com/" rel="noopener noreferrer" target="_blank">开心网</a>
+</div>
+</nav><nav aria-label="   用邮箱" class="section1">
+<div><strong>📮 常用邮箱：</strong>
+<a href="https://mail.google.com/" rel="noopener noreferrer" target="_blank">Gmail</a>
+<a href="https://outlook.live.com/" rel="noopener noreferrer" target="_blank">Outlook</a>
+<a href="https://mail.qq.com/" rel="noopener noreferrer" target="_blank">QQ邮箱</a>
+<a href="https://mail.163.com/" rel="noopener noreferrer" target="_blank">163邮箱</a>
+<a href="https://mail.aliyun.com/" rel="noopener noreferrer" target="_blank">阿里邮箱</a>
+<a href="https://mail.sina.com.cn/" rel="noopener noreferrer" target="_blank">新浪邮箱</a>
+<a href="https://foxmail.com/" rel="noopener noreferrer" target="_blank">Foxmail</a>
+<a href="https://mail.yeah.net/" rel="noopener noreferrer" target="_blank">Yeah邮箱</a>
+<a href="https://hicloud.com/" rel="noopener noreferrer" target="_blank">华为云邮箱</a>
+<a href="https://mail.126.com/" rel="noopener noreferrer" target="_blank">126邮箱</a>
+</div>
+</nav><nav aria-label="国内常用" class="section1">
+<div><strong>🌐 国内常用：</strong>
+<a href="https://www.baidu.com/" rel="noopener noreferrer" target="_blank">百度</a>
+<a href="https://www.qq.com/" rel="noopener noreferrer" target="_blank">腾讯网</a>
+<a href="https://www.taobao.com/" rel="noopener noreferrer" target="_blank">淘宝网</a>
+<a href="https://www.jd.com/" rel="noopener noreferrer" target="_blank">京东</a>
+<a href="https://www.tmall.com/" rel="noopener noreferrer" target="_blank">天猫</a>
+<a href="https://www.sina.com.cn/" rel="noopener noreferrer" target="_blank">新浪网</a>
+<a href="https://www.weibo.com/" rel="noopener noreferrer" target="_blank">微博</a>
+<a href="https://www.bilibili.com/" rel="noopener noreferrer" target="_blank">哔哩哔哩</a>
+<a href="https://www.zhihu.com/" rel="noopener noreferrer" target="_blank">知乎</a>
+<a href="https://www.douyin.com/" rel="noopener noreferrer" target="_blank">抖音</a>
+<a href="https://www.xiaohongshu.com/" rel="noopener noreferrer" target="_blank">小红书</a>
+<a href="https://www.163.com/" rel="noopener noreferrer" target="_blank">网易</a>
+<a href="https://www.sohu.com/" rel="noopener noreferrer" target="_blank">搜狐</a>
+<a href="https://www.iqiyi.com/" rel="noopener noreferrer" target="_blank">爱奇艺</a>
+<a href="https://youku.com/" rel="noopener noreferrer" target="_blank">优酷</a>
+</div>
+</nav><nav aria-label="其它专区" class="section2">
+<div class="toggle-header" onclick="toggleSection('otherLinks')">📁 其它</div>
+<div aria-expanded="false" class="toggle-content" id="otherLinks">
+<a href="https://americanflooring.us/" rel="noopener noreferrer" target="_blank">American Flooring </a>
+<a href="https://app.rippling.com/" rel="noopener noreferrer" target="_blank">Rippling </a>
+<a href="https://www.geico.com/" rel="noopener noreferrer" target="_blank">Geico </a>
+<a href="https://www.e-zpassny.com/" rel="noopener noreferrer" target="_blank">E-ZPassNY</a>
+<a href="https://dimsumsam.us/" rel="noopener noreferrer" target="_blank">金满庭 </a>
+<a href="https://kingskitchenusa.com/" rel="noopener noreferrer" target="_blank">金煌煲煲好</a>
+<a href="https://ekitchensupply.com/zh" rel="noopener noreferrer" target="_blank">ekitchensupply</a>
+<a href="https://www.pandarange.com/" rel="noopener noreferrer" target="_blank">L&amp;T 餐厅设备公司</a>
+<a href="https://www.youtube.com/@ltadministrator6042/videos" rel="noopener noreferrer" target="_blank">L&amp;T youtube</a>
+<a href="https://www.facebook.com/people/LT-Restaurant-Equipment-Inc/61558406247428/" rel="noopener noreferrer" target="_blank">L&amp;T Facebook</a>
+<a href="https://acm-fan.com/" rel="noopener noreferrer" target="_blank">厨房排气扇</a>
+<a href="https://hangyusquare.com/lucky-number/" rel="noopener noreferrer" target="_blank">航宇通讯</a>
+<a href="https://www.youtube.com/@chinabsr" rel="noopener noreferrer" target="_blank">ChinaBSR youtube</a>
+<a href="https://www.icloud.com/" rel="noopener noreferrer" target="_blank">苹果帐号</a>
+<a href="https://openaa.com/nav/mi" rel="noopener noreferrer" target="_blank">Minav</a>
+</div>
+</nav><footer class="footer">
+    © 2025 <a href="https://openaa.com/about/" rel="noopener noreferrer" target="_blank">jozl.com</a> 保留所有权利 | 联系邮箱：<a href="mailto:323748@gmail.com">323748@gmail.com</a>
+<br/>
+<span>OpenAA · 美国华人生活入口 · 华人导航 · 168招聘 · 168二手 · 美国华人资讯 · 华人AI工具 · 华人网址大全</span>
+</footer>
+</main>
+</div>
+<nav aria-label="底部导航" class="bottom-nav" role="navigation">
+<a class="bottom-nav-item active" href="https://openaa.com/" target="_self">
+<svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg><span>首页</span>
+</a>
+<a class="bottom-nav-item" href="https://openaa.com/jobs" target="_self">
+<svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="7"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg><span>招聘</span>
+</a>
+<a class="bottom-nav-item" href="https://openaa.com/secondhand" target="_self">
+<svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M6 2h12l3 5v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7l3-5Z"></path><path d="M3 7h18"></path><path d="M16 11a4 4 0 0 1-8 0"></path></svg><span>二手</span>
+</a>
+<a class="bottom-nav-item" href="https://openaa.com/news" target="_self">
+<svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Z"></path><path d="M4 22a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8z"></path></svg><span>新闻</span>
+</a>
+<a class="bottom-nav-item" href="https://openaa.com/profile" target="_self">
+<svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>我的</span>
+</a>
+</nav>
+<button aria-label="回到顶部" class="back-top" id="backTop" type="button">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m18 15-6-6-6 6"></path></svg>
+</button>
+<script>
+    function shareOpenAA() {
+      const data = { title: 'OpenAA 华人生活入口', text: 'OpenAA 美国华人生活入口', url: location.href };
+      if (navigator.share) {
+        navigator.share(data).catch(() => {});
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(location.href).then(() => showToast('链接已复制 📋'));
+      } else {
+        showToast('请复制当前页面链接');
+      }
+    }
+
+    function showToast(text) {
+      const old = document.querySelector('.toast');
+      if (old) old.remove();
+      const t = document.createElement('div');
+      t.className = 'toast';
+      t.style.visibility = 'visible';
+      t.textContent = text;
+      document.body.appendChild(t);
+      setTimeout(() => t.remove(), 2400);
+    }
+
+    function initTopLinks() {
+      const toggle = document.getElementById('topLinksToggle');
+      const panel = document.getElementById('topLinksPanel');
+      if (!toggle || !panel) return;
+      toggle.addEventListener('click', () => {
+        const open = !panel.classList.contains('open');
+        panel.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', e => {
+        if (!panel.classList.contains('open')) return;
+        if (panel.contains(e.target) || toggle.contains(e.target)) return;
+        panel.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+      panel.addEventListener('touchstart', e => { panel._touchStartY = e.touches[0].clientY; }, { passive: true });
+      panel.addEventListener('touchend', e => {
+        const startY = panel._touchStartY || 0;
+        const endY = e.changedTouches[0].clientY;
+        if (startY - endY > 28) {
+          panel.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      }, { passive: true });
+    }
+
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        const expanded = section.classList.toggle('open');
+        section.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    (function initBackTop() {
+      const btn = document.getElementById('backTop');
+      if (!btn) return;
+      window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 360), { passive: true });
+      btn.addEventListener('click', scrollToTop);
+    })();
+
+    initTopLinks();
+  </script>
+</body>
+</html>
