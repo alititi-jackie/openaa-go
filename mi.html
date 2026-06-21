@@ -236,18 +236,278 @@
       .footer { font-size: 11px; }
       .section1 strong { font-size: 13px; }
     }
+  
+
+    /* ===== OpenAA unified app style 2026 ===== */
+    :root {
+      --brand: #0078d4;
+      --brand-dark: #005fa3;
+      --card: #ffffff;
+      --soft: #eef6ff;
+      --text: #1f2937;
+      --muted: #667085;
+      --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.07);
+      --shadow-float: 0 10px 25px rgba(15, 23, 42, 0.18);
+      --radius-lg: 16px;
+      --radius-pill: 999px;
+      --content-width: min(1080px, calc(100vw - 48px));
+      --side-bg: #e4e7eb;
+      --center-bg: #f7f8fa;
+    }
+
+    body {
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+      background: linear-gradient(
+        90deg,
+        var(--side-bg) 0,
+        var(--side-bg) calc((100vw - var(--content-width)) / 2 - 18px),
+        var(--center-bg) calc((100vw - var(--content-width)) / 2 - 18px),
+        var(--center-bg) calc((100vw + var(--content-width)) / 2 + 18px),
+        var(--side-bg) calc((100vw + var(--content-width)) / 2 + 18px),
+        var(--side-bg) 100%
+      );
+      background-attachment: fixed;
+    }
+
+    header {
+      padding: 32px 14px 22px;
+      background: transparent;
+      border-bottom-color: rgba(15, 23, 42, 0.06);
+      overflow: hidden;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+      line-height: 1.25;
+      color: #12345a;
+      letter-spacing: .5px;
+    }
+
+    .logo a { color: #12345a; }
+
+    .quick-nav-wrap {
+      position: relative;
+      width: 100%;
+      max-width: var(--content-width);
+      margin: 18px auto 0;
+      padding: 0 44px;
+    }
+
+    .ai-nav-links {
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto;
+      padding: 4px 2px 10px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      flex-wrap: nowrap;
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .quick-nav-wrap.is-scrollable .ai-nav-links { justify-content: flex-start; }
+    .quick-nav-wrap:not(.is-scrollable) .nav-arrow { display: none; }
+
+    .ai-nav-links::-webkit-scrollbar { height: 6px; }
+    .ai-nav-links::-webkit-scrollbar-thumb { background: rgba(0, 120, 212, 0.25); border-radius: 999px; }
+
+    .ai-nav-links a {
+      flex: 0 0 auto;
+      white-space: nowrap;
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(0,120,212,0.12);
+    }
+
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--brand);
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 800;
+      z-index: 2;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .nav-arrow:hover { background: var(--brand); color: #fff; transform: translateY(-50%) scale(1.04); }
+    .nav-arrow.left { left: 4px; }
+    .nav-arrow.right { right: 4px; }
+
+    .search form { max-width: 760px; }
+    .search input[type="text"] { border-radius: 999px; background: #fff; }
+
+    .recommend, .section1, .section2 {
+      max-width: var(--content-width);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(15, 23, 42, 0.04);
+      padding: 16px 20px;
+      background: #fff;
+    }
+
+    .section1 strong {
+      color: #0f2f52;
+      font-size: 17px;
+    }
+
+    .recommend a, .section1 a, .section2 a, .toggle-content a {
+      background: #f6f8fb;
+      color: #1f3b57;
+      border: 1px solid rgba(15, 23, 42, 0.05);
+      border-radius: 999px;
+      padding: 6px 11px;
+      margin: 5px 4px;
+      line-height: 1.35;
+    }
+
+    .recommend a:hover, .section1 a:hover, .section2 a:hover, .toggle-content a:hover {
+      background: var(--soft);
+      border-color: rgba(0, 120, 212, 0.2);
+      color: var(--brand);
+    }
+
+    .toggle-header { color: var(--brand); font-size: 16px; }
+
+    .float-share,
+    .back-to-top {
+      width: 46px;
+      height: 46px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: var(--brand);
+      color: #fff;
+      box-shadow: var(--shadow-float);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      opacity: .94;
+      transition: opacity .2s ease, transform .2s ease, background .2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .float-share {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 1000;
+      background: #fff;
+      color: var(--brand);
+    }
+
+    .float-share svg { width: 22px; height: 22px; display: block; }
+
+    .floating-tools {
+      position: fixed;
+      right: 16px;
+      bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .back-to-top {
+      position: static;
+      right: auto;
+      bottom: auto;
+    }
+
+    .float-share:hover,
+    .back-to-top:hover {
+      background: var(--brand-dark);
+      color: #fff;
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    #backToTopBtn { display: none; }
+
+    .copy-toast {
+      visibility: hidden;
+      min-width: 120px;
+      background: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      padding: 8px 12px;
+      position: fixed;
+      z-index: 1001;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 10px 25px rgba(0,0,0,.18);
+    }
+
+    .footer {
+      background: transparent;
+      padding-bottom: 76px;
+    }
+
+    @media (min-width: 1200px) {
+      .recommend, .section1, .section2 { margin-top: 12px; margin-bottom: 12px; }
+      .section1 div, .section2 div { line-height: 1.95; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --content-width: calc(100vw - 20px); }
+      body { background: #f5f6f8; }
+      header { padding: 20px 48px 18px; }
+      .logo { font-size: 1.35rem; letter-spacing: 0; }
+      .quick-nav-wrap {
+        padding: 0;
+        width: calc(100vw - 20px);
+        max-width: calc(100vw - 20px);
+        margin: 12px auto 0;
+      }
+      .nav-arrow { display: none; }
+      .ai-nav-links { justify-content: flex-start; padding: 2px 12px 12px; gap: 8px; }
+      .ai-nav-links a { font-size: 13px !important; min-height: 34px; padding: 7px 13px !important; }
+      .recommend, .section1, .section2 {
+        width: calc(100vw - 20px);
+        max-width: calc(100vw - 20px);
+        margin: 10px auto;
+        padding: 12px;
+      }
+      .search { width: calc(100vw - 20px); max-width: calc(100vw - 20px); margin: 12px auto; }
+      .search input[type="text"] { padding: 11px 15px; font-size: 15px; }
+      .recommend a, .section1 a, .section2 a, .toggle-content a { font-size: 13px; margin: 4px 3px; padding: 6px 9px; }
+      .section1 strong { font-size: 15px; }
+      .float-share { top: 12px; right: 12px; }
+      .floating-tools { right: 12px; bottom: 14px; gap: 8px; }
+      .float-share, .back-to-top { width: 42px; height: 42px; font-size: 18px; }
+      .float-share svg { width: 20px; height: 20px; }
+      .footer { padding: 18px 14px 76px; }
+    }
+
   </style>
 </head>
 <body>
   <header>
     <h1 class="logo"><a href="/">OpenAA · 美国华人生活入口</a></h1>
-    <div class="top-actions">
-      <button onclick="addBookmark()" aria-label="收藏本站">📌 收藏本站</button>
-    </div>
   </header>
 
   <!-- 直达链接区块 -->
-<nav class="ai-nav-links" aria-label="直达链接区块">
+<div class="quick-nav-wrap" aria-label="直达链接区域">
+  <button class="nav-arrow left" type="button" onclick="scrollQuickNav(-1)" aria-label="向左滚动导航">‹</button>
+<nav class="ai-nav-links" id="quickNav" aria-label="直达链接区块">
   <a href="https://openaa.com/"> 首 页 </a>
   <a href="https://go.openaa.com/">网页版</a>
   <a href="https://tools.openaa.com/">OpenAA工具</a>
@@ -255,6 +515,8 @@
   <a href="https://onegobuy.com/">一式站购物</a>
   <a href="https://jozl.com/">jozl</a>
 </nav>
+  <button class="nav-arrow right" type="button" onclick="scrollQuickNav(1)" aria-label="向右滚动导航">›</button>
+</div>
 
   <div class="search">
     <form action="https://www.google.com/search" method="get" target="_blank" autocomplete="off" role="search" aria-label="谷歌搜索">
@@ -265,7 +527,7 @@
   <!-- 推荐专区 -->
   <nav class="recommend" aria-label="推荐">
       <a href="https://translate.google.com/?hl=zh-cn&sl=auto&tl=zh-CN&op=translate" target="_blank" rel="noopener noreferrer">Google翻译</a>
-      <a href="https://go.openaa.com/domains" target="_blank" rel="noopener noreferrer">域名展示</a>
+      <a href="https://openaa.com/domains" target="_blank" rel="noopener noreferrer">域名展示</a>
       <a href="https://www.aizhan.com/" target="_blank" rel="noopener noreferrer">爱站网</a>
       <a href="https://cn.aliyun.com/" target="_blank" rel="noopener noreferrer">阿里云</a>
       <a href="https://www.ename.net/" target="_blank" rel="noopener noreferrer">易名</a>
@@ -397,6 +659,15 @@
       <a href="https://bobaup.com/" target="_blank" rel="noopener noreferrer">bobaUP</a>
       <a href="https://jmtea.com/" target="_blank" rel="noopener noreferrer">JMtea</a>
       <a href="https://69nav.com/"target="_blank" rel="noopener noreferrer">69nav.com</a>
+      <a href="https://Joabc.com/" target="_blank" rel="noopener noreferrer">joabc</a>
+      <a href="https://joeabc.com/" target="_blank" rel="noopener noreferrer">joeabc</a>
+      <a href="https://alititi.com/" target="_blank" rel="noopener noreferrer">alititi</a>
+      <a href="https://luckynumberusa.com/" target="_blank" rel="noopener noreferrer">luckyNumberUsa</a>
+      <a href="https://foxtoday.com/" target="_blank" rel="noopener noreferrer">FoxToday</a>
+      <a href="https://meihuaren.com/" target="_blank" rel="noopener noreferrer">美华人 MeiHuaren</a>
+      <a href="https://bobaup.com/" target="_blank" rel="noopener noreferrer">bobaUP</a>
+      <a href="https://jmtea.com/" target="_blank" rel="noopener noreferrer">JMtea</a>
+      <a href="https://69nav.com/"target="_blank" rel="noopener noreferrer">69nav.com</a>
       <a href="https://alititi.com/" target="_blank" rel="noopener noreferrer">alititi</a>
       <a href="https://luckynumberusa.com/" target="_blank" rel="noopener noreferrer">luckyNumberUsa</a>
       <a href="https://numbermobi.com/" target="_blank" rel="noopener noreferrer">NumberMobi</a>
@@ -460,7 +731,17 @@
     </div>
   </nav>
 
-  <button class="back-to-top" onclick="scrollToTop()" aria-label="回到顶部" id="backToTopBtn">⬆️ 回到顶部</button>
+  <div id="copyToast" class="copy-toast" role="status" aria-live="polite">链接已复制</div>
+
+  <!-- 浮动快捷按钮 -->
+  <button class="float-share" type="button" onclick="shareSite()" aria-label="分享本站" title="分享">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M18 16.1c-1.05 0-1.98.51-2.56 1.29L8.91 13.6c.06-.25.09-.44.09-.6s-.03-.35-.09-.6l6.45-3.75A3.23 3.23 0 0 0 18 9.9a3.3 3.3 0 1 0-3.3-3.3c0 .2.02.4.06.58L8.27 10.95A3.28 3.28 0 0 0 6 10a3.3 3.3 0 1 0 2.27 5.65l6.52 3.8c-.04.18-.06.36-.06.55A3.27 3.27 0 1 0 18 16.1Z" fill="currentColor"/>
+    </svg>
+  </button>
+  <div class="floating-tools" aria-label="页面快捷操作">
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="回到顶部" title="回到顶部" id="backToTopBtn">↑</button>
+  </div>
 
   <footer class="footer">
     © 2025 <a href="https://openaa.com" target="_blank" rel="noopener noreferrer">OpenAA.com</a> 保留所有权利 | 联系邮箱：<a href="mailto:323748@gmail.com">323748@gmail.com</a>
@@ -488,6 +769,54 @@
         section.setAttribute('aria-expanded', expanded);
       }
     }
+
+    // 分享：手机优先调用系统分享，不支持时复制链接
+    function shareSite() {
+      const shareData = {
+        title: document.title || 'OpenAA · 美国华人生活入口',
+        text: 'OpenAA · 美国华人生活入口，华人导航、AI工具、常用网站与生活服务。',
+        url: window.location.href
+      };
+      if (navigator.share) {
+        navigator.share(shareData).catch(function () {});
+        return;
+      }
+      const toast = document.getElementById('copyToast');
+      const url = window.location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () {
+          if (toast) {
+            toast.textContent = '链接已复制';
+            toast.style.visibility = 'visible';
+            setTimeout(function () { toast.style.visibility = 'hidden'; }, 1500);
+          } else {
+            alert('链接已复制');
+          }
+        }).catch(function () { alert('请手动复制网址：' + url); });
+      } else {
+        alert('请手动复制网址：' + url);
+      }
+    }
+
+    // 电脑端导航箭头滚动
+    function updateQuickNavState() {
+      const nav = document.getElementById('quickNav');
+      const wrap = document.querySelector('.quick-nav-wrap');
+      if (!nav || !wrap) return;
+      const isScrollable = nav.scrollWidth > nav.clientWidth + 8;
+      wrap.classList.toggle('is-scrollable', isScrollable);
+    }
+
+    function scrollQuickNav(direction) {
+      const nav = document.getElementById('quickNav');
+      if (!nav) return;
+      const distance = Math.max(260, Math.floor(nav.clientWidth * 0.75));
+      nav.scrollBy({ left: direction * distance, behavior: 'smooth' });
+    }
+
+    window.addEventListener('load', updateQuickNavState);
+    window.addEventListener('resize', updateQuickNavState);
+
   </script>
 </body>
 </html>
