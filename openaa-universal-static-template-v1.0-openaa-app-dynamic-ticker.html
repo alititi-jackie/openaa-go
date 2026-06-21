@@ -46,7 +46,7 @@
     二、发给 AI 写内容时，请告诉 AI：
     1. 保留模板整体效果，不要重做设计。
     2. 不要修改 OPENAA_CONFIG，广告、板块显示隐藏、链接打开方式由站长自己改。
-    3. AI 只修改 head 里的 SEO 和“页面内容开始/页面内容结束”之间的正文。
+    3. AI 只修改 head 里的 SEO 和“中间内容开始/中间内容结束”之间的正文。
     4. 正文直接写进本 HTML，不要做外部动态加载内容页。
     5. 正文建议用 <article class="template-card"> 包住，保持卡片风格统一。
     6. 正文里的链接按内容需要设置，不受 templateLinkMode 控制。
@@ -849,14 +849,15 @@
     }
 
     const APP_BASE_URL = 'https://openaa.com';
-    const TOP_LINKS_API = APP_BASE_URL + '/api/top-links';
-    // 信息滚动条优先从 openaa-app 新站 API 动态读取；读取失败时才使用备用静态内容。
-    // 不再读取 ny.openaa.com / openaa-ny 旧站。
-    const LATEST_API_CANDIDATES = [
-      APP_BASE_URL + '/api/latest-posts',
-      APP_BASE_URL + '/api/home-latest',
-      APP_BASE_URL + '/api/latest'
+    const HOME_STATIC_TEMPLATE_API = APP_BASE_URL + '/api/home/static-template';
+    // 信息滚动条优先复用 openaa-app 首页当前使用的 tickerItems / tickerSettings。
+    // 读取失败时使用 openaa-app 首页 fallback ticker 内容。
+    const FALLBACK_TICKER_ITEMS = [
+      { label: 'OpenAA 纽约站已上线，欢迎发布招聘、房屋、二手和本地服务信息', href: '/news' }
     ];
+    const FALLBACK_TICKER_SETTINGS = {
+      global: { isEnabled: true, intervalSeconds: 4 }
+    };
 
     const ADS = Array.isArray(OPENAA_CONFIG.banners) ? OPENAA_CONFIG.banners : [];
 
@@ -970,13 +971,22 @@
     })();
 
 
+    function toAppUrl(value, fallbackPath) {
+      const raw = String(value || fallbackPath || '/').trim() || '/';
+      try {
+        return new URL(raw, APP_BASE_URL).toString();
+      } catch (e) {
+        return new URL(fallbackPath || '/', APP_BASE_URL).toString();
+      }
+    }
+
     function normalizeTopLinks(payload) {
-      const raw = Array.isArray(payload) ? payload : (payload && (payload.data || payload.links || payload.items)) || [];
+      const raw = Array.isArray(payload) ? payload : (payload && (payload.topQuickLinks || payload.data || payload.links || payload.items)) || [];
       return raw
         .filter(item => item && (item.name || item.title || item.label) && (item.url || item.href || item.link_url))
         .map(item => ({
           name: item.name || item.title || item.label,
-          url: item.url || item.href || item.link_url,
+          url: toAppUrl(item.url || item.href || item.link_url, '/'),
           openMode: item.open_mode || item.openMode || item.target || 'auto'
         }));
     }
@@ -1033,8 +1043,8 @@
       });
 
       try {
-        const res = await fetch(TOP_LINKS_API, { mode: 'cors', cache: 'no-store' });
-        if (!res.ok) throw new Error('top links api failed');
+        const res = await fetch(HOME_STATIC_TEMPLATE_API, { mode: 'cors', cache: 'no-store' });
+        if (!res.ok) throw new Error('home static template api failed');
         const data = await res.json();
         const links = normalizeTopLinks(data);
         if (links.length) { renderTopLinks(links); applyTemplateLinkMode(); }
@@ -1044,54 +1054,62 @@
     }
 
     function normalizeLatestItems(payload) {
-      const raw = Array.isArray(payload) ? payload : (payload && (payload.data || payload.items || payload.posts || payload.latest)) || [];
+      const raw = Array.isArray(payload) ? payload : (payload && (payload.tickerItems || payload.data || payload.items)) || [];
       return raw
-        .filter(item => item && (item.title || item.name))
+        .filter(item => item && (item.label || item.title || item.name))
         .map(item => ({
-          title: item.title || item.name,
-          type: item.type || item.module || item.category || '最新',
-          url: item.url || item.href || item.link || item.path || 'https://openaa.com/news',
-          location: item.location || item.region || ''
+          label: item.label || item.title || item.name,
+          href: toAppUrl(item.href || item.url || item.link || item.path, '/news'),
+          module: item.module || null
         }));
     }
 
-    function renderLatestStrip(items) {
+    function normalizeTickerSettings(payload) {
+      const settings = payload && payload.tickerSettings;
+      const global = settings && settings.global;
+      const enabled = typeof global?.isEnabled === 'boolean' ? global.isEnabled : FALLBACK_TICKER_SETTINGS.global.isEnabled;
+      const seconds = Number(global?.intervalSeconds);
+      const intervalSeconds = Number.isFinite(seconds)
+        ? Math.min(10, Math.max(3, Math.trunc(seconds)))
+        : FALLBACK_TICKER_SETTINGS.global.intervalSeconds;
+      return { global: { isEnabled: enabled, intervalSeconds } };
+    }
+
+    function renderLatestStrip(items, settings) {
       const strip = document.getElementById('latestStrip');
       const text = document.getElementById('latestStripText');
-      if (!strip || !text || !items.length) return;
+      const normalizedSettings = settings || FALLBACK_TICKER_SETTINGS;
+      if (!strip || !text || !normalizedSettings.global.isEnabled) {
+        if (strip) strip.hidden = true;
+        return;
+      }
+      const tickerItems = items.length > 0
+        ? items
+        : [{ label: 'OpenAA 最新发布，点击右上角放大镜搜索更多内容', href: toAppUrl('/news') }];
+      if (!tickerItems.length) return;
       let i = 0;
       function show() {
-        const item = items[i % items.length];
-        const prefix = item.type ? '[' + item.type + '] ' : '';
-        const suffix = item.location ? ' · ' + item.location : '';
-        text.textContent = prefix + item.title + suffix;
-        strip.href = item.url;
+        const item = tickerItems[i % tickerItems.length];
+        text.textContent = item.label;
+        strip.href = item.href;
         strip.target = getTemplateTarget();
         if (getTemplateRel()) strip.rel = getTemplateRel();
         else strip.removeAttribute('rel');
         i += 1;
       }
       show();
-      if (items.length > 1) setInterval(show, 3500);
+      if (tickerItems.length > 1) setInterval(show, normalizedSettings.global.intervalSeconds * 1000);
     }
 
     async function initLatestStripFromApp() {
-      for (const api of LATEST_API_CANDIDATES) {
-        try {
-          const res = await fetch(api, { mode: 'cors', cache: 'no-store' });
-          if (!res.ok) continue;
-          const data = await res.json();
-          const items = normalizeLatestItems(data);
-          if (items.length) {
-            renderLatestStrip(items);
-            return;
-          }
-        } catch (e) {}
+      try {
+        const res = await fetch(HOME_STATIC_TEMPLATE_API, { mode: 'cors', cache: 'no-store' });
+        if (!res.ok) throw new Error('home static template api failed');
+        const data = await res.json();
+        renderLatestStrip(normalizeLatestItems(data), normalizeTickerSettings(data));
+      } catch (e) {
+        renderLatestStrip(normalizeLatestItems(FALLBACK_TICKER_ITEMS), FALLBACK_TICKER_SETTINGS);
       }
-      renderLatestStrip([
-        { type: 'OpenAA', title: '美国华人生活入口 · 招聘 房屋 二手 新闻 本地服务', url: APP_BASE_URL + '/' },
-        { type: '导航', title: '常用网站、DMV、生活工具一站整理', url: APP_BASE_URL + '/' }
-      ]);
     }
 
     function shareOpenAA() {
