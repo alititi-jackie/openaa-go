@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0046a0" />
+  <title>查看题库（含答案）— 纽约 DMV | OpenAA</title>
+  <link rel="icon" type="image/png" href="../favicon/favicon-32x32.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .qa-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
+
+    /* ===== 顶部工具条：按钮高对比度 ===== */
+    .toolbar { display:flex; gap:10px; flex-wrap: wrap; align-items:center; }
+    .toolbar .form-input { flex: 1; min-width: 240px; }
+
+    .toolbar .toolbar-btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      padding: 10px 16px;
+      border-radius: 999px;
+
+      font-size: .92rem;
+      font-weight: 900;
+
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+
+      border: 2px solid rgba(255,255,255,.95);
+      background: #ffffff;
+      color: #0b2b5a;
+      box-shadow: 0 6px 18px rgba(0,0,0,.20);
+      text-decoration: none;
+
+      transition: transform .1s, opacity .15s, box-shadow .15s;
+      white-space: nowrap;
+    }
+    .toolbar .toolbar-btn:hover{
+      opacity: .98;
+      box-shadow: 0 8px 24px rgba(0,0,0,.24);
+    }
+    .toolbar .toolbar-btn:active{ transform: scale(.98); }
+
+    .toolbar .toolbar-btn-primary{
+      background: rgba(255,255,255,.18);
+      color: #fff;
+      border-color: rgba(255,255,255,.95);
+      backdrop-filter: blur(6px);
+    }
+    .toolbar .toolbar-btn-primary:hover{
+      background: rgba(255,255,255,.24);
+    }
+
+    @media (max-width: 520px){
+      .toolbar .form-input{ min-width: 100%; }
+      .toolbar .toolbar-btn{ flex: 1; }
+    }
+
+    /* ===== ✅ 题目 + 图片按钮：按钮紧贴在题目右边 ===== */
+    .qa-q{
+      font-weight: 800;
+      margin-bottom: 10px;
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      /* 关键：允许换行，长题目时按钮会掉到下一行靠左 */
+      flex-wrap: wrap;
+    }
+
+    /* 题目文字：不要强行占满整行（否则按钮就只能被挤走） */
+    .qa-q-text{
+      flex: 0 1 auto;
+      min-width: 0;
+    }
+
+    /* ✅ 看图按钮：取消 margin-left:auto（否则会跑最右） */
+    .qa-img-card{
+      flex: 0 0 auto;
+
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 8px 12px;
+      border-radius: 999px;
+
+      border: 2px solid var(--border);
+      background: #fff;
+      color: var(--text);
+
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+
+      transition: border-color .15s, box-shadow .15s, background .15s, transform .1s;
+      white-space: nowrap;
+    }
+    .qa-img-card:hover{
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(0,102,204,.12);
+      background: rgba(0,102,204,.04);
+    }
+    .qa-img-card:active{ transform: scale(.98); }
+
+    .qa-img-card-icon{
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .qa-img-card-text{
+      font-size: .88rem;
+      font-weight: 900;
+      white-space: nowrap;
+      color: var(--blue);
+    }
+
+    /* ===== 顶部标志入口（只加在题库卡片最上方，不影响其它内容） ===== */
+    .qa-top-link{
+      display:flex;
+      align-items:center;
+      justify-content: flex-start; /* ✅ 让按钮靠近标题，不要跑到最右 */
+      gap: 10px; /* ✅ 和题目行一致的间距，匹配截图红圈效果 */
+      padding: 10px 0 14px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 12px;
+      flex-wrap: wrap; /* ✅ 小屏时可换行，但默认仍紧贴标题 */
+    }
+    .qa-top-link-title{
+      font-weight: 900;
+      color: var(--text);
+      font-size: .95rem;
+      line-height: 1.25;
+    }
+
+    .qa-opts { margin: 0; padding-left: 18px; }
+    .qa-opts li { margin: 6px 0; }
+    .qa-ans { margin-top: 10px; font-weight: 800; color: var(--correct); }
+    .qa-muted { color: var(--text-sub); font-size: .85rem; margin-top: 6px; }
+
+    /* ===== Modal 里的“← 返回”按钮：高对比度 ===== */
+    .img-modal-bar{
+      background: rgba(0,0,0,.55) !important;
+      backdrop-filter: blur(6px);
+    }
+
+    #imgBackBtn{
+      background: #fff !important;
+      color: #0b2b5a !important;
+      border: 2px solid rgba(255,255,255,.95) !important;
+      font-weight: 900 !important;
+      padding: 8px 14px !important;
+      box-shadow: 0 10px 28px rgba(0,0,0,.35);
+    }
+    #imgBackBtn:hover{ background: rgba(255,255,255,.92) !important; }
+
+    #imgModalTitle{
+      font-weight: 900;
+      letter-spacing: .02em;
+      text-shadow: 0 2px 10px rgba(0,0,0,.4);
+    }
+
+    /* Fix: 图片以原始尺寸显示，容器可滚动，确保大图（如标志总览）可看清 */
+    .img-modal-body img {
+      max-width: none;
+      cursor: zoom-in;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-top">
+      <a class="logo-link" href="/index.html" title="OpenAA 首页">
+        <img class="logo-img" src="/logo.png" alt="OpenAA Logo" />
+      </a>
+      <div class="header-subtitle">查看题库（含答案）</div>
+    </div>
+
+    <div class="toolbar">
+      <input class="form-input" id="filterInput" type="search" placeholder="筛选关键词（可选）" autocomplete="off" />
+      <button class="toolbar-btn toolbar-btn-primary" id="toggleAnswersBtn" type="button">👁 显示答案</button>
+      <a class="toolbar-btn" href="index.html">← 返回</a>
+    </div>
+  </div>
+</header>
+
+<main class="page-wrap" style="padding-top:16px;">
+  <div class="card">
+    <div class="text-muted" id="metaLine">题库加载中…</div>
+  </div>
+
+  <div class="card" id="listCard">
+    <!-- ✅ 顶部新增：交通标志与信号（查看图） -->
+    <div class="qa-top-link">
+      <div class="qa-top-link-title">查看所有交通标志与信号</div>
+      <button class="qa-img-card" type="button" data-staticimg="signs_1_16" title="查看图">
+        <span class="qa-img-card-icon">🖼</span>
+        <span class="qa-img-card-text">查看图</span>
+      </button>
+    </div>
+
+    <div id="qaList">加载中…</div>
+  </div>
+</main>
+
+<!-- ✅ Image viewer modal -->
+<div class="img-modal hidden" id="imgModal" role="dialog" aria-modal="true" aria-label="图片查看">
+  <div class="img-modal-bar">
+    <button class="btn btn-ghost btn-sm" id="imgBackBtn" type="button">← 返回</button>
+    <div class="img-modal-title" id="imgModalTitle">图示</div>
+  </div>
+  <div class="img-modal-body">
+    <img id="imgModalImg" alt="题目图示" />
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>非官方练习，仅供学习使用（基于 NY DMV Driver’s Manual 常见要点编写）。</p>
+</footer>
+
+<script src="assets/view.js"></script>
+</body>
+</html>
