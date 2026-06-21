@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0046a0" />
+  <title>成绩 — 纽约 DMV 笔试模拟 | OpenAA</title>
+  <link rel="icon" type="image/png" href="../favicon/favicon-32x32.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-top">
+      <a class="logo-link" href="../index.html" title="OpenAA 首页">
+        <img class="logo-img" src="../logo.png" alt="OpenAA Logo" />
+      </a>
+      <div class="header-subtitle">纽约 DMV 笔试模拟 — 成绩</div>
+    </div>
+  </div>
+</header>
+
+<main class="page-wrap" style="padding-top:20px;">
+
+  <div class="card">
+    <div class="score-ring-wrap">
+      <div class="score-ring">
+        <svg viewBox="0 0 120 120">
+          <circle class="ring-bg" cx="60" cy="60" r="50"></circle>
+          <circle class="ring-fill" cx="60" cy="60" r="50" id="ringFill"
+                  stroke-dasharray="314.16" stroke-dashoffset="314.16"></circle>
+        </svg>
+        <div class="score-center">
+          <div class="score-pct" id="scorePct">—</div>
+          <div class="score-frac" id="scoreFrac">— / —</div>
+        </div>
+      </div>
+      <div class="score-verdict" id="scoreVerdict"></div>
+    </div>
+
+    <div class="score-stats">
+      <div class="stat-item">
+        <div class="stat-val stat-correct" id="statCorrect">—</div>
+        <div class="stat-lbl">✅ 正确</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val stat-wrong" id="statWrong">—</div>
+        <div class="stat-lbl">❌ 错误</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val stat-skip" id="statSkipped">—</div>
+        <div class="stat-lbl">⏭ 未作答</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-actions">
+    <button class="btn btn-danger" id="redoWrongBtn">🔁 重做错题</button>
+    <button class="btn btn-primary" id="againBtn">🔄 再来一套</button>
+    <button class="btn btn-outline" id="shareBtn">📤 分享</button>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <button class="collapsible-btn" id="collapseWrong" aria-expanded="false">
+      <span class="caret">▶</span>
+      <span>错题与解析</span>
+    </button>
+    <div class="collapsible-content" id="wrongContent">
+      <ul class="wrong-list" id="wrongList">
+        <li class="text-muted" style="padding:12px 0;font-size:.9rem;">加载中…</li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>⚠️ <strong>免责声明：</strong>非官方练习题，基于 NY DMV Driver’s Manual 常见要点编写，仅供学习使用。</p>
+  <p style="margin-top:6px;">最后整理：2026-04-17 &nbsp;|&nbsp; <a href="index.html">← 返回首页</a> &nbsp;|&nbsp; <a href="../index.html">OpenAA 首页</a></p>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
