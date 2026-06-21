@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0046a0" />
+  <title>答题 — 纽约 DMV 笔试模拟 | OpenAA</title>
+  <link rel="icon" type="image/png" href="../favicon/favicon-32x32.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-top">
+      <a class="logo-link" href="../index.html" title="OpenAA 首页">
+        <img class="logo-img" src="../logo.png" alt="OpenAA Logo" />
+      </a>
+      <div class="header-subtitle">纽约 DMV 笔试模拟</div>
+
+      <div class="timer-badge hidden" id="timerBadge">
+        ⏱ <span id="timerDisplay">30:00</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="progress-bar-wrap" style="margin-bottom:4px;">
+        <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <div class="progress-label" id="progressLabel">
+        <span>第 1 / 20 题</span><span>0%</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page-wrap" style="padding-top:16px;">
+
+  <div class="card">
+    <div class="question-number" id="questionNum">第 1 题</div>
+    <p class="question-text" id="questionText">题目加载中…</p>
+    <hr class="divider" style="margin-bottom:16px;" />
+    <ul class="options-list" id="optionsList" role="radiogroup" aria-label="选项"></ul>
+  </div>
+
+  <div class="quiz-nav">
+    <button class="btn btn-ghost" id="prevBtn" disabled>← 上一题</button>
+    <button class="btn btn-outline" id="nextBtn">下一题 →</button>
+    <button class="btn btn-success hidden" id="submitBtn">提交 ✓</button>
+  </div>
+
+  <div class="text-center mt-12">
+    <button class="btn btn-ghost btn-sm" id="exitBtn">✕ 退出</button>
+  </div>
+
+  <p class="text-muted text-center" style="font-size:.72rem;margin-top:12px;">
+    小提示：方向键 ← → 切题；数字键 1–4 选择选项
+  </p>
+
+</main>
+
+<!-- ✅ Image viewer modal -->
+<div class="img-modal hidden" id="imgModal" role="dialog" aria-modal="true" aria-label="图片查看">
+  <div class="img-modal-bar">
+    <button class="btn btn-ghost btn-sm" id="imgBackBtn" type="button">← 返回题目</button>
+    <div class="img-modal-title" id="imgModalTitle">图示</div>
+  </div>
+  <div class="img-modal-body">
+    <img id="imgModalImg" alt="题目图示（1-16 合集）" />
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>非官方练习，仅供学习使用（基于 NY DMV Driver’s Manual 常见要点编写）。</p>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
