@@ -55,7 +55,7 @@
     ä¸‰ã€é˜²è¯¯æ”¹è¾¹ç•Œï¼š
     1. ä¸è¦æ”¹é¡¶éƒ¨ Headerã€Logoã€å¿«æ·å¯¼èˆªã€å¹¿å‘Šè½®æ’­ã€æ»šåŠ¨åŠ¨æ€ã€8å®«æ ¼ã€å®žç”¨å·¥å…·ã€åº•éƒ¨å¯¼èˆªã€å›žåˆ°é¡¶éƒ¨ã€‚
     2. ä¸è¦æŠŠæ¨¡æ¿é‡Œçš„ä¸»ç«™é“¾æŽ¥ https://openaa.com æ”¹æˆæ—§ç«™æˆ–å…¶å®ƒåŸŸåã€‚
-    3. ä¿¡æ¯æ»šåŠ¨æ¡å›ºå®šä½¿ç”¨ openaa-app æ–°ç«™å†…å®¹ï¼Œä¸å†è¯»å– openaa-ny æ—§åŠ¨æ€ã€‚
+    3. 信息滚动条读取 openaa-app 首页同源动态。
     4. å¦‚éœ€è°ƒæ•´æ¨¡æ¿ç»“æž„ï¼Œè¯·å¦å­˜ä¸ºæ–°ç‰ˆæœ¬ï¼Œä¸è¦ç›´æŽ¥è¦†ç›–æ—§ç‰ˆæœ¬ã€‚
   ========================================================== -->
   <script>
@@ -739,7 +739,7 @@
         </div>
         <a class="quick-strip" id="latestStrip" data-template-module="ticker" href="https://openaa.com/news" target="_self">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 11-14h-8l1-6Z"/></svg>
-          <span class="quick-strip-text" id="latestStripText">æ­£åœ¨æ˜¾ç¤º OpenAA æ–°ç«™åŠ¨æ€...</span>
+          <span class="quick-strip-text" id="latestStripText">正在读取 OpenAA 最新动态...</span>
           <span class="quick-strip-arrow">â€º</span>
         </a>
       </section>
@@ -1182,14 +1182,14 @@
 
     const APP_BASE_URL = 'https://openaa.com';
     const TOP_LINKS_API = APP_BASE_URL + '/api/top-links';
-    // ä¿¡æ¯æ»šåŠ¨æ¡ä½¿ç”¨ openaa-app æ–°ç«™å†…å®¹ï¼Œé¿å…ç»§ç»­è¯»å– openaa-ny çš„æ—§åŠ¨æ€ã€‚
-    const LATEST_STRIP_ITEMS = [
-      { type: 'OpenAA', title: 'ç¾Žå›½åŽäººç”Ÿæ´»å…¥å£ Â· æ‹›è˜ æˆ¿å±‹ äºŒæ‰‹ æ–°é—» æœ¬åœ°æœåŠ¡', url: APP_BASE_URL + '/' },
-      { type: 'DMV', title: 'çº½çº¦ DMV ä¸­æ–‡é¢˜åº“ã€ç»ƒä¹ ã€æ¨¡æ‹Ÿè€ƒè¯•å’Œç½šå•æŸ¥è¯¢', url: APP_BASE_URL + '/dmv' },
-      { type: 'å¯¼èˆª', title: 'åŽäººå¸¸ç”¨ç½‘ç«™ã€æ”¿åºœæœåŠ¡ã€é“¶è¡Œé‡‘èžå’Œç”Ÿæ´»å·¥å…·', url: APP_BASE_URL + '/navigation' },
-      { type: 'æ–°é—»', title: 'ç¾Žå›½åŽäººèµ„è®¯ã€ç”Ÿæ´»æŒ‡å—å’Œæœ¬åœ°æ¶ˆæ¯', url: APP_BASE_URL + '/news' }
+    const HOME_STATIC_TEMPLATE_API = APP_BASE_URL + '/api/home/static-template';
+    // Ticker reuses the same home data source as openaa-app.
+    const FALLBACK_TICKER_ITEMS = [
+      { label: 'OpenAA 纽约站已上线，欢迎发布招聘、房屋、二手和本地服务信息', href: '/news' }
     ];
-
+    const FALLBACK_TICKER_SETTINGS = {
+      global: { isEnabled: true, intervalSeconds: 4 }
+    };
     const ADS = Array.isArray(OPENAA_CONFIG.banners) ? OPENAA_CONFIG.banners : [];
 
     (function initBanner() {
@@ -1375,40 +1375,72 @@
       }
     }
 
+    function toAppUrl(value, fallbackPath) {
+      const raw = String(value || fallbackPath || '/').trim() || '/';
+      try {
+        return new URL(raw, APP_BASE_URL).toString();
+      } catch (e) {
+        return new URL(fallbackPath || '/', APP_BASE_URL).toString();
+      }
+    }
+
     function normalizeLatestItems(payload) {
-      const raw = Array.isArray(payload) ? payload : (payload && (payload.data || payload.items || payload.posts || payload.latest)) || [];
+      const raw = Array.isArray(payload) ? payload : (payload && (payload.tickerItems || payload.data || payload.items)) || [];
       return raw
-        .filter(item => item && (item.title || item.name))
+        .filter(item => item && (item.label || item.title || item.name))
         .map(item => ({
-          title: item.title || item.name,
-          type: item.type || item.module || item.category || 'æœ€æ–°',
-          url: item.url || item.href || item.link || item.path || 'https://openaa.com/news',
-          location: item.location || item.region || ''
+          label: item.label || item.title || item.name,
+          href: toAppUrl(item.href || item.url || item.link || item.path, '/news'),
+          module: item.module || null
         }));
     }
 
-    function renderLatestStrip(items) {
+    function normalizeTickerSettings(payload) {
+      const settings = payload && payload.tickerSettings;
+      const global = settings && settings.global;
+      const enabled = typeof global?.isEnabled === 'boolean' ? global.isEnabled : FALLBACK_TICKER_SETTINGS.global.isEnabled;
+      const seconds = Number(global?.intervalSeconds);
+      const intervalSeconds = Number.isFinite(seconds)
+        ? Math.min(10, Math.max(3, Math.trunc(seconds)))
+        : FALLBACK_TICKER_SETTINGS.global.intervalSeconds;
+      return { global: { isEnabled: enabled, intervalSeconds } };
+    }
+
+    function renderLatestStrip(items, settings) {
       const strip = document.getElementById('latestStrip');
       const text = document.getElementById('latestStripText');
-      if (!strip || !text || !items.length) return;
+      const normalizedSettings = settings || FALLBACK_TICKER_SETTINGS;
+      if (!strip || !text || !normalizedSettings.global.isEnabled) {
+        if (strip) strip.hidden = true;
+        return;
+      }
+      const tickerItems = items.length > 0
+        ? items
+        : [{ label: 'OpenAA 最新发布，点击右上角放大镜搜索更多内容', href: toAppUrl('/news') }];
+      if (!tickerItems.length) return;
       let i = 0;
       function show() {
-        const item = items[i % items.length];
-        const prefix = item.type ? '[' + item.type + '] ' : '';
-        const suffix = item.location ? ' Â· ' + item.location : '';
-        text.textContent = prefix + item.title + suffix;
-        strip.href = item.url;
+        const item = tickerItems[i % tickerItems.length];
+        text.textContent = item.label;
+        strip.href = item.href;
         strip.target = getTemplateTarget();
         if (getTemplateRel()) strip.rel = getTemplateRel();
         else strip.removeAttribute('rel');
         i += 1;
       }
       show();
-      if (items.length > 1) setInterval(show, 3500);
+      if (tickerItems.length > 1) setInterval(show, normalizedSettings.global.intervalSeconds * 1000);
     }
 
-    function initLatestStripFromApp() {
-      renderLatestStrip(LATEST_STRIP_ITEMS);
+    async function initLatestStripFromApp() {
+      try {
+        const res = await fetch(HOME_STATIC_TEMPLATE_API, { mode: 'cors', cache: 'no-store' });
+        if (!res.ok) throw new Error('home static template api failed');
+        const data = await res.json();
+        renderLatestStrip(normalizeLatestItems(data), normalizeTickerSettings(data));
+      } catch (e) {
+        renderLatestStrip(normalizeLatestItems(FALLBACK_TICKER_ITEMS), FALLBACK_TICKER_SETTINGS);
+      }
     }
 
     function shareOpenAA() {
