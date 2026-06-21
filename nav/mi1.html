@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0078d4">
+
+  <!-- Favicons (按你给定的目录结构) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="msapplication-TileColor" content="#2b5797">
+
+  <title>OpenAA · 美国华人生活入口</title>
+  <meta name="description" content="OpenAA · 美国华人生活入口 -,华人常用·AI工具·网址大全、JOABC.COM、JOEABC.COM、ALITITI.COM等一键直达，导航你的灵感与效率。">
+  <meta name="keywords" content="jozl, AI工具, joabc.com, joeabc.com, alititi.com, 华人导航, AI导航, 实用网站, 常用工具, 免费AI, 华人网站, 网址大全">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #eef2f3;
+      padding: 20px 10px 20px 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0;
+    }
+    .logo a { color: #222; text-decoration: none; }
+    .top-actions {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+    }
+    .top-actions button {
+      padding: 8px 14px;
+      font-size: 14px;
+      background-color: #0078d4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .top-actions button:hover {
+      background-color: #005fa3;
+    }
+    .ai-nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.2em;
+      margin: 18px auto 0 auto;
+      max-width: 95vw;
+      flex-wrap: wrap;
+    }
+    .ai-nav-links a {
+      color: #fff;
+      background: #0078d4;
+      padding: 7px 18px;
+      border-radius: 22px;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px rgba(0,120,212,0.06);
+      margin-bottom: 4px;
+    }
+    .ai-nav-links a:hover {
+      background: #005fa3;
+      color: #fff;
+    }
+    .search {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 95vw;
+    }
+    .search form {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+    }
+    .search input[type="text"] {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 25px;
+      outline: none;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      transition: border 0.2s;
+    }
+    .search input[type="text"]:focus {
+      border-color: #0078d4;
+    }
+    .recommend {
+      background: #fff;
+      margin: 10px auto;
+      padding: 10px;
+      max-width: 95vw;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .recommend a {
+      display: inline-block;
+      margin: 5px 10px;
+      font-size: 14px;
+      padding: 3px 7px;
+      border-radius: 5px;
+      transition: background 0.15s, color 0.15s;
+      color: #222;
+      text-decoration: none;
+    }
+    .recommend a:hover {
+      background: #0078d41a;
+      color: #0078d4;
+    }
+    /* 旗下网站区样式 */
+    .section1 {
+      background: #fff;
+      margin: 10px auto;
+      padding: 10px;
+      max-width: 95vw;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .section1 strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 16px;
+      color: #0078d4;
+      font-weight: bold;
+    }
+    .section1 a {
+      display: inline-block;
+      margin: 5px 10px;
+      font-size: 14px;
+      padding: 3px 7px;
+      border-radius: 5px;
+      transition: background 0.15s, color 0.15s;
+      color: #222;
+      text-decoration: none;
+    }
+    .section1 a:hover {
+      background: #0078d41a;
+      color: #0078d4;
+    }
+    /* 折叠区样式 */
+    .section2 {
+      background: #fff;
+      margin: 10px auto;
+      padding: 10px;
+      max-width: 95vw;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .toggle-header {
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      padding: 6px 0;
+      color: #0078d4;
+      margin-bottom: 2px;
+    }
+    .toggle-content {
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(.4,0,.2,1);
+      max-height: 0;
+    }
+    .toggle-content.open {
+      max-height: 900px;
+      transition: max-height 0.5s cubic-bezier(.4,0,.2,1);
+    }
+    .toggle-content a {
+      display: inline-block;
+      margin: 5px 10px;
+      font-size: 14px;
+      padding: 3px 7px;
+      border-radius: 5px;
+      transition: background 0.15s, color 0.15s;
+      color: #222;
+      text-decoration: none;
+    }
+    .toggle-content a:hover {
+      background: #0078d41a;
+      color: #0078d4;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #888;
+      background-color: #eef2f3;
+      margin-top: 40px;
+    }
+    .back-to-top {
+      display: none;
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      padding: 10px 15px;
+      font-size: 14px;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 999;
+      transition: background 0.3s, opacity 0.25s;
+      opacity: 0.85;
+    }
+    .back-to-top:hover {
+      background-color: #005fa3;
+      opacity: 1;
+    }
+    @media (max-width: 600px) {
+      .logo { font-size: 1.1rem; }
+      .ai-nav-links a { font-size: 13px; padding: 6px 12px; }
+      .ai-nav-links { gap: 0.5em; }
+      .recommend a, .toggle-content a, .section1 a { font-size: 12px; margin: 4px 6px; }
+      .recommend, .section2, .section1 { padding: 8px; }
+      .search { margin: 10px auto; }
+      .footer { font-size: 11px; }
+      .section1 strong { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo"><a href="/">OpenAA · 美国华人生活入口</a></h1>
+    <div class="top-actions">
+      <button onclick="addBookmark()" aria-label="收藏本站">📌 收藏本站</button>
+    </div>
+  </header>
+
+  <!-- 直达链接区块 -->
+<nav class="ai-nav-links" aria-label="直达链接区块">
+  <a href="https://openaa.com/"> 首 页 </a>
+  <a href="https://openaa.com/web">网页版</a>
+  <a href="https://numbermobi.com">美国手机靓号</a>
+  <a href="https://joeabc.com/">跟Joe学英语</a>
+  <a href="https://jozl.com/">jozl</a>
+</nav>
+
+  <div class="search">
+    <form action="https://www.google.com/search" method="get" target="_blank" autocomplete="off" role="search" aria-label="谷歌搜索">
+      <input type="text" name="q" placeholder="华人OpenAA 搜索你感兴趣的内容..." aria-label="搜索内容" required>
+    </form>
+  </div>
+
+  <!-- 推荐专区 -->
+  <nav class="recommend" aria-label="推荐">
+      <a href="https://translate.google.com/?hl=zh-cn&sl=auto&tl=zh-CN&op=translate" target="_blank" rel="noopener noreferrer">Google翻译</a>
+      <a href="https://www.openaa.com/domains" target="_blank" rel="noopener noreferrer">域名展示</a>
+      <a href="https://www.aizhan.com/" target="_blank" rel="noopener noreferrer">爱站网</a>
+      <a href="https://cn.aliyun.com/" target="_blank" rel="noopener noreferrer">阿里云</a>
+      <a href="https://www.ename.net/" target="_blank" rel="noopener noreferrer">易名</a>
+      <a href="https://www.22.cn/" target="_blank" rel="noopener noreferrer">22爱名网</a>
+      <a href="https://www.4.cn/" target="_blank" rel="noopener noreferrer">4.cn金名网</a>
+      <a href="https://www.dnspod.cn/" target="_blank" rel="noopener noreferrer">dnspod</a>
+      <a href="https://www.gname.com/" target="_blank" rel="noopener noreferrer">gname</a>
+      <a href="https://www.dynadot.com/" target="_blank" rel="noopener noreferrer">DYNADOT</a>
+      <a href="https://www.godaddy.com/" target="_blank" rel="noopener noreferrer">godaddy</a>
+      <a href="https://auctions.godaddy.com/beta" target="_blank" rel="noopener noreferrer">godaddy查询 </a>
+      <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">cloudflare</a>
+      <a href="https://framer.com/" target="_blank" rel="noopener noreferrer">framer</a>
+      <a href="https://www.afternic.com" target="_blank" rel="noopener noreferrer">afternic</a>
+      <a href="https://www.sedo.com/" target="_blank" rel="noopener noreferrer">sedo</a>
+      <a href="https://www.weebly.com/" target="_blank" rel="noopener noreferrer">weebly</a>
+      <a href="https://www.dropcatch.com/" target="_blank" rel="noopener noreferrer">域名抢注dropcatch</a>
+      <a href="https://www.shopify.com/zh" target="_blank" rel="noopener noreferrer">跨境独立站</a>
+      <a href="https://who.is/" target="_blank" rel="noopener noreferrer">WHOIS 查询</a>
+      <a href="https://www.namecheap.com/" target="_blank" rel="noopener noreferrer">批量域名搜索</a>
+      <a href="https://qzone.qq.com/" target="_blank" rel="noopener noreferrer">QQ空间</a>
+      <a href="https://user.qzone.qq.com/81271555/main" target="_blank" rel="noopener noreferrer">Jackie的QQ空间</a>
+      <a href="https://www.icloud.com/" target="_blank" rel="noopener noreferrer">苹果帐号</a>
+      <a href="https://www.cadzxw.com/" target="_blank" rel="noopener noreferrer">CAD自学网</a>
+      <a href="https://web-capture.net" target="_blank" rel="noopener noreferrer">网址截图1</a>
+      <a href="https://screenshot.guru" target="_blank" rel="noopener noreferrer">网址截图2</a>
+      <a href="https://www.google.com/search?q=%E4%BA%94%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95" target="_blank" rel="noopener noreferrer">五笔输入法</a>
+  </nav>
+
+  <!-- 常用工具 -->
+<nav class="section1" aria-label="常用工具">
+  <div><strong>🛠 常用工具：</strong>
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github</a>
+      <a href="https://dash.cloudflare.com/" target="_blank" rel="noopener noreferrer">cloudflare</a>
+      <a href="https://web.archive.org/" target="_blank" rel="noopener noreferrer">时光机</a>
+      <a href="https://clideo.com/zh/editor/merge-audio" target="_blank" rel="noopener noreferrer">MP3合拼</a>
+      <a href="https://ttsmp3.com/" target="_blank" rel="noopener noreferrer">文本转语音</a>
+      <a href="https://favicon.io/favicon-converter/" target="_blank" rel="noopener noreferrer">一键生成 .ico 文件</a>      
+      <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">域名备案管理系统</a>
+      <a href="https://tm.aliyun.com/" target="_blank" rel="noopener noreferrer">阿里云商标注册</a>
+      <a href="https://www.tm.cn/" target="_blank" rel="noopener noreferrer">商标查询</a>
+      <a href="https://improvmx.com/" target="_blank" rel="noopener noreferrer">电子邮件转发</a>
+      <a href="https://www.comparitech.com/blog/vpn-privacy/whats-the-best-vpn-for-china-5-that-still-work-in-2016/" target="_blank" rel="noopener noreferrer">最佳中国VPN推荐</a>
+      <a href="https://ziyuan.baidu.com/?castk=LTE%3D" target="_blank" rel="noopener noreferrer">百度搜索资源平台</a>
+      <a href="https://zhanzhang.sogou.com/" target="_blank" rel="noopener noreferrer">搜狗站长平台（腾讯搜索）</a>
+      <a href="https://www.bing.com/webmasters/about" target="_blank" rel="noopener noreferrer">Bing（必应）搜索引擎</a>      
+      <a href="https://www.xml-sitemaps.com/" target="_blank" rel="noopener noreferrer">网站网址创建站点地图</a>
+      <a href="https://search.google.com/search-console/welcome" target="_blank" rel="noopener noreferrer">Google Search Console（谷歌搜索控制台）</a>
+  </div>
+</nav>
+
+  <!-- 建站平台 -->
+<nav class="section1" aria-label="搜索平台">
+  <div><strong>🔍 建站平台：</strong>
+      <a href="https://supabase.com/" target="_blank" rel="noopener noreferrer">Supabase</a>
+      <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer">Vercel</a>
+      <a href="https://github.com/copilot" target="_blank" rel="noopener noreferrer">Github copilot</a>
+      <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a>     
+      <a href="https://img.openaa.com/" target="_blank" rel="noopener noreferrer">OpenAA 图片</a> 
+      <a href="https://app.openaa.com/admin" target="_blank" rel="noopener noreferrer">OpenAA 管理后台</a>            
+      <a href="https://github.com/search" target="_blank" rel="noopener noreferrer">GitHub Search - 全球最大的代码托管和搜索平台</a>
+  </div>
+</nav>
+
+  <!-- 搜索平台 -->
+<nav class="section1" aria-label="搜索平台">
+  <div><strong>🔍 搜索平台：</strong>
+      <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Google</a>
+      <a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">百度</a>
+      <a href="https://www.bing.com/" target="_blank" rel="noopener noreferrer">Bing（必应）</a>
+      <a href="https://sogou.com/" target="_blank" rel="noopener noreferrer">搜狗搜索（腾讯）</a>
+      <a href="https://www.yahoo.com/" target="_blank" rel="noopener noreferrer">Yahoo（雅虎）</a>
+      <a href="https://www.so.com/" target="_blank" rel="noopener noreferrer">360搜索</a>
+      <a href="https://github.com/search" target="_blank" rel="noopener noreferrer">GitHub Search - 全球最大的代码托管和搜索平台</a>
+  </div>
+</nav>
+
+  <!-- 🤖 通用 AI -->
+<nav class="section1" aria-label="🤖 通用 AI">
+  <div><strong>🤖 通用 AI：</strong>
+      <a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer">Deepseek</a>
+      <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a>
+      <a href="https://grok.com/" target="_blank" rel="noopener noreferrer">Grok</a>
+      <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini</a>
+      <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a>
+      <a href="https://copilot.microsoft.com/" target="_blank" rel="noopener noreferrer">Bing Copilot</a>
+      <a href="https://perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity</a>
+      <a href="https://poe.com/" target="_blank" rel="noopener noreferrer">Poe</a>
+      <a href="https://www.yiyan.baidu.com/" target="_blank" rel="noopener noreferrer">文心一言</a>
+      <a href="https://kimi.moonshot.cn/" target="_blank" rel="noopener noreferrer">Kimi</a>
+      <a href="https://doubao.com/" target="_blank" rel="noopener noreferrer">豆包</a>
+      <a href="https://tongyi.aliyun.com/" target="_blank" rel="noopener noreferrer">通义千问</a>
+      <a href="https://huggingface.co/" target="_blank" rel="noopener noreferrer">Hugging Face</a>
+      <a href="https://openaa.com/nav/ai" target="_blank" rel="noopener noreferrer">更多AI</a>
+  </div>
+        <div style="margin-top:10px;"><strong>💻 编程 AI：</strong>
+      <a href="https://github.com/copilot" target="_blank" rel="noopener noreferrer">Github Copilot</a>
+      <a href="https://www.phind.com/" target="_blank" rel="noopener noreferrer">Phind</a>
+      <a href="https://codeium.com/" target="_blank" rel="noopener noreferrer">Codeium</a>
+      <a href="https://www.cursor.sh/" target="_blank" rel="noopener noreferrer">Cursor</a>
+      <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">w3schools</a> 
+      <a href="https://www.suno.ai/" target="_blank" rel="noopener noreferrer">Suno AI</a>
+    </div>
+</nav>
+
+<!-- 常用邮箱 -->
+<nav class="section1" aria-label="常用邮箱">
+  <div><strong>📮 常用邮箱：</strong>
+    <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">Gmail</a>
+    <a href="https://outlook.live.com/" target="_blank" rel="noopener noreferrer">Outlook</a>
+    <a href="https://mail.qq.com/" target="_blank" rel="noopener noreferrer">QQ邮箱</a>
+    <a href="https://mail.163.com/" target="_blank" rel="noopener noreferrer">163邮箱</a>
+    <a href="https://mail.aliyun.com/" target="_blank" rel="noopener noreferrer">阿里邮箱</a>
+    <a href="https://mail.sina.com.cn/" target="_blank" rel="noopener noreferrer">新浪邮箱</a>
+    <a href="https://foxmail.com/" target="_blank" rel="noopener noreferrer">Foxmail</a>
+    <a href="https://mail.yeah.net/" target="_blank" rel="noopener noreferrer">Yeah邮箱</a>
+    <a href="https://hicloud.com/" target="_blank" rel="noopener noreferrer">华为云邮箱</a>
+    <a href="https://mail.126.com/" target="_blank" rel="noopener noreferrer">126邮箱</a>
+  </div>
+</nav>
+
+   <!-- 旗下网站 -->
+  <nav class="section1" aria-label="出售以下域名,323748@gmail.com">
+    <div><strong>🌐 出售以下域名,323748@gmail.com：</strong>
+      <a href="https://openaa.com/nav/">精品域名</a>
+      <a href="https://jozl.com/" target="_blank" rel="noopener noreferrer">jozl</a>
+      <a href="https://elale.com/" target="_blank" rel="noopener noreferrer">elale</a>     
+      <a href="https://foxtoday.com/" target="_blank" rel="noopener noreferrer">FoxToday</a>
+      <a href="https://meihuaren.com/" target="_blank" rel="noopener noreferrer">美华人 MeiHuaren</a>
+      <a href="https://bobaup.com/" target="_blank" rel="noopener noreferrer">bobaUP</a>
+      <a href="https://jmtea.com/" target="_blank" rel="noopener noreferrer">JMtea</a>
+      <a href="https://69nav.com/"target="_blank" rel="noopener noreferrer">69nav.com</a>
+      <a href="https://Joabc.com/" target="_blank" rel="noopener noreferrer">joabc</a>
+      <a href="https://joeabc.com/" target="_blank" rel="noopener noreferrer">joeabc</a>
+      <a href="https://alititi.com/" target="_blank" rel="noopener noreferrer">alititi</a>
+      <a href="https://luckynumberusa.com/" target="_blank" rel="noopener noreferrer">luckyNumberUsa</a>
+      <a href="https://numbermobi.com/" target="_blank" rel="noopener noreferrer">NumberMobi</a>
+      <a href="https://numbermobile.com/" target="_blank" rel="noopener noreferrer">NumberMobile</a>
+      <a href="https://supergobuy.com/" target="_blank" rel="noopener noreferrer">SuperGobuy</a>
+      <a href="https://onegobuy.com/" target="_blank" rel="noopener noreferrer">OneGobuy</a>
+      <a href="https://chinabsr.org/" target="_blank" rel="noopener noreferrer">ChinaBSR</a>
+      <a href="https://cnbsr.org/" target="_blank" rel="noopener noreferrer">CNBSR</a>      
+      <a href="https://asa.vip/"target="_blank" rel="noopener noreferrer">asa.vip</a> 
+      <a href="https://seekroam.com/" target="_blank" rel="noopener noreferrer">SeekRoam</a>
+      <a href="https://joyhush.com/" target="_blank" rel="noopener noreferrer">JoyHush</a>
+      <a href="https://all.edu.kg/" target="_blank" rel="noopener noreferrer">all.edu.kg</a>
+      <a href="https://forall.help/" target="_blank" rel="noopener noreferrer">Forall.help</a> 
+      <a href="https://helphub.vip/"target="_blank" rel="noopener noreferrer">helphub.vip</a>
+      <a href="https://tap.bi/" target="_blank" rel="noopener noreferrer">tap.bi</a>   
+      <a href="https://usa168hub.com/" target="_blank" rel="noopener noreferrer">usa168hub</a>   
+      <a href="https://123638.com/" target="_blank" rel="noopener noreferrer">123638</a>    
+      <a href="https://jo.edu.kg/" target="_blank" rel="noopener noreferrer">jo.edu.kg</a>     
+      <a href="https://18hot.vip/"target="_blank" rel="noopener noreferrer">18Hot.vip</a> 
+      <a href="https://18hub.vip/"target="_blank" rel="noopener noreferrer">18hub.vip</a>   
+      <a href="https://tapbi.xyz/"target="_blank" rel="noopener noreferrer">tapbi.xyz</a>
+  </nav>
+
+  <!-- 折叠区 -->
+  <nav class="section2" aria-label="其它专区">
+    <div class="toggle-header" onclick="toggleSection('otherLinks')">📁 其它</div>
+    <div id="otherLinks" class="toggle-content" aria-expanded="false">
+      <a href="https://dimsumsam.us/" target="_blank" rel="noopener noreferrer">金满庭</a>
+      <a href="https://kingskitchenusa.com/" target="_blank" rel="noopener noreferrer">金煌煲煲好</a>
+      <a href="https://ekitchensupply.com/zh" target="_blank" rel="noopener noreferrer">ekitchensupply</a>
+      <a href="https://www.pandarange.com/" target="_blank" rel="noopener noreferrer">L&T 餐厅设备公司</a>
+      <a href="https://www.youtube.com/@ltadministrator6042/videos" target="_blank" rel="noopener noreferrer">L&T youtube</a>
+      <a href="https://www.facebook.com/people/LT-Restaurant-Equipment-Inc/61558406247428/" target="_blank" rel="noopener noreferrer">L&T Facebook</a>
+      <a href="https://acm-fan.com/" target="_blank" rel="noopener noreferrer">厨房排气扇</a>
+      <a href="https://www.youtube.com/@alititi-Jackie" target="_blank" rel="noopener noreferrer">Alititi youtube</a>
+      <a href="https://fauxid.com/" target="_blank" rel="noopener noreferrer">假名和身份生成器</a>
+      <a href="https://www.ncsu.edu/" target="_blank" rel="noopener noreferrer">北卡罗来纳州立大学</a>
+      <a href="https://youtu.be/yJ50bG9axJc?si=oCXXg-oJnc6btxt9" target="_blank" rel="noopener noreferrer">ncsu.edu教程</a>
+      <a href="https://asuonline.asu.edu/" target="_blank" rel="noopener noreferrer">亚利桑那州立大学</a>
+      <a href="https://youtu.be/JHg9kQ8DXSA?si=Q5Pz9DWrqUTu-6dX" target="_blank" rel="noopener noreferrer">asu.edu教程</a>
+      <a href="https://app.rippling.com/" target="_blank" rel="noopener noreferrer">rippling</a>
+      <a href="https://www.numberbarn.com/" target="_blank" rel="noopener noreferrer">NumberBarn</a>
+      <a href="https://www.ringboost.com/" target="_blank" rel="noopener noreferrer">RingBoost</a>
+      <a href="https://tollfreenumbers.com/" target="_blank" rel="noopener noreferrer">TollFreeNumbers</a>
+      <a href="https://www.nyeznumber.com/" target="_blank" rel="noopener noreferrer">nyeznumber</a>
+      <a href="https://www.bling.cloud/" target="_blank" rel="noopener noreferrer">Bling.cloud</a>
+      <a href="https://talkroute.com/" target="_blank" rel="noopener noreferrer">Talkroute</a>
+      <a href="https://www.dialaxy.com/" target="_blank" rel="noopener noreferrer">Dialaxy</a>
+      <a href="https://www.sxl.cn/" target="_blank" rel="noopener noreferrer">上线了</a>
+      <a href="https://www.metinfo.cn/" target="_blank" rel="noopener noreferrer">米拓</a>
+      <a href="https://www.deepl.com/translator" target="_blank" rel="noopener noreferrer">DeepL翻译</a>
+      <a href="https://mail.proton.me/" target="_blank" rel="noopener noreferrer">ProtonMail</a>
+      <a href="https://www.oalley.fr/" target="_blank" rel="noopener noreferrer">Oalley地图</a>
+      <a href="https://www.speedtest.net/" target="_blank" rel="noopener noreferrer">网速测试</a>
+      <a href="https://www.photopea.com/" target="_blank" rel="noopener noreferrer">在线PS</a>
+      <a href="https://www.remove.bg/" target="_blank" rel="noopener noreferrer">图片去背</a>
+      <a href="https://tinywow.com/" target="_blank" rel="noopener noreferrer">TinyWow工具箱</a>
+      <a href="https://dict.eudic.net/" target="_blank" rel="noopener noreferrer">欧路词典</a>
+      <a href="https://you.com/" target="_blank" rel="noopener noreferrer">You.com</a>
+      <a href="https://pan.baidu.com/" target="_blank" rel="noopener noreferrer">百度网盘</a>
+      <a href="https://www.alipan.com/" target="_blank" rel="noopener noreferrer">阿里云盘</a>
+      <a href="https://www.mediafire.com/" target="_blank" rel="noopener noreferrer">MediaFire网盘</a>
+      <a href="https://terabox.com/" target="_blank" rel="noopener noreferrer">Terabox网盘</a>
+      <a href="https://chat.lmsys.org/" target="_blank" rel="noopener noreferrer">Chatbot Arena</a>
+      <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini</a>
+      <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a>
+      <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity</a>
+      <a href="https://www.kdocs.cn/latest?from=ai_login" target="_blank" rel="noopener noreferrer">金山文档</a>
+      <a href="https://www.yuque.com/" target="_blank" rel="noopener noreferrer">语雀</a>
+      <a href="https://www.facebook.com/settings?tab=profile&section=name&view" target="_blank" rel="noopener noreferrer">BK</a>
+    </div>
+  </nav>
+
+  <button class="back-to-top" onclick="scrollToTop()" aria-label="回到顶部" id="backToTopBtn">⬆️ 回到顶部</button>
+
+  <footer class="footer">
+    © 2025 <a href="https://www.openaa.com" target="_blank" rel="noopener noreferrer">OpenAA.com</a> 保留所有权利 | 联系邮箱：<a href="mailto:323748@gmail.com">323748@gmail.com</a>
+  </footer>
+
+  <script>
+    function addBookmark() {
+      alert('请使用 Ctrl+D (或 Cmd+D) 收藏本网站，或在浏览器菜单中选择“添加书签”');
+    }
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.addEventListener('scroll', function() {
+      const btn = document.getElementById('backToTopBtn');
+      if (window.scrollY > 200) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        const expanded = section.classList.toggle('open');
+        section.setAttribute('aria-expanded', expanded);
+      }
+    }
+  </script>
+</body>
+</html>
