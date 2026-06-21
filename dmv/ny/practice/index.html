@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>页面跳转中...</title>
+  <meta name="robots" content="noindex,nofollow" />
+
+  <!--
+    =========================
+    只需要修改这里的跳转网址
+    =========================
+  -->
+  <script>
+    const TARGET_URL = "https://ny.openaa.com/dmv/ny/practice";
+    const REDIRECT_DELAY = 0; // 0 = 立即跳转；1000 = 1秒后跳转
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f5f7fb;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 480px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 40px 28px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .logo {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #6b7280;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 20px;
+      background: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="logo">🔄</div>
+    <h1>页面跳转中...</h1>
+    <p>如果没有自动跳转，请点击下方按钮继续。</p>
+    <a id="jumpBtn" class="btn" href="#">立即进入</a>
+  </div>
+
+  <script>
+    const jumpBtn = document.getElementById("jumpBtn");
+    jumpBtn.href = TARGET_URL;
+
+    setTimeout(() => {
+      window.location.replace(TARGET_URL);
+    }, REDIRECT_DELAY);
+  </script>
+
+  <noscript>
+    <style>
+      .noscript-link {
+        display: block;
+        margin-top: 18px;
+        color: #2563eb;
+        font-weight: 600;
+      }
+    </style>
+    <p>
+      浏览器未开启 JavaScript，请复制上方目标网址或点击按钮进入。
+    </p>
+  </noscript>
+</body>
+</html>
