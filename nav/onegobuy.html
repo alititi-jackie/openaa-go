@@ -1,94 +1,110 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>购物导航 | 美国中国电商大全 | OpenAA</title>
-  <meta name="description" content="OpenAA 购物导航：美国电商、中国电商、服装、美妆、数码、家居一站式购物导航大全。">
-  <meta name="keywords" content="购物导航,美国电商,中国电商,亚马逊,淘宝,京东,服装,美妆,数码,家居">
+  <title>è´­ç‰©å¯¼èˆª | ç¾Žå›½ä¸­å›½ç”µå•†å¤§å…¨ | OpenAA</title>
+  <meta name="description" content="OpenAA è´­ç‰©å¯¼èˆªï¼šç¾Žå›½ç”µå•†ã€ä¸­å›½ç”µå•†ã€æœè£…ã€ç¾Žå¦†ã€æ•°ç ã€å®¶å±…ä¸€ç«™å¼è´­ç‰©å¯¼èˆªå¤§å…¨ã€‚">
+  <meta name="keywords" content="è´­ç‰©å¯¼èˆª,ç¾Žå›½ç”µå•†,ä¸­å›½ç”µå•†,äºšé©¬é€Š,æ·˜å®,äº¬ä¸œ,æœè£…,ç¾Žå¦†,æ•°ç ,å®¶å±…">
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://go.openaa.com/nav/onegobuy">
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="购物导航 | OpenAA" />
-  <meta property="og:description" content="美国中国电商全覆盖购物导航平台。" />
+  <meta property="og:title" content="è´­ç‰©å¯¼èˆª | OpenAA" />
+  <meta property="og:description" content="ç¾Žå›½ä¸­å›½ç”µå•†å…¨è¦†ç›–è´­ç‰©å¯¼èˆªå¹³å°ã€‚" />
   <meta property="og:url" content="https://go.openaa.com/nav/onegobuy" />
   <meta property="og:image" content="https://img.openaa.com/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="购物导航 | OpenAA" />
-  <meta name="twitter:description" content="美国中国电商、服装、美妆、数码、家居一站式购物导航大全。" />
+  <meta name="twitter:title" content="è´­ç‰©å¯¼èˆª | OpenAA" />
+  <meta name="twitter:description" content="ç¾Žå›½ä¸­å›½ç”µå•†ã€æœè£…ã€ç¾Žå¦†ã€æ•°ç ã€å®¶å±…ä¸€ç«™å¼è´­ç‰©å¯¼èˆªå¤§å…¨ã€‚" />
   <meta name="twitter:image" content="https://img.openaa.com/logo.png" />
   <link rel="icon" href="https://img.openaa.com/favicon.ico" />
   <link rel="apple-touch-icon" href="https://img.openaa.com/apple-touch-icon.png" />
 
 
   <!-- =========================================================
-    OpenAA 通用静态页面说明
+    OpenAA é€šç”¨é™æ€é¡µé¢æ¨¡æ¿ Â· openaa-app ç‰ˆ
+    Template Version: 1.0.0
+    Primary Domain: https://openaa.com
+    Image Domain:   https://img.openaa.com
 
-    一、站长自己改的地方：只改下面 OPENAA_CONFIG
-    1. banners：广告图片地址 + 点击广告打开的链接。
-    2. modules：控制广告轮播、滚动动态、8宫格、实用工具显示或隐藏。
-       true  = 显示
-       false = 隐藏
-       隐藏后页面会自动收紧，不会留下大空白。
-    3. templateLinkMode：控制“模板固定区域”的链接打开方式。
-       "new"  = 新窗口打开（默认）
-       "same" = 当前页面打开
-       只控制：顶部 Logo、纽约快捷栏、广告图、滚动动态、8宫格、实用工具、底部导航。
-       不控制：中间正文内容里的链接。
+    ä¸€ã€ç«™é•¿è‡ªå·±æ”¹çš„åœ°æ–¹ï¼šåªæ”¹ä¸‹é¢ OPENAA_CONFIG
+    1. versionï¼šæ¨¡æ¿ç‰ˆæœ¬å·ï¼Œæ–¹ä¾¿ä»¥åŽç¡®è®¤æ–‡ä»¶æ˜¯å¦ä¸ºæœ€æ–°ç‰ˆã€‚
+    2. pageTypeï¼šé¡µé¢ç±»åž‹æ ‡è®°ï¼Œåªä½œè¯†åˆ«å’ŒåŽç»­æ‰©å±•ï¼Œä¸æ”¹å˜å½“å‰è§†è§‰æ•ˆæžœã€‚
+       å¯ç”¨å»ºè®®ï¼š"standard" / "guide" / "notice" / "ad" / "topic"
+    3. bannersï¼šå¹¿å‘Šå›¾ç‰‡åœ°å€ + ç‚¹å‡»å¹¿å‘Šæ‰“å¼€çš„é“¾æŽ¥ã€‚
+    4. modulesï¼šæŽ§åˆ¶å¹¿å‘Šè½®æ’­ã€æ»šåŠ¨åŠ¨æ€ã€8å®«æ ¼ã€å®žç”¨å·¥å…·æ˜¾ç¤ºæˆ–éšè—ã€‚
+       true  = æ˜¾ç¤º
+       false = éšè—
+       éšè—åŽé¡µé¢ä¼šè‡ªåŠ¨æ”¶ç´§ï¼Œä¸ä¼šç•™ä¸‹å¤§ç©ºç™½ã€‚
+    5. templateLinkModeï¼šæŽ§åˆ¶â€œæ¨¡æ¿å›ºå®šåŒºåŸŸâ€çš„é“¾æŽ¥æ‰“å¼€æ–¹å¼ã€‚
+       "new"  = æ–°çª—å£æ‰“å¼€
+       "same" = å½“å‰é¡µé¢æ‰“å¼€ï¼ˆé»˜è®¤ï¼‰
+       åªæŽ§åˆ¶ï¼šé¡¶éƒ¨ Logoã€é¡¶éƒ¨å¿«æ·å¯¼èˆªã€å¹¿å‘Šå›¾ã€æ»šåŠ¨åŠ¨æ€ã€8å®«æ ¼ã€å®žç”¨å·¥å…·ã€åº•éƒ¨å¯¼èˆªã€‚
+       ä¸æŽ§åˆ¶ï¼šä¸­é—´æ­£æ–‡å†…å®¹é‡Œçš„é“¾æŽ¥ã€‚
 
-    二、发给 AI 写内容时，请告诉 AI：
-    1. 保留模板整体效果，不要重做设计。
-    2. 不要修改 OPENAA_CONFIG，广告、板块显示隐藏、链接打开方式由站长自己改。
-    3. AI 只修改 head 里的 SEO 和“页面内容开始/页面内容结束”之间的正文。
-    4. 正文直接写进本 HTML，不要做外部动态加载内容页。
-    5. 正文建议用 <article class="template-card"> 包住，保持卡片风格统一。
-    6. 正文里的链接按内容需要设置，不受 templateLinkMode 控制。
-    7. 正式页面的 title、description、keywords、canonical、OG、Twitter、结构化数据都要按当前内容改好，不要写“模板”。
+    äºŒã€å‘ç»™ AI å†™å†…å®¹æ—¶ï¼Œè¯·å‘Šè¯‰ AIï¼š
+    1. ä¿ç•™æ¨¡æ¿æ•´ä½“æ•ˆæžœï¼Œä¸è¦é‡åšè®¾è®¡ã€‚
+    2. ä¸è¦ä¿®æ”¹ OPENAA_CONFIGï¼Œå¹¿å‘Šã€æ¿å—æ˜¾ç¤ºéšè—ã€é“¾æŽ¥æ‰“å¼€æ–¹å¼ç”±ç«™é•¿è‡ªå·±æ”¹ã€‚
+    3. AI åªä¿®æ”¹ head é‡Œçš„ SEO å’Œâ€œé¡µé¢å†…å®¹å¼€å§‹/é¡µé¢å†…å®¹ç»“æŸâ€ä¹‹é—´çš„æ­£æ–‡ã€‚
+    4. æ­£æ–‡ç›´æŽ¥å†™è¿›æœ¬ HTMLï¼Œä¸è¦åšå¤–éƒ¨åŠ¨æ€åŠ è½½å†…å®¹é¡µã€‚
+    5. æ­£æ–‡å»ºè®®ç”¨ <article class="template-card"> åŒ…ä½ï¼Œä¿æŒå¡ç‰‡é£Žæ ¼ç»Ÿä¸€ã€‚
+    6. æ­£æ–‡é‡Œçš„é“¾æŽ¥æŒ‰å†…å®¹éœ€è¦è®¾ç½®ï¼Œä¸å— templateLinkMode æŽ§åˆ¶ã€‚
+    7. æ­£å¼é¡µé¢çš„ titleã€descriptionã€keywordsã€canonicalã€OGã€Twitterã€ç»“æž„åŒ–æ•°æ®éƒ½è¦æŒ‰å½“å‰å†…å®¹æ”¹å¥½ï¼Œä¸è¦å†™â€œæ¨¡æ¿â€ã€‚
+
+    ä¸‰ã€é˜²è¯¯æ”¹è¾¹ç•Œï¼š
+    1. ä¸è¦æ”¹é¡¶éƒ¨ Headerã€Logoã€å¿«æ·å¯¼èˆªã€å¹¿å‘Šè½®æ’­ã€æ»šåŠ¨åŠ¨æ€ã€8å®«æ ¼ã€å®žç”¨å·¥å…·ã€åº•éƒ¨å¯¼èˆªã€å›žåˆ°é¡¶éƒ¨ã€‚
+    2. ä¸è¦æŠŠæ¨¡æ¿é‡Œçš„ä¸»ç«™é“¾æŽ¥ https://openaa.com æ”¹æˆæ—§ç«™æˆ–å…¶å®ƒåŸŸåã€‚
+    3. ä¿¡æ¯æ»šåŠ¨æ¡å›ºå®šä½¿ç”¨ openaa-app æ–°ç«™å†…å®¹ï¼Œä¸å†è¯»å– openaa-ny æ—§åŠ¨æ€ã€‚
+    4. å¦‚éœ€è°ƒæ•´æ¨¡æ¿ç»“æž„ï¼Œè¯·å¦å­˜ä¸ºæ–°ç‰ˆæœ¬ï¼Œä¸è¦ç›´æŽ¥è¦†ç›–æ—§ç‰ˆæœ¬ã€‚
   ========================================================== -->
   <script>
     const OPENAA_CONFIG = {
-      // 1）广告轮播：图片地址 + 点击图片打开的链接
+      // 0ï¼‰æ¨¡æ¿ç‰ˆæœ¬ä¸Žé¡µé¢ç±»åž‹ï¼šåªä½œè¯†åˆ«å’ŒåŽç»­æ‰©å±•ï¼Œä¸æ”¹å˜å½“å‰è§†è§‰æ•ˆæžœ
+      version: "1.0.0",
+      pageType: "standard",
+
+      // 1ï¼‰å¹¿å‘Šè½®æ’­ï¼šå›¾ç‰‡åœ°å€ + ç‚¹å‡»å›¾ç‰‡æ‰“å¼€çš„é“¾æŽ¥
       banners: [
         {
           image: "https://img.openaa.com/img/banners/6e374654-6816-4da8-9736-bd374ea70b04.png",
           link: "https://openaa.com/jobs",
-          alt: "OpenAA 招聘求职"
+          alt: "OpenAA æ‹›è˜æ±‚èŒ"
         },
         {
           image: "https://img.openaa.com/img/banners/71a8312c-c4b2-4bde-bc4e-c35032223fde.png",
           link: "https://openaa.com/housing",
-          alt: "OpenAA 房屋租售"
+          alt: "OpenAA æˆ¿å±‹ç§Ÿå”®"
         },
         {
           image: "https://img.openaa.com/img/banners/1215d9b3-f38c-4173-ad87-aa0792690bd8.png",
           link: "https://openaa.com/secondhand",
-          alt: "OpenAA 二手闲置"
+          alt: "OpenAA äºŒæ‰‹é—²ç½®"
         },
         {
           image: "https://img.openaa.com/img/banners/17588ab5-0248-47ae-a9a2-b0e02e06ea5b.png",
           link: "https://openaa.com/dmv",
-          alt: "OpenAA DMV 笔试模拟"
+          alt: "OpenAA DMV ç¬”è¯•æ¨¡æ‹Ÿ"
         },
         {
           image: "https://img.openaa.com/img/banners/b720c8f2-d90c-451b-87fc-bec4179d7d61.png",
           link: "https://openaa.com/services",
-          alt: "OpenAA 本地服务"
+          alt: "OpenAA æœ¬åœ°æœåŠ¡"
         }
       ],
 
-      // 2）常用板块显示 / 隐藏
+      // 2ï¼‰å¸¸ç”¨æ¿å—æ˜¾ç¤º / éšè—
       modules: {
-        showBanner: false,   // 广告轮播：true显示，false隐藏
-        showTicker: true,    // 滚动动态：true显示，false隐藏
-        showGridMenu: false, // 8宫格：true显示，false隐藏
-        showTools: false     // 实用工具：true显示，false隐藏
+        showBanner: false,   // å¹¿å‘Šè½®æ’­ï¼štrueæ˜¾ç¤ºï¼Œfalseéšè—
+        showTicker: true,   // æ»šåŠ¨åŠ¨æ€ï¼štrueæ˜¾ç¤ºï¼Œfalseéšè—
+        showGridMenu: false, // 8å®«æ ¼ï¼štrueæ˜¾ç¤ºï¼Œfalseéšè—
+        showTools: false     // å®žç”¨å·¥å…·ï¼štrueæ˜¾ç¤ºï¼Œfalseéšè—
       },
 
-      // 3）模板固定区域链接打开方式
-      // "new"  = 新窗口打开
-      // "same" = 当前页面打开
-      // 只控制模板固定区域链接，不控制正文内容里的链接
+      // 3ï¼‰æ¨¡æ¿å›ºå®šåŒºåŸŸé“¾æŽ¥æ‰“å¼€æ–¹å¼
+      // "new"  = æ–°çª—å£æ‰“å¼€
+      // "same" = å½“å‰é¡µé¢æ‰“å¼€
+      // åªæŽ§åˆ¶æ¨¡æ¿å›ºå®šåŒºåŸŸé“¾æŽ¥ï¼Œä¸æŽ§åˆ¶æ­£æ–‡å†…å®¹é‡Œçš„é“¾æŽ¥
       templateLinkMode: "same"
     };
   </script>
@@ -100,19 +116,30 @@
       background: linear-gradient(90deg, #d9dce3 0%, #eef0f4 28%, #eef0f4 72%, #d9dce3 100%);
       color: #18181b;
       min-height: 100vh;
-      padding-bottom: calc(64px + env(safe-area-inset-bottom));
+      padding-bottom: calc(72px + env(safe-area-inset-bottom));
     }
     a { color: inherit; text-decoration: none; }
     button { font: inherit; }
     [hidden] { display: none !important; }
 
+    :root {
+      --app-shell-width: 560px;
+      --app-bg: #f4f4f7;
+      --app-blue: #3b82f6;
+      --app-text: #18181b;
+      --app-muted: #71717a;
+      --app-border: #e4e4e7;
+      --app-side-shadow: -32px 0 44px rgba(15, 23, 42, .14), 32px 0 44px rgba(15, 23, 42, .14);
+    }
+
     .app-shell {
-      max-width: 560px;
+      width: 100%;
+      max-width: var(--app-shell-width);
       min-height: 100vh;
       margin: 0 auto;
-      background: #f4f4f7;
+      background: var(--app-bg);
       position: relative;
-      box-shadow: -32px 0 44px rgba(15, 23, 42, .14), 32px 0 44px rgba(15, 23, 42, .14);
+      box-shadow: var(--app-side-shadow);
     }
 
     .app-header {
@@ -121,13 +148,13 @@
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
-      max-width: 560px;
+      max-width: var(--app-shell-width);
       z-index: 100;
       background: rgba(255,255,255,.96);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(228,228,235,.8);
-      box-shadow: -32px 0 44px rgba(15, 23, 42, .14), 32px 0 44px rgba(15, 23, 42, .14);
+      box-shadow: var(--app-side-shadow);
     }
     .header-inner {
       height: 56px;
@@ -195,7 +222,7 @@
       left: 50%;
       transform: translateX(-50%) translateY(-8px);
       width: 100%;
-      max-width: 560px;
+      max-width: var(--app-shell-width);
       z-index: 98;
       background: rgba(255,255,255,.98);
       border-bottom: 1px solid #e4e4e7;
@@ -346,8 +373,8 @@
 
 
     /* ===================================================
-       OpenAA 首页 8 宫格 + 实用工具
-       样式按 openaa.com 首页效果整理
+       OpenAA é¦–é¡µ 8 å®«æ ¼ + å®žç”¨å·¥å…·
+       æ ·å¼æŒ‰ openaa-app é¦–é¡µæ•ˆæžœæ•´ç†
        =================================================== */
     .home-grid-section {
       background: #f4f4f5;
@@ -500,7 +527,7 @@
       bottom: 0;
       transform: translateX(-50%);
       width: 100%;
-      max-width: 560px;
+      max-width: var(--app-shell-width);
       z-index: 100;
       background: rgba(255,255,255,.97);
       backdrop-filter: blur(12px);
@@ -514,23 +541,25 @@
     .bottom-nav-item {
       flex: 1;
       min-width: 0;
+      min-height: 64px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 3px;
-      padding: 8px 4px 10px;
-      color: #71717a;
-      font-size: 11px;
+      padding: 7px 4px 9px;
+      color: var(--app-muted);
+      font-size: 13px;
+      line-height: 1.05;
       font-weight: 500;
       -webkit-tap-highlight-color: transparent;
     }
-    .bottom-nav-item svg { width: 24px; height: 24px; stroke: currentColor; }
-    .bottom-nav-item.active { color: #3b82f6; font-weight: 700; }
+    .bottom-nav-item svg { width: 24px; height: 24px; stroke: currentColor; flex: 0 0 auto; }
+    .bottom-nav-item.active { color: var(--app-blue); font-weight: 700; }
 
     .back-top {
       position: fixed;
-      right: calc(50% - 260px + 12px);
+      right: calc((100vw - min(100vw, var(--app-shell-width))) / 2 + 14px);
       bottom: calc(78px + env(safe-area-inset-bottom));
       width: 42px;
       height: 42px;
@@ -564,6 +593,11 @@
       box-shadow: 0 4px 16px rgba(0,0,0,.2);
     }
 
+
+    @media (min-width: 768px) { :root { --app-shell-width: 760px; } }
+    @media (min-width: 1024px) { :root { --app-shell-width: 960px; } }
+    @media (min-width: 1280px) { :root { --app-shell-width: 1040px; } }
+
     @media (min-width: 480px) { .banner-slide img { height: 180px; } }
     @media (min-width: 600px) { .banner-slide img { height: 200px; } }
     @media (min-width: 768px) {
@@ -577,563 +611,493 @@
       .app-shell, .app-header, .bottom-nav { box-shadow: none; }
       .back-top { right: 14px; }
     }
-
-
-    /* ===== OneGoBuy / 购物导航内容样式（从原页面迁移） ===== */
-
-    /* 购物页面内容专属样式（结构/布局/颜色由 style.css 提供） */
-    :root {
-      --primary: #0078d4;
-      --primary-dark: #005fa3;
-      --card-bg: #ffffff;
-      --text-dark: #1f2937;
-      --text-light: #6b7280;
-      --border: #e5e7eb;
-      --shadow: 0 2px 8px rgba(0,0,0,0.08);
-      --radius: 12px;
-    }
-
-    /* 隐藏 Banner / 搜索框 / 8宫格入口 */
-    .banner-section    { display: none !important; }
-    .search-section    { display: none !important; }
-    .grid-menu-section { display: none !important; }
-
-    h1 {
-      font-size: 24px;
-      margin: 16px 0 8px 0;
-      color: var(--text-dark);
-    }
-
-    h2 {
-      font-size: 18px;
-      margin: 20px 0 12px 0;
-      color: var(--text-dark);
-      font-weight: 600;
-    }
-
+    /* Page-specific styles migrated from old OpenAA template */
     .page-desc {
-      font-size: 14px;
-      color: var(--text-light);
-      margin-bottom: 16px;
-      line-height: 1.6;
-    }
+          font-size: 14px;
+          color: var(--text-light);
+          margin-bottom: 16px;
+          line-height: 1.6;
+        }
+        .card {
+          background: var(--card-bg);
+          border-radius: var(--radius);
+          box-shadow: var(--shadow);
+          margin: 8px 0;
+          overflow: hidden;
+        }
+        .card-header {
+          padding: 12px 16px;
+          background: linear-gradient(135deg, #f0f7ff 0%, #f8fbff 100%);
+          border-bottom: 1px solid var(--border);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .card-header-icon { font-size: 20px; }
+        .card-header-title {
+          font-size: 15px;
+          font-weight: 600;
+          color: var(--primary);
+          margin: 0;
+        }
+        .card-content { padding: 0; }
+        .shopping-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0;
+        }
+        .shopping-item {
+          padding: 12px 8px;
+          border-right: 1px solid var(--border);
+          border-bottom: 1px solid var(--border);
+          text-decoration: none;
+          color: var(--text-dark);
+          font-size: 14px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          transition: background 0.15s;
+          min-height: 90px;
+          justify-content: center;
+          text-align: center;
+        }
+        .shopping-item:nth-child(3n) { border-right: none; }
+        .shopping-item:active { background: #f0f7ff; }
+        .shopping-item-icon { font-size: 28px; }
+        .shopping-item-name {
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 1.3;
+        }
+        .shopping-body { padding: 8px; }
+        @media (min-width: 560px) {
+          .shopping-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        /* æš—é»‘æ¨¡å¼ */
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --card-bg: #2d2d2d;
+            --text-dark: #f5f5f5;
+            --text-light: #a0a0a0;
+            --border: #3d3d3d;
+          }
 
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      margin: 8px 0;
-      overflow: hidden;
-    }
-
-    .card-header {
-      padding: 12px 16px;
-      background: linear-gradient(135deg, #f0f7ff 0%, #f8fbff 100%);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .card-header-icon { font-size: 20px; }
-
-    .card-header-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--primary);
-      margin: 0;
-    }
-
-    .card-content { padding: 0; }
-
-    .shopping-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-    }
-
-    .shopping-item {
-      padding: 12px 8px;
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      text-decoration: none;
-      color: var(--text-dark);
-      font-size: 14px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      transition: background 0.15s;
-      min-height: 90px;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .shopping-item:nth-child(3n) { border-right: none; }
-    .shopping-item:active { background: #f0f7ff; }
-
-    .shopping-item-icon { font-size: 28px; }
-
-    .shopping-item-name {
-      font-size: 13px;
-      font-weight: 500;
-      line-height: 1.3;
-    }
-
-    .shopping-body { padding: 8px; }
-
-    @media (min-width: 560px) {
-      .shopping-grid { grid-template-columns: repeat(4, 1fr); }
-    }
-
-    /* 暗黑模式 */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --card-bg: #2d2d2d;
-        --text-dark: #f5f5f5;
-        --text-light: #a0a0a0;
-        --border: #3d3d3d;
-      }
-
-      .card-header { background: #3d3d3d; }
-      .shopping-item:active { background: #3d3d3d; }
-    }
-
-    /* ===== 分类栏：滚动到位置才吸顶（JS 切换 class） ===== */
-    #categoryBarWrap.oaa-stuck {
-      position: fixed;
-      top: 56px; /* header height */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      max-width: 560px;
-      z-index: 95;
-    }
-
-    .oaa-catbar-spacer {
-      display: none;
-      height: 44px; /* cat tab height */
-      background: transparent;
-    }
-
-    /* 当分类栏吸顶时，开启占位，避免页面跳动 */
-    .oaa-catbar-spacer.oaa-on {
-      display: block;
-    }
-  
-    .shopping-template-content { padding-top: 14px; }
-    .shopping-template-content .shopping-body { padding: 0; }
-    .shopping-template-content footer { display: none; }
-
+          .card-header { background: #3d3d3d; }
+          .shopping-item:active { background: #3d3d3d; }
+        }
+        .shopping-template-content { padding-top: 14px; }
+        .shopping-template-content .shopping-body { padding: 0; }
+        .shopping-template-content footer { display: none; }
   </style>
 </head>
 <body>
   <div class="app-shell">
     <header class="app-header">
       <div class="header-inner">
-        <button class="header-location" id="topLinksToggle" type="button" aria-label="打开顶部快捷导航" aria-expanded="false">
+        <button class="header-location" id="topLinksToggle" type="button" aria-label="æ‰“å¼€é¡¶éƒ¨å¿«æ·å¯¼èˆª" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>纽约</span>
+          <span>çº½çº¦</span>
           <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
         </button>
 
-        <a class="header-logo" href="https://openaa.com/" aria-label="OpenAA 首页">
+        <a class="header-logo" href="https://openaa.com/" aria-label="OpenAA é¦–é¡µ">
           <img src="https://img.openaa.com/logo.png" alt="OpenAA" />
           <span class="header-logo-text"><span class="logo-blue">Open</span><span class="logo-dark">AA</span></span>
         </a>
 
         <div class="header-actions">
-          <a class="round-btn" href="https://openaa.com/search" aria-label="搜索">
+          <a class="round-btn" href="https://openaa.com/search" aria-label="æœç´¢">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           </a>
-          <button class="round-btn" type="button" aria-label="分享" onclick="shareOpenAA()">
+          <button class="round-btn" type="button" aria-label="åˆ†äº«" onclick="shareOpenAA()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98"/><path d="M15.41 6.51 8.59 10.49"/></svg>
           </button>
         </div>
       </div>
     </header>
 
-    <div class="top-links-panel" id="topLinksPanel" aria-label="顶部快捷导航">
+    <div class="top-links-panel" id="topLinksPanel" aria-label="é¡¶éƒ¨å¿«æ·å¯¼èˆª">
       <div class="top-links-scroller" id="topLinksScroller">
-        <a class="top-link-chip" href="https://openaa.com/navigation" target="_self">导航</a>
+        <a class="top-link-chip" href="https://openaa.com/navigation" target="_self">å¯¼èˆª</a>
         <a class="top-link-chip" href="https://openaa.com/dmv" target="_self">DMV</a>
-        <a class="top-link-chip" href="https://openaa.com/jobs" target="_self">招聘</a>
-        <a class="top-link-chip" href="https://openaa.com/housing" target="_self">房屋</a>
-        <a class="top-link-chip" href="https://openaa.com/secondhand" target="_self">二手</a>
-        <a class="top-link-chip" href="https://openaa.com/news" target="_self">新闻</a>
-        <a class="top-link-chip" href="https://openaa.com/services" target="_self">本地服务</a>
+        <a class="top-link-chip" href="https://openaa.com/jobs" target="_self">æ‹›è˜</a>
+        <a class="top-link-chip" href="https://openaa.com/housing" target="_self">æˆ¿å±‹</a>
+        <a class="top-link-chip" href="https://openaa.com/secondhand" target="_self">äºŒæ‰‹</a>
+        <a class="top-link-chip" href="https://openaa.com/news" target="_self">æ–°é—»</a>
+        <a class="top-link-chip" href="https://openaa.com/services" target="_self">æœ¬åœ°æœåŠ¡</a>
       </div>
     </div>
 
     <div class="header-spacer"></div>
 
     <main>
-      <section class="banner-section" id="bannerSection" aria-label="OpenAA 广告轮播">
+      <section class="banner-section" id="bannerSection" aria-label="OpenAA å¹¿å‘Šè½®æ’­">
         <div class="banner-wrapper" id="bannerWrapper" data-template-module="banner">
           <div class="banner-track" id="bannerTrack"></div>
           <div class="banner-dots" id="bannerDots"></div>
         </div>
         <a class="quick-strip" id="latestStrip" data-template-module="ticker" href="https://openaa.com/news" target="_self">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 11-14h-8l1-6Z"/></svg>
-          <span class="quick-strip-text" id="latestStripText">正在读取 OpenAA 最新动态...</span>
-          <span class="quick-strip-arrow">›</span>
+          <span class="quick-strip-text" id="latestStripText">æ­£åœ¨æ˜¾ç¤º OpenAA æ–°ç«™åŠ¨æ€...</span>
+          <span class="quick-strip-arrow">â€º</span>
         </a>
       </section>
 
-      <!-- OpenAA 首页 8 宫格入口 -->
-      <section class="home-grid-section" data-template-module="gridMenu" aria-label="OpenAA 快捷入口">
+      <!-- OpenAA é¦–é¡µ 8 å®«æ ¼å…¥å£ -->
+      <section class="home-grid-section" data-template-module="gridMenu" aria-label="OpenAA å¿«æ·å…¥å£">
         <div class="home-grid">
           <a class="home-grid-item" href="https://openaa.com/jobs" target="_self">
             <div class="home-grid-icon blue">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 12v4"/><path d="M10 14h4"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12h.01"></path><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path><path d="M22 13a18.15 18.15 0 0 1-20 0"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
             </div>
-            <span>招聘</span>
+            <span>æ‹›è˜</span>
           </a>
           <a class="home-grid-item" href="https://openaa.com/housing" target="_self">
             <div class="home-grid-icon green">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10.5Z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg>
             </div>
-            <span>房屋</span>
+            <span>æˆ¿å±‹</span>
           </a>
           <a class="home-grid-item" href="https://openaa.com/secondhand" target="_self">
             <div class="home-grid-icon purple">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12l3 5v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7l3-5Z"/><path d="M3 7h18"/><path d="M16 11a4 4 0 0 1-8 0"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg>
             </div>
-            <span>二手</span>
+            <span>äºŒæ‰‹</span>
           </a>
           <a class="home-grid-item" href="https://openaa.com/dmv" target="_self">
             <div class="home-grid-icon yellow">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18l-2-5a3 3 0 0 0-3-2H8a3 3 0 0 0-3 2l-2 5Z"/><path d="M5 13v5"/><path d="M19 13v5"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"></path><path d="M7 14h.01"></path><path d="M17 14h.01"></path><rect width="18" height="8" x="3" y="10" rx="2"></rect><path d="M5 18v2"></path><path d="M19 18v2"></path></svg>
             </div>
             <span>DMV</span>
           </a>
           <a class="home-grid-item" href="https://openaa.com/news" target="_self">
             <div class="home-grid-icon red">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Z"/><path d="M4 22a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18h-5"></path><path d="M18 14h-8"></path><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"></path><rect width="8" height="4" x="10" y="6" rx="1"></rect></svg>
             </div>
-            <span>新闻</span>
+            <span>æ–°é—»</span>
           </a>
           <a class="home-grid-item" href="https://openaa.com/navigation" target="_self">
             <div class="home-grid-icon cyan">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7Z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></svg>
             </div>
-            <span>导航</span>
+            <span>å¯¼èˆª</span>
           </a>
-          <a class="home-grid-item" href="https://openaa.com/news?category=新手指南" target="_self">
+          <a class="home-grid-item" href="https://openaa.com/news?category=æ–°æ‰‹æŒ‡å—" target="_self">
             <div class="home-grid-icon orange">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V7"></path><path d="m16 12 2 2 4-4"></path><path d="M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3"></path></svg>
             </div>
-            <span>新手指南</span>
+            <span>æ–°æ‰‹æŒ‡å—</span>
           </a>
           <a class="home-grid-item" href="https://openaa.com/services" target="_self">
             <div class="home-grid-icon teal">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.7-3.7a6 6 0 0 1-7.8 7.8l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.8-7.8l-3.7 3.7Z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"></path><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path></svg>
             </div>
-            <span>本地服务</span>
+            <span>æœ¬åœ°æœåŠ¡</span>
           </a>
         </div>
       </section>
 
-      <!-- OpenAA 首页实用工具 -->
-      <section class="tools-section" data-template-module="tools" aria-label="实用工具">
-        <div class="tools-title">实用工具</div>
+      <!-- OpenAA é¦–é¡µå®žç”¨å·¥å…· -->
+      <section class="tools-section" data-template-module="tools" aria-label="å®žç”¨å·¥å…·">
+        <div class="tools-title">å®žç”¨å·¥å…·</div>
         <div class="tools-grid">
           <a class="tool-card blue" href="https://openaa.com/dmv" target="_self">
             <div class="tool-top">
               <div class="tool-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18l-2-5a3 3 0 0 0-3-2H8a3 3 0 0 0-3 2l-2 5Z"/><path d="M5 13v5"/><path d="M19 13v5"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
               </div>
-              <span class="tool-action">开始练习 ›</span>
+              <span class="tool-action">å¼€å§‹ç»ƒä¹  â€º</span>
             </div>
-            <div class="tool-name">DMV 笔试模拟</div>
-            <div class="tool-desc">纽约 Learner Permit 中文练习</div>
+            <div class="tool-name">DMV ç¬”è¯•æ¨¡æ‹Ÿ</div>
+            <div class="tool-desc">çº½çº¦ Learner Permit ä¸­æ–‡ç»ƒä¹ </div>
           </a>
-          <a class="tool-card orange" href="/dmv/tickets/" target="_self">
+          <a class="tool-card orange" href="https://openaa.com/dmv/tickets" target="_self">
             <div class="tool-top">
               <div class="tool-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
               </div>
-              <span class="tool-action">点击查询 ›</span>
+              <span class="tool-action">ç‚¹å‡»æŸ¥è¯¢ â€º</span>
             </div>
-            <div class="tool-name">罚单查询</div>
-            <div class="tool-desc">停车 / 闯红灯 / 超速拍照</div>
+            <div class="tool-name">ç½šå•æŸ¥è¯¢</div>
+            <div class="tool-desc">åœè½¦ / é—¯çº¢ç¯ / è¶…é€Ÿæ‹ç…§</div>
           </a>
         </div>
       </section>
 
 
-      <!-- 中间内容开始：以后只让 AI 修改这里，不要改顶部、广告轮播、8宫格、实用工具、底部导航 -->
+      <!-- ä¸­é—´å†…å®¹å¼€å§‹ï¼šä»¥åŽåªè®© AI ä¿®æ”¹è¿™é‡Œï¼Œä¸è¦æ”¹é¡¶éƒ¨ã€å¹¿å‘Šè½®æ’­ã€8å®«æ ¼ã€å®žç”¨å·¥å…·ã€åº•éƒ¨å¯¼èˆª -->
       <section class="content-wrap shopping-template-content">
         <!-- Shopping content -->
     <div class="shopping-body">
-      <h1>🛍️ 购物导航</h1>
-      <p class="page-desc">美国电商、中国电商、服装、美妆、数码、家居一站式购物导航大全，快速找到你需要的购物平台。</p>
+      <h1>ðŸ›ï¸ è´­ç‰©å¯¼èˆª</h1>
+      <p class="page-desc">ç¾Žå›½ç”µå•†ã€ä¸­å›½ç”µå•†ã€æœè£…ã€ç¾Žå¦†ã€æ•°ç ã€å®¶å±…ä¸€ç«™å¼è´­ç‰©å¯¼èˆªå¤§å…¨ï¼Œå¿«é€Ÿæ‰¾åˆ°ä½ éœ€è¦çš„è´­ç‰©å¹³å°ã€‚</p>
 
-    <!-- 美国电商 -->
-    <h2>美国主流电商</h2>
+    <!-- ç¾Žå›½ç”µå•† -->
+    <h2>ç¾Žå›½ä¸»æµç”µå•†</h2>
     <div class="card">
       <div class="card-header">
-        <div class="card-header-icon">🛒</div>
-        <h3 class="card-header-title">美国购物平台</h3>
+        <div class="card-header-icon">ðŸ›’</div>
+        <h3 class="card-header-title">ç¾Žå›½è´­ç‰©å¹³å°</h3>
       </div>
       <div class="card-content">
         <div class="shopping-grid">
           <a href="https://www.amazon.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">📦</div>
-            <div class="shopping-item-name">Amazon<br/>亚马逊</div>
+            <div class="shopping-item-icon">ðŸ“¦</div>
+            <div class="shopping-item-name">Amazon<br/>äºšé©¬é€Š</div>
           </a>
           <a href="https://www.walmart.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🏬</div>
-            <div class="shopping-item-name">Walmart<br/>沃尔玛</div>
+            <div class="shopping-item-icon">ðŸ¬</div>
+            <div class="shopping-item-name">Walmart<br/>æ²ƒå°”çŽ›</div>
           </a>
           <a href="https://www.target.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🎯</div>
-            <div class="shopping-item-name">Target<br/>塔吉特</div>
+            <div class="shopping-item-icon">ðŸŽ¯</div>
+            <div class="shopping-item-name">Target<br/>å¡”å‰ç‰¹</div>
           </a>
           <a href="https://www.costco.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🏪</div>
-            <div class="shopping-item-name">Costco<br/>好市多</div>
+            <div class="shopping-item-icon">ðŸª</div>
+            <div class="shopping-item-name">Costco<br/>å¥½å¸‚å¤š</div>
           </a>
           <a href="https://www.ebay.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🏷️</div>
-            <div class="shopping-item-name">eBay<br/>易趣</div>
+            <div class="shopping-item-icon">ðŸ·ï¸</div>
+            <div class="shopping-item-name">eBay<br/>æ˜“è¶£</div>
           </a>
           <a href="https://www.bestbuy.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">💻</div>
-            <div class="shopping-item-name">Best Buy<br/>百思买</div>
+            <div class="shopping-item-icon">ðŸ’»</div>
+            <div class="shopping-item-name">Best Buy<br/>ç™¾æ€ä¹°</div>
           </a>
           <a href="https://www.sayweee.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🥬</div>
-            <div class="shopping-item-name">Weee!<br/>华人买菜</div>
+            <div class="shopping-item-icon">ðŸ¥¬</div>
+            <div class="shopping-item-name">Weee!<br/>åŽäººä¹°èœ</div>
           </a>
           <a href="https://www.samsclub.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🛵</div>
-            <div class="shopping-item-name">Sam's Club<br/>山姆会员店</div>
+            <div class="shopping-item-icon">ðŸ›µ</div>
+            <div class="shopping-item-name">Sam's Club<br/>å±±å§†ä¼šå‘˜åº—</div>
           </a>
         </div>
       </div>
     </div>
 
-    <!-- 中国电商 -->
-    <h2>中国主流电商</h2>
+    <!-- ä¸­å›½ç”µå•† -->
+    <h2>ä¸­å›½ä¸»æµç”µå•†</h2>
     <div class="card">
       <div class="card-header">
-        <div class="card-header-icon">🇨🇳</div>
-        <h3 class="card-header-title">中国购物平台</h3>
+        <div class="card-header-icon">ðŸ‡¨ðŸ‡³</div>
+        <h3 class="card-header-title">ä¸­å›½è´­ç‰©å¹³å°</h3>
       </div>
       <div class="card-content">
         <div class="shopping-grid">
           <a href="https://www.taobao.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🐶</div>
-            <div class="shopping-item-name">Taobao<br/>淘宝</div>
+            <div class="shopping-item-icon">ðŸ¶</div>
+            <div class="shopping-item-name">Taobao<br/>æ·˜å®</div>
           </a>
           <a href="https://www.tmall.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🏢</div>
-            <div class="shopping-item-name">Tmall<br/>天猫</div>
+            <div class="shopping-item-icon">ðŸ¢</div>
+            <div class="shopping-item-name">Tmall<br/>å¤©çŒ«</div>
           </a>
           <a href="https://www.jd.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">📦</div>
-            <div class="shopping-item-name">JD<br/>京东</div>
+            <div class="shopping-item-icon">ðŸ“¦</div>
+            <div class="shopping-item-name">JD<br/>äº¬ä¸œ</div>
           </a>
           <a href="https://www.pinduoduo.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🍐</div>
-            <div class="shopping-item-name">PDD<br/>拼多多</div>
+            <div class="shopping-item-icon">ðŸ</div>
+            <div class="shopping-item-name">PDD<br/>æ‹¼å¤šå¤š</div>
           </a>
           <a href="https://www.1688.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🏭</div>
-            <div class="shopping-item-name">1688<br/>批发平台</div>
+            <div class="shopping-item-icon">ðŸ­</div>
+            <div class="shopping-item-name">1688<br/>æ‰¹å‘å¹³å°</div>
           </a>
           <a href="https://www.vip.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">💎</div>
-            <div class="shopping-item-name">VIP<br/>唯品会</div>
+            <div class="shopping-item-icon">ðŸ’Ž</div>
+            <div class="shopping-item-name">VIP<br/>å”¯å“ä¼š</div>
           </a>
           <a href="https://www.suning.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🏬</div>
-            <div class="shopping-item-name">Suning<br/>苏宁</div>
+            <div class="shopping-item-icon">ðŸ¬</div>
+            <div class="shopping-item-name">Suning<br/>è‹å®</div>
           </a>
           <a href="https://www.xiaohongshu.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">❤️</div>
-            <div class="shopping-item-name">小红书<br/>社交购物</div>
+            <div class="shopping-item-icon">â¤ï¸</div>
+            <div class="shopping-item-name">å°çº¢ä¹¦<br/>ç¤¾äº¤è´­ç‰©</div>
           </a>
         </div>
       </div>
     </div>
 
-    <!-- 服装时尚 -->
-    <h2>服装时尚</h2>
+    <!-- æœè£…æ—¶å°š -->
+    <h2>æœè£…æ—¶å°š</h2>
     <div class="card">
       <div class="card-header">
-        <div class="card-header-icon">👕</div>
-        <h3 class="card-header-title">服装鞋帽</h3>
+        <div class="card-header-icon">ðŸ‘•</div>
+        <h3 class="card-header-title">æœè£…éž‹å¸½</h3>
       </div>
       <div class="card-content">
         <div class="shopping-grid">
           <a href="https://us.shein.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">👗</div>
-            <div class="shopping-item-name">Shein<br/>快时尚</div>
+            <div class="shopping-item-icon">ðŸ‘—</div>
+            <div class="shopping-item-name">Shein<br/>å¿«æ—¶å°š</div>
           </a>
           <a href="https://www.nike.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">👟</div>
-            <div class="shopping-item-name">Nike<br/>运动品牌</div>
+            <div class="shopping-item-icon">ðŸ‘Ÿ</div>
+            <div class="shopping-item-name">Nike<br/>è¿åŠ¨å“ç‰Œ</div>
           </a>
           <a href="https://www.zara.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">👔</div>
-            <div class="shopping-item-name">Zara<br/>时装</div>
+            <div class="shopping-item-icon">ðŸ‘”</div>
+            <div class="shopping-item-name">Zara<br/>æ—¶è£…</div>
           </a>
           <a href="https://www.hm.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">👖</div>
-            <div class="shopping-item-name">H&M<br/>服装</div>
+            <div class="shopping-item-icon">ðŸ‘–</div>
+            <div class="shopping-item-name">H&M<br/>æœè£…</div>
           </a>
           <a href="https://www.uniqlo.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">👕</div>
-            <div class="shopping-item-name">UNIQLO<br/>休闲服</div>
+            <div class="shopping-item-icon">ðŸ‘•</div>
+            <div class="shopping-item-name">UNIQLO<br/>ä¼‘é—²æœ</div>
           </a>
           <a href="https://www.adidas.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">⚽</div>
-            <div class="shopping-item-name">Adidas<br/>运动</div>
+            <div class="shopping-item-icon">âš½</div>
+            <div class="shopping-item-name">Adidas<br/>è¿åŠ¨</div>
           </a>
           <a href="https://www.forever21.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">💃</div>
-            <div class="shopping-item-name">Forever 21<br/>快时尚</div>
+            <div class="shopping-item-icon">ðŸ’ƒ</div>
+            <div class="shopping-item-name">Forever 21<br/>å¿«æ—¶å°š</div>
           </a>
           <a href="https://www.gapinc.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🎽</div>
-            <div class="shopping-item-name">Gap<br/>服饰</div>
+            <div class="shopping-item-icon">ðŸŽ½</div>
+            <div class="shopping-item-name">Gap<br/>æœé¥°</div>
           </a>
         </div>
       </div>
     </div>
 
-    <!-- 美妆护肤 -->
-    <h2>美妆护肤</h2>
+    <!-- ç¾Žå¦†æŠ¤è‚¤ -->
+    <h2>ç¾Žå¦†æŠ¤è‚¤</h2>
     <div class="card">
       <div class="card-header">
-        <div class="card-header-icon">💄</div>
-        <h3 class="card-header-title">美妆护肤</h3>
+        <div class="card-header-icon">ðŸ’„</div>
+        <h3 class="card-header-title">ç¾Žå¦†æŠ¤è‚¤</h3>
       </div>
       <div class="card-content">
         <div class="shopping-grid">
           <a href="https://www.sephora.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">💅</div>
-            <div class="shopping-item-name">Sephora<br/>丝芙兰</div>
+            <div class="shopping-item-icon">ðŸ’…</div>
+            <div class="shopping-item-name">Sephora<br/>ä¸èŠ™å…°</div>
           </a>
           <a href="https://www.ulta.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">💄</div>
-            <div class="shopping-item-name">Ulta<br/>美妆超市</div>
+            <div class="shopping-item-icon">ðŸ’„</div>
+            <div class="shopping-item-name">Ulta<br/>ç¾Žå¦†è¶…å¸‚</div>
           </a>
           <a href="https://www.amazon.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🧴</div>
-            <div class="shopping-item-name">Amazon<br/>美妆区</div>
+            <div class="shopping-item-icon">ðŸ§´</div>
+            <div class="shopping-item-name">Amazon<br/>ç¾Žå¦†åŒº</div>
           </a>
           <a href="https://www.xiaohongshu.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">💄</div>
-            <div class="shopping-item-name">小红书<br/>美妆推荐</div>
+            <div class="shopping-item-icon">ðŸ’„</div>
+            <div class="shopping-item-name">å°çº¢ä¹¦<br/>ç¾Žå¦†æŽ¨è</div>
           </a>
           <a href="https://www.cultbeauty.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">✨</div>
-            <div class="shopping-item-name">Cult Beauty<br/>美妆</div>
+            <div class="shopping-item-icon">âœ¨</div>
+            <div class="shopping-item-name">Cult Beauty<br/>ç¾Žå¦†</div>
           </a>
           <a href="https://www.spacenk.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🌟</div>
-            <div class="shopping-item-name">Space NK<br/>护肤</div>
+            <div class="shopping-item-icon">ðŸŒŸ</div>
+            <div class="shopping-item-name">Space NK<br/>æŠ¤è‚¤</div>
           </a>
           <a href="https://www.yesstyle.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🎀</div>
-            <div class="shopping-item-name">YesStyle<br/>K美</div>
+            <div class="shopping-item-icon">ðŸŽ€</div>
+            <div class="shopping-item-name">YesStyle<br/>Kç¾Ž</div>
           </a>
           <a href="https://www.taobao.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">💇</div>
-            <div class="shopping-item-name">淘宝<br/>美妆</div>
+            <div class="shopping-item-icon">ðŸ’‡</div>
+            <div class="shopping-item-name">æ·˜å®<br/>ç¾Žå¦†</div>
           </a>
         </div>
       </div>
     </div>
 
-    <!-- 数码电器 -->
-    <h2>数码电器</h2>
+    <!-- æ•°ç ç”µå™¨ -->
+    <h2>æ•°ç ç”µå™¨</h2>
     <div class="card">
       <div class="card-header">
-        <div class="card-header-icon">📱</div>
-        <h3 class="card-header-title">数码电器</h3>
+        <div class="card-header-icon">ðŸ“±</div>
+        <h3 class="card-header-title">æ•°ç ç”µå™¨</h3>
       </div>
       <div class="card-content">
         <div class="shopping-grid">
           <a href="https://www.apple.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🍎</div>
-            <div class="shopping-item-name">Apple<br/>苹果</div>
+            <div class="shopping-item-icon">ðŸŽ</div>
+            <div class="shopping-item-name">Apple<br/>è‹¹æžœ</div>
           </a>
           <a href="https://www.bestbuy.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">💻</div>
-            <div class="shopping-item-name">Best Buy<br/>百思买</div>
+            <div class="shopping-item-icon">ðŸ’»</div>
+            <div class="shopping-item-name">Best Buy<br/>ç™¾æ€ä¹°</div>
           </a>
           <a href="https://www.newegg.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🖥️</div>
-            <div class="shopping-item-name">Newegg<br/>新蛋</div>
+            <div class="shopping-item-icon">ðŸ–¥ï¸</div>
+            <div class="shopping-item-name">Newegg<br/>æ–°è›‹</div>
           </a>
           <a href="https://www.samsung.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">📺</div>
-            <div class="shopping-item-name">Samsung<br/>三星</div>
+            <div class="shopping-item-icon">ðŸ“º</div>
+            <div class="shopping-item-name">Samsung<br/>ä¸‰æ˜Ÿ</div>
           </a>
           <a href="https://www.bhphotovideo.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">📷</div>
-            <div class="shopping-item-name">B&H Photo<br/>相机</div>
+            <div class="shopping-item-icon">ðŸ“·</div>
+            <div class="shopping-item-name">B&H Photo<br/>ç›¸æœº</div>
           </a>
           <a href="https://www.jd.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">⌚</div>
-            <div class="shopping-item-name">京东<br/>数码</div>
+            <div class="shopping-item-icon">âŒš</div>
+            <div class="shopping-item-name">äº¬ä¸œ<br/>æ•°ç </div>
           </a>
           <a href="https://www.taobao.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🎧</div>
-            <div class="shopping-item-name">淘宝<br/>电器</div>
+            <div class="shopping-item-icon">ðŸŽ§</div>
+            <div class="shopping-item-name">æ·˜å®<br/>ç”µå™¨</div>
           </a>
           <a href="https://www.aliexpress.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🔌</div>
-            <div class="shopping-item-name">AliExpress<br/>速卖通</div>
+            <div class="shopping-item-icon">ðŸ”Œ</div>
+            <div class="shopping-item-name">AliExpress<br/>é€Ÿå–é€š</div>
           </a>
         </div>
       </div>
     </div>
 
-    <!-- 家居生活 -->
-    <h2>家居生活</h2>
+    <!-- å®¶å±…ç”Ÿæ´» -->
+    <h2>å®¶å±…ç”Ÿæ´»</h2>
     <div class="card">
       <div class="card-header">
-        <div class="card-header-icon">🏠</div>
-        <h3 class="card-header-title">家居生活</h3>
+        <div class="card-header-icon">ðŸ </div>
+        <h3 class="card-header-title">å®¶å±…ç”Ÿæ´»</h3>
       </div>
       <div class="card-content">
         <div class="shopping-grid">
           <a href="https://www.ikea.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🛋️</div>
-            <div class="shopping-item-name">IKEA<br/>宜家</div>
+            <div class="shopping-item-icon">ðŸ›‹ï¸</div>
+            <div class="shopping-item-name">IKEA<br/>å®œå®¶</div>
           </a>
           <a href="https://www.wayfair.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🛏️</div>
-            <div class="shopping-item-name">Wayfair<br/>家具</div>
+            <div class="shopping-item-icon">ðŸ›ï¸</div>
+            <div class="shopping-item-name">Wayfair<br/>å®¶å…·</div>
           </a>
           <a href="https://www.overstock.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🪑</div>
-            <div class="shopping-item-name">Overstock<br/>家居</div>
+            <div class="shopping-item-icon">ðŸª‘</div>
+            <div class="shopping-item-name">Overstock<br/>å®¶å±…</div>
           </a>
           <a href="https://www.amazon.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🪟</div>
-            <div class="shopping-item-name">Amazon<br/>家居</div>
+            <div class="shopping-item-icon">ðŸªŸ</div>
+            <div class="shopping-item-name">Amazon<br/>å®¶å±…</div>
           </a>
           <a href="https://www.rugs-usa.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🧶</div>
-            <div class="shopping-item-name">Rugs USA<br/>地毯</div>
+            <div class="shopping-item-icon">ðŸ§¶</div>
+            <div class="shopping-item-name">Rugs USA<br/>åœ°æ¯¯</div>
           </a>
           <a href="https://www.williams-sonoma.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🍽️</div>
-            <div class="shopping-item-name">W-S<br/>餐具</div>
+            <div class="shopping-item-icon">ðŸ½ï¸</div>
+            <div class="shopping-item-name">W-S<br/>é¤å…·</div>
           </a>
           <a href="https://www.jd.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">🪴</div>
-            <div class="shopping-item-name">京东<br/>家居</div>
+            <div class="shopping-item-icon">ðŸª´</div>
+            <div class="shopping-item-name">äº¬ä¸œ<br/>å®¶å±…</div>
           </a>
           <a href="https://www.taobao.com/" class="shopping-item" target="_blank" rel="noopener">
-            <div class="shopping-item-icon">💡</div>
-            <div class="shopping-item-name">淘宝<br/>家装</div>
+            <div class="shopping-item-icon">ðŸ’¡</div>
+            <div class="shopping-item-name">æ·˜å®<br/>å®¶è£…</div>
           </a>
         </div>
       </div>
@@ -1141,29 +1105,29 @@
 
     </div><!-- /.shopping-body -->
       </section>
-      <!-- 中间内容结束 -->
+      <!-- ä¸­é—´å†…å®¹ç»“æŸ -->
     </main>
   </div>
 
-  <nav class="bottom-nav" role="navigation" aria-label="底部导航">
+  <nav class="bottom-nav" role="navigation" aria-label="åº•éƒ¨å¯¼èˆª">
     <a href="https://openaa.com/" class="bottom-nav-item active" target="_self">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg><span>首页</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg><span>é¦–é¡µ</span>
     </a>
     <a href="https://openaa.com/jobs" class="bottom-nav-item" target="_self">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg><span>招聘</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12h.01"></path><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path><path d="M22 13a18.15 18.15 0 0 1-20 0"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg><span>æ‹›è˜</span>
     </a>
     <a href="https://openaa.com/housing" class="bottom-nav-item" target="_self">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg><span>房屋</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg><span>æˆ¿å±‹</span>
     </a>
     <a href="https://openaa.com/news" class="bottom-nav-item" target="_self">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Z"/><path d="M4 22a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8z"/></svg><span>新闻</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18h-5"></path><path d="M18 14h-8"></path><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"></path><rect width="8" height="4" x="10" y="6" rx="1"></rect></svg><span>æ–°é—»</span>
     </a>
     <a href="https://openaa.com/profile" class="bottom-nav-item" target="_self">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>我的</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg><span>æˆ‘çš„</span>
     </a>
   </nav>
 
-  <button class="back-top" id="backTop" type="button" aria-label="回到顶部">
+  <button class="back-top" id="backTop" type="button" aria-label="å›žåˆ°é¡¶éƒ¨">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
   </button>
 
@@ -1171,6 +1135,12 @@
 
     function getTemplateTarget() {
       return OPENAA_CONFIG.templateLinkMode === 'same' ? '_self' : '_blank';
+    }
+
+    function applyTemplateIdentity() {
+      document.documentElement.setAttribute('data-openaa-template', 'universal-static');
+      document.documentElement.setAttribute('data-template-version', OPENAA_CONFIG.version || '1.0.0');
+      document.documentElement.setAttribute('data-page-type', OPENAA_CONFIG.pageType || 'standard');
     }
 
     function getTemplateRel() {
@@ -1212,11 +1182,12 @@
 
     const APP_BASE_URL = 'https://openaa.com';
     const TOP_LINKS_API = APP_BASE_URL + '/api/top-links';
-    // 如果 openaa.com 以后提供不同的最新动态 API，只需要改这里。
-    const LATEST_API_CANDIDATES = [
-      APP_BASE_URL + '/api/latest-posts',
-      APP_BASE_URL + '/api/home-latest',
-      APP_BASE_URL + '/api/latest'
+    // ä¿¡æ¯æ»šåŠ¨æ¡ä½¿ç”¨ openaa-app æ–°ç«™å†…å®¹ï¼Œé¿å…ç»§ç»­è¯»å– openaa-ny çš„æ—§åŠ¨æ€ã€‚
+    const LATEST_STRIP_ITEMS = [
+      { type: 'OpenAA', title: 'ç¾Žå›½åŽäººç”Ÿæ´»å…¥å£ Â· æ‹›è˜ æˆ¿å±‹ äºŒæ‰‹ æ–°é—» æœ¬åœ°æœåŠ¡', url: APP_BASE_URL + '/' },
+      { type: 'DMV', title: 'çº½çº¦ DMV ä¸­æ–‡é¢˜åº“ã€ç»ƒä¹ ã€æ¨¡æ‹Ÿè€ƒè¯•å’Œç½šå•æŸ¥è¯¢', url: APP_BASE_URL + '/dmv' },
+      { type: 'å¯¼èˆª', title: 'åŽäººå¸¸ç”¨ç½‘ç«™ã€æ”¿åºœæœåŠ¡ã€é“¶è¡Œé‡‘èžå’Œç”Ÿæ´»å·¥å…·', url: APP_BASE_URL + '/navigation' },
+      { type: 'æ–°é—»', title: 'ç¾Žå›½åŽäººèµ„è®¯ã€ç”Ÿæ´»æŒ‡å—å’Œæœ¬åœ°æ¶ˆæ¯', url: APP_BASE_URL + '/news' }
     ];
 
     const ADS = Array.isArray(OPENAA_CONFIG.banners) ? OPENAA_CONFIG.banners : [];
@@ -1245,7 +1216,7 @@
         if (getTemplateRel()) a.rel = getTemplateRel();
         const img = document.createElement('img');
         img.src = ad.image;
-        img.alt = ad.alt || 'OpenAA 广告';
+        img.alt = ad.alt || 'OpenAA å¹¿å‘Š';
         img.loading = eager ? 'eager' : 'lazy';
         img.draggable = false;
         a.appendChild(img);
@@ -1262,7 +1233,7 @@
           const b = document.createElement('button');
           b.className = 'banner-dot' + (i === 0 ? ' active' : '');
           b.type = 'button';
-          b.setAttribute('aria-label', '第 ' + (i + 1) + ' 张广告');
+          b.setAttribute('aria-label', 'ç¬¬ ' + (i + 1) + ' å¼ å¹¿å‘Š');
           b.addEventListener('click', () => goTo(i + 1, true));
           dots.appendChild(b);
         });
@@ -1400,7 +1371,7 @@
         const links = normalizeTopLinks(data);
         if (links.length) { renderTopLinks(links); applyTemplateLinkMode(); }
       } catch (e) {
-        // 读取失败时保留模板里的固定备用快捷入口。
+        // è¯»å–å¤±è´¥æ—¶ä¿ç•™æ¨¡æ¿é‡Œçš„å›ºå®šå¤‡ç”¨å¿«æ·å…¥å£ã€‚
       }
     }
 
@@ -1410,7 +1381,7 @@
         .filter(item => item && (item.title || item.name))
         .map(item => ({
           title: item.title || item.name,
-          type: item.type || item.module || item.category || '最新',
+          type: item.type || item.module || item.category || 'æœ€æ–°',
           url: item.url || item.href || item.link || item.path || 'https://openaa.com/news',
           location: item.location || item.region || ''
         }));
@@ -1424,7 +1395,7 @@
       function show() {
         const item = items[i % items.length];
         const prefix = item.type ? '[' + item.type + '] ' : '';
-        const suffix = item.location ? ' · ' + item.location : '';
+        const suffix = item.location ? ' Â· ' + item.location : '';
         text.textContent = prefix + item.title + suffix;
         strip.href = item.url;
         strip.target = getTemplateTarget();
@@ -1436,33 +1407,18 @@
       if (items.length > 1) setInterval(show, 3500);
     }
 
-    async function initLatestStripFromApp() {
-      for (const api of LATEST_API_CANDIDATES) {
-        try {
-          const res = await fetch(api, { mode: 'cors', cache: 'no-store' });
-          if (!res.ok) continue;
-          const data = await res.json();
-          const items = normalizeLatestItems(data);
-          if (items.length) {
-            renderLatestStrip(items);
-            return;
-          }
-        } catch (e) {}
-      }
-      renderLatestStrip([
-        { type: 'OpenAA', title: '美国华人生活入口 · 招聘 房屋 二手 新闻 本地服务', url: 'https://openaa.com/' },
-        { type: '导航', title: '常用网站、DMV、生活工具一站整理', url: 'https://openaa.com/' }
-      ]);
+    function initLatestStripFromApp() {
+      renderLatestStrip(LATEST_STRIP_ITEMS);
     }
 
     function shareOpenAA() {
-      const data = { title: 'OpenAA 华人生活入口', text: 'OpenAA 美国华人生活入口', url: location.href };
+      const data = { title: 'OpenAA åŽäººç”Ÿæ´»å…¥å£', text: 'OpenAA ç¾Žå›½åŽäººç”Ÿæ´»å…¥å£', url: location.href };
       if (navigator.share) {
         navigator.share(data).catch(() => {});
       } else if (navigator.clipboard) {
-        navigator.clipboard.writeText(location.href).then(() => showToast('链接已复制 📋'));
+        navigator.clipboard.writeText(location.href).then(() => showToast('é“¾æŽ¥å·²å¤åˆ¶ ðŸ“‹'));
       } else {
-        showToast('请复制当前页面链接');
+        showToast('è¯·å¤åˆ¶å½“å‰é¡µé¢é“¾æŽ¥');
       }
     }
 
@@ -1483,6 +1439,7 @@
       btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     })();
 
+    applyTemplateIdentity();
     applyModuleVisibility();
     applyTemplateLinkMode();
     initTopLinksFromApp();
