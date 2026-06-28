@@ -592,7 +592,8 @@ function initResultPage() {
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
-  if (path.endsWith('index.html') || path.endsWith('/dmv/') || path.endsWith('/dmv')) {
+  const isPracticeIndex = path.endsWith('/dmv/ny/practice/') || path.endsWith('/dmv/ny/practice');
+  if (path.endsWith('index.html') || path.endsWith('/dmv/') || path.endsWith('/dmv') || isPracticeIndex) {
     initIndexPage();
   } else if (path.endsWith('quiz.html')) {
     initQuizPage();
