@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+  <meta name="twitter:image" content="https://img.openaa.com/logo.png" />
+  <link rel="icon" href="https://img.openaa.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://img.openaa.com/apple-touch-icon.png" />
+  <title>电话地址本</title>
+  <style>
+    :root {
+      --blue: #1976d2;
+      --blue-soft: #eff6ff;
+      --border: #e5e7eb;
+      --text: #0f172a;
+      --muted: #64748b;
+      --bg: #f4f4f5;
+      --card: #ffffff;
+      --amber-bg: rgba(255, 251, 235, 0.75);
+      --amber-border: #fde68a;
+      --amber-text: #78350f;
+      --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 16px 14px 28px;
+    }
+
+    .topbar {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-width: 0;
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+      margin: 2px auto 0;
+    }
+
+    .brand-logo {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      object-fit: contain;
+      background: transparent;
+    }
+
+    .brand-title {
+      color: #0f172a;
+      font-size: 19px;
+      font-weight: 950;
+      line-height: 1;
+      white-space: nowrap;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-open {
+      color: var(--blue);
+      font-weight: 950;
+    }
+
+    .brand-aa {
+      color: #0f172a;
+      font-weight: 950;
+    }
+
+    .actions-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .top-button {
+      min-height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      color: #334155;
+      padding: 0 14px;
+      font-size: 14px;
+      font-weight: 800;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+      cursor: pointer;
+    }
+
+    @media (max-width: 390px) {
+      .topbar {
+        gap: 9px;
+      }
+
+      .top-button {
+        min-height: 38px;
+        padding: 0 10px;
+        font-size: 13px;
+      }
+
+      .brand {
+        gap: 7px;
+      }
+
+      .brand-logo {
+        width: 28px;
+        height: 28px;
+      }
+
+      .brand-title {
+        font-size: 17px;
+      }
+    }
+
+    .title {
+      margin: 0 0 12px;
+      font-size: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .panel {
+      display: grid;
+      gap: 12px;
+    }
+
+    .tabs-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tabs {
+      display: inline-flex;
+      padding: 4px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .tab {
+      border: 0;
+      border-radius: 14px;
+      background: transparent;
+      color: #475569;
+      min-height: 38px;
+      padding: 0 16px;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(25, 118, 210, 0.22);
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      padding-right: 2px;
+    }
+
+    .search {
+      min-height: 48px;
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fff;
+      color: var(--text);
+      padding: 0 16px;
+      font-size: 16px;
+      font-weight: 700;
+      outline: none;
+      box-shadow: var(--shadow);
+    }
+
+    .search::placeholder {
+      color: #cbd5e1;
+    }
+
+    .search:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.12);
+    }
+
+    .grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .grid.phone {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.address {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .grid.phone {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .grid.address {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      display: block;
+      min-height: 86px;
+      border: 1px solid #f1f5f9;
+      border-radius: 20px;
+      background: #fff;
+      padding: 8px;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:active {
+      transform: scale(0.99);
+    }
+
+    .card-inner {
+      min-height: 70px;
+      border-radius: 16px;
+      background: #f8fafc;
+      padding: 12px;
+    }
+
+    .name {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #0f172a;
+      font-size: 16px;
+      font-weight: 950;
+      line-height: 1.2;
+    }
+
+    .address-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .address-title-row .name {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .copy-address {
+      flex: 0 0 auto;
+      min-height: 28px;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1976d2;
+      padding: 0 10px;
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .copy-address:active {
+      transform: scale(0.98);
+    }
+
+    .address-card {
+      cursor: pointer;
+    }
+
+    .value {
+      display: block;
+      margin-top: 10px;
+      color: #475569;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    .phone .value {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .empty {
+      border: 1px dashed #cbd5e1;
+      border-radius: 20px;
+      background: #fff;
+      padding: 22px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 14px;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+    }
+
+    .notice {
+      margin-top: 12px;
+      border: 1px solid var(--amber-border);
+      border-radius: 20px;
+      background: var(--amber-bg);
+      padding: 16px;
+    }
+
+    .notice-title {
+      margin: 0;
+      color: var(--amber-text);
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .notice-text {
+      margin: 6px 0 0;
+      color: rgba(120, 53, 15, 0.82);
+      font-size: 15px;
+      font-weight: 650;
+      line-height: 1.65;
+    }
+
+    .helper {
+      margin: 16px 0 0;
+      color: #94a3b8;
+      font-size: 12px;
+      line-height: 1.7;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <div class="brand" aria-label="OpenAA 电话地址本">
+        <img class="brand-logo" src="https://img.openaa.com/logo.png" alt="OpenAA" />
+        <span class="brand-title"><span class="brand-open">Open</span><span class="brand-aa">AA</span>电话地址本</span>
+      </div>
+      <div class="actions-row">
+        <button class="top-button" type="button" onclick="history.length > 1 ? history.back() : location.href='/'">返回</button>
+        <button class="top-button" type="button" id="shareButton">分享</button>
+      </div>
+    </div>
+
+    <h1 class="title">电话地址本</h1>
+
+    <section class="panel" aria-label="电话地址本">
+      <div class="tabs-row">
+        <div class="tabs" role="tablist" aria-label="分类">
+          <button class="tab active" type="button" id="phoneTab" role="tab" aria-selected="true">电话本</button>
+          <button class="tab" type="button" id="addressTab" role="tab" aria-selected="false">地址</button>
+        </div>
+        <div class="count" id="countText"></div>
+      </div>
+
+      <input class="search" id="searchInput" type="search" autocomplete="off" placeholder="搜索姓名或电话号码" />
+
+      <div class="grid phone" id="list"></div>
+    </section>
+
+    <section class="notice" aria-label="使用提醒">
+      <h2 class="notice-title">使用提醒</h2>
+      <p class="notice-text">这是个人便捷记录工具。请不要保存密码、证件、银行卡等重要隐私资料，并定期复制本文件做备份。</p>
+    </section>
+
+    <p class="helper">修改资料：用记事本打开这个 HTML 文件，在顶部 PHONEBOOK / ADDRESSES 里添加姓名、电话、名称和地址即可。</p>
+  </main>
+
+  <script>
+    /*
+      使用方法：
+      1. 添加电话：在 PHONEBOOK 里按格式加一行：
+         { name: "张三", phone: "212-555-1234" },
+
+      2. 添加地址：在 ADDRESSES 里按格式加一行：
+         { name: "公司", address: "123 Main St, New York, NY 10001" },
+
+      3. 不要忘记每行后面的逗号。
+      4. 这个文件是纯静态文件，不需要数据库，不会自动同步。
+    */
+
+    const PHONEBOOK = [
+      { name: "成", phone: "646-889-7111" },
+      { name: "玲", phone: "646-889-7222" },
+      { name: "欢", phone: "646-889-7333" },
+      { name: "保险公司", phone: "800-555-0000" },
+    ];
+
+    const ADDRESSES = [
+      { name: "纽约车站", address: "31st St & 8th Ave New York, NY 10001" },
+      { name: "8大道", address: "678 60 st Brooklyn ny 11220" },      
+      { name: "宾州地址", address: "215 Quality Rd, Dupont, PA 18641-1912, US" }, 
+      { name: "宾州长途车站", address: "Flix Bus Stop 609 luzerne st, Scranton, PA 18504, US" }, 
+      { name: "宾州地板厂", address: "160-180 Independence Dr, Pittston, PA 18640" },       
+      { name: "机场 JFK", address: "John F. Kennedy International Airport, Queens, NY" },
+      { name: "机场 LGA", address: "LaGuardia Airport, Queens, NY" },
+      { name: "机场 EWR", address: "Newark Liberty International Airport, Newark, NJ" },
+    ];
+
+    const state = {
+      type: "phone",
+      query: "",
+    };
+
+    const phoneTab = document.getElementById("phoneTab");
+    const addressTab = document.getElementById("addressTab");
+    const searchInput = document.getElementById("searchInput");
+    const list = document.getElementById("list");
+    const countText = document.getElementById("countText");
+    const shareButton = document.getElementById("shareButton");
+
+    function normalize(value) {
+      return String(value || "").trim().toLowerCase();
+    }
+
+    function filteredItems() {
+      const query = normalize(state.query);
+      const items = state.type === "phone" ? PHONEBOOK : ADDRESSES;
+      if (!query) return items;
+      return items.filter((item) => {
+        const value = state.type === "phone" ? item.phone : item.address;
+        return normalize(item.name).includes(query) || normalize(value).includes(query);
+      });
+    }
+
+    function mapUrl(address) {
+      const encoded = encodeURIComponent(address);
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const isAndroid = /Android/i.test(navigator.userAgent);
+
+      if (isAndroid) return `geo:0,0?q=${encoded}`;
+      if (isIOS) return `https://maps.apple.com/?q=${encoded}`;
+      return `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+    }
+
+    function render() {
+      const isPhone = state.type === "phone";
+      const items = filteredItems();
+
+      phoneTab.classList.toggle("active", isPhone);
+      phoneTab.setAttribute("aria-selected", isPhone ? "true" : "false");
+
+      addressTab.classList.toggle("active", !isPhone);
+      addressTab.setAttribute("aria-selected", !isPhone ? "true" : "false");
+
+      searchInput.placeholder = isPhone ? "搜索姓名或电话号码" : "搜索名称或地址";
+      list.className = `grid ${isPhone ? "phone" : "address"}`;
+      countText.textContent = `${items.length} 条`;
+
+      if (items.length === 0) {
+        list.innerHTML = `<div class="empty">暂无内容</div>`;
+        return;
+      }
+
+      list.innerHTML = items.map((item) => {
+        const name = escapeHtml(item.name);
+        const value = escapeHtml(isPhone ? item.phone : item.address);
+
+        if (isPhone) {
+          const href = `tel:${encodeURIComponent(item.phone)}`;
+          return `
+            <a class="card" href="${href}">
+              <span class="card-inner">
+                <span class="name">${name}</span>
+                <span class="value">${value}</span>
+              </span>
+            </a>
+          `;
+        }
+
+        const href = mapUrl(item.address);
+        const addressAttr = escapeAttribute(item.address);
+
+        return `
+          <div class="card address-card" role="link" tabindex="0" data-map-url="${escapeAttribute(href)}">
+            <div class="card-inner">
+              <div class="address-title-row">
+                <span class="name">${name}</span>
+                <button class="copy-address" type="button" data-address="${addressAttr}" aria-label="复制地址">复制</button>
+              </div>
+              <span class="value">${value}</span>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function escapeAttribute(value) {
+      return escapeHtml(value).replaceAll("`", "&#096;");
+    }
+
+    function openMapUrl(url) {
+      if (!url) return;
+      if (url.startsWith("geo:")) {
+        window.location.href = url;
+        return;
+      }
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    async function copyText(value) {
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(value);
+          return true;
+        } catch (_) {}
+      }
+
+      const textarea = document.createElement("textarea");
+      textarea.value = value;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.top = "-9999px";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+
+      let copied = false;
+      try {
+        copied = document.execCommand("copy");
+      } catch (_) {
+        copied = false;
+      }
+
+      document.body.removeChild(textarea);
+      return copied;
+    }
+
+    phoneTab.addEventListener("click", () => {
+      state.type = "phone";
+      state.query = "";
+      searchInput.value = "";
+      render();
+    });
+
+    addressTab.addEventListener("click", () => {
+      state.type = "address";
+      state.query = "";
+      searchInput.value = "";
+      render();
+    });
+
+    searchInput.addEventListener("input", (event) => {
+      state.query = event.target.value;
+      render();
+    });
+
+    list.addEventListener("click", async (event) => {
+      const copyButton = event.target.closest(".copy-address");
+      if (copyButton) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const address = copyButton.getAttribute("data-address") || "";
+        const copied = await copyText(address);
+        const originalText = copyButton.textContent;
+        copyButton.textContent = copied ? "已复制" : "复制失败";
+        setTimeout(() => {
+          copyButton.textContent = originalText || "复制";
+        }, 1500);
+        return;
+      }
+
+      const addressCard = event.target.closest(".address-card");
+      if (addressCard) {
+        openMapUrl(addressCard.getAttribute("data-map-url") || "");
+      }
+    });
+
+    list.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      const addressCard = event.target.closest(".address-card");
+      if (!addressCard || event.target.closest(".copy-address")) return;
+
+      event.preventDefault();
+      openMapUrl(addressCard.getAttribute("data-map-url") || "");
+    });
+
+    shareButton.addEventListener("click", async () => {
+      const shareData = {
+        title: "电话地址本",
+        text: "个人电话地址本",
+        url: location.href,
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          return;
+        } catch (_) {}
+      }
+
+      try {
+        await navigator.clipboard.writeText(location.href);
+        alert("链接已复制");
+      } catch (_) {
+        alert("当前浏览器不支持分享，请手动复制地址栏链接。");
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>
