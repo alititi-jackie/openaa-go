@@ -24,7 +24,7 @@
       --soft-hover: #e8eaed;
       --brand: #1a73e8;
       --shadow: 0 1px 6px rgba(32, 33, 36, 0.22);
-      --content-width: 680px;
+      --content-width: 980px;
     }
 
     * {
@@ -74,7 +74,7 @@
       justify-content: flex-end;
       gap: 18px;
       padding: 0 24px;
-      font-size: 13px;
+      font-size: 14px;
       white-space: nowrap;
     }
 
@@ -87,12 +87,19 @@
       flex: 1;
       display: flex;
       justify-content: center;
-      padding: clamp(54px, 10vh, 112px) 20px 40px;
+      padding: clamp(48px, 8vh, 92px) 28px 44px;
     }
 
     .main {
       width: min(100%, var(--content-width));
       text-align: center;
+    }
+
+    .search-wrap,
+    .engine-tabs {
+      width: min(100%, 820px);
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .brand {
@@ -106,15 +113,15 @@
     }
 
     .brand-logo {
-      width: clamp(48px, 7vw, 64px);
-      height: clamp(48px, 7vw, 64px);
+      width: clamp(56px, 5vw, 72px);
+      height: clamp(56px, 5vw, 72px);
       display: block;
       object-fit: contain;
       border-radius: 50%;
     }
 
     .brand-name {
-      font-size: clamp(42px, 7vw, 64px);
+      font-size: clamp(50px, 5vw, 72px);
       font-weight: 700;
       letter-spacing: -2.4px;
     }
@@ -141,12 +148,12 @@
 
     .search-box {
       width: 100%;
-      min-height: 48px;
+      min-height: 56px;
       display: grid;
       grid-template-columns: auto minmax(0, 1fr) 44px;
       align-items: center;
       border: 1px solid var(--line);
-      border-radius: 24px;
+      border-radius: 28px;
       background: #fff;
       transition:
         border-color 0.18s ease,
@@ -202,13 +209,13 @@
     .search-input {
       width: 100%;
       min-width: 0;
-      height: 46px;
+      height: 54px;
       padding: 0 8px;
       border: 0;
       outline: none;
       background: transparent;
       color: var(--text);
-      font-size: 16px;
+      font-size: 17px;
     }
 
     .search-input::placeholder {
@@ -216,8 +223,8 @@
     }
 
     .search-button {
-      width: 40px;
-      height: 40px;
+      width: 46px;
+      height: 46px;
       display: grid;
       place-items: center;
       margin-right: 4px;
@@ -274,9 +281,9 @@
 
     .shortcuts {
       display: grid;
-      grid-template-columns: repeat(8, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 34px;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 18px 14px;
+      margin-top: 42px;
     }
 
     .shortcut {
@@ -285,7 +292,7 @@
       flex-direction: column;
       align-items: center;
       gap: 9px;
-      padding: 10px 4px 8px;
+      padding: 14px 8px 12px;
       border-radius: 12px;
       color: #3c4043;
       font-size: 13px;
@@ -299,8 +306,8 @@
     }
 
     .shortcut-icon {
-      width: 48px;
-      height: 48px;
+      width: 58px;
+      height: 58px;
       display: grid;
       place-items: center;
       border-radius: 50%;
@@ -313,8 +320,8 @@
     }
 
     .shortcut-icon svg {
-      width: 22px;
-      height: 22px;
+      width: 26px;
+      height: 26px;
       fill: none;
       stroke: currentColor;
       stroke-width: 1.8;
@@ -349,6 +356,27 @@
       font-size: 13px;
     }
 
+
+    @media (min-width: 681px) {
+      .brand {
+        gap: 14px;
+      }
+
+      .tagline {
+        margin-top: 14px;
+        margin-bottom: 32px;
+        font-size: 15px;
+      }
+
+      .engine-tabs {
+        margin-top: 18px;
+      }
+
+      .shortcut-label {
+        font-size: 14px;
+      }
+    }
+
     @media (max-width: 680px) {
       .topbar {
         min-height: 52px;
@@ -374,10 +402,30 @@
         margin-bottom: 24px;
       }
 
+      .search-wrap,
+      .engine-tabs {
+        width: 100%;
+      }
+
       .shortcuts {
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        row-gap: 10px;
+        gap: 10px 6px;
         margin-top: 27px;
+      }
+
+      .shortcut {
+        padding: 10px 4px 8px;
+        font-size: 13px;
+      }
+
+      .shortcut-icon {
+        width: 48px;
+        height: 48px;
+      }
+
+      .shortcut-icon svg {
+        width: 22px;
+        height: 22px;
       }
     }
 
