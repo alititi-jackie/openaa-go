@@ -28,35 +28,6 @@
     Primary Domain: https://openaa.com
     Image Domain:   https://img.openaa.com
 
-    一、站长自己改的地方：只改下面 OPENAA_CONFIG
-    1. version：模板版本号，方便以后确认文件是否为最新版。
-    2. pageType：页面类型标记，只作识别和后续扩展，不改变当前视觉效果。
-       可用建议："standard" / "guide" / "notice" / "ad" / "topic"
-    3. banners：广告图片地址 + 点击广告打开的链接。
-    4. modules：控制广告轮播、滚动动态、8宫格、实用工具显示或隐藏。
-       true  = 显示
-       false = 隐藏
-       隐藏后页面会自动收紧，不会留下大空白。
-    5. templateLinkMode：控制“模板固定区域”的链接打开方式。
-       "new"  = 新窗口打开
-       "same" = 当前页面打开（默认）
-       只控制：顶部 Logo、顶部快捷导航、广告图、滚动动态、8宫格、实用工具、底部导航。
-       不控制：中间正文内容里的链接。
-
-    二、发给 AI 写内容时，请告诉 AI：
-    1. 保留模板整体效果，不要重做设计。
-    2. 不要修改 OPENAA_CONFIG，广告、板块显示隐藏、链接打开方式由站长自己改。
-    3. AI 只修改 head 里的 SEO 和“页面内容开始/页面内容结束”之间的正文。
-    4. 正文直接写进本 HTML，不要做外部动态加载内容页。
-    5. 正文建议用 <article class="template-card"> 包住，保持卡片风格统一。
-    6. 正文里的链接按内容需要设置，不受 templateLinkMode 控制。
-    7. 正式页面的 title、description、keywords、canonical、OG、Twitter、结构化数据都要按当前内容改好，不要写“模板”。
-
-    三、防误改边界：
-    1. 不要改顶部 Header、Logo、快捷导航、广告轮播、滚动动态、8宫格、实用工具、底部导航、回到顶部。
-    2. 不要把模板里的主站链接 https://openaa.com 改成旧站或其它域名。
-    3. 信息滚动条读取 openaa-app 首页同源动态。
-    4. 如需调整模板结构，请另存为新版本，不要直接覆盖旧版本。
   ========================================================== -->
   <script>
     const OPENAA_CONFIG = {
@@ -766,7 +737,7 @@
         "@type": "ListItem",
         "position": 5,
         "name": "纽约 DMV 笔试练习",
-        "url": "https://go.openaa.com/dmv/ny/practice/"
+        "url": "https://openaa.com/dmv"
       }
     ]
   }
@@ -801,8 +772,8 @@
 
     <div class="top-links-panel" id="topLinksPanel" aria-label="顶部快捷导航">
       <div class="top-links-scroller" id="topLinksScroller">
-        <a class="top-link-chip" href="https://tools.openaa.com" target="_self">OpenAA工具</a>
-        <a class="top-link-chip" href="https://go.openaa.com" target="_self">OpenAA网页版</a>
+        <a class="top-link-chip" href="https://toolku.com" target="_self">OpenAA工具库</a>
+        <a class="top-link-chip" href="https://go.openaa.com" target="_self">Go.OpenAA</a>
         <a class="top-link-chip" href="https://openaa.com/navigation" target="_self">导航</a>
         <a class="top-link-chip" href="https://openaa.com/dmv" target="_self">DMV</a>
         <a class="top-link-chip" href="https://openaa.com/jobs" target="_self">招聘</a>
