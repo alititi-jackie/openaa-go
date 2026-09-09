@@ -2,42 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://go.openaa.com/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-08</lastmod>
   </url>
   <url>
     <loc>https://go.openaa.com/about/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-08</lastmod>
   </url>
+
+  <!-- 华人导航 -->
   <url>
     <loc>https://go.openaa.com/nav/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-08</lastmod>
   </url>
   <url>
     <loc>https://go.openaa.com/nav/ai.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-08</lastmod>
   </url>
   <url>
     <loc>https://go.openaa.com/nav/bank.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-08</lastmod>
   </url>
   <url>
     <loc>https://go.openaa.com/nav/dmv.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-08</lastmod>
   </url>
   <url>
-    <loc>https://go.openaa.com/mi.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://go.openaa.com/nav/onegobuyweb.html</loc>
+    <lastmod>2026-09-08</lastmod>
   </url>
+
+  <!-- DMV -->
   <url>
     <loc>https://go.openaa.com/dmv/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-08</lastmod>
   </url>
   <url>
     <loc>https://go.openaa.com/dmv/tickets/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-08</lastmod>
   </url>
   <url>
     <loc>https://go.openaa.com/dmv/ny/practice/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://go.openaa.com/dmv/ny/practice/quiz.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://go.openaa.com/dmv/ny/practice/result.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://go.openaa.com/dmv/ny/practice/view.html</loc>
+    <lastmod>2026-09-08</lastmod>
   </url>
 </urlset>
