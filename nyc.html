@@ -9,523 +9,83 @@
   <meta name="author" content="OpenAA" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://go.openaa.com/nyc.html" />
-
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="OpenAA" />
   <meta property="og:title" content="OpenAA 纽约周边景点｜纽约华人常去景点地址与导航" />
-  <meta property="og:description" content="纽约及周边华人常去景点 · 地址 · 导航。可一键进入地图、复制地址和分享。" />
+  <meta property="og:description" content="纽约及周边华人常去景点 · 地址 · 导航。点击景点卡片即可打开地图，也可复制地址和分享。" />
   <meta property="og:url" content="https://go.openaa.com/nyc.html" />
   <meta property="og:image" content="https://img.openaa.com/logo.png" />
   <meta property="og:locale" content="zh_CN" />
-
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="OpenAA 纽约周边景点" />
   <meta name="twitter:description" content="纽约及周边华人常去景点 · 地址 · 导航" />
   <meta name="twitter:image" content="https://img.openaa.com/logo.png" />
-
   <link rel="icon" href="https://img.openaa.com/favicon.ico" />
   <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="/nyc.webmanifest" />
   <title>纽约周边景点地址大全｜纽约华人常去景点导航 - OpenAA</title>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "OpenAA 纽约周边景点",
-    "url": "https://go.openaa.com/nyc.html",
-    "description": "纽约及周边华人常去景点地址与导航",
-    "inLanguage": "zh-CN",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "OpenAA",
-      "url": "https://openaa.com/"
-    }
-  }
-  </script>
-
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"OpenAA 纽约周边景点","url":"https://go.openaa.com/nyc.html","description":"纽约及周边华人常去景点地址与导航","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"OpenAA","url":"https://openaa.com/"}}</script>
   <style>
-    :root{
-      --blue:#1976d2;
-      --blue-soft:#eff6ff;
-      --border:#e5e7eb;
-      --text:#0f172a;
-      --muted:#64748b;
-      --bg:#f4f4f5;
-      --card:#fff;
-      --shadow:0 8px 24px rgba(15,23,42,.06);
-    }
-
-    *{box-sizing:border-box}
-    html{-webkit-text-size-adjust:100%}
-    body{
-      margin:0;
-      min-height:100dvh;
-      background:var(--bg);
-      color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;
-    }
-    button,input{font:inherit}
-    a{color:inherit;text-decoration:none}
-
-    .page{
-      max-width:860px;
-      margin:0 auto;
-      padding:16px 14px 30px;
-    }
-
-    .topbar{
-      display:grid;
-      gap:12px;
-      margin-bottom:14px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:9px;
-      margin-top:2px;
-    }
-
-    .brand-logo{
-      width:34px;
-      height:34px;
-      border-radius:9px;
-      object-fit:contain;
-    }
-
-    .brand-title{
-      font-size:20px;
-      font-weight:950;
-      letter-spacing:-.03em;
-    }
-
-    .subtitle{
-      margin:-2px 0 0;
-      text-align:center;
-      color:var(--muted);
-      font-size:14px;
-      font-weight:700;
-      line-height:1.5;
-    }
-
-    .actions-row{
-      display:flex;
-      justify-content:flex-end;
-      gap:10px;
-    }
-
-    .top-button{
-      min-height:40px;
-      border:1px solid var(--border);
-      border-radius:14px;
-      background:#fff;
-      color:#334155;
-      padding:0 14px;
-      font-size:14px;
-      font-weight:850;
-      box-shadow:0 1px 2px rgba(15,23,42,.05);
-      cursor:pointer;
-    }
-
-    .search{
-      min-height:48px;
-      width:100%;
-      border:1px solid var(--border);
-      border-radius:18px;
-      background:#fff;
-      color:var(--text);
-      padding:0 16px;
-      font-size:16px;
-      font-weight:700;
-      outline:none;
-      box-shadow:var(--shadow);
-      margin-bottom:12px;
-    }
-
-    .search:focus{
-      border-color:var(--blue);
-      box-shadow:0 0 0 3px rgba(25,118,210,.12);
-    }
-
-    .count{
-      margin:0 2px 10px;
-      color:var(--muted);
-      font-size:13px;
-      font-weight:800;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:10px;
-    }
-
-    @media (min-width:768px){
-      .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-    }
-
-    .card{
-      border:1px solid #f1f5f9;
-      border-radius:20px;
-      background:#fff;
-      padding:8px;
-      box-shadow:var(--shadow);
-    }
-
-    .card-inner{
-      border-radius:16px;
-      background:#f8fafc;
-      padding:13px;
-    }
-
-    .name{
-      display:block;
-      color:#0f172a;
-      font-size:16px;
-      font-weight:950;
-      line-height:1.35;
-    }
-
-    .address{
-      display:block;
-      margin-top:8px;
-      color:#475569;
-      font-size:13px;
-      font-weight:750;
-      line-height:1.5;
-      overflow-wrap:anywhere;
-    }
-
-    .card-actions{
-      display:flex;
-      gap:8px;
-      margin-top:12px;
-    }
-
-    .map-button,
-    .copy-button{
-      min-height:36px;
-      border-radius:12px;
-      padding:0 13px;
-      font-size:13px;
-      font-weight:900;
-      cursor:pointer;
-    }
-
-    .map-button{
-      border:0;
-      background:var(--blue);
-      color:#fff;
-      flex:1;
-    }
-
-    .copy-button{
-      border:1px solid #bfdbfe;
-      background:var(--blue-soft);
-      color:var(--blue);
-    }
-
-    .empty{
-      grid-column:1/-1;
-      border:1px dashed #cbd5e1;
-      border-radius:20px;
-      background:#fff;
-      padding:22px;
-      text-align:center;
-      color:#94a3b8;
-      font-size:14px;
-      font-weight:800;
-    }
-
-    .links-section{
-      margin-top:18px;
-    }
-
-    .links-title{
-      margin:0 0 10px;
-      font-size:15px;
-      font-weight:950;
-      color:#334155;
-    }
-
-    .site-links{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:10px;
-    }
-
-    .site-link{
-      display:block;
-      border:1px solid var(--border);
-      border-radius:16px;
-      background:#fff;
-      padding:13px 14px;
-      box-shadow:var(--shadow);
-    }
-
-    .site-link strong{
-      display:block;
-      font-size:14px;
-      font-weight:950;
-      color:#0f172a;
-    }
-
-    .site-link span{
-      display:block;
-      margin-top:4px;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.4;
-    }
-
-    .footer{
-      margin:18px 0 0;
-      text-align:center;
-      color:#94a3b8;
-      font-size:12px;
-      line-height:1.7;
-    }
-
-    @media (max-width:420px){
-      .brand-title{font-size:18px}
-      .brand-logo{width:31px;height:31px}
-      .site-links{grid-template-columns:1fr}
-    }
+    :root{--blue:#1976d2;--blue-soft:#eff6ff;--border:#e5e7eb;--text:#0f172a;--muted:#64748b;--bg:#f4f4f5;--shadow:0 8px 24px rgba(15,23,42,.06)}
+    *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;min-height:100dvh;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif}button,input{font:inherit}a{color:inherit;text-decoration:none}
+    .page{max-width:860px;margin:0 auto;padding:16px 14px 30px}.topbar{display:grid;gap:12px;margin-bottom:14px}.brand{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:2px}.brand-logo{width:34px;height:34px;border-radius:9px;object-fit:contain}.brand-title{font-size:20px;font-weight:950;letter-spacing:-.03em}.subtitle{margin:-2px 0 0;text-align:center;color:var(--muted);font-size:14px;font-weight:700;line-height:1.5}.actions-row{display:flex;justify-content:flex-end;gap:10px}.top-button{min-height:40px;border:1px solid var(--border);border-radius:14px;background:#fff;color:#334155;padding:0 14px;font-size:14px;font-weight:850;box-shadow:0 1px 2px rgba(15,23,42,.05);cursor:pointer}
+    .search{min-height:48px;width:100%;border:1px solid var(--border);border-radius:18px;background:#fff;color:var(--text);padding:0 16px;font-size:16px;font-weight:700;outline:none;box-shadow:var(--shadow);margin-bottom:12px}.search:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(25,118,210,.12)}.count{margin:0 2px 10px;color:var(--muted);font-size:13px;font-weight:800}.grid{display:grid;grid-template-columns:1fr;gap:10px}@media(min-width:768px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    .card{border:1px solid #f1f5f9;border-radius:20px;background:#fff;padding:8px;box-shadow:var(--shadow);cursor:pointer;transition:transform .15s ease}.card:active{transform:scale(.99)}.card-inner{position:relative;min-height:88px;border-radius:16px;background:#f8fafc;padding:13px 76px 13px 13px}.name{display:block;color:#0f172a;font-size:16px;font-weight:950;line-height:1.35}.address{display:block;margin-top:8px;color:#475569;font-size:13px;font-weight:750;line-height:1.5;overflow-wrap:anywhere}.copy-button{position:absolute;top:12px;right:12px;min-height:30px;border:1px solid #bfdbfe;border-radius:999px;background:var(--blue-soft);color:var(--blue);padding:0 11px;font-size:12px;font-weight:900;cursor:pointer}.copy-button:active{transform:scale(.98)}
+    .empty{grid-column:1/-1;border:1px dashed #cbd5e1;border-radius:20px;background:#fff;padding:22px;text-align:center;color:#94a3b8;font-size:14px;font-weight:800;box-shadow:var(--shadow)}.links-section{margin-top:18px}.links-title{margin:0 0 10px;font-size:15px;font-weight:950;color:#334155}.site-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.site-link{display:block;border:1px solid var(--border);border-radius:16px;background:#fff;padding:13px 14px;box-shadow:var(--shadow)}.site-link strong{display:block;font-size:14px;font-weight:950;color:#0f172a}.site-link span{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.4}.footer{margin:18px 0 0;text-align:center;color:#94a3b8;font-size:12px;line-height:1.7}@media(max-width:420px){.brand-title{font-size:18px}.brand-logo{width:31px;height:31px}.site-links{grid-template-columns:1fr}.card-inner{padding-right:72px}}
   </style>
 </head>
-
 <body>
   <main class="page">
     <div class="topbar">
-      <div class="brand">
-        <img class="brand-logo" src="https://img.openaa.com/logo.png" alt="OpenAA" />
-        <div class="brand-title">OpenAA 纽约周边景点</div>
-      </div>
-
+      <div class="brand"><img class="brand-logo" src="https://img.openaa.com/logo.png" alt="OpenAA" /><div class="brand-title">OpenAA 纽约周边景点</div></div>
       <p class="subtitle">纽约及周边华人常去景点 · 地址 · 导航</p>
-
-      <div class="actions-row">
-        <button class="top-button" id="installButton" type="button">下载到桌面</button>
-        <button class="top-button" id="shareButton" type="button">分享</button>
-      </div>
+      <div class="actions-row"><button class="top-button" id="installButton" type="button">下载到桌面</button><button class="top-button" id="shareButton" type="button">分享</button></div>
     </div>
-
     <input class="search" id="searchInput" type="search" autocomplete="off" placeholder="搜索景点或地址" />
     <div class="count" id="countText"></div>
-
     <section class="grid" id="list" aria-label="纽约市景点地址"></section>
-
     <section class="links-section">
       <h2 class="links-title">OpenAA 实用网站</h2>
       <div class="site-links">
-        <a class="site-link" href="https://openaa.com" target="_blank" rel="noopener noreferrer">
-          <strong>OpenAA</strong>
-          <span>纽约华人生活、招聘、二手、服务</span>
-        </a>
-
-        <a class="site-link" href="https://dmv.openaa.com" target="_blank" rel="noopener noreferrer">
-          <strong>OpenAA DMV</strong>
-          <span>美国 DMV 中文题库与模拟考试</span>
-        </a>
-
-        <a class="site-link" href="https://toolku.com" target="_blank" rel="noopener noreferrer">
-          <strong>Toolku</strong>
-          <span>在美华人常用生活工具</span>
-        </a>
-
-        <a class="site-link" href="https://numbermobi.com" target="_blank" rel="noopener noreferrer">
-          <strong>NumberMobi</strong>
-          <span>美国手机靓号</span>
-        </a>
+        <a class="site-link" href="https://openaa.com" target="_blank" rel="noopener noreferrer"><strong>OpenAA</strong><span>纽约华人生活、招聘、二手、服务</span></a>
+        <a class="site-link" href="https://dmv.openaa.com" target="_blank" rel="noopener noreferrer"><strong>OpenAA DMV</strong><span>美国 DMV 中文题库与模拟考试</span></a>
+        <a class="site-link" href="https://toolku.com" target="_blank" rel="noopener noreferrer"><strong>Toolku</strong><span>在美华人常用生活工具</span></a>
+        <a class="site-link" href="https://numbermobi.com" target="_blank" rel="noopener noreferrer"><strong>NumberMobi</strong><span>美国手机靓号</span></a>
       </div>
     </section>
-
     <p class="footer">OpenAA.com · 为在美华人提供实用生活信息</p>
   </main>
-
   <script>
-    const PLACES = [
-      { name: "中央公园 Central Park", address: "Columbus Circle, New York, NY 10019" },
-      { name: "时代广场 Times Square", address: "Times Square, New York, NY 10036" },
-      { name: "自由女神 / Battery Park", address: "Battery Park, New York, NY 10004" },
-      { name: "华尔街铜牛 Charging Bull", address: "Bowling Green, New York, NY 10004" },
-      { name: "世贸中心 / 9·11 纪念馆", address: "180 Greenwich St, New York, NY 10007" },
-      { name: "布鲁克林大桥 Brooklyn Bridge", address: "Brooklyn Bridge, New York, NY 10038" },
-      { name: "DUMBO 经典拍照点", address: "Washington St & Water St, Brooklyn, NY 11201" },
-      { name: "法拉盛草原可乐娜公园", address: "Flushing Meadows Corona Park, Queens, NY 11368" },
-      { name: "Roosevelt Island", address: "Roosevelt Island, New York, NY 10044" },
-      { name: "Coney Island", address: "Coney Island Boardwalk, Brooklyn, NY 11224" }
-      { name: "7大道地铁口", address: "Seventh Avenue & 62nd Street Brooklyn, NY 11220" },       
-      { name: "36街地铁口", address: "36th Street & Fourth Avenue Brooklyn, NY 11232" }, 
-      { name: "36街 Costco", address: "976 3rd Ave Brooklyn, NY 11232" },
+    const PLACES=[
+      {name:"中央公园 Central Park",address:"Columbus Circle, New York, NY 10019"},
+      {name:"时代广场 Times Square",address:"Times Square, New York, NY 10036"},
+      {name:"自由女神 / Battery Park",address:"Battery Park, New York, NY 10004"},
+      {name:"华尔街铜牛 Charging Bull",address:"Bowling Green, New York, NY 10004"},
+      {name:"世贸中心 / 9·11 纪念馆",address:"180 Greenwich St, New York, NY 10007"},
+      {name:"布鲁克林大桥 Brooklyn Bridge",address:"Brooklyn Bridge, New York, NY 10038"},
+      {name:"DUMBO 经典拍照点",address:"Washington St & Water St, Brooklyn, NY 11201"},
+      {name:"法拉盛草原可乐娜公园",address:"Flushing Meadows Corona Park, Queens, NY 11368"},
+      {name:"Roosevelt Island",address:"Roosevelt Island, New York, NY 10044"},
+      {name:"Coney Island",address:"Coney Island Boardwalk, Brooklyn, NY 11224"},
+      {name:"7大道地铁口",address:"Seventh Avenue & 62nd Street Brooklyn, NY 11220"},
+      {name:"36街地铁口",address:"36th Street & Fourth Avenue Brooklyn, NY 11232"},
+      {name:"36街 Costco",address:"976 3rd Ave Brooklyn, NY 11232"}
     ];
-
-    const list = document.getElementById("list");
-    const searchInput = document.getElementById("searchInput");
-    const countText = document.getElementById("countText");
-    const shareButton = document.getElementById("shareButton");
-    const installButton = document.getElementById("installButton");
-    let deferredInstallPrompt = null;
-
-    function escapeHtml(value) {
-      return String(value || "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-
-    function escapeAttribute(value) {
-      return escapeHtml(value).replaceAll("`", "&#096;");
-    }
-
-    function mapUrl(address) {
-      const encoded = encodeURIComponent(address);
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      const isAndroid = /Android/i.test(navigator.userAgent);
-
-      if (isAndroid) return `geo:0,0?q=${encoded}`;
-      if (isIOS) return `https://maps.apple.com/?q=${encoded}`;
-      return `https://www.google.com/maps/search/?api=1&query=${encoded}`;
-    }
-
-    function openMap(address) {
-      const url = mapUrl(address);
-      if (url.startsWith("geo:")) {
-        location.href = url;
-      } else {
-        window.open(url, "_blank", "noopener,noreferrer");
-      }
-    }
-
-    async function copyText(value) {
-      if (navigator.clipboard && window.isSecureContext) {
-        try {
-          await navigator.clipboard.writeText(value);
-          return true;
-        } catch (_) {}
-      }
-
-      const textarea = document.createElement("textarea");
-      textarea.value = value;
-      textarea.setAttribute("readonly", "");
-      textarea.style.position = "fixed";
-      textarea.style.top = "-9999px";
-      document.body.appendChild(textarea);
-      textarea.select();
-
-      let ok = false;
-      try { ok = document.execCommand("copy"); } catch (_) {}
-      document.body.removeChild(textarea);
-      return ok;
-    }
-
-    function render() {
-      const query = searchInput.value.trim().toLowerCase();
-      const items = PLACES.filter(item => {
-        return !query ||
-          item.name.toLowerCase().includes(query) ||
-          item.address.toLowerCase().includes(query);
-      });
-
-      countText.textContent = `${items.length} 个景点`;
-
-      if (!items.length) {
-        list.innerHTML = '<div class="empty">没有找到相关景点</div>';
-        return;
-      }
-
-      list.innerHTML = items.map(item => `
-        <article class="card">
-          <div class="card-inner">
-            <span class="name">${escapeHtml(item.name)}</span>
-            <span class="address">${escapeHtml(item.address)}</span>
-            <div class="card-actions">
-              <button class="map-button" type="button" data-map="${escapeAttribute(item.address)}">进入地图</button>
-              <button class="copy-button" type="button" data-copy="${escapeAttribute(item.address)}">复制</button>
-            </div>
-          </div>
-        </article>
-      `).join("");
-    }
-
-    list.addEventListener("click", async event => {
-      const mapButton = event.target.closest("[data-map]");
-      if (mapButton) {
-        openMap(mapButton.getAttribute("data-map") || "");
-        return;
-      }
-
-      const copyButton = event.target.closest("[data-copy]");
-      if (copyButton) {
-        const address = copyButton.getAttribute("data-copy") || "";
-        const ok = await copyText(address);
-        const original = copyButton.textContent;
-        copyButton.textContent = ok ? "已复制" : "复制失败";
-        setTimeout(() => copyButton.textContent = original || "复制", 1400);
-      }
-    });
-
-    searchInput.addEventListener("input", render);
-
-    window.addEventListener("beforeinstallprompt", event => {
-      event.preventDefault();
-      deferredInstallPrompt = event;
-      installButton.hidden = false;
-    });
-
-    window.addEventListener("appinstalled", () => {
-      deferredInstallPrompt = null;
-      installButton.textContent = "已安装";
-      installButton.disabled = true;
-    });
-
-    installButton.addEventListener("click", async () => {
-      if (deferredInstallPrompt) {
-        deferredInstallPrompt.prompt();
-        try {
-          await deferredInstallPrompt.userChoice;
-        } catch (_) {}
-        deferredInstallPrompt = null;
-        return;
-      }
-
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      if (isIOS) {
-        alert("iPhone / iPad：点浏览器下方“分享”按钮，再选择“添加到主屏幕”。");
-        return;
-      }
-
-      alert("如没有弹出安装窗口，请使用 Chrome / Edge 浏览器菜单中的“安装此应用”或“创建快捷方式”，即可放到桌面。");
-    });
-
-    if ("serviceWorker" in navigator && location.protocol === "https:") {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("/sw-nyc.js").catch(() => {});
-      });
-    }
-
-    shareButton.addEventListener("click", async () => {
-      const shareData = {
-        title: "OpenAA 纽约周边景点",
-        text: "纽约及周边华人常去景点 · 地址 · 导航",
-        url: location.href
-      };
-
-      if (navigator.share) {
-        try {
-          await navigator.share(shareData);
-          return;
-        } catch (_) {}
-      }
-
-      const ok = await copyText(location.href);
-      alert(ok ? "链接已复制" : "当前浏览器不支持分享，请手动复制地址栏链接。");
-    });
-
+    const list=document.getElementById("list"),searchInput=document.getElementById("searchInput"),countText=document.getElementById("countText"),shareButton=document.getElementById("shareButton"),installButton=document.getElementById("installButton");let deferredInstallPrompt=null;
+    function escapeHtml(v){return String(v||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;")}
+    function escapeAttribute(v){return escapeHtml(v).replaceAll("`","&#096;")}
+    function mapUrl(address){const encoded=encodeURIComponent(address),isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent),isAndroid=/Android/i.test(navigator.userAgent);if(isAndroid)return `geo:0,0?q=${encoded}`;if(isIOS)return `https://maps.apple.com/?q=${encoded}`;return `https://www.google.com/maps/search/?api=1&query=${encoded}`}
+    function openMap(address){const url=mapUrl(address);if(url.startsWith("geo:"))location.href=url;else window.open(url,"_blank","noopener,noreferrer")}
+    async function copyText(value){if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(value);return true}catch(_){}}const textarea=document.createElement("textarea");textarea.value=value;textarea.setAttribute("readonly","");textarea.style.position="fixed";textarea.style.top="-9999px";document.body.appendChild(textarea);textarea.select();let ok=false;try{ok=document.execCommand("copy")}catch(_){}document.body.removeChild(textarea);return ok}
+    function render(){const query=searchInput.value.trim().toLowerCase();const items=PLACES.filter(item=>!query||item.name.toLowerCase().includes(query)||item.address.toLowerCase().includes(query));countText.textContent=`${items.length} 个景点`;if(!items.length){list.innerHTML='<div class="empty">没有找到相关景点</div>';return}list.innerHTML=items.map(item=>`<article class="card" role="link" tabindex="0" data-map="${escapeAttribute(item.address)}"><div class="card-inner"><span class="name">${escapeHtml(item.name)}</span><button class="copy-button" type="button" data-copy="${escapeAttribute(item.address)}" aria-label="复制地址">复制</button><span class="address">${escapeHtml(item.address)}</span></div></article>`).join("")}
+    list.addEventListener("click",async event=>{const copyButton=event.target.closest("[data-copy]");if(copyButton){event.preventDefault();event.stopPropagation();const address=copyButton.getAttribute("data-copy")||"",ok=await copyText(address),original=copyButton.textContent;copyButton.textContent=ok?"已复制":"复制失败";setTimeout(()=>copyButton.textContent=original||"复制",1400);return}const card=event.target.closest("[data-map]");if(card)openMap(card.getAttribute("data-map")||"")});
+    list.addEventListener("keydown",event=>{if(event.key!=="Enter"&&event.key!==" ")return;if(event.target.closest("[data-copy]"))return;const card=event.target.closest("[data-map]");if(!card)return;event.preventDefault();openMap(card.getAttribute("data-map")||"")});
+    searchInput.addEventListener("input",render);
+    window.addEventListener("beforeinstallprompt",event=>{event.preventDefault();deferredInstallPrompt=event;installButton.hidden=false});
+    window.addEventListener("appinstalled",()=>{deferredInstallPrompt=null;installButton.textContent="已安装";installButton.disabled=true});
+    installButton.addEventListener("click",async()=>{if(deferredInstallPrompt){deferredInstallPrompt.prompt();try{await deferredInstallPrompt.userChoice}catch(_){}deferredInstallPrompt=null;return}if(/iPad|iPhone|iPod/.test(navigator.userAgent)){alert("iPhone / iPad：点浏览器下方“分享”按钮，再选择“添加到主屏幕”。");return}alert("如没有弹出安装窗口，请使用 Chrome / Edge 浏览器菜单中的“安装此应用”或“创建快捷方式”，即可放到桌面。")});
+    if("serviceWorker" in navigator&&location.protocol==="https:")window.addEventListener("load",()=>navigator.serviceWorker.register("/sw-nyc.js").catch(()=>{}));
+    shareButton.addEventListener("click",async()=>{const shareData={title:"OpenAA 纽约周边景点",text:"纽约及周边华人常去景点 · 地址 · 导航",url:location.href};if(navigator.share){try{await navigator.share(shareData);return}catch(_){}}const ok=await copyText(location.href);alert(ok?"链接已复制":"当前浏览器不支持分享，请手动复制地址栏链接。")});
     render();
   </script>
 </body>
