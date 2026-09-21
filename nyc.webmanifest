@@ -1,10 +1,10 @@
 {
-  "id": "/nyc.html",
+  "id": "/nav/nyc.html",
   "name": "OpenAA 纽约地址导航",
   "short_name": "纽约导航",
   "description": "纽约景点、购物商场、品牌店和实用地点中文地址导航",
-  "start_url": "/nyc.html",
-  "scope": "/",
+  "start_url": "/nav/nyc.html",
+  "scope": "/nav/",
   "display": "standalone",
   "background_color": "#f4f4f5",
   "theme_color": "#ffffff",
