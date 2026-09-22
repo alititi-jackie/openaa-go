@@ -1,0 +1,33 @@
+name: Nav tablet three columns
+on:
+  push:
+    paths:
+      - '.github/workflows/nav-tablet-three-columns.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lower three-column breakpoint
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          files = [Path('nav/ai.html'), Path('nav/bank.html'), Path('nav/dmv.html'), Path('nav/onegobuy.html')]
+          old='@media(min-width:769px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}'
+          new='@media(min-width:600px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}'
+          for p in files:
+              s=p.read_text(encoding='utf-8')
+              if old not in s:
+                  raise SystemExit(f'Expected breakpoint not found in {p}')
+              p.write_text(s.replace(old,new,1),encoding='utf-8')
+          PY
+      - name: Commit changes and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/nav-tablet-three-columns.yml
+          git add nav/ai.html nav/bank.html nav/dmv.html nav/onegobuy.html
+          git commit -m "Use three columns on tablet nav pages"
+          git push
