@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "OpenAA 美国华人生活入口",
+  "short_name": "OpenAA",
+  "description": "搜索网络，也搜索华人生活",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "/favicon/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
