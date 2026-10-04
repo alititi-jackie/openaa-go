@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🏠 房屋</span>
 <h1>在美华人租房全指南（2026版）</h1>
 <p class="desc">刚来美国租房从哪下手？这篇2026版全指南覆盖：预算怎么定、去哪找房、看房签约、搬入检查、租客权利、退房拿押金，附FARE法案和押金法最新要点。</p>
-<div class="intro"><p>这篇是给刚来美国的华人准备的租房总纲，把全流程串成一条线：定预算→找房→看房→申请→签约→搬入→居住→退房。配合2026年纽约两大要点（FARE中介费法案、押金14天退还），照着走能避开九成坑。建议收藏，租房每一步翻出来对照。</p></div>
+<div class="intro">这篇是给刚来美国的华人准备的租房总纲，把全流程串成一条线：定预算→找房→看房→申请→签约→搬入→居住→退房。配合2026年纽约两大要点（FARE中介费法案、押金14天退还），照着走能避开九成坑。建议收藏，租房每一步翻出来对照。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">第一步：定预算和选区域</a></li><li><a href="#s2">第二步：找房和看房</a></li><li><a href="#s3">第三步：申请和签约</a></li><li><a href="#s4">第四步：居住中的权利</a></li><li><a href="#s5">第五步：退房拿回押金</a></li></ol></nav>
 <h2 class="sec" id="s1">第一步：定预算和选区域</h2>
 <p>通用规则：<strong>房租别超过税前收入的30%</strong>，纽约可以适当放宽但别超40%，否则生活质量直线下降。区域选择看三样：<strong>通勤</strong>（地铁30分钟内为佳）、<strong>安全</strong>（白天晚上各去一次感受）、<strong>生活</strong>（华人超市、中餐馆、中文服务）。法拉盛适合预算有限的新移民，曼哈顿贵但通勤短，布鲁克林华人区性价比居中。学生党预算紧，优先考虑合租和学校周边；上班族把通勤控制在45分钟内，每天省下的时间比省下的房租值钱。</p><h2 class="sec" id="s2">第二步：找房和看房</h2>
@@ -135,7 +132,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>来美第一年没信用记录怎么租房？</summary><div class="a">三招：找华人房东或二房东（要求相对宽松）、提供银行存款证明和预付几个月租金、找有信用的朋友做担保人。押金上限仍是一个月租金，房东不能多收。</div></details><details class="faq-item"><summary>纽约租房中介费现在谁出？</summary><div class="a">2025年6月11日FARE法案生效后，谁请中介谁付钱。房东雇的中介不能向租客收费，只有你自己雇的中介才需要你付，且必须先签书面协议。</div></details><details class="faq-item"><summary>押金最多能收几个月？</summary><div class="a">纽约州最多一个月租金，这是2019年法律定的硬上限。要求交两个月押金或额外保证金的都是违法的，可以拒绝并举报。</div></details></div>
 <div class="sources">数据来源：<a href="https://www.NYC.gov/assets/hpd/downloads/pdfs/services/tenant-bill-of-rights-simplified-chinese.pdf" rel="nofollow noopener" target="_blank">纽约市租户权利法案（中文）</a>、<a href="https://ru.ag.ny.gov/sites/default/files/publications/tenantrights-chinese.pdf" rel="nofollow noopener" target="_blank">纽约州检察长租客权利指南（中文）</a>、<a href="https://brooklynrenters.com/rights/broker-fees" rel="nofollow noopener" target="_blank">FARE法案中介费解读</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🏠 房屋板块更多指南</h2><ul><li><a href="housing-niuyue-zufang-qudao.html">纽约租房去哪找？5个靠谱渠道</a></li><li><a href="housing-zufang-fangpian.html">纽约租房防骗：6种常见套路</a></li><li><a href="housing-yajin-tuikuan.html">美国租房押金能退吗？退押金攻略</a></li><li><a href="housing-lease-hetong.html">美国lease签约前必看的10条</a></li><li><a href="housing-falasheng-zufang.html">法拉盛租房多少钱？2026行情</a></li><li><a href="housing-hezu-zhuyi.html">在美国跟人合租要注意什么？</a></li><li><a href="housing-fangdong-shaixuan.html">在美国当房东怎么筛选租客？</a></li><li><a href="housing-zuba-chuli.html">遇到租霸怎么办？房东应对指南</a></li><li><a href="housing-maifang-shoufu.html">在美国买房首付要准备多少？</a></li></ul></nav>
+<nav class="related"><h2>🏠 房屋板块更多指南</h2><ul><li><a href="housing-niuyue-zufang-qudao.html">纽约租房去哪找？4个靠谱渠道</a></li><li><a href="housing-zufang-fangpian.html">纽约租房防骗：6种常见套路</a></li><li><a href="housing-yajin-tuikuan.html">美国租房押金能退吗？退押金攻略</a></li><li><a href="housing-lease-hetong.html">美国lease签约前必看的10条</a></li><li><a href="housing-falasheng-zufang.html">法拉盛租房多少钱？2026行情</a></li><li><a href="housing-hezu-zhuyi.html">在美国跟人合租要注意什么？</a></li><li><a href="housing-fangdong-shaixuan.html">在美国当房东怎么筛选租客？</a></li><li><a href="housing-zuba-chuli.html">遇到租霸怎么办？房东应对指南</a></li><li><a href="housing-maifang-shoufu.html">在美国买房首付要准备多少？</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>

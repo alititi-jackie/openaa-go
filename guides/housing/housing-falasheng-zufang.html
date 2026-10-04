@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🏠 房屋</span>
 <h1>法拉盛租房多少钱？2026行情</h1>
 <p class="desc">法拉盛是纽约华人租房首选。本文整理2026年法拉盛各户型租金行情：单间、一室一厅、两室大概什么价，对比曼哈顿能省多少，以及在法拉盛租房的优缺点。</p>
-<div class="intro"><p>法拉盛是纽约华人最集中的地方：讲中文、吃中餐、坐7号线二十分钟直达曼哈顿，刚来的华人十个有八个先落脚这里。2026年法拉盛租金整体平稳，下面是目前各户型的大概行情（具体以实时房源为准，出行前多对比几家）。</p></div>
+<div class="intro">法拉盛是纽约华人最集中的地方：讲中文、吃中餐、坐7号线二十分钟直达曼哈顿，刚来的华人十个有八个先落脚这里。2026年法拉盛租金整体平稳，下面是目前各户型的大概行情（具体以实时房源为准，出行前多对比几家）。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">2026年法拉盛租金行情</a></li><li><a href="#s2">为什么华人爱租法拉盛</a></li><li><a href="#s3">法拉盛租房的坑</a></li><li><a href="#s4">法拉盛周边备选</a></li></ol></nav>
 <h2 class="sec" id="s1">2026年法拉盛租金行情</h2>
 <p>目前法拉盛大概行情：<strong>合租单间800-1200美元</strong>，Studio一室户1600-2000美元，一室一厅2100-2600美元，两室2800-3400美元。缅街地铁站周边和新建公寓偏贵，老楼和稍远街区便宜两三百。跟曼哈顿同户型比，<strong>普遍便宜三到四成</strong>，这也是华人扎堆法拉盛的最大原因。提醒：行情每月浮动，签约前以StreetEasy、Zillow实时房源为准。</p><h2 class="sec" id="s2">为什么华人爱租法拉盛</h2>
@@ -134,7 +131,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>法拉盛合租单间一般多少钱？</summary><div class="a">目前约800-1200美元，看位置和条件。地铁站步行5分钟内的贵两三百，稍远的便宜。包水电网的和不包的也要问清，差价可能每月一两百。</div></details><details class="faq-item"><summary>在法拉盛租房一定要通过中介吗？</summary><div class="a">不一定。法拉盛很多华人房东直租，微信群、华人论坛每天都有个人房源。走中介的好处是合同规范，但2026年要注意FARE法案：房东的中介不能再向你收费。</div></details><details class="faq-item"><summary>法拉盛安全吗？</summary><div class="a">整体还可以，缅街、地铁站周边和商业区人流多、较安全。晚上尽量走大路，偏僻小巷多留意。看房时白天晚上各去一次，感受下周边环境。</div></details></div>
 <div class="sources">数据来源：<a href="https://www.streeteasy.com/" rel="nofollow noopener" target="_blank">StreetEasy纽约租房平台</a>、<a href="https://www.zillow.com/" rel="nofollow noopener" target="_blank">Zillow找房平台</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🏠 房屋板块更多指南</h2><ul><li><a href="housing-niuyue-zufang-qudao.html">纽约租房去哪找？5个靠谱渠道</a></li><li><a href="housing-zufang-fangpian.html">纽约租房防骗：6种常见套路</a></li><li><a href="housing-yajin-tuikuan.html">美国租房押金能退吗？退押金攻略</a></li><li><a href="housing-lease-hetong.html">美国lease签约前必看的10条</a></li><li><a href="housing-hezu-zhuyi.html">在美国跟人合租要注意什么？</a></li><li><a href="housing-fangdong-shaixuan.html">在美国当房东怎么筛选租客？</a></li><li><a href="housing-zuba-chuli.html">遇到租霸怎么办？房东应对指南</a></li><li><a href="housing-maifang-shoufu.html">在美国买房首付要准备多少？</a></li><li><a href="housing-huaren-zhinan.html">在美华人租房全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>🏠 房屋板块更多指南</h2><ul><li><a href="housing-niuyue-zufang-qudao.html">纽约租房去哪找？4个靠谱渠道</a></li><li><a href="housing-zufang-fangpian.html">纽约租房防骗：6种常见套路</a></li><li><a href="housing-yajin-tuikuan.html">美国租房押金能退吗？退押金攻略</a></li><li><a href="housing-lease-hetong.html">美国lease签约前必看的10条</a></li><li><a href="housing-hezu-zhuyi.html">在美国跟人合租要注意什么？</a></li><li><a href="housing-fangdong-shaixuan.html">在美国当房东怎么筛选租客？</a></li><li><a href="housing-zuba-chuli.html">遇到租霸怎么办？房东应对指南</a></li><li><a href="housing-maifang-shoufu.html">在美国买房首付要准备多少？</a></li><li><a href="housing-huaren-zhinan.html">在美华人租房全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>
