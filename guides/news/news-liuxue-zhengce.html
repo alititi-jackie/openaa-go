@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">📰 新闻</span>
 <h1>留学生政策变化去哪看？</h1>
 <p class="desc">F-1、OPT、H-1B政策牵动每个留学生。本文整理SEVP官网、学校DSO、USCIS三个官方渠道，教你辨别一亩三分地和微信群消息，别被谣言耽误身份。</p>
-<div class="intro"><p>&lt;p&gt;对留学生来说，政策变化不是新闻，是人生：OPT时长、H-1B抽签规则、CPT实习规定，变一项就可能打乱毕业计划。但留学生群里也是谣言重灾区，“明年取消OPT”这种话年年传。记住：&lt;strong&gt;身份问题只认官方渠道&lt;/strong&gt;，本文把三个必备的官方来源讲清楚。&lt;/p&gt;</p></div>
+<div class="intro"><p>对留学生来说，政策变化不是新闻，是人生：OPT时长、H-1B抽签规则、CPT实习规定，变一项就可能打乱毕业计划。但留学生群里也是谣言重灾区，“明年取消OPT”这种话年年传。记住：<strong>身份问题只认官方渠道</strong>，本文把三个必备的官方来源讲清楚。</p></div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">SEVP官网：留学生政策的源头</a></li><li><a href="#s2">学校DSO：你最重要的真人渠道</a></li><li><a href="#s3">USCIS官网：申请类政策看这里</a></li><li><a href="#s4">一亩三分地和微信群：经验帖怎么看</a></li><li><a href="#s5">身份出问题第一时间找谁</a></li></ol></nav>
 <h2 class="sec" id="s1">SEVP官网：留学生政策的源头</h2>
 <p><strong>学生和交流访问者项目官网</strong>（studyinthestates.dhs.gov）是国土安全部下属SEVP的官方网站，所有关于F-1、M-1学生身份的规定、SEVIS系统、OPT政策都在这里发布。网站有专门的<strong>学生版块</strong>，用相对通俗的语言解释政策，还有中文版的部分指引。H-1B抽签、OPT失业期计算这类关键问题，先来这里查原文，再去看中文解读。政策谣言的终结方法很简单：官网搜不到，就是假的。</p><h2 class="sec" id="s2">学校DSO：你最重要的真人渠道</h2>
@@ -135,7 +132,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>OPT政策变化去哪看最准？</summary><div class="a">studyinthestates.dhs.gov 的SEVP官网和 uscis.gov，两个都是官方源。微信群消息必须到官网验证。</div></details><details class="faq-item"><summary>学校DSO是干嘛的？</summary><div class="a">DSO是学校指定的官员，负责在SEVIS系统里维护你的学生身份。身份相关问题先问DSO，免费且权威。</div></details><details class="faq-item"><summary>H-1B抽签消息去哪看？</summary><div class="a">USCIS官网每年公布抽签时间表和规则，抽签结果在USCIS在线账户查。不要轻信中介的“内幕消息”。</div></details><details class="faq-item"><summary>一亩三分地的信息可信吗？</summary><div class="a">经验分享类可参考，政策类必须去官网验证。记住区分“网友经验”和“官方政策”，后者只认.gov网站。</div></details></div>
 <div class="sources">数据来源：<a href="https://studyinthestates.dhs.gov" rel="nofollow noopener" target="_blank">SEVP Study in the States</a>、<a href="https://www.uscis.gov" rel="nofollow noopener" target="_blank">美国公民及移民服务局 USCIS</a>、<a href="https://www.1point3acres.com" rel="nofollow noopener" target="_blank">一亩三分地</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>📰 新闻板块更多指南</h2><ul><li><a href="news-huaren-xinwen-nalikan.html">美国华人新闻去哪看？6个渠道</a></li><li><a href="news-yimin-zhengce-guanfang.html">美国移民政策去哪看官方消息？</a></li><li><a href="news-niuyue-shequ.html">纽约华人社区新闻在哪看？</a></li><li><a href="news-tianqi-yujing.html">在美国天气预警去哪看最准？</a></li><li><a href="news-shuiwu-xinzheng.html">美国税务新政华人去哪看解读？</a></li><li><a href="news-huaren-pianju-yujing.html">华人社区最新骗局预警去哪看？</a></li><li><a href="news-xiaofei-tousu.html">在美国消费被坑去哪投诉？</a></li><li><a href="news-fangjia-zoushi.html">美国房价走势去哪看靠谱数据？</a></li><li><a href="news-huaren-zhinan.html">在美华人新闻资讯全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>📰 新闻板块更多指南</h2><ul><li><a href="news-huaren-xinwen-nalikan.html">美国华人新闻去哪看？5个渠道</a></li><li><a href="news-yimin-zhengce-guanfang.html">美国移民政策去哪看官方消息？</a></li><li><a href="news-niuyue-shequ.html">纽约华人社区新闻在哪看？</a></li><li><a href="news-tianqi-yujing.html">在美国天气预警去哪看最准？</a></li><li><a href="news-shuiwu-xinzheng.html">美国税务新政华人去哪看解读？</a></li><li><a href="news-huaren-pianju-yujing.html">华人社区最新骗局预警去哪看？</a></li><li><a href="news-xiaofei-tousu.html">在美国消费被坑去哪投诉？</a></li><li><a href="news-fangjia-zoushi.html">美国房价走势去哪看靠谱数据？</a></li><li><a href="news-huaren-zhinan.html">在美华人新闻资讯全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>

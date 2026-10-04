@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">📰 新闻</span>
 <h1>在美华人新闻资讯全指南（2026版）</h1>
 <p class="desc">在美华人新闻资讯总纲：按移民政策、税务、天气、防骗、买房等7大场景，一次配齐官方渠道和中文信源，并附微信群消息5步验证法。收藏这一篇，7大场景渠道全配齐。</p>
-<div class="intro"><p>&lt;p&gt;在美国生活，信息就是安全感：政策变了要知道，骗局来了要躲开，天灾来了要准备。但中文信息散落在几十个网站和无数微信群里，新人常常不知道从哪下手。这篇总纲按&lt;strong&gt;7大生活场景&lt;/strong&gt;，把前面9篇文章的渠道汇总成一张清单，收藏这一篇就够了。&lt;/p&gt;</p></div>
+<div class="intro"><p>在美国生活，信息就是安全感：政策变了要知道，骗局来了要躲开，天灾来了要准备。但中文信息散落在几十个网站和无数微信群里，新人常常不知道从哪下手。这篇总纲按<strong>7大生活场景</strong>，把前面9篇文章的渠道汇总成一张清单，收藏这一篇就够了。</p></div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">每日中文新闻：4个固定信源</a></li><li><a href="#s2">移民与税务：只认.gov官网</a></li><li><a href="#s3">天气和安全：NWS+手机警报</a></li><li><a href="#s4">防骗维权：FTC+IC3+州检察长</a></li><li><a href="#s5">买房数据与消息验证法</a></li></ol></nav>
 <h2 class="sec" id="s1">每日中文新闻：4个固定信源</h2>
 <p>每天花15分钟刷这4个，基本不会错过重要消息：<ul><li><strong>世界日报</strong>（worldjournal.com）：北美中文大报，本地新闻深</li><li><strong>纽约华人资讯网</strong>（nychinaren.com）：纽约本地社区新闻和论坛</li><li><strong>文学城/万维</strong>（wenxuecity.com/news.creaders.net）：新闻聚合，信息量大</li><li><strong>OpenAA新闻板块</strong>（openaa.com/news）：纽约华人实用资讯</li></ul>建议的搭配是：大事看世界日报+英文主流媒体，生活办事查OpenAA和本地资讯网，聚合站当线索来源。</p><h2 class="sec" id="s2">移民与税务：只认.gov官网</h2>
@@ -135,7 +132,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>只收藏一篇够吗？</summary><div class="a">这篇是总纲和清单，够你快速找到渠道。具体场景的详细用法（如怎么写投诉、怎么看排期表）请看本系列对应的单篇指南。</div></details><details class="faq-item"><summary>英文不好怎么用.gov官网？</summary><div class="a">用浏览器自带翻译功能看大意，关键数字和日期对照原文；IRS、NWS等网站有中文帮助页面；重大事项找律师或会计师确认。</div></details><details class="faq-item"><summary>有没有一个APP能全搞定？</summary><div class="a">没有。不同场景的官方渠道不同，这正是本文存在的意义。建议按场景把网址分类存进浏览器书签。</div></details><details class="faq-item"><summary>这些渠道多久看一次？</summary><div class="a">中文新闻每天15分钟；移民/税务政策每月看一次官网更新；天气预警在恶劣天气季每天看；防骗预警隔段时间刷一下FTC预警栏目。</div></details></div>
 <div class="sources">数据来源：<a href="https://www.worldjournal.com" rel="nofollow noopener" target="_blank">世界日报</a>、<a href="https://www.ftc.gov" rel="nofollow noopener" target="_blank">美国联邦贸易委员会 FTC</a>、<a href="https://www.weather.gov" rel="nofollow noopener" target="_blank">美国国家气象局 NWS</a>、<a href="https://www.openaa.com/news" rel="nofollow noopener" target="_blank">OpenAA新闻板块</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>📰 新闻板块更多指南</h2><ul><li><a href="news-huaren-xinwen-nalikan.html">美国华人新闻去哪看？6个渠道</a></li><li><a href="news-yimin-zhengce-guanfang.html">美国移民政策去哪看官方消息？</a></li><li><a href="news-niuyue-shequ.html">纽约华人社区新闻在哪看？</a></li><li><a href="news-tianqi-yujing.html">在美国天气预警去哪看最准？</a></li><li><a href="news-shuiwu-xinzheng.html">美国税务新政华人去哪看解读？</a></li><li><a href="news-huaren-pianju-yujing.html">华人社区最新骗局预警去哪看？</a></li><li><a href="news-xiaofei-tousu.html">在美国消费被坑去哪投诉？</a></li><li><a href="news-liuxue-zhengce.html">留学生政策变化去哪看？</a></li><li><a href="news-fangjia-zoushi.html">美国房价走势去哪看靠谱数据？</a></li></ul></nav>
+<nav class="related"><h2>📰 新闻板块更多指南</h2><ul><li><a href="news-huaren-xinwen-nalikan.html">美国华人新闻去哪看？5个渠道</a></li><li><a href="news-yimin-zhengce-guanfang.html">美国移民政策去哪看官方消息？</a></li><li><a href="news-niuyue-shequ.html">纽约华人社区新闻在哪看？</a></li><li><a href="news-tianqi-yujing.html">在美国天气预警去哪看最准？</a></li><li><a href="news-shuiwu-xinzheng.html">美国税务新政华人去哪看解读？</a></li><li><a href="news-huaren-pianju-yujing.html">华人社区最新骗局预警去哪看？</a></li><li><a href="news-xiaofei-tousu.html">在美国消费被坑去哪投诉？</a></li><li><a href="news-liuxue-zhengce.html">留学生政策变化去哪看？</a></li><li><a href="news-fangjia-zoushi.html">美国房价走势去哪看靠谱数据？</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>
