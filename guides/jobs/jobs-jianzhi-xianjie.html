@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🔍 招聘</span>
 <h1>在美国打现金工靠谱吗？风险必看</h1>
 <p class="desc">在美国打现金工（拿现金、不报税）到底靠谱吗？本文讲清现金工的四种真实风险：身份影响、欠薪维权难、工伤无保障、报税问题，以及留学生和无身份者的合法替代方案。</p>
-<div class="intro"><p>&lt;p&gt;“现金工”是华人圈的高频词：餐馆、装修、保姆、仓库，很多岗位发工资直接给现金。听起来省税、门槛低，但&lt;strong&gt;现金工游走在法律灰色地带，风险比很多人想象的大&lt;/strong&gt;。这篇不评判、只讲清风险，帮你做知情选择。&lt;/p&gt;</p></div>
+<div class="intro"><p>“现金工”是华人圈的高频词：餐馆、装修、保姆、仓库，很多岗位发工资直接给现金。听起来省税、门槛低，但<strong>现金工游走在法律灰色地带，风险比很多人想象的大</strong>。这篇不评判、只讲清风险，帮你做知情选择。</p></div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">什么是现金工：先把定义搞清</a></li><li><a href="#s2">对留学生：可能断送身份</a></li><li><a href="#s3">欠薪和工伤：现金工最痛的两点</a></li><li><a href="#s4">合法替代方案</a></li></ol></nav>
 <h2 class="sec" id="s1">什么是现金工：先把定义搞清</h2>
 <p>现金工指雇主<strong>不走正规工资系统（payroll）、不扣税、不发W-2或1099</strong>，直接用现金（或Zelle、现金支票）付工资的用工方式。常见于中餐馆后厨、装修队、家庭保姆、仓库搬运等华人聚集行业。对雇主来说省了税和保险成本；对工人来说到手多一点、入职零门槛。但代价是：<strong>你在法律上“不存在”这份工作</strong>——没有工资记录，意味着没有社保积分、没有失业保险、没有工伤保险。</p><h2 class="sec" id="s2">对留学生：可能断送身份</h2>
@@ -134,7 +131,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>现金工需要报税吗？</summary><div class="a">法律上所有收入都要报税，包括现金收入。现实中很多人不报，但这属于逃税，一旦被查会有罚款。不报税的另一个代价是：没有收入记录，以后贷款、办身份都缺证明。</div></details><details class="faq-item"><summary>老板欠现金工工资，能要回来吗？</summary><div class="a">可以尝试。保留微信聊天记录、考勤证据，向州劳工厅（Department of Labor）投诉。纽约州等地明确表示投诉不查身份。但举证比正规工难，所以事前留证据最重要。</div></details><details class="faq-item"><summary>打现金工会被移民局发现吗？</summary><div class="a">有可能，尤其是在申请OPT、H-1B、绿卡等需要审查工作历史的环节。银行大额现金存入也可能引起注意。不要心存侥幸。</div></details><details class="faq-item"><summary>Zelle转账算现金工吗？</summary><div class="a">如果雇主用Zelle发工资但不走payroll、不报税，本质上和现金工一样，属于未申报用工，风险相同。</div></details></div>
 <div class="sources">数据来源：<a href="https://github.com/sver0411/opportunityhandbook/blob/HEAD/docs/countries/美国.md" rel="nofollow noopener" target="_blank">留美工作身份指南</a>、<a href="https://consumer.ftc.gov/articles/mystery-shopping-scams" rel="nofollow noopener" target="_blank">FTC：求职骗局官方警示</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🔍 招聘板块更多指南</h2><ul><li><a href="jobs-huaren-zhaogong-qudao.html">在美国华人找工作去哪找？7个靠谱渠道</a></li><li><a href="jobs-liuxuesheng-qiuzhi.html">美国留学生怎么找工作？OPT全流程</a></li><li><a href="jobs-zhongcanguan-zhaogong.html">纽约中餐馆招工信息去哪看？</a></li><li><a href="jobs-h1b-sponsor.html">sponsor H1B的公司怎么找？3招</a></li><li><a href="jobs-mianshi-yingwen.html">英文不好在美国怎么面试？技巧</a></li><li><a href="jobs-jianli-moban.html">美国简历怎么写？华人模板+避坑</a></li><li><a href="jobs-qiuzhi-pianju.html">华人找工作防骗：8种求职骗局</a></li><li><a href="jobs-yuesao-shouru.html">在美国做月嫂保姆收入多少？</a></li><li><a href="jobs-huaren-zhinan.html">在美华人找工作全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>🔍 招聘板块更多指南</h2><ul><li><a href="jobs-huaren-zhaogong-qudao.html">在美国华人找工作去哪找？5个靠谱渠道</a></li><li><a href="jobs-liuxuesheng-qiuzhi.html">美国留学生怎么找工作？OPT全流程</a></li><li><a href="jobs-zhongcanguan-zhaogong.html">纽约中餐馆招工信息去哪看？</a></li><li><a href="jobs-h1b-sponsor.html">sponsor H1B的公司怎么找？3招</a></li><li><a href="jobs-mianshi-yingwen.html">英文不好在美国怎么面试？技巧</a></li><li><a href="jobs-jianli-moban.html">美国简历怎么写？华人模板+避坑</a></li><li><a href="jobs-qiuzhi-pianju.html">华人找工作防骗：8种求职骗局</a></li><li><a href="jobs-yuesao-shouru.html">在美国做月嫂保姆收入多少？</a></li><li><a href="jobs-huaren-zhinan.html">在美华人找工作全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>
