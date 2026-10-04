@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🧭 导航</span>
 <h1>美国转运公司怎么选？海淘转运教程</h1>
 <p class="desc">在美国网站买东西寄回国，选对转运公司能省一半运费。本文讲清转运全流程：注册拿美国仓库地址、免税州下单、合箱打包，并教你5招避开转运坑，附禁运品清单。</p>
-<div class="intro"><p>美国很多好东西国内买不到或贵一倍，海淘就成了华人的刚需。但美国商家大多不直邮中国，这时候就需要转运公司：先寄到它在美国的仓库，再合箱发回国。本文把转运完整流程、怎么选公司、哪些东西不能运一次讲透，新手照着走就行。</p></div>
+<div class="intro">美国很多好东西国内买不到或贵一倍，海淘就成了华人的刚需。但美国商家大多不直邮中国，这时候就需要转运公司：先寄到它在美国的仓库，再合箱发回国。本文把转运完整流程、怎么选公司、哪些东西不能运一次讲透，新手照着走就行。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">转运全流程：四步把货运回国</a></li><li><a href="#s2">选转运公司的5个标准</a></li><li><a href="#s3">海淘下单的省钱技巧</a></li></ol></nav>
 <h2 class="sec" id="s1">转运全流程：四步把货运回国</h2>
 <p><strong>第一步：注册转运公司</strong>，拿到它在美国的仓库地址（一般会给你一个专属客户编号）。<strong>第二步：在美国网站下单</strong>，收货地址填转运仓库地址，<strong>优先选免税州的仓库</strong>（特拉华、俄勒冈、蒙大拿、新罕布什尔、阿拉斯加这五个州没有销售税，买1000美元的东西能省下近百美元税费）。</p><p><strong>第三步：包裹入库后操作合箱</strong>，把多个包裹合并成一个，省体积也省运费；易碎品记得加固包装。<strong>第四步：支付国际运费、提交发货</strong>，等着国内收货就行。全程在转运公司网站或App里都能查到物流轨迹。</p><h2 class="sec" id="s2">选转运公司的5个标准</h2>
@@ -133,7 +130,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>转运公司是怎么收费的？</summary><div class="a">主要收两部分：美国国内段（商家寄到仓库一般包邮或自付）和国际段（按首重+续重计费）。合箱、加固、保价可能另收费，下单前看清价目表。</div></details><details class="faq-item"><summary>哪些东西不能转运回国？</summary><div class="a">肉类、种子、烟酒、易燃易爆品、仿牌商品基本禁运；奶粉、保健品、化妆品、电子产品各家政策不同，下单前务必查转运公司的禁运清单。</div></details><details class="faq-item"><summary>为什么推荐免税州仓库？</summary><div class="a">特拉华、俄勒冈等五个州没有销售税。用免税州仓库地址下单，1000美元的商品能省下约70到90美元税费，具体以各州现行税率为准。</div></details><details class="faq-item"><summary>转运丢件了怎么办？</summary><div class="a">选择有明确赔付标准的正规公司，贵重物品加买保价。保留下单截图和运单号，丢件后按公司理赔流程申报。超低价转运丢件维权最难，选公司时别只看价格。</div></details></div>
 <div class="sources">数据来源：<a href="https://medium.com/@myggpark/%E7%A7%9F%E7%94%A8%E7%BE%8E%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97-2026-%E7%9C%9F%E5%AE%9E%E5%9C%B0%E5%9D%80%E4%B8%8E%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E6%80%8E%E4%B9%88%E9%80%89-%E8%B7%A8%E5%A2%83%E5%88%9B%E4%B8%9A%E8%80%85-%E5%8D%96%E5%AE%B6%E4%B8%8E%E7%95%99%E5%AD%A6%E7%94%9F%E7%9A%84%E5%AE%9E%E6%93%8D%E8%B7%AF%E7%BA%BF-b3be99a429a4" rel="nofollow noopener" target="_blank">美国地址/转运选型指南2026</a>、<a href="https://www.usps.com" rel="nofollow noopener" target="_blank">USPS 官网</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🧭 导航板块更多指南</h2><ul><li><a href="navigation-yinhang-kaihu.html">在美国银行开户要带什么？2026教程</a></li><li><a href="navigation-changyong-wangzhan.html">在美华人常用网站大全（分类整理）</a></li><li><a href="navigation-shouji-ka.html">在美国办手机卡选哪家？华人对比</a></li><li><a href="navigation-huaren-gouwu.html">美国华人购物网站有哪些？</a></li><li><a href="navigation-jipiao-pianyi.html">中美机票怎么买便宜？6个技巧</a></li><li><a href="navigation-ditu-app.html">在美国导航用哪个APP最好？</a></li><li><a href="navigation-kanbing-guahao.html">在美国看病怎么挂号？流程</a></li><li><a href="navigation-zhengfu-wangzhan.html">美国政府常用网站：报税/社安/DMV</a></li><li><a href="navigation-huaren-zhinan.html">在美华人网站导航全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>🧭 导航板块更多指南</h2><ul><li><a href="navigation-yinhang-kaihu.html">在美国银行开户要带什么？2026教程</a></li><li><a href="navigation-changyong-wangzhan.html">在美华人常用网站大全（分类整理）</a></li><li><a href="navigation-shouji-ka.html">在美国办手机卡选哪家？华人对比</a></li><li><a href="navigation-huaren-gouwu.html">美国华人购物网站有哪些？</a></li><li><a href="navigation-jipiao-pianyi.html">中美机票怎么买便宜？3个技巧</a></li><li><a href="navigation-ditu-app.html">在美国导航用哪个APP最好？</a></li><li><a href="navigation-kanbing-guahao.html">在美国看病怎么挂号？流程</a></li><li><a href="navigation-zhengfu-wangzhan.html">美国政府常用网站：报税/社安/DMV</a></li><li><a href="navigation-huaren-zhinan.html">在美华人网站导航全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>
