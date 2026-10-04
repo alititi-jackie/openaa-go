@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🔍 招聘</span>
 <h1>华人找工作防骗：8种求职骗局</h1>
 <p class="desc">华人在美国找工作一定要警惕求职骗局：假支票、招转培、交押金、冒充公检法。本文完整拆解8种常见骗局的套路细节，附FTC官方防骗建议与被骗后的处理办法。</p>
-<div class="intro"><p>&lt;p&gt;求职心切＋初来乍到不了解美国规则＝骗子的完美目标。华人求职者是求职诈骗的重灾区，&lt;strong&gt;从假支票到“招转培”，套路年年翻新&lt;/strong&gt;。这篇拆解8种最常见的骗局，记住核心原则能躲掉99%的坑：&lt;strong&gt;凡是让你先交钱、先存支票、先给SSN的“工作”，都是骗局&lt;/strong&gt;。&lt;/p&gt;</p></div>
+<div class="intro"><p>求职心切＋初来乍到不了解美国规则＝骗子的完美目标。华人求职者是求职诈骗的重灾区，<strong>从假支票到“招转培”，套路年年翻新</strong>。这篇拆解8种最常见的骗局，记住核心原则能躲掉99%的坑：<strong>凡是让你先交钱、先存支票、先给SSN的“工作”，都是骗局</strong>。</p></div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">假支票骗局：FTC点名最多的套路</a></li><li><a href="#s2">“招转培”和培训贷</a></li><li><a href="#s3">交押金、制服费、打点费</a></li><li><a href="#s4">冒充公检法：专盯留学生</a></li><li><a href="#s5">其他4种：网刷单、杀猪盘式“高薪”、盗身份、假网站</a></li></ol></nav>
 <h2 class="sec" id="s1">假支票骗局：FTC点名最多的套路</h2>
 <p>这是FTC（联邦贸易委员会）反复警示的经典骗局，华人留学生、新移民频繁中招。套路：“神秘顾客”“保姆”“远程助理”等招聘，对方寄来一张支票让你存入银行，<strong>然后让你把一部分钱汇回去、买礼品卡发卡号，或“留一部分当工资”</strong>。支票几周后被银行判定为假，你汇出去的可是自己的真钱，还得倒赔银行。记住FTC的原话：<strong>正规雇主永远不会让你存支票再把钱汇回去</strong>。收到这种“工作机会”，直接拉黑，并到ReportFraud.ftc.gov举报。</p><h2 class="sec" id="s2">“招转培”和培训贷</h2>
@@ -135,7 +132,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>已经给骗子转了钱，还能追回吗？</summary><div class="a">立即做三件事：1）联系银行尝试止付/争议交易；2）到ReportFraud.ftc.gov向FTC举报；3）报警拿报案号。电汇、西联汇款追回难度大，越快行动希望越大。</div></details><details class="faq-item"><summary>怎么核实一家公司是不是真的在招人？</summary><div class="a">去公司官网的Careers页面核对职位；LinkedIn查发帖人身份；在网上搜“公司名+scam/complaint”看评价。野鸡公司一般经不起这三步验证。</div></details><details class="faq-item"><summary>微信群里的“高薪招工”是骗局吗？</summary><div class="a">不一定，但“高薪＋轻松＋先交钱”三要素占两个就要高度警惕。要求视频看工作环境、要营业执照、拒绝一切预付款，基本能过滤掉骗子。</div></details><details class="faq-item"><summary>被骗子拿到了SSN怎么办？</summary><div class="a">立即在三大信用局（Equifax、Experian、TransUnion）冻结信用报告，防止被冒名开卡；到IdentityTheft.gov按指引处理；报警备案。</div></details></div>
 <div class="sources">数据来源：<a href="https://consumer.ftc.gov/articles/mystery-shopping-scams" rel="nofollow noopener" target="_blank">FTC：求职骗局官方警示</a>、<a href="https://news.sina.cn/2026-09-14/detail-inirupfe4681031.d.html" rel="nofollow noopener" target="_blank">警方揭秘求职诈骗套路</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🔍 招聘板块更多指南</h2><ul><li><a href="jobs-huaren-zhaogong-qudao.html">在美国华人找工作去哪找？7个靠谱渠道</a></li><li><a href="jobs-liuxuesheng-qiuzhi.html">美国留学生怎么找工作？OPT全流程</a></li><li><a href="jobs-zhongcanguan-zhaogong.html">纽约中餐馆招工信息去哪看？</a></li><li><a href="jobs-h1b-sponsor.html">sponsor H1B的公司怎么找？3招</a></li><li><a href="jobs-jianzhi-xianjie.html">在美国打现金工靠谱吗？风险必看</a></li><li><a href="jobs-mianshi-yingwen.html">英文不好在美国怎么面试？技巧</a></li><li><a href="jobs-jianli-moban.html">美国简历怎么写？华人模板+避坑</a></li><li><a href="jobs-yuesao-shouru.html">在美国做月嫂保姆收入多少？</a></li><li><a href="jobs-huaren-zhinan.html">在美华人找工作全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>🔍 招聘板块更多指南</h2><ul><li><a href="jobs-huaren-zhaogong-qudao.html">在美国华人找工作去哪找？5个靠谱渠道</a></li><li><a href="jobs-liuxuesheng-qiuzhi.html">美国留学生怎么找工作？OPT全流程</a></li><li><a href="jobs-zhongcanguan-zhaogong.html">纽约中餐馆招工信息去哪看？</a></li><li><a href="jobs-h1b-sponsor.html">sponsor H1B的公司怎么找？3招</a></li><li><a href="jobs-jianzhi-xianjie.html">在美国打现金工靠谱吗？风险必看</a></li><li><a href="jobs-mianshi-yingwen.html">英文不好在美国怎么面试？技巧</a></li><li><a href="jobs-jianli-moban.html">美国简历怎么写？华人模板+避坑</a></li><li><a href="jobs-yuesao-shouru.html">在美国做月嫂保姆收入多少？</a></li><li><a href="jobs-huaren-zhinan.html">在美华人找工作全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>
