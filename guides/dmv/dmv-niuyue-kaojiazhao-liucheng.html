@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🚗 DMV</span>
 <h1>纽约考驾照要几步？2026华人版流程</h1>
 <p class="desc">在纽约考驾照一共分几步？从凑齐6点身份证明、去DMV考笔试拿permit，到上5小时课程、练车、预约路考，这篇按华人视角把2026年纽约考驾照全流程讲清楚，照着做就行。</p>
-<div class="intro"><p>在纽约考驾照，流程是固定的四步：准备身份文件→去DMV考笔试拿permit→上5小时课程并练车→预约路考拿正式驾照。全程自己跑下来一般需要1到3个月，慢主要慢在约路考排队。这篇把每一步要带什么材料、花多少钱、去哪里办都列清楚，第一次考驾照的华人朋友照着走就行。</p></div>
+<div class="intro">在纽约考驾照，流程是固定的四步：准备身份文件→去DMV考笔试拿permit→上5小时课程并练车→预约路考拿正式驾照。全程自己跑下来一般需要1到3个月，慢主要慢在约路考排队。这篇把每一步要带什么材料、花多少钱、去哪里办都列清楚，第一次考驾照的华人朋友照着走就行。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">第一步：凑齐6点身份证明</a></li><li><a href="#s2">第二步：去DMV考笔试拿permit</a></li><li><a href="#s3">第三步：上5小时课程＋练车</a></li><li><a href="#s4">第四步：预约路考＋拿正式驾照</a></li><li><a href="#s5">时间规划：怎么安排最顺</a></li></ol></nav>
 <h2 class="sec" id="s1">第一步：凑齐6点身份证明</h2>
 <p>纽约DMV要求申请人出示总价值<strong>6点</strong>的身份证明（ID-44表格规则），外加出生日期证明和纽约州居住证明。对华人最常见的组合是：<strong>中国护照（4分）＋社安卡SSN（2分）</strong>，正好6分。如果有工卡（EAD，3分），可以护照4分＋工卡3分再补一张银行账单（1分）。</p><p>注意三点：<strong>必须带原件</strong>，复印件一律不收；所有文件上的名字拼音必须一致；护照不能过期。好消息是纽约有“绿灯法案”（Green Light Law），<strong>没有合法身份也可以申请标准驾照</strong>，没有SSN的话签一份宣誓书即可，具体可查dmv.ny.gov。</p><h2 class="sec" id="s2">第二步：去DMV考笔试拿permit</h2>

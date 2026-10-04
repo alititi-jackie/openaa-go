@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🚗 DMV</span>
 <h1>纽约学车permit怎么拿？第一步</h1>
 <p class="desc">permit是纽约考驾照的第一步：带6点身份证明去DMV，通过视力测试和20道题的笔试就能拿。这篇讲申请条件、当天流程、permit的有效期和练车限制。</p>
-<div class="intro"><p>在纽约，考驾照的第一步不是摸方向盘，而是去DMV拿一张&lt;strong&gt;学习许可（learner permit）&lt;/strong&gt;。有了它你才能合法练车、才能去上5小时课程、才能约路考。好消息是permit当天就能拿，笔试过了、视力过了、交了费，拍照完permit就到手。这篇讲怎么拿、有什么用、有什么限制。</p></div>
+<div class="intro">在纽约，考驾照的第一步不是摸方向盘，而是去DMV拿一张<strong>学习许可（learner permit）</strong>。有了它你才能合法练车、才能去上5小时课程、才能约路考。好消息是permit当天就能拿，笔试过了、视力过了、交了费，拍照完permit就到手。这篇讲怎么拿、有什么用、有什么限制。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">permit是什么，谁能申请</a></li><li><a href="#s2">去DMV当天流程</a></li><li><a href="#s3">permit的有效期和限制</a></li><li><a href="#s4">拿到permit之后做什么</a></li><li><a href="#s5">permit到手后的第一周做什么</a></li></ol></nav>
 <h2 class="sec" id="s1">permit是什么，谁能申请</h2>
 <p>permit是纽约州发的“学习驾照”，<strong>不是正式驾照</strong>，不能单独开车上路，必须有持照司机陪同。申请条件很简单：<strong>年满16岁</strong>，带齐6点身份证明文件（护照4分＋社安卡2分最常用），就能去DMV申请。根据纽约绿灯法案，<strong>申请不看移民身份</strong>，16岁以上的纽约居民都能办。</p><p>未满18岁的青少年拿的是“初级permit”（junior permit），限制更多，比如夜间驾驶限制，18岁后自动转成正式permit规则。这篇主要讲成年人（18岁以上）的流程。</p><h2 class="sec" id="s2">去DMV当天流程</h2>
