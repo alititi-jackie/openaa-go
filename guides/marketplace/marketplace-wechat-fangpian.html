@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🛒 二手</span>
 <h1>微信群二手交易怎么防骗？</h1>
 <p class="desc">华人微信群二手交易方便，但也是骗子聚集地。这篇总结6种常见骗局：定金骗局、假付款截图、钓鱼链接、超额退款等，教你面交验货、不提前转账，守住钱袋子。</p>
-<div class="intro"><p>法拉盛、圣盖博谷的华人二手微信群，家具家电转手极快，全中文沟通很方便——但也正因为熟人感强，骗子特别爱在这里下手。群里没有平台担保，一切靠自己把关。这篇把华人圈最常见的6种骗局和防范方法一次讲透，看完再交易。</p></div>
+<div class="intro">法拉盛、圣盖博谷的华人二手微信群，家具家电转手极快，全中文沟通很方便——但也正因为熟人感强，骗子特别爱在这里下手。群里没有平台担保，一切靠自己把关。这篇把华人圈最常见的6种骗局和防范方法一次讲透，看完再交易。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">骗局1-2：定金骗局和假付款截图</a></li><li><a href="#s2">骗局3-4：钓鱼链接和超额退款</a></li><li><a href="#s3">骗局5-6：低价引流和换汇混入</a></li><li><a href="#s4">安全交易4条铁律</a></li><li><a href="#s5">被骗了怎么办</a></li></ol></nav>
 <h2 class="sec" id="s1">骗局1-2：定金骗局和假付款截图</h2>
 <p><strong>定金骗局</strong>："东西很抢手，先转50定金我给你留着"——钱到手人消失。正规二手交易没有"定金留货"的规矩，<strong>谁先面交付款归谁</strong>。<strong>假付款截图</strong>：Zelle、Venmo的转账截图一分钟就能P出来，<strong>以自己账户实际到账为准</strong>，截图一律不算数。</p><h2 class="sec" id="s2">骗局3-4：钓鱼链接和超额退款</h2>
@@ -135,7 +132,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>群主担保交易可信吗？</summary><div class="a">要看群主是谁。长期活跃、有真实身份的大群群主相对可信；小群、刚建的群所谓的&quot;担保&quot;很可能是同伙。最稳的还是面交现金。</div></details><details class="faq-item"><summary>对方要求先付一半定金才面交，正常吗？</summary><div class="a">不正常，直接拒绝。正规流程是面交时验货付款，任何提前转账的要求都是红灯。</div></details><details class="faq-item"><summary>Zelle转账能撤回吗？</summary><div class="a">基本不能。Zelle是实时到账、不可撤销的，所以只在面交当场、验货无误后操作，绝不提前转。</div></details><details class="faq-item"><summary>怎么判断二手群靠不靠谱？</summary><div class="a">看三点：建群时间、群主身份是否公开、有没有发过骗子预警。广告刷屏、频繁换群名的要警惕。</div></details></div>
 <div class="sources">数据来源：<a href="https://www.ftc.gov/" rel="nofollow noopener" target="_blank">FTC: 识别与防范诈骗（官方）</a>、<a href="https://www.facebook.com/business/help/358970040838616?locale=en_US" rel="nofollow noopener" target="_blank">Facebook Commerce Policies（官方交易规则）</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🛒 二手板块更多指南</h2><ul><li><a href="marketplace-ershou-jiaju.html">在美国买二手家具去哪？5个渠道</a></li><li><a href="marketplace-facebook-jiaocheng.html">Facebook Marketplace怎么用？华人教程</a></li><li><a href="marketplace-ershou-che.html">在美国买二手车注意事项（华人版）</a></li><li><a href="marketplace-banqian-chuli.html">搬家旧家具怎么处理？4个办法</a></li><li><a href="marketplace-ershou-dianqi.html">在美国买二手电器靠谱吗？检查清单</a></li><li><a href="marketplace-mai-xianzhi.html">在美国卖闲置去哪卖最快？</a></li><li><a href="marketplace-chuangshi-jiancha.html">二手床垫沙发怎么检查床虱？</a></li><li><a href="marketplace-ershou-pingguo.html">二手苹果产品在哪买靠谱？</a></li><li><a href="marketplace-huaren-zhinan.html">在美华人二手买卖全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>🛒 二手板块更多指南</h2><ul><li><a href="marketplace-ershou-jiaju.html">在美国买二手家具去哪？5个渠道</a></li><li><a href="marketplace-facebook-jiaocheng.html">Facebook Marketplace怎么用？华人教程</a></li><li><a href="marketplace-ershou-che.html">在美国买二手车注意事项（华人版）</a></li><li><a href="marketplace-banqian-chuli.html">搬家旧家具怎么处理？5个办法</a></li><li><a href="marketplace-ershou-dianqi.html">在美国买二手电器靠谱吗？检查清单</a></li><li><a href="marketplace-mai-xianzhi.html">在美国卖闲置去哪卖最快？</a></li><li><a href="marketplace-chuangshi-jiancha.html">二手床垫沙发怎么检查床虱？</a></li><li><a href="marketplace-ershou-pingguo.html">二手苹果产品在哪买靠谱？</a></li><li><a href="marketplace-huaren-zhinan.html">在美华人二手买卖全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>

@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🛒 二手</span>
 <h1>在美国卖闲置去哪卖最快？</h1>
 <p class="desc">搬家回国，闲置怎么快速变现？对比5个渠道：Facebook Marketplace、OfferUp、eBay、华人微信群、Craigslist，告诉你哪个最快、哪个价格最好，附定价拍照技巧。</p>
-<div class="intro"><p>毕业回国、搬家换城，家里一堆&quot;食之无味弃之可惜&quot;的闲置：家具、电器、衣服、书。扔了心疼，带走又贵。其实选对渠道，一周内清掉大半不是梦。这篇对比5个主流渠道的速度和价格，帮你又快又好地回血。看完这篇，着手清，清得又快又好。</p></div>
+<div class="intro">毕业回国、搬家换城，家里一堆"食之无味弃之可惜"的闲置：家具、电器、衣服、书。扔了心疼，带走又贵。其实选对渠道，一周内清掉大半不是梦。这篇对比5个主流渠道的速度和价格，帮你又快又好地回血。看完这篇，着手清，清得又快又好。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">最快：Facebook Marketplace + 华人微信群</a></li><li><a href="#s2">价格最好：eBay（适合小件邮寄）</a></li><li><a href="#s3">老牌但慢：Craigslist和OfferUp</a></li><li><a href="#s4">定价技巧：快比贵重要</a></li><li><a href="#s5">拍照和描述：决定成交速度</a></li></ol></nav>
 <h2 class="sec" id="s1">最快：Facebook Marketplace + 华人微信群</h2>
 <p><strong>Facebook Marketplace是综合最快</strong>：流量大、同城面交、当天成交很常见，家具家电挂上去一两天就有人问。<strong>华人微信群在华人区更快</strong>：中文沟通零障碍，婴儿用品、厨房电器、小家电在群里流转极快。急着清仓的人，两个渠道同步发，效果翻倍。</p><h2 class="sec" id="s2">价格最好：eBay（适合小件邮寄）</h2>
@@ -135,7 +132,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>多久能卖掉？</summary><div class="a">定价合理的话，Facebook Marketplace上家具家电通常1-3天成交。超过一周没人问，说明定价高了或照片太差，降价10%再试。</div></details><details class="faq-item"><summary>衣服旧书卖得掉吗？</summary><div class="a">难。旧衣服直接捐Goodwill更快；教材书可以试试学校论坛或Amazon卖二手书。别在这些小件上耗太多时间。</div></details><details class="faq-item"><summary>卖东西要报税吗？</summary><div class="a">个人偶尔卖二手闲置、卖价低于买入价的，一般不算应税收入。但如果是频繁倒卖赚差价，可能被视为经营收入，具体以IRS规定为准，不确定就咨询会计师。</div></details><details class="faq-item"><summary>回国前最后一周还没卖完怎么办？</summary><div class="a">转免费送：Craigslist free区、微信群发&quot;免费自取&quot;，基本当天清掉。最后实在没人要的，预约bulk pickup或花钱请junk removal，别留给房东扣押金。</div></details></div>
 <div class="sources">数据来源：<a href="https://www.facebook.com/business/help/358970040838616?locale=en_US" rel="nofollow noopener" target="_blank">Facebook Commerce Policies（官方）</a>、<a href="https://www.irs.gov" rel="nofollow noopener" target="_blank">IRS: 个人物品出售税务说明（官方）</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🛒 二手板块更多指南</h2><ul><li><a href="marketplace-ershou-jiaju.html">在美国买二手家具去哪？5个渠道</a></li><li><a href="marketplace-facebook-jiaocheng.html">Facebook Marketplace怎么用？华人教程</a></li><li><a href="marketplace-wechat-fangpian.html">微信群二手交易怎么防骗？</a></li><li><a href="marketplace-ershou-che.html">在美国买二手车注意事项（华人版）</a></li><li><a href="marketplace-banqian-chuli.html">搬家旧家具怎么处理？4个办法</a></li><li><a href="marketplace-ershou-dianqi.html">在美国买二手电器靠谱吗？检查清单</a></li><li><a href="marketplace-chuangshi-jiancha.html">二手床垫沙发怎么检查床虱？</a></li><li><a href="marketplace-ershou-pingguo.html">二手苹果产品在哪买靠谱？</a></li><li><a href="marketplace-huaren-zhinan.html">在美华人二手买卖全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>🛒 二手板块更多指南</h2><ul><li><a href="marketplace-ershou-jiaju.html">在美国买二手家具去哪？5个渠道</a></li><li><a href="marketplace-facebook-jiaocheng.html">Facebook Marketplace怎么用？华人教程</a></li><li><a href="marketplace-wechat-fangpian.html">微信群二手交易怎么防骗？</a></li><li><a href="marketplace-ershou-che.html">在美国买二手车注意事项（华人版）</a></li><li><a href="marketplace-banqian-chuli.html">搬家旧家具怎么处理？5个办法</a></li><li><a href="marketplace-ershou-dianqi.html">在美国买二手电器靠谱吗？检查清单</a></li><li><a href="marketplace-chuangshi-jiancha.html">二手床垫沙发怎么检查床虱？</a></li><li><a href="marketplace-ershou-pingguo.html">二手苹果产品在哪买靠谱？</a></li><li><a href="marketplace-huaren-zhinan.html">在美华人二手买卖全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>

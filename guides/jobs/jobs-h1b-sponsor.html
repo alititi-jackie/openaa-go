@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🔍 招聘</span>
 <h1>sponsor H1B的公司怎么找？3招</h1>
 <p class="desc">想留美工作，sponsor H-1B的公司怎么找？本文教你3招：用MyVisaJobs查历史担保记录、看USCIS雇主数据、面试时问对问题，附2026年政策提醒。</p>
-<div class="intro"><p>&lt;p&gt;对留学生来说，找工作不只是看薪资和岗位，&lt;strong&gt;更要看这家公司愿不愿意、够不够格给你办H-1B&lt;/strong&gt;。2026年H-1B政策变动频繁（加权抽签已生效、费用规则还在博弈），形势比前几年更严。这篇教你3招，精准找到愿意sponsor的公司。&lt;/p&gt;</p></div>
+<div class="intro"><p>对留学生来说，找工作不只是看薪资和岗位，<strong>更要看这家公司愿不愿意、够不够格给你办H-1B</strong>。2026年H-1B政策变动频繁（加权抽签已生效、费用规则还在博弈），形势比前几年更严。这篇教你3招，精准找到愿意sponsor的公司。</p></div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">先搞懂2026年H-1B现状</a></li><li><a href="#s2">第一招：用MyVisaJobs查历史担保记录</a></li><li><a href="#s3">第二招：看USCIS官方雇主数据</a></li><li><a href="#s4">第三招：面试时把sponsor政策问清楚</a></li></ol></nav>
 <h2 class="sec" id="s1">先搞懂2026年H-1B现状</h2>
 <p>基本盘没变：H-1B每年配额<strong>65000个常规名额＋20000个美国硕士以上预留名额</strong>，超额就抽签。但2026年有两个大变化要知道：<strong>一是加权抽签已于2026年2月生效，工资等级越高抽中概率越大</strong>，低薪入门岗位中签率被结构性压低；<strong>二是费用风波</strong>——此前针对境外申请人的10万美元附加费被法院叫停，DHS又提出约10.3万美元的新收费拟议规则，尚未定稿。政策还在变动中，<strong>一切以USCIS官网当年公布为准</strong>，本文数字仅作趋势参考。</p><h2 class="sec" id="s2">第一招：用MyVisaJobs查历史担保记录</h2>
@@ -134,7 +131,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>小公司能sponsor H-1B吗？</summary><div class="a">法律上可以，只要公司真实运营、能支付 prevailing wage（现行工资标准）。但小公司移民经验少、怕麻烦，实际操作中意愿较低。面试时重点确认它们以前办过没有。</div></details><details class="faq-item"><summary>第一年没抽中H-1B怎么办？</summary><div class="a">如果还有OPT/STEM OPT时间，可以第二年再抽（STEM共36个月，最多有3次抽签机会）。也可以考虑cap-exempt单位，或咨询律师评估O-1等其他路径。</div></details><details class="faq-item"><summary>H-1B抽签是什么时候？</summary><div class="a">通常每年3月开放电子注册（具体日期以USCIS当年公告为准）。需要雇主先为你完成注册，中签后才能递交申请。</div></details><details class="faq-item"><summary>换工作后H-1B要重新抽签吗？</summary><div class="a">不用。已经持有H-1B身份的人换雇主走transfer流程（新雇主递交申请），不受配额抽签限制，收到receipt后即可为新雇主工作。</div></details></div>
 <div class="sources">数据来源：<a href="https://www.myvisajobs.com/about/faq.aspx" rel="nofollow noopener" target="_blank">MyVisaJobs：H-1B雇主数据库</a>、<a href="https://www.tryalma.com/learn/f1-to-h1b-transfer" rel="nofollow noopener" target="_blank">F-1到H-1B时间线指南</a>、<a href="https://news.creaders.net/china/2026/10/02/3053831.html" rel="nofollow noopener" target="_blank">2026年H-1B政策变化梳理</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🔍 招聘板块更多指南</h2><ul><li><a href="jobs-huaren-zhaogong-qudao.html">在美国华人找工作去哪找？7个靠谱渠道</a></li><li><a href="jobs-liuxuesheng-qiuzhi.html">美国留学生怎么找工作？OPT全流程</a></li><li><a href="jobs-zhongcanguan-zhaogong.html">纽约中餐馆招工信息去哪看？</a></li><li><a href="jobs-jianzhi-xianjie.html">在美国打现金工靠谱吗？风险必看</a></li><li><a href="jobs-mianshi-yingwen.html">英文不好在美国怎么面试？技巧</a></li><li><a href="jobs-jianli-moban.html">美国简历怎么写？华人模板+避坑</a></li><li><a href="jobs-qiuzhi-pianju.html">华人找工作防骗：8种求职骗局</a></li><li><a href="jobs-yuesao-shouru.html">在美国做月嫂保姆收入多少？</a></li><li><a href="jobs-huaren-zhinan.html">在美华人找工作全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>🔍 招聘板块更多指南</h2><ul><li><a href="jobs-huaren-zhaogong-qudao.html">在美国华人找工作去哪找？5个靠谱渠道</a></li><li><a href="jobs-liuxuesheng-qiuzhi.html">美国留学生怎么找工作？OPT全流程</a></li><li><a href="jobs-zhongcanguan-zhaogong.html">纽约中餐馆招工信息去哪看？</a></li><li><a href="jobs-jianzhi-xianjie.html">在美国打现金工靠谱吗？风险必看</a></li><li><a href="jobs-mianshi-yingwen.html">英文不好在美国怎么面试？技巧</a></li><li><a href="jobs-jianli-moban.html">美国简历怎么写？华人模板+避坑</a></li><li><a href="jobs-qiuzhi-pianju.html">华人找工作防骗：8种求职骗局</a></li><li><a href="jobs-yuesao-shouru.html">在美国做月嫂保姆收入多少？</a></li><li><a href="jobs-huaren-zhinan.html">在美华人找工作全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>

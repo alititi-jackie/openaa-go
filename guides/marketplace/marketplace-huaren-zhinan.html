@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🛒 二手</span>
 <h1>在美华人二手买卖全指南（2026版）</h1>
 <p class="desc">在美华人二手买卖终极指南：5大渠道横向对比、面交安全铁律、砍价话术、防骗手册、床虱防范要点，一篇讲透在美国买卖二手的所有门道，新手老手都适用。</p>
-<div class="intro"><p>在美国生活，二手买卖是必修课：刚来要配家具，搬家要清东西，换手机电脑要回血。这篇是二手板块的总纲，把渠道、安全、砍价、防骗、床虱这些分散在各篇里的要点浓缩成一张行动地图，看完这篇，你对在美二手买卖就有全局观了。</p></div>
+<div class="intro">在美国生活，二手买卖是必修课：刚来要配家具，搬家要清东西，换手机电脑要回血。这篇是二手板块的总纲，把渠道、安全、砍价、防骗、床虱这些分散在各篇里的要点浓缩成一张行动地图，看完这篇，你对在美二手买卖就有全局观了。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">5大渠道总览：各有各的用处</a></li><li><a href="#s2">安全铁律：面交现金是底线</a></li><li><a href="#s3">砍价：美国二手默认可议价</a></li><li><a href="#s4">床虱：二手软体家具的头号风险</a></li><li><a href="#s5">进阶：税务和环保</a></li></ol></nav>
 <h2 class="sec" id="s1">5大渠道总览：各有各的用处</h2>
 <p><strong>Facebook Marketplace</strong>：流量最大，家具家电同城面交首选；<strong>华人微信群</strong>：华人区流转最快，全中文；<strong>Craigslist</strong>：老牌免费，free区捡漏；<strong>OfferUp/eBay</strong>：小件和邮寄；<strong>Goodwill</strong>：线下省心，捐赠还能抵税。<strong>高手都是多渠道同步</strong>：卖东西FB+微信群双发，买东西5个渠道都蹲。</p><h2 class="sec" id="s2">安全铁律：面交现金是底线</h2>
@@ -135,7 +132,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>新手第一单从哪开始？</summary><div class="a">从买开始：先在Facebook Marketplace或华人微信群买件小家具练手，熟悉面交流程。卖东西可以从不急的小件开始，积累经验。</div></details><details class="faq-item"><summary>英语不好能玩二手吗？</summary><div class="a">能。华人微信群全中文；Facebook上中英双语发布即可，面交时翻译软件+手势基本够用。纽约、洛杉矶华人区很多卖家本身就是华人。</div></details><details class="faq-item"><summary>被骗了钱能追回吗？</summary><div class="a">现金面交被骗很难追回，所以预防重于追讨。电子转账被骗立刻联系银行/平台，保留聊天记录报警并在FTC官网投诉。</div></details><details class="faq-item"><summary>这篇指南的有效期？</summary><div class="a">平台规则以官网为准（如Facebook Commerce Policies会更新）。渠道和方法的逻辑长期有效，但具体费率、政策建议交易前再核实一次。</div></details></div>
 <div class="sources">数据来源：<a href="https://www.facebook.com/business/help/358970040838616?locale=en_US" rel="nofollow noopener" target="_blank">Facebook Commerce Policies（官方）</a>、<a href="http://www.epa.gov/bedbugs/protecting-your-home-bed-bugs" rel="nofollow noopener" target="_blank">EPA: Protecting Your Home from Bed Bugs（官方）</a>、<a href="https://www.ftc.gov/" rel="nofollow noopener" target="_blank">FTC: 消费者保护（官方）</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🛒 二手板块更多指南</h2><ul><li><a href="marketplace-ershou-jiaju.html">在美国买二手家具去哪？5个渠道</a></li><li><a href="marketplace-facebook-jiaocheng.html">Facebook Marketplace怎么用？华人教程</a></li><li><a href="marketplace-wechat-fangpian.html">微信群二手交易怎么防骗？</a></li><li><a href="marketplace-ershou-che.html">在美国买二手车注意事项（华人版）</a></li><li><a href="marketplace-banqian-chuli.html">搬家旧家具怎么处理？4个办法</a></li><li><a href="marketplace-ershou-dianqi.html">在美国买二手电器靠谱吗？检查清单</a></li><li><a href="marketplace-mai-xianzhi.html">在美国卖闲置去哪卖最快？</a></li><li><a href="marketplace-chuangshi-jiancha.html">二手床垫沙发怎么检查床虱？</a></li><li><a href="marketplace-ershou-pingguo.html">二手苹果产品在哪买靠谱？</a></li></ul></nav>
+<nav class="related"><h2>🛒 二手板块更多指南</h2><ul><li><a href="marketplace-ershou-jiaju.html">在美国买二手家具去哪？5个渠道</a></li><li><a href="marketplace-facebook-jiaocheng.html">Facebook Marketplace怎么用？华人教程</a></li><li><a href="marketplace-wechat-fangpian.html">微信群二手交易怎么防骗？</a></li><li><a href="marketplace-ershou-che.html">在美国买二手车注意事项（华人版）</a></li><li><a href="marketplace-banqian-chuli.html">搬家旧家具怎么处理？5个办法</a></li><li><a href="marketplace-ershou-dianqi.html">在美国买二手电器靠谱吗？检查清单</a></li><li><a href="marketplace-mai-xianzhi.html">在美国卖闲置去哪卖最快？</a></li><li><a href="marketplace-chuangshi-jiancha.html">二手床垫沙发怎么检查床虱？</a></li><li><a href="marketplace-ershou-pingguo.html">二手苹果产品在哪买靠谱？</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>
