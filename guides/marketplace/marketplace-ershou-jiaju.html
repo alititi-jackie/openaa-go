@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🛒 二手</span>
 <h1>在美国买二手家具去哪？5个渠道</h1>
 <p class="desc">刚来美国租房配家具太贵？整理华人最常用的5个二手家具渠道：Facebook、Craigslist、OfferUp、微信群和Goodwill，附砍价和床虱防范要点。</p>
-<div class="intro"><p>在美国给出租屋配齐家具，买新的动不动两三千美元。二手家具通常只要2到4折，是刚来美国的华人最实在的选择。这篇把5个最常用的渠道一次讲清：从线上同城面交到线下二手店，再到华人微信群和毕业季捡漏，帮你又快又省地把家安顿下来。</p></div>
+<div class="intro">在美国给出租屋配齐家具，买新的动不动两三千美元。二手家具通常只要2到4折，是刚来美国的华人最实在的选择。这篇把5个最常用的渠道一次讲清：从线上同城面交到线下二手店，再到华人微信群和毕业季捡漏，帮你又快又省地把家安顿下来。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">Facebook Marketplace：同城面交首选</a></li><li><a href="#s2">Craigslist：老牌免费分类，free区能捡漏</a></li><li><a href="#s3">OfferUp和华人微信群</a></li><li><a href="#s4">Goodwill等线下慈善二手店</a></li><li><a href="#s5">防床虱和砍价要点</a></li></ol></nav>
 <h2 class="sec" id="s1">Facebook Marketplace：同城面交首选</h2>
 <p>这是目前在美华人用得最多的二手平台。<strong>优势是同城面交、用户基数大</strong>，纽约、洛杉矶等华人聚居区每天都有大量上新。搜索时中英文关键词都试试，比如"couch"和"沙发"都搜一遍。面交前先看卖家主页，优先选有头像、有历史动态的本地账号。</p><p>按Facebook官方政策，家具类商品完全合规（禁售的是武器、酒精、烟草、动物、假货等），见面交易也更安全。</p><h2 class="sec" id="s2">Craigslist：老牌免费分类，free区能捡漏</h2>
@@ -135,7 +132,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>二手家具一般是新品几折？</summary><div class="a">通常2到4折。IKEA基础款、毕业季急出的甚至能到1折；品牌实木家具保值些，约4到5折。</div></details><details class="faq-item"><summary>面交安全吗？</summary><div class="a">选白天、人多的公共场所，最好带个朋友。大件去卖家家里拉货时，提前把地址发给家人。</div></details><details class="faq-item"><summary>二手床垫能买吗？</summary><div class="a">EPA明确建议买二手床、沙发前仔细检查床虱。床垫风险最高，很多人宁可买新的床垫、二手的床架，这是更稳妥的搭配。</div></details><details class="faq-item"><summary>什么时候捡漏最多？</summary><div class="a">5-6月和12月毕业季，留学生集中回国，整套家具低价出，蹲华人微信群和Marketplace就行。</div></details></div>
 <div class="sources">数据来源：<a href="https://www.facebook.com/business/help/358970040838616?locale=en_US" rel="nofollow noopener" target="_blank">Facebook Commerce Policies（官方禁售清单）</a>、<a href="http://www.epa.gov/bedbugs/protecting-your-home-bed-bugs" rel="nofollow noopener" target="_blank">EPA: Protecting Your Home from Bed Bugs</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🛒 二手板块更多指南</h2><ul><li><a href="marketplace-facebook-jiaocheng.html">Facebook Marketplace怎么用？华人教程</a></li><li><a href="marketplace-wechat-fangpian.html">微信群二手交易怎么防骗？</a></li><li><a href="marketplace-ershou-che.html">在美国买二手车注意事项（华人版）</a></li><li><a href="marketplace-banqian-chuli.html">搬家旧家具怎么处理？4个办法</a></li><li><a href="marketplace-ershou-dianqi.html">在美国买二手电器靠谱吗？检查清单</a></li><li><a href="marketplace-mai-xianzhi.html">在美国卖闲置去哪卖最快？</a></li><li><a href="marketplace-chuangshi-jiancha.html">二手床垫沙发怎么检查床虱？</a></li><li><a href="marketplace-ershou-pingguo.html">二手苹果产品在哪买靠谱？</a></li><li><a href="marketplace-huaren-zhinan.html">在美华人二手买卖全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>🛒 二手板块更多指南</h2><ul><li><a href="marketplace-facebook-jiaocheng.html">Facebook Marketplace怎么用？华人教程</a></li><li><a href="marketplace-wechat-fangpian.html">微信群二手交易怎么防骗？</a></li><li><a href="marketplace-ershou-che.html">在美国买二手车注意事项（华人版）</a></li><li><a href="marketplace-banqian-chuli.html">搬家旧家具怎么处理？5个办法</a></li><li><a href="marketplace-ershou-dianqi.html">在美国买二手电器靠谱吗？检查清单</a></li><li><a href="marketplace-mai-xianzhi.html">在美国卖闲置去哪卖最快？</a></li><li><a href="marketplace-chuangshi-jiancha.html">二手床垫沙发怎么检查床虱？</a></li><li><a href="marketplace-ershou-pingguo.html">二手苹果产品在哪买靠谱？</a></li><li><a href="marketplace-huaren-zhinan.html">在美华人二手买卖全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>
