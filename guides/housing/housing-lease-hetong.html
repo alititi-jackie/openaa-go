@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🏠 房屋</span>
 <h1>美国lease签约前必看的10条</h1>
 <p class="desc">在美国签租房合同（lease）前，这10条一定要逐字看清：租期租金、押金、维修责任、提前解约、转租、宠物、室友条款等。一字之差可能让你损失几千美元。</p>
-<div class="intro"><p>Lease是英文法律文件，很多华人看不懂就直接签了，出问题才发现处处是坑。这篇把最重要的10条挑出来，签约前对照着一条条核对，花半小时，能省几千美元。涵盖租金押金、租期解约、维修责任、室友宠物四大类，签约前务必逐条确认。</p></div>
+<div class="intro">Lease是英文法律文件，很多华人看不懂就直接签了，出问题才发现处处是坑。这篇把最重要的10条挑出来，签约前对照着一条条核对，花半小时，能省几千美元。涵盖租金押金、租期解约、维修责任、室友宠物四大类，签约前务必逐条确认。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">钱的事：租金、押金和费用（第1-4条）</a></li><li><a href="#s2">租期与解约：提前走要赔多少（第5-6条）</a></li><li><a href="#s3">谁修东西：维修责任划分（第7-8条）</a></li><li><a href="#s4">人和宠：室友、宠物与保险（第9-10条）</a></li></ol></nav>
 <h2 class="sec" id="s1">钱的事：租金、押金和费用（第1-4条）</h2>
 <p><strong>第1条：月租金额和交租日期</strong>，确认数字和每月几号交，有没有滞纳金。<strong>第2条：押金金额</strong>，纽约州上限为一个月租金，多收违法。<strong>第3条：申请费</strong>，纽约州上限20美元。<strong>第4条：中介费和杂费</strong>，FARE法案生效后房东的中介不能向你收费，合同里必须列明你要付的所有费用，看到不明收费直接问。另外看清租金是否包含水电暖气，纽约老楼多包暖气和热水，新公寓常不包，每月差一两百。自动扣款可设，但留好取消方式。</p><h2 class="sec" id="s2">租期与解约：提前走要赔多少（第5-6条）</h2>
@@ -134,7 +131,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>房东口头承诺的能算数吗？</summary><div class="a">不算数。所有承诺——换电器、刷墙、免一个月房租——都必须写进lease并双方签字。口头承诺出纠纷时无法举证，等于没说过。</div></details><details class="faq-item"><summary>lease是英文看不懂怎么办？</summary><div class="a">别裸签。找懂英文的朋友逐条翻译，或花几百美元请律师看一遍。重点看本文列的10条，其他条款快速过。签完一定要拿一份复印件留存。</div></details><details class="faq-item"><summary>可以要求修改lease条款吗？</summary><div class="a">可以谈。lease是双方协议，不是房东单方面说了算。比如养宠条款、提前解约条件都可以协商，谈妥后书面修改、双方签字确认。</div></details></div>
 <div class="sources">数据来源：<a href="https://it.hcr.ny.gov/chinese-fact-sheet-9" rel="nofollow noopener" target="_blank">HCR中文情况说明书</a>、<a href="https://ru.ag.ny.gov/sites/default/files/publications/tenantrights-chinese.pdf" rel="nofollow noopener" target="_blank">纽约州检察长租客权利指南（中文）</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>🏠 房屋板块更多指南</h2><ul><li><a href="housing-niuyue-zufang-qudao.html">纽约租房去哪找？5个靠谱渠道</a></li><li><a href="housing-zufang-fangpian.html">纽约租房防骗：6种常见套路</a></li><li><a href="housing-yajin-tuikuan.html">美国租房押金能退吗？退押金攻略</a></li><li><a href="housing-falasheng-zufang.html">法拉盛租房多少钱？2026行情</a></li><li><a href="housing-hezu-zhuyi.html">在美国跟人合租要注意什么？</a></li><li><a href="housing-fangdong-shaixuan.html">在美国当房东怎么筛选租客？</a></li><li><a href="housing-zuba-chuli.html">遇到租霸怎么办？房东应对指南</a></li><li><a href="housing-maifang-shoufu.html">在美国买房首付要准备多少？</a></li><li><a href="housing-huaren-zhinan.html">在美华人租房全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>🏠 房屋板块更多指南</h2><ul><li><a href="housing-niuyue-zufang-qudao.html">纽约租房去哪找？4个靠谱渠道</a></li><li><a href="housing-zufang-fangpian.html">纽约租房防骗：6种常见套路</a></li><li><a href="housing-yajin-tuikuan.html">美国租房押金能退吗？退押金攻略</a></li><li><a href="housing-falasheng-zufang.html">法拉盛租房多少钱？2026行情</a></li><li><a href="housing-hezu-zhuyi.html">在美国跟人合租要注意什么？</a></li><li><a href="housing-fangdong-shaixuan.html">在美国当房东怎么筛选租客？</a></li><li><a href="housing-zuba-chuli.html">遇到租霸怎么办？房东应对指南</a></li><li><a href="housing-maifang-shoufu.html">在美国买房首付要准备多少？</a></li><li><a href="housing-huaren-zhinan.html">在美华人租房全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>
