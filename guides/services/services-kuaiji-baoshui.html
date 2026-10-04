@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">🔧 本地服务</span>
 <h1>在美华人会计报税怎么找？4个避坑</h1>
 <p class="desc">在美国报税找华人会计，图的是中文沟通和懂华人税务情况。本文讲W2、1099、留学生、小生意等场景怎么选CPA还是报税店，以及幽灵报税人等4个大坑。</p>
-<div class="intro"><p>每年1到4月报税季，华人微信群里问得最多的就是“靠谱的报税会计推荐”。自己英文报税怕报错，找会计又怕被坑。这篇讲清什么情况需要找CPA、报税店和CPA的区别，以及国税局（IRS）点名的几种报税骗局，帮你安心过税季。</p></div>
+<div class="intro">每年1到4月报税季，华人微信群里问得最多的就是“靠谱的报税会计推荐”。自己英文报税怕报错，找会计又怕被坑。这篇讲清什么情况需要找CPA、报税店和CPA的区别，以及国税局（IRS）点名的几种报税骗局，帮你安心过税季。</div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">先看你是哪种报税情况</a></li><li><a href="#s2">CPA、报税店、自己报怎么选</a></li><li><a href="#s3">4个大坑一定要避开</a></li><li><a href="#s4">签约前问清这5句话</a></li></ol></nav>
 <h2 class="sec" id="s1">先看你是哪种报税情况</h2>
 <p><strong>打工族（W-2）</strong>：情况简单，有中文服务的报税店或TurboTax中文版就能处理。<strong>接散活、开Uber、做代购（1099）</strong>：涉及自雇税和抵扣，建议找懂小生意的会计。<strong>留学生（F-1/J-1）</strong>：前5年算非居民，用1040-NR，别被按居民报错了。<strong>有出租房、小公司、跨境收入</strong>：一定要找有执照的CPA，省的税可能远超会计费。记住：收入越复杂，越值得为专业付费。</p><h2 class="sec" id="s2">CPA、报税店、自己报怎么选</h2>
