@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -124,7 +121,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <span class="tag">📰 新闻</span>
 <h1>纽约华人社区新闻在哪看？</h1>
 <p class="desc">住纽约，想知道法拉盛、布鲁克林、日落公园发生了什么？本文整理纽约华人社区新闻的5个渠道：世界日报地方版、纽约华人资讯网、OpenAA新闻、市政府中文服务。</p>
-<div class="intro"><p>&lt;p&gt;纽约是美国华人最集中的城市，法拉盛、曼哈顿华埠、布鲁克林八大道、日落公园，每个社区都有自己的事：地铁改道、学区政策、社区活动、治安提醒。全国性新闻不会报这些，你得有专门的社区新闻渠道。本文整理5个纽约华人最常用的社区新闻来源。&lt;/p&gt;</p></div>
+<div class="intro"><p>纽约是美国华人最集中的城市，法拉盛、曼哈顿华埠、布鲁克林八大道、日落公园，每个社区都有自己的事：地铁改道、学区政策、社区活动、治安提醒。全国性新闻不会报这些，你得有专门的社区新闻渠道。本文整理5个纽约华人最常用的社区新闻来源。</p></div>
 <nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">世界日报纽约地方版</a></li><li><a href="#s2">纽约华人资讯网</a></li><li><a href="#s3">OpenAA新闻板块</a></li><li><a href="#s4">纽约市政府中文服务</a></li><li><a href="#s5">社区微信群和公众号</a></li></ol></nav>
 <h2 class="sec" id="s1">世界日报纽约地方版</h2>
 <p><strong>世界日报</strong>（worldjournal.com）在纽约有专门的地方新闻版面，覆盖大纽约地区的华人社区：市议会涉华政策、华人商会活动、社区案件、法拉盛和布鲁克林的民生新闻。它的记者常年跑华人社区，消息比英文媒体更贴近华人视角。建议每天扫一眼地方版标题，遇到与自己相关的（如所在学区、所在社区）再点进去细读。纸质版在华人超市、餐馆门口免费取阅点很常见。</p><h2 class="sec" id="s2">纽约华人资讯网</h2>
@@ -135,7 +132,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>纽约华人社区新闻哪个更新最快？</summary><div class="a">突发类消息通常是社区微信群和nychinaren论坛最快，但准确性要打折；想确认去看世界日报地方版或英文主流媒体。</div></details><details class="faq-item"><summary>市政府的中文服务去哪找？</summary><div class="a">nyc.gov 右上角可切换中文，311、教育局、房屋局等主要服务都有中文页面和中文电话服务。</div></details><details class="faq-item"><summary>怎么知道我所在社区的官方通知？</summary><div class="a">上 nyc.gov 按邮编查你所属的 Community Board，会议议程和社区通知都在上面公开。</div></details><details class="faq-item"><summary>社区微信群怎么加？</summary><div class="a">华人超市布告栏、同乡会、教会、朋友介绍是最常见的渠道。进群后先观察一段时间，判断信息质量再决定留不留。</div></details></div>
 <div class="sources">数据来源：<a href="https://www.worldjournal.com" rel="nofollow noopener" target="_blank">世界日报</a>、<a href="https://www.nychinaren.com" rel="nofollow noopener" target="_blank">纽约华人资讯网</a>、<a href="https://www.nyc.gov" rel="nofollow noopener" target="_blank">纽约市政府官网</a>、<a href="https://www.openaa.com/news" rel="nofollow noopener" target="_blank">OpenAA新闻板块</a><br>内容更新：2026-10-04，仅供参考，以官方为准。</div>
 </article>
-<nav class="related"><h2>📰 新闻板块更多指南</h2><ul><li><a href="news-huaren-xinwen-nalikan.html">美国华人新闻去哪看？6个渠道</a></li><li><a href="news-yimin-zhengce-guanfang.html">美国移民政策去哪看官方消息？</a></li><li><a href="news-tianqi-yujing.html">在美国天气预警去哪看最准？</a></li><li><a href="news-shuiwu-xinzheng.html">美国税务新政华人去哪看解读？</a></li><li><a href="news-huaren-pianju-yujing.html">华人社区最新骗局预警去哪看？</a></li><li><a href="news-xiaofei-tousu.html">在美国消费被坑去哪投诉？</a></li><li><a href="news-liuxue-zhengce.html">留学生政策变化去哪看？</a></li><li><a href="news-fangjia-zoushi.html">美国房价走势去哪看靠谱数据？</a></li><li><a href="news-huaren-zhinan.html">在美华人新闻资讯全指南（2026版）</a></li></ul></nav>
+<nav class="related"><h2>📰 新闻板块更多指南</h2><ul><li><a href="news-huaren-xinwen-nalikan.html">美国华人新闻去哪看？5个渠道</a></li><li><a href="news-yimin-zhengce-guanfang.html">美国移民政策去哪看官方消息？</a></li><li><a href="news-tianqi-yujing.html">在美国天气预警去哪看最准？</a></li><li><a href="news-shuiwu-xinzheng.html">美国税务新政华人去哪看解读？</a></li><li><a href="news-huaren-pianju-yujing.html">华人社区最新骗局预警去哪看？</a></li><li><a href="news-xiaofei-tousu.html">在美国消费被坑去哪投诉？</a></li><li><a href="news-liuxue-zhengce.html">留学生政策变化去哪看？</a></li><li><a href="news-fangjia-zoushi.html">美国房价走势去哪看靠谱数据？</a></li><li><a href="news-huaren-zhinan.html">在美华人新闻资讯全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ go.openaa.com/guides/</footer>
 </div>
 </body>
