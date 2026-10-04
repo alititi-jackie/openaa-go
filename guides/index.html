@@ -74,13 +74,10 @@ h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;back
 .related li a::after{content:"\2192";color:var(--accent);flex:none}
 footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
 /* ---- hub ---- */
-.hero{position:relative;overflow:hidden;border-radius:24px;padding:52px 40px;margin:26px 0 8px;color:#fff;background:linear-gradient(130deg,#1e3a8a 0%,#2563eb 55%,#7c3aed 100%);box-shadow:0 16px 40px -12px rgba(37,99,235,.45)}
-.hero::before{content:"";position:absolute;left:-60px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.hero::after{content:"";position:absolute;right:-40px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.08)}
-.hero h1{font-size:34px;margin:0 0 10px;position:relative;z-index:1}
-.hero p{margin:0 0 18px;opacity:.94;font-size:15.5px;position:relative;z-index:1;max-width:36em}
-.hero .stats{display:flex;gap:26px;position:relative;z-index:1}
-.hero .stats div b{font-size:26px;display:block}.hero .stats div span{font-size:12.5px;opacity:.85}
+.hero{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 8px}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:26px 0 10px}
 .card{position:relative;background:var(--card);border-radius:18px;padding:24px 22px 20px;text-decoration:none;color:var(--ink);display:block;border:1px solid rgba(0,0,0,.04);box-shadow:0 2px 14px rgba(60,50,30,.05);transition:transform .15s,box-shadow .15s;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--accent)}
@@ -115,8 +112,7 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <div class="wrap">
 <div class="hero">
 <h1>在美华人生活指南</h1>
-<p>招聘 / 二手 / 房屋 / DMV / 新闻 / 导航 / 本地服务 —— 7 大板块，70 篇中文指南，全部按华人真实搜索习惯编写。</p>
-<div class="stats"><div><b>7</b><span>生活板块</span></div><div><b>70</b><span>中文指南</span></div><div><b>100%</b><span>华人视角</span></div></div>
+<p>招聘 · 二手 · 房屋 · DMV · 新闻 · 导航 · 本地服务</p>
 </div>
 <div class="cards"><a class="card" style="--accent:#2563eb;--accent-soft:#e8effe" href="#jobs"><div class="e">🔍</div><h3>招聘</h3><p>纽约华人职位每天更新，直接联系雇主</p><span class="go">10篇指南 →</span></a><a class="card" style="--accent:#ea580c;--accent-soft:#ffefe4" href="#marketplace"><div class="e">🛒</div><h3>二手</h3><p>家具车辆闲置买卖，华人交易更放心</p><span class="go">10篇指南 →</span></a><a class="card" style="--accent:#16a34a;--accent-soft:#e6f6ec" href="#housing"><div class="e">🏠</div><h3>房屋</h3><p>纽约租房买房信息，华人房东直租</p><span class="go">10篇指南 →</span></a><a class="card" style="--accent:#dc2626;--accent-soft:#fdecec" href="#dmv"><div class="e">🚗</div><h3>DMV</h3><p>纽约驾照笔试中文模拟考试，免费刷题</p><span class="go">10篇指南 →</span></a><a class="card" style="--accent:#7c3aed;--accent-soft:#f1eafe" href="#news"><div class="e">📰</div><h3>新闻</h3><p>纽约华人社区资讯，每天更新</p><span class="go">10篇指南 →</span></a><a class="card" style="--accent:#0891b2;--accent-soft:#e0f5fa" href="#navigation"><div class="e">🧭</div><h3>导航</h3><p>银行快递购物常用网站，一站找齐</p><span class="go">10篇指南 →</span></a><a class="card" style="--accent:#d97706;--accent-soft:#fdf0dc" href="#services"><div class="e">🔧</div><h3>本地服务</h3><p>律师会计月嫂装修，纽约华人服务黄页</p><span class="go">10篇指南 →</span></a></div>
 <section class="idx-sec" id="jobs" style="--accent:#2563eb;--accent-soft:#e8effe;--accent-deep:#0d47a1"><h2><span class="dot"></span>🔍 招聘</h2><div class="sub">纽约华人职位每天更新，直接联系雇主　<a href="https://openaa.com/jobs?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=guides-hub&utm_content=hub" target="_blank" rel="noopener">进入板块 →</a></div><ul><li><a href="jobs/jobs-huaren-zhaogong-qudao.html"><span class="n">1</span>在美国华人找工作去哪找？7个靠谱渠道</a></li><li><a href="jobs/jobs-liuxuesheng-qiuzhi.html"><span class="n">2</span>美国留学生怎么找工作？OPT全流程</a></li><li><a href="jobs/jobs-zhongcanguan-zhaogong.html"><span class="n">3</span>纽约中餐馆招工信息去哪看？</a></li><li><a href="jobs/jobs-h1b-sponsor.html"><span class="n">4</span>sponsor H1B的公司怎么找？3招</a></li><li><a href="jobs/jobs-jianzhi-xianjie.html"><span class="n">5</span>在美国打现金工靠谱吗？风险必看</a></li><li><a href="jobs/jobs-mianshi-yingwen.html"><span class="n">6</span>英文不好在美国怎么面试？技巧</a></li><li><a href="jobs/jobs-jianli-moban.html"><span class="n">7</span>美国简历怎么写？华人模板+避坑</a></li><li><a href="jobs/jobs-qiuzhi-pianju.html"><span class="n">8</span>华人找工作防骗：8种求职骗局</a></li><li><a href="jobs/jobs-yuesao-shouru.html"><span class="n">9</span>在美国做月嫂保姆收入多少？</a></li><li><a href="jobs/jobs-huaren-zhinan.html"><span class="n">10</span>在美华人找工作全指南（2026版）</a></li></ul></section>
