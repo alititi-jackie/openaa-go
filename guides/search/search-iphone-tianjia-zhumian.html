@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>iPhone如何把网站添加到主屏幕？三步变成App｜OpenAA指南</title>
+<meta name="description" content="iPhone 的 Safari 可以把任何网站添加到主屏幕，点图标直接打开，像 App 一样。这篇三步教你，还能改名字。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://go.openaa.com/guides/search/search-iphone-tianjia-zhumian.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="OpenAA">
+<meta property="og:title" content="iPhone如何把网站添加到主屏幕？三步变成App">
+<meta property="og:description" content="iPhone 的 Safari 可以把任何网站添加到主屏幕，点图标直接打开，像 App 一样。这篇三步教你，还能改名字。">
+<meta property="og:url" content="https://go.openaa.com/guides/search/search-iphone-tianjia-zhumian.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "iPhone如何把网站添加到主屏幕？三步变成App", "description": "iPhone 的 Safari 可以把任何网站添加到主屏幕，点图标直接打开，像 App 一样。这篇三步教你，还能改名字。", "inLanguage": "zh-CN", "author": {"@type": "Organization", "name": "OpenAA"}, "publisher": {"@type": "Organization", "name": "OpenAA"}, "mainEntityOfPage": "https://go.openaa.com/guides/search/search-iphone-tianjia-zhumian.html", "articleSection": "搜索技巧"}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1c1e21;--muted:#6b7280;--line:#e8e2d6;--bg:#f6f3ec;--card:#ffffff;--accent:#2563eb;--accent-deep:#0d47a1;--accent-soft:#e8effe}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.9;font-size:16.5px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-deep));z-index:99}
+/* ---- header ---- */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:880px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.site-logo{width:34px;height:34px;border-radius:50%;flex:none;display:block}
+.brand-tx{display:flex;align-items:center;gap:9px}
+.brand-tx .vdiv{width:1px;height:20px;background:#dfe1e5;flex:none}
+.brand-tx b{font-size:19px;color:#111;font-weight:800}
+.brand-tx b em{font-style:normal;color:#2563eb}
+.brand-tx small{font-size:13px;color:var(--muted);font-weight:400}
+.open-link{font-size:14px;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 16px;background:#fff}
+.open-link:hover{color:#2563eb;border-color:#2563eb}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px 60px}
+.crumb{margin:22px 0 14px;font-size:13px;color:var(--muted)}
+.crumb a{color:var(--muted);text-decoration:none}.crumb a:hover{color:var(--accent)}
+/* ---- section nav bar (hub) ---- */
+/* ---- CTA card (whole card clickable) ---- */
+.cta-card{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:22px 24px;color:var(--ink);text-decoration:none;margin:6px 0 24px;transition:transform .15s,box-shadow .15s}
+.cta-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(0,0,0,.15)}
+.cta-emoji{font-size:32px;flex:none}
+.cta-main{display:flex;flex-direction:column;gap:5px}
+.cta-title{font-size:20px;font-weight:800;letter-spacing:.5px;color:var(--ink)}
+.cta-sub{font-size:13.5px;color:var(--muted)}
+.cta-arrow{margin-left:auto;font-size:24px;font-weight:300;flex:none;color:#9aa0a6}
+/* ---- article card ---- */
+.article{background:var(--card);border-radius:20px;padding:38px 40px;box-shadow:0 2px 20px rgba(60,50,30,.06);border:1px solid rgba(0,0,0,.03)}
+.tag{display:inline-block;background:var(--accent-soft);color:var(--accent-deep);font-size:13px;font-weight:700;padding:4px 14px;border-radius:999px;margin-bottom:12px}
+h1{font-size:29px;line-height:1.45;margin:0 0 12px;letter-spacing:.5px}
+.desc{color:var(--muted);font-size:15px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;margin:0 0 20px}
+.intro{font-size:16px;background:#fffdf5;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:10px;position:relative}
+.intro::before{content:"\201C";position:absolute;left:12px;top:2px;font-size:44px;color:var(--accent);opacity:.25;font-family:Georgia,serif}
+.intro p{margin:0 0 10px}.intro p:last-child{margin:0}
+.toc{background:#fff;border:1.5px dashed var(--line);border-radius:14px;padding:18px 22px;margin:26px 0}
+.toc .t{font-weight:800;font-size:15px;margin-bottom:10px;color:var(--accent-deep)}
+.toc ol{margin:0;padding-left:22px;font-size:14.5px}.toc li{margin:5px 0}.toc a{color:var(--ink);text-decoration:none}.toc a:hover{color:var(--accent)}
+h2.sec{font-size:21px;margin:34px 0 12px;display:flex;align-items:center;gap:12px;scroll-margin-top:140px}
+h2.sec::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;background:linear-gradient(var(--accent),var(--accent-deep))}
+.article p{margin:0 0 14px}
+.article ul{margin:0 0 14px;padding-left:22px}
+.article li{margin:7px 0}
+.article li::marker{color:var(--accent)}
+.faq{margin:30px 0}
+.faq>h2{font-size:21px;margin:0 0 14px;display:flex;align-items:center;gap:12px}
+.faq>h2::before{content:"";flex:none;width:6px;height:24px;border-radius:3px;background:linear-gradient(var(--accent),var(--accent-deep))}
+.faq-item{border:1px solid var(--line);border-radius:14px;margin-bottom:10px;background:#fffdf8;overflow:hidden}
+.faq-item summary{cursor:pointer;padding:15px 20px;font-weight:700;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent-deep);display:grid;place-items:center;font-size:18px;font-weight:700}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item .a{padding:0 20px 18px;color:#3c4043;font-size:15px}
+.sources{font-size:13px;color:var(--muted);margin:28px 0 0;padding-top:18px;border-top:1px dashed var(--line)}
+.sources a{color:var(--muted)}
+.related{margin:28px 0 0;background:var(--card);border-radius:20px;padding:28px 30px;border:1px solid rgba(0,0,0,.03);box-shadow:0 2px 20px rgba(60,50,30,.06)}
+.related h2{font-size:18px;margin:0 0 6px}
+.related ul{list-style:none;margin:14px 0 0;padding:0}
+.related li{margin:0;border-bottom:1px solid var(--line)}
+.related li:last-child{border-bottom:none}
+.related li a{display:flex;justify-content:space-between;align-items:center;padding:12px 4px;color:var(--ink);text-decoration:none;font-size:15px;gap:12px}
+.related li a:hover{color:var(--accent)}
+.related li a::after{content:"\2192";color:var(--accent);flex:none}
+footer{margin-top:44px;padding:26px 0 10px;color:var(--muted);font-size:13px;text-align:center}
+footer a{color:var(--muted);text-decoration:none;font-weight:700}
+footer a:hover{color:#2563eb}
+/* ---- hub ---- */
+.hero{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px;margin:26px 0 4px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(#2563eb,#7c3aed)}
+.hero h1{font-size:27px;margin:0 0 8px;letter-spacing:1px}
+.hero p{margin:0;color:var(--muted);font-size:15px}
+.idx-sec{background:var(--card);border-radius:18px;padding:26px 28px;margin:22px 0;border:1px solid rgba(0,0,0,.04);scroll-margin-top:140px}
+.idx-sec h2{font-size:20px;margin:0 0 6px;display:flex;align-items:center;border-left:5px solid var(--accent);padding-left:14px}
+.idx-sec .sub{font-size:13px;color:var(--muted);margin-bottom:12px}
+.idx-sec ul{list-style:none;margin:0;padding:0;columns:2;column-gap:28px}
+.idx-sec li{margin:0;border-bottom:1px dashed var(--line);break-inside:avoid}
+.idx-sec li a{display:block;padding:10px 2px;color:var(--ink);text-decoration:none;font-size:14.5px}
+.idx-sec li a:hover{color:var(--accent)}
+.idx-sec li a .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:#f1f3f4;color:#5f6368;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:640px){
+body{font-size:15.5px}
+.article{padding:24px 20px}.hero{padding:28px 24px}.hero h1{font-size:23px}
+h1{font-size:23px}.cta-card{padding:20px}.cta-title{font-size:19px}.cta-emoji{font-size:30px}
+.idx-sec ul{columns:1}
+.open-link{display:none}
+}
+</style>
+<script>
+addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%'},{passive:true});
+</script>
+</head>
+<body>
+<div id="progress"></div>
+<div class="topbar"><div class="in">
+<a class="brand" href="../index.html" aria-label="OpenAA生活指南首页"><img class="site-logo" src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-tx"><b><em>Open</em>AA</b><i class="vdiv"></i><small>生活指南</small></span></a>
+<a class="open-link" href="https://openaa.com?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=nav" target="_blank" rel="noopener">OpenAA.com →</a>
+</div></div>
+<div class="wrap">
+<div class="crumb"><a href="../index.html">指南首页</a> &nbsp;›&nbsp; <a href="../index.html#search">🔍 搜索技巧</a> &nbsp;›&nbsp; 正文</div>
+<a class="cta-card" href="https://go.openaa.com/?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=search-guides&utm_content=search-iphone-tianjia-zhumian" target="_blank" rel="noopener" aria-label="打开 OpenAA 搜索入口">
+<span class="cta-emoji">🔍</span>
+<span class="cta-main"><span class="cta-title">打开 OpenAA 搜索入口</span><span class="cta-sub">Google / 百度 / Bing 一键切换，添加到桌面打开即搜</span></span>
+<span class="cta-arrow">→</span>
+</a>
+<article class="article">
+<span class="tag">🔍 搜索技巧</span>
+<h1>iPhone如何把网站添加到主屏幕？三步变成App</h1>
+<p class="desc">iPhone 的 Safari 可以把任何网站添加到主屏幕，点图标直接打开，像 App 一样。这篇三步教你，还能改名字。</p>
+<div class="intro">每天都要打开的网站，每次都得先开 Safari、再翻书签，是不是有点烦？其实 iPhone 有个很多人不知道的功能：<strong>把网站直接“钉”到主屏幕上</strong>，生成一个像 App 一样的图标，点一下直接打开，不用再翻书签。三步就能搞定，这篇一次讲清。</div>
+<nav class="toc"><div class="t">📖 本文导读</div><ol><li><a href="#s1">为什么要把网站放到主屏幕</a></li><li><a href="#s2">三步操作：Safari 添加到主屏幕</a></li><li><a href="#s3">改名和整理小技巧</a></li><li><a href="#s4">不想要了怎么删掉</a></li><li><a href="#s5">举例：把 OpenAA 搜索入口放主屏幕</a></li></ol></nav>
+<h2 class="sec" id="s1">为什么要把网站放到主屏幕</h2>
+<p>先说好处。<strong>第一是快</strong>：点图标直接打开网站，省掉了“开浏览器→点书签→找网站”三步，每天打开两三次以上就值回操作成本。<strong>第二是像 App</strong>：图标可以改名、可以拖位置、可以放进文件夹，视觉上跟原生 App 没区别，找起来顺手。</p><p>最适合放主屏幕的是<strong>每天都用的“入口型”网站</strong>，比如搜索页、查汇率、看新闻。举个例子：<a href="https://go.openaa.com/?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=search-guides&utm_content=search-iphone-tianjia-zhumian" target="_blank" rel="noopener">OpenAA 搜索入口</a>放到主屏幕以后，想搜东西点一下图标就是搜索框，搜中文切百度、搜英文切 Google，不用来回换 App。</p><h2 class="sec" id="s2">三步操作：Safari 添加到主屏幕</h2>
+<p><strong>第一步：</strong>用 <strong>Safari</strong> 打开你要添加的网站。注意必须是 Safari，微信、QQ 里点开的内置浏览器没有这个功能。<strong>第二步：</strong>点 Safari 底部工具栏中间的<strong>“分享”按钮</strong>（方框里伸出一个箭头的图标），在弹出的菜单里<strong>向上滑</strong>，找到<strong>“添加到主屏幕”</strong>，点进去。</p><p><strong>第三步：</strong>改个名字（比如改成“搜索”，两个字最顺眼），再点右上角的<strong>“添加”</strong>。完成！图标会出现在主屏幕最后一页，长按可以拖到顺手的位置。整个过程不到半分钟。</p><h2 class="sec" id="s3">改名和整理小技巧</h2>
+<p>添加那一步的名字<strong>尽量短</strong>，主屏幕图标下只能显示几个字，太长会被截断。“搜索”“汇率”“新闻”这种两个字的最好认。图标用的是网站自己的 logo，<a href="https://go.openaa.com/?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=search-guides&utm_content=search-iphone-tianjia-zhumian" target="_blank" rel="noopener">OpenAA</a> 这类有专属图标的网站，一眼就能从一堆图标里认出来。</p><p>常用的两三个可以直接拖到 <strong>Dock 栏</strong>（屏幕底部那一排），切哪个页面都能点到；不常用的建个文件夹收起来，主屏幕看着清爽。</p><h2 class="sec" id="s4">不想要了怎么删掉</h2>
+<p>长按图标，在弹出菜单里选<strong>“删除书签”</strong>（部分系统显示“移除 App”），确认删除即可。放心，这只是删掉主屏幕上的快捷方式，<strong>Safari 里存的书签、浏览记录都不受影响</strong>，想用随时可以重新添加。</p><h2 class="sec" id="s5">举例：把 OpenAA 搜索入口放主屏幕</h2>
+<p>拿 <a href="https://go.openaa.com/?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=search-guides&utm_content=search-iphone-tianjia-zhumian" target="_blank" rel="noopener">OpenAA 搜索入口</a>实操一遍：Safari 打开它 → 点底部“分享”按钮 → 上滑找到“添加到主屏幕” → 改名“搜索” → 点“添加”。以后想查东西，点一下主屏幕图标就是搜索框，一个框里能切换 Google、百度、Bing 和 AI 搜索，中文资讯用百度、英文资料用 Google，<strong>一个入口全搞定</strong>，不用再装好几个搜索 App 占地方。</p>
+<div class="faq"><h2>常见问题</h2><details class="faq-item"><summary>添加到主屏幕和下载 App 有什么区别？</summary><div class="a">区别很大：添加到主屏幕只是建了个网页快捷方式，不占什么空间、不经过 App Store，点开还是用 Safari 打开网页。好处是零安装、随时可删；坏处是没有推送通知、不能离线用。对搜索这类轻量需求来说完全够用。</div></details><details class="faq-item"><summary>分享菜单里找不到“添加到主屏幕”怎么办？</summary><div class="a">先确认你用的是 Safari，而不是微信、QQ 等 App 的内置浏览器。然后在分享菜单里用力向上滑，它藏在比较靠下的位置。系统太老的话建议升级到最新 iOS 再试。</div></details><details class="faq-item"><summary>图标可以换成自己喜欢的图片吗？</summary><div class="a">直接添加时不行，图标默认用网站自己的 logo。如果想自定义，可以用 iPhone 自带的“快捷指令”App 做一个打开网址的快捷指令再添加到主屏幕，步骤多一些，一般没必要折腾。</div></details><details class="faq-item"><summary>删掉图标后，网站的书签还在吗？</summary><div class="a">在。删的只是主屏幕上的快捷方式，Safari 收藏夹里的书签、历史记录都还在，不受任何影响。</div></details></div>
+<div class="sources">内容更新：2026-10-05，操作步骤以 iOS 最新版本为准，仅供参考。</div>
+</article>
+<nav class="related"><h2>🔍 搜索技巧更多指南</h2><ul><li><a href="search-anzhuo-fangdao-zhuomian.html">安卓手机把网站放到桌面：一键添加教程</a></li><li><a href="search-diannao-zhuomian-kuaijie.html">电脑桌面创建网站快捷方式：Chrome/Edge/Safari教程</a></li></ul></nav>
+<footer>© 2026 OpenAA · 在美华人生活指南 ｜ <a href="https://go.openaa.com/?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=search-guides&utm_content=search-iphone-tianjia-zhumian" target="_blank" rel="noopener">go.openaa.com</a></footer>
+</div>
+</body>
+</html>
