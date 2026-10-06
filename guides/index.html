@@ -116,6 +116,7 @@ h1{font-size:23px}.cta-card{padding:20px}.cta-title{font-size:19px}.cta-emoji{fo
 <script>
 addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%'},{passive:true});
 
+document.addEventListener('DOMContentLoaded',function(){
 document.querySelectorAll('.idx-sec').forEach(function(sec){
   var h2=sec.querySelector('h2'),ul=sec.querySelector('ul');
   h2.insertAdjacentHTML('beforeend','<span class="cnt">'+ul.querySelectorAll('li').length+'篇</span><span class="chev">\u25BE</span>');
@@ -127,6 +128,8 @@ document.querySelectorAll('.idx-sec').forEach(function(sec){
   sync();
 });
 (function(){var t=document.getElementById((location.hash||'').slice(1));if(t&&t.classList.contains('idx-sec')){t.classList.remove('collapsed');t.querySelector('h2').setAttribute('aria-expanded','true');}})();
+
+});
 </script>
 </head>
 <body>
