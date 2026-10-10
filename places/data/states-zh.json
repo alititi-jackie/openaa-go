@@ -1,0 +1,423 @@
+[
+  {
+    "usps": "AL",
+    "chineseName": "阿拉巴马州",
+    "capitalZh": "蒙哥马利",
+    "capitalEn": "Montgomery",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "AK",
+    "chineseName": "阿拉斯加州",
+    "capitalZh": "朱诺",
+    "capitalEn": "Juneau",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "AZ",
+    "chineseName": "亚利桑那州",
+    "capitalZh": "菲尼克斯",
+    "capitalEn": "Phoenix",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "AR",
+    "chineseName": "阿肯色州",
+    "capitalZh": "小石城",
+    "capitalEn": "Little Rock",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "CA",
+    "chineseName": "加利福尼亚州",
+    "capitalZh": "萨克拉门托",
+    "capitalEn": "Sacramento",
+    "chineseNameStatus": "verified",
+    "aliases": [
+      "加州"
+    ]
+  },
+  {
+    "usps": "CO",
+    "chineseName": "科罗拉多州",
+    "capitalZh": "丹佛",
+    "capitalEn": "Denver",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "CT",
+    "chineseName": "康涅狄格州",
+    "capitalZh": "哈特福德",
+    "capitalEn": "Hartford",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "DE",
+    "chineseName": "特拉华州",
+    "capitalZh": "多佛",
+    "capitalEn": "Dover",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "DC",
+    "chineseName": "华盛顿特区",
+    "capitalZh": "华盛顿",
+    "capitalEn": "Washington",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "FL",
+    "chineseName": "佛罗里达州",
+    "capitalZh": "塔拉哈西",
+    "capitalEn": "Tallahassee",
+    "chineseNameStatus": "verified",
+    "aliases": [
+      "佛州"
+    ]
+  },
+  {
+    "usps": "GA",
+    "chineseName": "佐治亚州",
+    "capitalZh": "亚特兰大",
+    "capitalEn": "Atlanta",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "HI",
+    "chineseName": "夏威夷州",
+    "capitalZh": "檀香山",
+    "capitalEn": "Honolulu",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "ID",
+    "chineseName": "爱达荷州",
+    "capitalZh": "博伊西",
+    "capitalEn": "Boise",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "IL",
+    "chineseName": "伊利诺伊州",
+    "capitalZh": "斯普林菲尔德",
+    "capitalEn": "Springfield",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "IN",
+    "chineseName": "印第安纳州",
+    "capitalZh": "印第安纳波利斯",
+    "capitalEn": "Indianapolis",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "IA",
+    "chineseName": "艾奥瓦州",
+    "capitalZh": "得梅因",
+    "capitalEn": "Des Moines",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "KS",
+    "chineseName": "堪萨斯州",
+    "capitalZh": "托皮卡",
+    "capitalEn": "Topeka",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "KY",
+    "chineseName": "肯塔基州",
+    "capitalZh": "法兰克福",
+    "capitalEn": "Frankfort",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "LA",
+    "chineseName": "路易斯安那州",
+    "capitalZh": "巴吞鲁日",
+    "capitalEn": "Baton Rouge",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "ME",
+    "chineseName": "缅因州",
+    "capitalZh": "奥古斯塔",
+    "capitalEn": "Augusta",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "MD",
+    "chineseName": "马里兰州",
+    "capitalZh": "安纳波利斯",
+    "capitalEn": "Annapolis",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "MA",
+    "chineseName": "马萨诸塞州",
+    "capitalZh": "波士顿",
+    "capitalEn": "Boston",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "MI",
+    "chineseName": "密歇根州",
+    "capitalZh": "兰辛",
+    "capitalEn": "Lansing",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "MN",
+    "chineseName": "明尼苏达州",
+    "capitalZh": "圣保罗",
+    "capitalEn": "Saint Paul",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "MS",
+    "chineseName": "密西西比州",
+    "capitalZh": "杰克逊",
+    "capitalEn": "Jackson",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "MO",
+    "chineseName": "密苏里州",
+    "capitalZh": "杰斐逊城",
+    "capitalEn": "Jefferson City",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "MT",
+    "chineseName": "蒙大拿州",
+    "capitalZh": "海伦娜",
+    "capitalEn": "Helena",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "NE",
+    "chineseName": "内布拉斯加州",
+    "capitalZh": "林肯",
+    "capitalEn": "Lincoln",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "NV",
+    "chineseName": "内华达州",
+    "capitalZh": "卡森城",
+    "capitalEn": "Carson City",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "NH",
+    "chineseName": "新罕布什尔州",
+    "capitalZh": "康科德",
+    "capitalEn": "Concord",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "NJ",
+    "chineseName": "新泽西州",
+    "capitalZh": "特伦顿",
+    "capitalEn": "Trenton",
+    "chineseNameStatus": "verified",
+    "aliases": [
+      "新泽西"
+    ]
+  },
+  {
+    "usps": "NM",
+    "chineseName": "新墨西哥州",
+    "capitalZh": "圣菲",
+    "capitalEn": "Santa Fe",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "NY",
+    "chineseName": "纽约州",
+    "capitalZh": "奥尔巴尼",
+    "capitalEn": "Albany",
+    "chineseNameStatus": "verified",
+    "aliases": [
+      "纽约州"
+    ]
+  },
+  {
+    "usps": "NC",
+    "chineseName": "北卡罗来纳州",
+    "capitalZh": "罗利",
+    "capitalEn": "Raleigh",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "ND",
+    "chineseName": "北达科他州",
+    "capitalZh": "俾斯麦",
+    "capitalEn": "Bismarck",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "OH",
+    "chineseName": "俄亥俄州",
+    "capitalZh": "哥伦布",
+    "capitalEn": "Columbus",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "OK",
+    "chineseName": "俄克拉荷马州",
+    "capitalZh": "俄克拉荷马城",
+    "capitalEn": "Oklahoma City",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "OR",
+    "chineseName": "俄勒冈州",
+    "capitalZh": "塞勒姆",
+    "capitalEn": "Salem",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "PA",
+    "chineseName": "宾夕法尼亚州",
+    "capitalZh": "哈里斯堡",
+    "capitalEn": "Harrisburg",
+    "chineseNameStatus": "verified",
+    "aliases": [
+      "宾州"
+    ]
+  },
+  {
+    "usps": "RI",
+    "chineseName": "罗得岛州",
+    "capitalZh": "普罗维登斯",
+    "capitalEn": "Providence",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "SC",
+    "chineseName": "南卡罗来纳州",
+    "capitalZh": "哥伦比亚",
+    "capitalEn": "Columbia",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "SD",
+    "chineseName": "南达科他州",
+    "capitalZh": "皮尔",
+    "capitalEn": "Pierre",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "TN",
+    "chineseName": "田纳西州",
+    "capitalZh": "纳什维尔",
+    "capitalEn": "Nashville",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "TX",
+    "chineseName": "得克萨斯州",
+    "capitalZh": "奥斯汀",
+    "capitalEn": "Austin",
+    "chineseNameStatus": "verified",
+    "aliases": [
+      "德州",
+      "德克萨斯州"
+    ]
+  },
+  {
+    "usps": "UT",
+    "chineseName": "犹他州",
+    "capitalZh": "盐湖城",
+    "capitalEn": "Salt Lake City",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "VT",
+    "chineseName": "佛蒙特州",
+    "capitalZh": "蒙彼利埃",
+    "capitalEn": "Montpelier",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "VA",
+    "chineseName": "弗吉尼亚州",
+    "capitalZh": "里士满",
+    "capitalEn": "Richmond",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "WA",
+    "chineseName": "华盛顿州",
+    "capitalZh": "奥林匹亚",
+    "capitalEn": "Olympia",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "WV",
+    "chineseName": "西弗吉尼亚州",
+    "capitalZh": "查尔斯顿",
+    "capitalEn": "Charleston",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "WI",
+    "chineseName": "威斯康星州",
+    "capitalZh": "麦迪逊",
+    "capitalEn": "Madison",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  },
+  {
+    "usps": "WY",
+    "chineseName": "怀俄明州",
+    "capitalZh": "夏延",
+    "capitalEn": "Cheyenne",
+    "chineseNameStatus": "verified",
+    "aliases": []
+  }
+]

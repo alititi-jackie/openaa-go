@@ -1,0 +1,628 @@
+[
+ {
+  "id": "geo-3651000",
+  "slug": "new-york",
+  "geoType": "city",
+  "englishName": "New York",
+  "chineseName": "纽约",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "纽约市"
+  ],
+  "stateCode": "NY",
+  "latitude": 40.6627,
+  "longitude": -73.9387,
+  "hasPage": true
+ },
+ {
+  "id": "geo-4260000",
+  "slug": "philadelphia",
+  "geoType": "city",
+  "englishName": "Philadelphia",
+  "chineseName": "费城",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "PA",
+  "latitude": 40.0093,
+  "longitude": -75.1333,
+  "hasPage": true
+ },
+ {
+  "id": "geo-4261000",
+  "slug": "pittsburgh",
+  "geoType": "city",
+  "englishName": "Pittsburgh",
+  "chineseName": "匹兹堡",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "PA",
+  "latitude": 40.4399,
+  "longitude": -79.9755,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0644000",
+  "slug": "los-angeles",
+  "geoType": "city",
+  "englishName": "Los Angeles",
+  "chineseName": "洛杉矶",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "洛城"
+  ],
+  "stateCode": "CA",
+  "latitude": 34.0194,
+  "longitude": -118.4108,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0667000",
+  "slug": "san-francisco",
+  "geoType": "city",
+  "englishName": "San Francisco",
+  "chineseName": "旧金山",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "三藩",
+   "三藩市"
+  ],
+  "stateCode": "CA",
+  "latitude": 37.7272,
+  "longitude": -123.0322,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0668000",
+  "slug": "san-jose",
+  "geoType": "city",
+  "englishName": "San Jose",
+  "chineseName": "圣何塞",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "CA",
+  "latitude": 37.296,
+  "longitude": -121.8146,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0666000",
+  "slug": "san-diego",
+  "geoType": "city",
+  "englishName": "San Diego",
+  "chineseName": "圣迭戈",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "圣地亚哥"
+  ],
+  "stateCode": "CA",
+  "latitude": 32.8304,
+  "longitude": -117.1209,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0664000",
+  "slug": "sacramento",
+  "geoType": "city",
+  "englishName": "Sacramento",
+  "chineseName": "萨克拉门托",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "CA",
+  "latitude": 38.5677,
+  "longitude": -121.4682,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0648914",
+  "slug": "monterey-park",
+  "geoType": "city",
+  "englishName": "Monterey Park",
+  "chineseName": "蒙特利公园",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "蒙市"
+  ],
+  "stateCode": "CA",
+  "latitude": 34.0484,
+  "longitude": -118.1332,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0600884",
+  "slug": "alhambra",
+  "geoType": "city",
+  "englishName": "Alhambra",
+  "chineseName": "阿罕布拉",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "CA",
+  "latitude": 34.0836,
+  "longitude": -118.1364,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0636770",
+  "slug": "irvine",
+  "geoType": "city",
+  "englishName": "Irvine",
+  "chineseName": "尔湾",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "CA",
+  "latitude": 33.6784,
+  "longitude": -117.7713,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0663218",
+  "slug": "rowland-heights",
+  "geoType": "neighborhood",
+  "englishName": "Rowland Heights",
+  "chineseName": "罗兰岗",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "罗兰高"
+  ],
+  "stateCode": "CA",
+  "latitude": 33.9703,
+  "longitude": -117.8906,
+  "hasPage": true
+ },
+ {
+  "id": "geo-2507000",
+  "slug": "boston",
+  "geoType": "city",
+  "englishName": "Boston",
+  "chineseName": "波士顿",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "MA",
+  "latitude": 42.3327,
+  "longitude": -71.0135,
+  "hasPage": true
+ },
+ {
+  "id": "geo-1714000",
+  "slug": "chicago",
+  "geoType": "city",
+  "englishName": "Chicago",
+  "chineseName": "芝加哥",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "芝城"
+  ],
+  "stateCode": "IL",
+  "latitude": 41.837,
+  "longitude": -87.6849,
+  "hasPage": true
+ },
+ {
+  "id": "geo-5363000",
+  "slug": "seattle",
+  "geoType": "city",
+  "englishName": "Seattle",
+  "chineseName": "西雅图",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "WA",
+  "latitude": 47.6193,
+  "longitude": -122.3515,
+  "hasPage": true
+ },
+ {
+  "id": "geo-4835000",
+  "slug": "houston",
+  "geoType": "city",
+  "englishName": "Houston",
+  "chineseName": "休斯敦",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "休斯顿"
+  ],
+  "stateCode": "TX",
+  "latitude": 29.7857,
+  "longitude": -95.3888,
+  "hasPage": true
+ },
+ {
+  "id": "geo-4819000",
+  "slug": "dallas",
+  "geoType": "city",
+  "englishName": "Dallas",
+  "chineseName": "达拉斯",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "TX",
+  "latitude": 32.7933,
+  "longitude": -96.7665,
+  "hasPage": true
+ },
+ {
+  "id": "geo-4805000",
+  "slug": "austin",
+  "geoType": "city",
+  "englishName": "Austin",
+  "chineseName": "奥斯汀",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "TX",
+  "latitude": 30.2986,
+  "longitude": -97.7541,
+  "hasPage": true
+ },
+ {
+  "id": "geo-4865000",
+  "slug": "san-antonio",
+  "geoType": "city",
+  "englishName": "San Antonio",
+  "chineseName": "圣安东尼奥",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "TX",
+  "latitude": 29.4598,
+  "longitude": -98.5243,
+  "hasPage": true
+ },
+ {
+  "id": "geo-3240000",
+  "slug": "las-vegas",
+  "geoType": "city",
+  "englishName": "Las Vegas",
+  "chineseName": "拉斯维加斯",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "赌城"
+  ],
+  "stateCode": "NV",
+  "latitude": 36.2335,
+  "longitude": -115.264,
+  "hasPage": true
+ },
+ {
+  "id": "geo-1245000",
+  "slug": "miami",
+  "geoType": "city",
+  "englishName": "Miami",
+  "chineseName": "迈阿密",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "FL",
+  "latitude": 25.7752,
+  "longitude": -80.2086,
+  "hasPage": true
+ },
+ {
+  "id": "geo-1253000",
+  "slug": "orlando",
+  "geoType": "city",
+  "englishName": "Orlando",
+  "chineseName": "奥兰多",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "FL",
+  "latitude": 28.4723,
+  "longitude": -81.3225,
+  "hasPage": true
+ },
+ {
+  "id": "geo-1304000",
+  "slug": "atlanta",
+  "geoType": "city",
+  "englishName": "Atlanta",
+  "chineseName": "亚特兰大",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "GA",
+  "latitude": 33.7629,
+  "longitude": -84.4227,
+  "hasPage": true
+ },
+ {
+  "id": "geo-2404000",
+  "slug": "baltimore",
+  "geoType": "city",
+  "englishName": "Baltimore",
+  "chineseName": "巴尔的摩",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "MD",
+  "latitude": 39.3001,
+  "longitude": -76.6105,
+  "hasPage": true
+ },
+ {
+  "id": "geo-2622000",
+  "slug": "detroit",
+  "geoType": "city",
+  "englishName": "Detroit",
+  "chineseName": "底特律",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "MI",
+  "latitude": 42.383,
+  "longitude": -83.1022,
+  "hasPage": true
+ },
+ {
+  "id": "geo-2743000",
+  "slug": "minneapolis",
+  "geoType": "city",
+  "englishName": "Minneapolis",
+  "chineseName": "明尼阿波利斯",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "MN",
+  "latitude": 44.9633,
+  "longitude": -93.2683,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0820000",
+  "slug": "denver",
+  "geoType": "city",
+  "englishName": "Denver",
+  "chineseName": "丹佛",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "CO",
+  "latitude": 39.7619,
+  "longitude": -104.8811,
+  "hasPage": true
+ },
+ {
+  "id": "geo-0455000",
+  "slug": "phoenix",
+  "geoType": "city",
+  "englishName": "Phoenix",
+  "chineseName": "菲尼克斯",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "凤凰城"
+  ],
+  "stateCode": "AZ",
+  "latitude": 33.5722,
+  "longitude": -112.0901,
+  "hasPage": true
+ },
+ {
+  "id": "geo-4159000",
+  "slug": "portland",
+  "geoType": "city",
+  "englishName": "Portland",
+  "chineseName": "波特兰",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "OR",
+  "latitude": 45.537,
+  "longitude": -122.65,
+  "hasPage": true
+ },
+ {
+  "id": "geo-2255000",
+  "slug": "new-orleans",
+  "geoType": "city",
+  "englishName": "New Orleans",
+  "chineseName": "新奥尔良",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "LA",
+  "latitude": 30.0529,
+  "longitude": -89.9345,
+  "hasPage": true
+ },
+ {
+  "id": "geo-3436000",
+  "slug": "jersey-city",
+  "geoType": "city",
+  "englishName": "Jersey City",
+  "chineseName": "泽西城",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "NJ",
+  "latitude": 40.7114,
+  "longitude": -74.0648,
+  "hasPage": true
+ },
+ {
+  "id": "custom-dc-washington",
+  "slug": "washington",
+  "geoType": "city",
+  "englishName": "Washington",
+  "chineseName": "华盛顿",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "华盛顿特区"
+  ],
+  "stateCode": "DC",
+  "latitude": 38.9072,
+  "longitude": -77.0369,
+  "hasPage": true
+ },
+ {
+  "id": "geo-1571550",
+  "slug": "urban-honolulu",
+  "geoType": "city",
+  "englishName": "Urban Honolulu",
+  "chineseName": "檀香山",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "火奴鲁鲁"
+  ],
+  "stateCode": "HI",
+  "latitude": 21.3243,
+  "longitude": -157.8476,
+  "hasPage": true
+ },
+ {
+  "id": "custom-nj-edison",
+  "slug": "edison",
+  "geoType": "township",
+  "englishName": "Edison",
+  "chineseName": "爱迪生",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "NJ",
+  "latitude": 40.5187,
+  "longitude": -74.4121,
+  "hasPage": true
+ },
+ {
+  "id": "custom-nj-fort-lee",
+  "slug": "fort-lee",
+  "geoType": "borough",
+  "englishName": "Fort Lee",
+  "chineseName": "李堡",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "NJ",
+  "latitude": 40.8509,
+  "longitude": -74.6753,
+  "hasPage": true
+ },
+ {
+  "id": "custom-ny-manhattan",
+  "slug": "manhattan",
+  "geoType": "borough",
+  "englishName": "Manhattan",
+  "chineseName": "曼哈顿",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "NY",
+  "latitude": 40.7831,
+  "longitude": -73.9712,
+  "hasPage": true
+ },
+ {
+  "id": "custom-ny-brooklyn",
+  "slug": "brooklyn",
+  "geoType": "borough",
+  "englishName": "Brooklyn",
+  "chineseName": "布鲁克林",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "布碌仑"
+  ],
+  "stateCode": "NY",
+  "latitude": 40.6782,
+  "longitude": -73.9442,
+  "hasPage": true
+ },
+ {
+  "id": "custom-ny-queens",
+  "slug": "queens",
+  "geoType": "borough",
+  "englishName": "Queens",
+  "chineseName": "皇后区",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "皇后县"
+  ],
+  "stateCode": "NY",
+  "latitude": 40.7282,
+  "longitude": -73.7949,
+  "hasPage": true
+ },
+ {
+  "id": "custom-ny-bronx",
+  "slug": "bronx",
+  "geoType": "borough",
+  "englishName": "Bronx",
+  "chineseName": "布朗克斯",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "布朗士"
+  ],
+  "stateCode": "NY",
+  "latitude": 40.8448,
+  "longitude": -73.8648,
+  "hasPage": true
+ },
+ {
+  "id": "custom-ny-staten-island",
+  "slug": "staten-island",
+  "geoType": "borough",
+  "englishName": "Staten Island",
+  "chineseName": "史坦顿岛",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "斯塔滕岛"
+  ],
+  "stateCode": "NY",
+  "latitude": 40.5795,
+  "longitude": -74.1502,
+  "hasPage": true
+ },
+ {
+  "id": "custom-ny-flushing",
+  "slug": "flushing",
+  "geoType": "neighborhood",
+  "englishName": "Flushing",
+  "chineseName": "法拉盛",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "福拉兴"
+  ],
+  "stateCode": "NY",
+  "latitude": 40.767,
+  "longitude": -73.833,
+  "hasPage": true
+ },
+ {
+  "id": "custom-ny-sunset-park",
+  "slug": "sunset-park",
+  "geoType": "neighborhood",
+  "englishName": "Sunset Park",
+  "chineseName": "日落公园",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "八大道"
+  ],
+  "stateCode": "NY",
+  "latitude": 40.6451,
+  "longitude": -74.0107,
+  "hasPage": true
+ },
+ {
+  "id": "custom-ny-elmhurst",
+  "slug": "elmhurst",
+  "geoType": "neighborhood",
+  "englishName": "Elmhurst",
+  "chineseName": "艾姆赫斯特",
+  "chineseNameStatus": "verified",
+  "aliases": [],
+  "stateCode": "NY",
+  "latitude": 40.7447,
+  "longitude": -73.8786,
+  "hasPage": true
+ },
+ {
+  "id": "custom-ny-chinatown",
+  "slug": "chinatown",
+  "geoType": "neighborhood",
+  "englishName": "Chinatown",
+  "chineseName": "唐人街",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "华埠"
+  ],
+  "stateCode": "NY",
+  "latitude": 40.7158,
+  "longitude": -73.997,
+  "hasPage": true
+ },
+ {
+  "id": "custom-ny-long-island-city",
+  "slug": "long-island-city",
+  "geoType": "neighborhood",
+  "englishName": "Long Island City",
+  "chineseName": "长岛市",
+  "chineseNameStatus": "verified",
+  "aliases": [
+   "LIC"
+  ],
+  "stateCode": "NY",
+  "latitude": 40.7447,
+  "longitude": -73.9485,
+  "hasPage": true
+ }
+]
