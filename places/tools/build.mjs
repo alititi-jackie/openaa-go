@@ -59,22 +59,23 @@ h2.sec{font-size:20px;margin:32px 0 12px;padding-bottom:8px;border-bottom:2px so
 `;
 
 function layout({ title, desc, canon, nav, body, jsonld }) {
+  const t = escHtml(title), d = escHtml(desc);
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title}</title>
-<meta name="description" content="${desc}">
+<title>${t}</title>
+<meta name="description" content="${d}">
 <link rel="canonical" href="${canon}">
-<meta property="og:title" content="${title}">
-<meta property="og:description" content="${desc}">
+<meta property="og:title" content="${t}">
+<meta property="og:description" content="${d}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${canon}">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="/favicon.ico">
 <style>${CSS}</style>
-${jsonld ? `<script type="application/ld+json">${jsonld}</script>` : ''}
+${jsonld ? `<script type="application/ld+json">${jsonld.replace(/</g, '\\u003c')}</script>` : ''}
 </head>
 <body>
 <header class="topbar"><div class="wrap">
@@ -104,22 +105,27 @@ ${jsonld ? `<script type="application/ld+json">${jsonld}</script>` : ''}
 
 const crumb = (items) =>
   `<nav class="breadcrumb" aria-label="面包屑">${items.map((x, i) =>
-    i < items.length - 1 ? `<a href="${x[1]}">${x[0]}</a> &gt; ` : x[0]).join('')}</nav>`;
+    i < items.length - 1 ? `<a href="${escHtml(x[1])}">${escHtml(x[0])}</a> &gt; ` : escHtml(x[0])).join('')}</nav>`;
+
+/* 统一 HTML 转义：所有插入地名数据的地方都走这里 */
+function escHtml(s) {
+  return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
 
 const placeCard = (p) => {
   const st = stateByUsps[p.stateCode];
   const typeLabel = { city: '城市', town: '镇', township: '镇区', borough: '区', neighborhood: '社区', nickname: '华人习惯称呼' }[p.geoType] || p.geoType;
-  return `<a class="card" href="/places/us/${p.stateCode.toLowerCase()}/${p.slug}/">
-<span class="zh">${p.chineseName}</span><br><span class="en">${p.englishName}</span><br>
-<span class="tag">${typeLabel}</span> <span class="en">${st ? st.chineseName : p.stateCode}</span></a>`;
+  return `<a class="card" href="/places/us/${p.stateCode.toLowerCase()}/${escHtml(p.slug)}/">
+<span class="zh">${escHtml(p.chineseName)}</span><br><span class="en">${escHtml(p.englishName)}</span><br>
+<span class="tag">${escHtml(typeLabel)}</span> <span class="en">${escHtml(st ? st.chineseName : p.stateCode)}</span></a>`;
 };
 
 const mapLinks = (p) => {
   const q = encodeURIComponent(`${p.englishName}, ${p.stateCode}`);
   const ll = `${p.latitude},${p.longitude}`;
   return `<div class="btnrow">
-<a class="btn" href="https://www.google.com/maps/search/?api=1&query=${ll}" target="_blank" rel="noopener">Google Maps</a>
-<a class="btn" href="https://maps.apple.com/?q=${q}&ll=${ll}" target="_blank" rel="noopener">Apple Maps</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=${ll}" target="_blank" rel="noopener">Google Maps</a>
+<a class="btn" href="https://maps.apple.com/?q=${q}&amp;ll=${ll}" target="_blank" rel="noopener">Apple Maps</a>
 </div>`;
 };
 
@@ -200,12 +206,12 @@ for (const s of states) {
     containedInPlace: { '@type': 'Country', name: 'United States' },
   });
   const body = crumb([['地名首页', '/places/'], ['美国州名大全', '/places/states/'], [s.chineseName, '']]) + `
-<h1>${s.chineseName} ${s.englishName}</h1>
+<h1>${escHtml(s.chineseName)} ${escHtml(s.englishName)}</h1>
 <dl class="info">
-<dt>英文名称</dt><dd>${s.englishName}</dd>
-<dt>USPS 缩写</dt><dd>${s.usps}</dd>
-<dt>首府</dt><dd>${s.capitalZh} ${s.capitalEn}</dd>
-<dt>中文别名</dt><dd>${s.aliases.length ? s.aliases.join('、') : '—'}</dd>
+<dt>英文名称</dt><dd>${escHtml(s.englishName)}</dd>
+<dt>USPS 缩写</dt><dd>${escHtml(s.usps)}</dd>
+<dt>首府</dt><dd>${escHtml(s.capitalZh)} ${escHtml(s.capitalEn)}</dd>
+<dt>中文别名</dt><dd>${s.aliases.length ? escHtml(s.aliases.join('、')) : '—'}</dd>
 </dl>
 ${cities.length ? `<h2 class="sec">主要城市</h2><div class="cards">${cities.map(placeCard).join('')}</div>` : ''}
 ${hoods.length ? `<h2 class="sec">华人常用社区</h2><div class="cards">${hoods.map(placeCard).join('')}</div>` : ''}
@@ -234,18 +240,25 @@ for (const p of curated) {
   });
   const siblings = curated.filter((x) => x.stateCode === p.stateCode && x.id !== p.id).slice(0, 8);
   const body = crumb([['地名首页', '/places/'], [st.chineseName, `/places/states/${st.usps === 'DC' ? 'district-of-columbia' : slugOf(st.englishName)}/`], [p.chineseName, '']]) + `
-<h1>${p.chineseName} ${p.englishName}</h1>
+<h1>${escHtml(p.chineseName)} ${escHtml(p.englishName)}</h1>
 <dl class="info">
-<dt>中文名称</dt><dd>${p.chineseName}${p.chineseNameStatus === 'common' ? '（常用译法）' : ''}</dd>
-<dt>英文名称</dt><dd>${p.englishName}</dd>
+<dt>中文名称</dt><dd>${escHtml(p.chineseName)}${p.chineseNameStatus === 'common' ? '（常用译法）' : ''}</dd>
+<dt>英文名称</dt><dd>${escHtml(p.englishName)}</dd>
 <dt>地理类型</dt><dd>${typeZh[p.geoType] || p.geoType}</dd>
-<dt>所属州</dt><dd>${st.chineseName} ${st.englishName}</dd>
-${p.aliases.length ? `<dt>其他名称</dt><dd>${p.aliases.join('、')}</dd>` : ''}
+<dt>所属州</dt><dd>${escHtml(st.chineseName)} ${escHtml(st.englishName)}</dd>
+${p.aliases.length ? `<dt>其他名称</dt><dd>${escHtml(p.aliases.join('、'))}</dd>` : ''}
 </dl>
 <div class="btnrow">
-<button class="btn" onclick="navigator.clipboard.writeText('${p.englishName}').then(()=>alert('已复制英文名称'))">复制英文名称</button>
-<button class="btn" onclick="navigator.clipboard.writeText('${p.chineseName} ${p.englishName}, ${st.englishName}').then(()=>alert('已复制'))">复制完整描述</button>
+<button class="btn" data-copy="${escHtml(p.englishName)}">复制英文名称</button>
+<button class="btn" data-copy="${escHtml(p.chineseName + ' ' + p.englishName + ', ' + st.englishName)}">复制完整描述</button>
 </div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    navigator.clipboard.writeText(b.getAttribute('data-copy')).then(function () { alert('已复制'); });
+  });
+});
+</script>
 ${mapLinks(p)}
 <p style="color:#6b7280;font-size:13px">地图定位为地点代表坐标，不代表行政边界。</p>
 ${siblings.length ? `<h2 class="sec">同州相关地区</h2><div class="cards">${siblings.map(placeCard).join('')}</div>` : ''}
@@ -319,7 +332,7 @@ function render(q){
     var hits=search(q);
     if(!hits.length){box.innerHTML='<p>没有找到“'+esc(q)+'”，试试英文名称，或浏览<a href="/places/states/">州列表</a>。</p>';return}
     box.innerHTML='<p>找到 '+hits.length+' 条结果</p><div class="cards">'+hits.map(function(h){
-      return '<a class="card" href="'+h.url+'"><span class="zh">'+esc(h.zh||h.en)+'</span><br><span class="en">'+esc(h.en)+'</span><br><span class="tag">'+esc(h.type)+'</span> <span class="en">'+esc(h.stZh)+'</span>'+(h.zh? '':'<br><span class="en" style="color:#b45309">中文名待收录</span>')+'</a>';
+      return '<a class="card" href="'+esc(h.url)+'"><span class="zh">'+esc(h.zh||h.en)+'</span><br><span class="en">'+esc(h.en)+'</span><br><span class="tag">'+esc(h.type)+'</span> <span class="en">'+esc(h.stZh)+'</span>'+(h.zh? '':'<br><span class="en" style="color:#b45309">中文名待收录</span>')+'</a>';
     }).join('')+'</div>';
   });
 }
@@ -353,7 +366,7 @@ D('faq');
   const body = crumb([['地名首页', '/places/'], ['常见问题', '']]) + `
 <h1>美国地名常见中文问题</h1>
 <div class="faq">${faqs.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>
-<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) })}</script>`;
+<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }).replace(/</g, '\\u003c')}</script>`;
   writeFileSync(out('faq/index.html'), layout({
     title: '美国地名常见问题｜纽约州和纽约市的区别、ZIP Code 说明 - OpenAA',
     desc: '解答华人常见的美国地名问题：纽约州和纽约市的区别、法拉盛英文、PA/NJ是哪个州、ZIP Code和城市的关系。',
@@ -364,7 +377,7 @@ D('faq');
   faqs.forEach(([q, a], i) => {
     const slug = 'q' + (i + 1);
     D(`faq/${slug}`);
-    const b = crumb([['地名首页', '/places/'], ['常见问题', '/places/faq/'], [q, '']]) + `<h1>${q}</h1><p>${a}</p><p><a class="btn" href="/places/faq/">查看全部问题</a></p>`;
+    const b = crumb([['地名首页', '/places/'], ['常见问题', '/places/faq/'], [q, '']]) + `<h1>${escHtml(q)}</h1><p>${escHtml(a)}</p><p><a class="btn" href="/places/faq/">查看全部问题</a></p>`;
     writeFileSync(out(`faq/${slug}/index.html`), layout({
       title: `${q} - OpenAA`, desc: a.slice(0, 100),
       canon: `https://go.openaa.com/places/faq/${slug}/`,

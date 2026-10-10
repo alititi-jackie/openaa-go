@@ -73,12 +73,19 @@ h2.sec{font-size:20px;margin:32px 0 12px;padding-bottom:8px;border-bottom:2px so
 <dt>其他名称</dt><dd>罗兰高</dd>
 </dl>
 <div class="btnrow">
-<button class="btn" onclick="navigator.clipboard.writeText('Rowland Heights').then(()=>alert('已复制英文名称'))">复制英文名称</button>
-<button class="btn" onclick="navigator.clipboard.writeText('罗兰岗 Rowland Heights, California').then(()=>alert('已复制'))">复制完整描述</button>
+<button class="btn" data-copy="Rowland Heights">复制英文名称</button>
+<button class="btn" data-copy="罗兰岗 Rowland Heights, California">复制完整描述</button>
 </div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    navigator.clipboard.writeText(b.getAttribute('data-copy')).then(function () { alert('已复制'); });
+  });
+});
+</script>
 <div class="btnrow">
-<a class="btn" href="https://www.google.com/maps/search/?api=1&query=33.9703,-117.8906" target="_blank" rel="noopener">Google Maps</a>
-<a class="btn" href="https://maps.apple.com/?q=Rowland%20Heights%2C%20CA&ll=33.9703,-117.8906" target="_blank" rel="noopener">Apple Maps</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=33.9703,-117.8906" target="_blank" rel="noopener">Google Maps</a>
+<a class="btn" href="https://maps.apple.com/?q=Rowland%20Heights%2C%20CA&amp;ll=33.9703,-117.8906" target="_blank" rel="noopener">Apple Maps</a>
 </div>
 <p style="color:#6b7280;font-size:13px">地图定位为地点代表坐标，不代表行政边界。</p>
 <h2 class="sec">同州相关地区</h2><div class="cards"><a class="card" href="/places/us/ca/los-angeles/">

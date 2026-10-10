@@ -99,7 +99,7 @@ function render(q){
     var hits=search(q);
     if(!hits.length){box.innerHTML='<p>没有找到“'+esc(q)+'”，试试英文名称，或浏览<a href="/places/states/">州列表</a>。</p>';return}
     box.innerHTML='<p>找到 '+hits.length+' 条结果</p><div class="cards">'+hits.map(function(h){
-      return '<a class="card" href="'+h.url+'"><span class="zh">'+esc(h.zh||h.en)+'</span><br><span class="en">'+esc(h.en)+'</span><br><span class="tag">'+esc(h.type)+'</span> <span class="en">'+esc(h.stZh)+'</span>'+(h.zh? '':'<br><span class="en" style="color:#b45309">中文名待收录</span>')+'</a>';
+      return '<a class="card" href="'+esc(h.url)+'"><span class="zh">'+esc(h.zh||h.en)+'</span><br><span class="en">'+esc(h.en)+'</span><br><span class="tag">'+esc(h.type)+'</span> <span class="en">'+esc(h.stZh)+'</span>'+(h.zh? '':'<br><span class="en" style="color:#b45309">中文名待收录</span>')+'</a>';
     }).join('')+'</div>';
   });
 }
