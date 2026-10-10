@@ -121,12 +121,12 @@ function renderArticle(a) {
     '@context': 'https://schema.org', '@type': 'Article',
     headline: a.title, description: a.desc,
     image: img ? img.imageUrl : undefined,
-    datePublished: a.datePublished, dateModified: a.lastVerifiedAt,
+    datePublished: a.datePublished, dateModified: a.lastUpdatedAt,
     author: { '@type': 'Organization', name: 'OpenAA' },
   });
   const body = `<article class="article">` +
     crumb([['旅游首页', '/travel/'], ['纽约旅游攻略', '/travel/new-york/'], [a.shortTitle, '']]) +
-    `<h1>${escHtml(a.h1)}</h1>\n<p class="meta">最近核实：${escHtml(a.lastVerifiedAt)} · 阅读约 ${a.readMinutes} 分钟</p>\n` +
+    `<h1>${escHtml(a.h1)}</h1>\n<p class="meta">内容更新：${escHtml(a.lastUpdatedAt)} · 阅读约 ${a.readMinutes} 分钟</p>\n` +
     (a.imageId ? imgTag(a.imageId, 'hero-img') : '') +
     `<p class="lede"><strong>${escHtml(a.lede)}</strong></p>\n` +
     a.sections.map((s) => {
@@ -143,8 +143,8 @@ function renderArticle(a) {
       const ra = articles.find((x) => x.slug === r);
       return ra ? `<li><a href="/travel/new-york/${ra.slug}/">${escHtml(ra.shortTitle)}</a></li>` : '';
     }).join('') + `</ul>` : '') +
-    `<div class="sources"><strong>资料来源与核实</strong><br>` +
-    a.sources.map((s) => `· <a href="${escHtml(s.url)}" target="_blank" rel="noopener">${escHtml(s.name)}</a>（核实于 ${escHtml(a.lastVerifiedAt)}）`).join('<br>') +
+    `<div class="sources"><strong>官方资料与出行前查询</strong><br>` +
+    a.sources.map((s) => `· <a href="${escHtml(s.url)}" target="_blank" rel="noopener">${escHtml(s.name)}</a>`).join('<br>') +
     `<br>出行前请以官方页面最新信息为准。</div>` +
     `</article>`;
   return layout({ title: a.seoTitle, desc: a.desc, canon: `https://go.openaa.com/travel/new-york/${a.slug}/`, nav: 'ny', body, jsonld });
