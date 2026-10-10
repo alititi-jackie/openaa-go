@@ -249,12 +249,16 @@
     ],
     "sources": [
       {
-        "name": "NYC Tourism官方",
-        "url": "https://www.nyctourism.com/"
+        "name": "美国国家公园管理局：自由女神像票务",
+        "url": "https://www.nps.gov/stli/planyourvisit/fees.htm"
       },
       {
-        "name": "Top of the Rock官网",
+        "name": "Top of the Rock 官方购票",
         "url": "https://www.topoftherocknyc.com/"
+      },
+      {
+        "name": "NYC Tourism 纽约景点指南",
+        "url": "https://www.nyctourism.com/"
       }
     ],
     "lastUpdatedAt": "2026-10-10"
@@ -366,12 +370,16 @@
     ],
     "sources": [
       {
-        "name": "NYC Tourism官方",
-        "url": "https://www.nyctourism.com/"
+        "name": "MTA 官方路线与服务状态",
+        "url": "https://new.mta.info/"
       },
       {
-        "name": "MTA官方",
-        "url": "https://new.mta.info/"
+        "name": "Top of the Rock 官方购票",
+        "url": "https://www.topoftherocknyc.com/"
+      },
+      {
+        "name": "美国国家公园管理局：自由女神像",
+        "url": "https://www.nps.gov/stli/planyourvisit/fees.htm"
       }
     ],
     "lastUpdatedAt": "2026-10-10"
@@ -481,12 +489,16 @@
     ],
     "sources": [
       {
-        "name": "NYC Tourism官方",
-        "url": "https://www.nyctourism.com/"
+        "name": "NYC Parks 官方公园信息",
+        "url": "https://www.nycgovparks.org/"
       },
       {
-        "name": "NYC DCLA（文化事务部）",
-        "url": "https://www.nyc.gov/site/dcla/index.page"
+        "name": "美国国家公园管理局：自由女神像票务",
+        "url": "https://www.nps.gov/stli/planyourvisit/fees.htm"
+      },
+      {
+        "name": "Staten Island Ferry 官方服务信息",
+        "url": "https://www.nyc.gov/html/dot/html/ferrybus/staten-island-ferry.shtml"
       }
     ],
     "lastUpdatedAt": "2026-10-10"
@@ -575,12 +587,16 @@
     ],
     "sources": [
       {
-        "name": "NYC Tourism官方（家庭游）",
-        "url": "https://www.nyctourism.com/"
+        "name": "美国自然历史博物馆访客指南",
+        "url": "https://www.amnh.org/plan-your-visit"
       },
       {
-        "name": "美国自然历史博物馆官网",
-        "url": "https://www.amnh.org/"
+        "name": "MTA 无障碍交通信息",
+        "url": "https://new.mta.info/accessibility"
+      },
+      {
+        "name": "NYC Tourism 家庭旅行指南",
+        "url": "https://www.nyctourism.com/"
       }
     ],
     "lastUpdatedAt": "2026-10-10"
@@ -681,16 +697,16 @@
     ],
     "sources": [
       {
-        "name": "The Met官网",
-        "url": "https://www.metmuseum.org/"
+        "name": "The Met 官方访客指南",
+        "url": "https://www.metmuseum.org/plan-your-visit"
       },
       {
-        "name": "美国自然历史博物馆官网",
-        "url": "https://www.amnh.org/"
+        "name": "美国自然历史博物馆访客指南",
+        "url": "https://www.amnh.org/plan-your-visit"
       },
       {
-        "name": "MoMA官网",
-        "url": "https://www.moma.org/"
+        "name": "MoMA 官方访客指南",
+        "url": "https://www.moma.org/visit/"
       }
     ],
     "lastUpdatedAt": "2026-10-10"
@@ -777,12 +793,16 @@
     ],
     "sources": [
       {
-        "name": "MTA官方票价表",
-        "url": "https://dev.mta.info/document/195636"
+        "name": "MTA 官方票价",
+        "url": "https://www.mta.info/fares"
       },
       {
-        "name": "NYC Tourism官方",
-        "url": "https://www.nyctourism.com/"
+        "name": "OMNY 七天票价上限",
+        "url": "https://omny.info/fares"
+      },
+      {
+        "name": "Top of the Rock 官方购票",
+        "url": "https://www.topoftherocknyc.com/"
       }
     ],
     "lastUpdatedAt": "2026-10-10"
@@ -897,7 +917,11 @@
     ],
     "sources": [
       {
-        "name": "NYC Tourism官方",
+        "name": "Top of the Rock 官方购票与参观规则",
+        "url": "https://www.topoftherocknyc.com/"
+      },
+      {
+        "name": "NYC Tourism 纽约景点指南",
         "url": "https://www.nyctourism.com/"
       }
     ],
@@ -1022,12 +1046,16 @@
     ],
     "sources": [
       {
-        "name": "MTA Metro-North官网",
+        "name": "Metro-North 官方班次与票价",
         "url": "https://new.mta.info/agency/metro-north-railroad"
       },
       {
-        "name": "NYC Tourism官方",
-        "url": "https://www.nyctourism.com/"
+        "name": "Storm King 官方访客信息",
+        "url": "https://stormking.org/visit/"
+      },
+      {
+        "name": "New York State Parks 官方公园信息",
+        "url": "https://parks.ny.gov/"
       }
     ],
     "lastUpdatedAt": "2026-10-10"
