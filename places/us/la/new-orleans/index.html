@@ -73,12 +73,19 @@ h2.sec{font-size:20px;margin:32px 0 12px;padding-bottom:8px;border-bottom:2px so
 
 </dl>
 <div class="btnrow">
-<button class="btn" onclick="navigator.clipboard.writeText('New Orleans').then(()=>alert('已复制英文名称'))">复制英文名称</button>
-<button class="btn" onclick="navigator.clipboard.writeText('新奥尔良 New Orleans, Louisiana').then(()=>alert('已复制'))">复制完整描述</button>
+<button class="btn" data-copy="New Orleans">复制英文名称</button>
+<button class="btn" data-copy="新奥尔良 New Orleans, Louisiana">复制完整描述</button>
 </div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    navigator.clipboard.writeText(b.getAttribute('data-copy')).then(function () { alert('已复制'); });
+  });
+});
+</script>
 <div class="btnrow">
-<a class="btn" href="https://www.google.com/maps/search/?api=1&query=30.0529,-89.9345" target="_blank" rel="noopener">Google Maps</a>
-<a class="btn" href="https://maps.apple.com/?q=New%20Orleans%2C%20LA&ll=30.0529,-89.9345" target="_blank" rel="noopener">Apple Maps</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=30.0529,-89.9345" target="_blank" rel="noopener">Google Maps</a>
+<a class="btn" href="https://maps.apple.com/?q=New%20Orleans%2C%20LA&amp;ll=30.0529,-89.9345" target="_blank" rel="noopener">Apple Maps</a>
 </div>
 <p style="color:#6b7280;font-size:13px">地图定位为地点代表坐标，不代表行政边界。</p>
 

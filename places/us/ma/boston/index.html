@@ -73,12 +73,19 @@ h2.sec{font-size:20px;margin:32px 0 12px;padding-bottom:8px;border-bottom:2px so
 
 </dl>
 <div class="btnrow">
-<button class="btn" onclick="navigator.clipboard.writeText('Boston').then(()=>alert('已复制英文名称'))">复制英文名称</button>
-<button class="btn" onclick="navigator.clipboard.writeText('波士顿 Boston, Massachusetts').then(()=>alert('已复制'))">复制完整描述</button>
+<button class="btn" data-copy="Boston">复制英文名称</button>
+<button class="btn" data-copy="波士顿 Boston, Massachusetts">复制完整描述</button>
 </div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    navigator.clipboard.writeText(b.getAttribute('data-copy')).then(function () { alert('已复制'); });
+  });
+});
+</script>
 <div class="btnrow">
-<a class="btn" href="https://www.google.com/maps/search/?api=1&query=42.3327,-71.0135" target="_blank" rel="noopener">Google Maps</a>
-<a class="btn" href="https://maps.apple.com/?q=Boston%2C%20MA&ll=42.3327,-71.0135" target="_blank" rel="noopener">Apple Maps</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=42.3327,-71.0135" target="_blank" rel="noopener">Google Maps</a>
+<a class="btn" href="https://maps.apple.com/?q=Boston%2C%20MA&amp;ll=42.3327,-71.0135" target="_blank" rel="noopener">Apple Maps</a>
 </div>
 <p style="color:#6b7280;font-size:13px">地图定位为地点代表坐标，不代表行政边界。</p>
 
