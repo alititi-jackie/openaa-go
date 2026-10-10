@@ -135,8 +135,8 @@ function renderArticle(a) {
       if (s.type === 'p') return `<p>${s.html}</p>`; // html 已在数据源转义核查
       if (s.type === 'infobox') return `<div class="infobox">${s.html}</div>`;
       if (s.type === 'tips') return `<div class="tips">💡 ${s.html}</div>`;
-      if (s.type === 'timeline') return `<ol class="timeline">` + s.items.map((it) => `<li><span class="time">${escHtml(it.time)}</span><br>${it.html}</li>`).join('') + `</ol>`;
-      if (s.type === 'list') return `<ul>` + s.items.map((it) => `<li>${it.html}</li>`).join('') + `</ul>`;
+      if (s.type === 'timeline') return `<ol class="timeline">` + s.items.map((it) => typeof it === 'string' ? `<li>${it}</li>` : `<li>${it.time ? `<span class="time">${escHtml(it.time)}</span><br>` : ''}${it.html}</li>`).join('') + `</ol>`;
+      if (s.type === 'list') return `<ul>` + s.items.map((it) => `<li>${typeof it === 'string' ? it : it.html}</li>`).join('') + `</ul>`;
       return '';
     }).join('\n') +
     (a.related && a.related.length ? `<h2>相关攻略</h2><ul>` + a.related.map((r) => {
