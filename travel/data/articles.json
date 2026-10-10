@@ -1,0 +1,1101 @@
+[
+  {
+    "slug": "transportation",
+    "h1": "纽约地铁和公交怎么坐？游客交通、支付与换乘指南",
+    "shortTitle": "纽约公共交通攻略",
+    "seoTitle": "纽约地铁和公交怎么坐？游客交通、支付与换乘指南 - OpenAA",
+    "desc": "纽约地铁公交游客指南：OMNY支付方式、$3单程票价、周票价上限$35、免费换乘规则、JFK/LaGuardia/Newark机场交通，附MTA官方查询渠道。",
+    "lede": "纽约地铁和公交是游客最划算的出行方式。2026年起全面使用OMNY支付，单程$3，掌握换乘规则和机场交通，一天玩转纽约不心疼钱包。",
+    "cardDesc": "OMNY支付、票价、换乘、机场交通一次讲清",
+    "imageId": "grand-central",
+    "readMinutes": 8,
+    "datePublished": "2026-10-10",
+    "lastVerifiedAt": "2026-10-10",
+    "sections": [
+      {
+        "type": "h2",
+        "text": "先看结论：游客最需要知道的5件事"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "<strong>单程$3.00</strong>：地铁、本地公交、Select Bus统一价，2026年1月4日起生效"
+          },
+          {
+            "html": "<strong>用OMNY支付</strong>：MetroCard已于2026年1月1日停用，现在刷银行卡、手机或OMNY卡"
+          },
+          {
+            "html": "<strong>周票价上限$35</strong>：同一支付方式7天内付满12次后，当周剩下行程免费，自动生效不用预购"
+          },
+          {
+            "html": "<strong>免费换乘</strong>：地铁↔本地公交2小时内免费换乘（须用同一OMNY支付方式）"
+          },
+          {
+            "html": "<strong>机场交通</strong>：JFK约$11.75、LaGuardia约$3、Newark约$16–18到曼哈顿"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "OMNY怎么用"
+      },
+      {
+        "type": "p",
+        "html": "OMNY是MTA的非接触支付系统。进站时把<strong>银行卡、手机（Apple Pay/Google Pay）或OMNY卡</strong>贴在闸机读卡器上，听到"
+      },
+      {
+        "type": "p",
+        "html": "同一张卡/同一部手机算同一种支付方式——这关系到换乘优惠和周票价上限，不要混着刷。"
+      },
+      {
+        "type": "infobox",
+        "html": "<strong>OMNY周票价上限</strong>：滚动7天内，用同一支付方式付满12次（$3×12=$36，实际按$35封顶），之后当周行程免费。玩3天以上大概率能触发，适合行程紧凑的游客。"
+      },
+      {
+        "type": "h2",
+        "text": "三个机场到曼哈顿"
+      },
+      {
+        "type": "h3",
+        "text": "JFK肯尼迪机场"
+      },
+      {
+        "type": "p",
+        "html": "AirTrain到Jamaica站或Howard Beach站（<strong>$8.75</strong>，航站楼之间免费），再转地铁进曼哈顿（<strong>$3.00</strong>），合计<strong>约$11.75</strong>，全程50–70分钟。赶时间可AirTrain转LIRR到Penn Station，更快但贵几美元。"
+      },
+      {
+        "type": "h3",
+        "text": "LaGuardia机场"
+      },
+      {
+        "type": "p",
+        "html": "<strong>Q70公交免费</strong>（2022年5月起），坐到Jackson Heights转E/F/M/R/7号线，全程只付<strong>$3.00</strong>地铁票，是三个机场里最便宜的。"
+      },
+      {
+        "type": "h3",
+        "text": "Newark机场"
+      },
+      {
+        "type": "p",
+        "html": "AirTrain转NJ Transit到纽约Penn Station，<strong>约$16–18</strong>（已含AirTrain费用），25–35分钟。预算紧可走PATH（$2.90）经Newark Penn转车，慢一些。"
+      },
+      {
+        "type": "h2",
+        "text": "换乘与省钱技巧"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "地铁↔本地公交<strong>2小时内免费换乘</strong>，必须用同一OMNY支付方式"
+          },
+          {
+            "html": "单程票（售票机$3.50）<strong>不含换乘</strong>，不如直接刷OMNY"
+          },
+          {
+            "html": "65岁以上/残障人士优惠票$1.50，需办Reduced Fare卡"
+          },
+          {
+            "html": "快线公交$7.25，一般游客用不上"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "实时查询与停运"
+      },
+      {
+        "type": "p",
+        "html": "纽约地铁周末常有施工改道。出行前用<strong>MTA官方App</strong>（原MYmta）或Google Maps查实时路线，App会推服务提醒。深夜部分线路会改道，看清站内告示再上车。"
+      },
+      {
+        "type": "tips",
+        "html": "不适合坐地铁的场景：去Staten Island看自由女神坐免费渡轮；深夜到偏远街区考虑打车；带大件行李避开高峰期。"
+      }
+    ],
+    "related": [
+      "one-day-itinerary",
+      "travel-budget",
+      "day-trips"
+    ],
+    "sources": [
+      {
+        "name": "MTA官方票价表",
+        "url": "https://dev.mta.info/document/195636"
+      },
+      {
+        "name": "MTA OMNY官方",
+        "url": "https://omny.info/"
+      }
+    ]
+  },
+  {
+    "slug": "best-attractions",
+    "h1": "纽约必去景点推荐：第一次去纽约应该怎么玩",
+    "shortTitle": "纽约必去景点",
+    "seoTitle": "纽约必去景点推荐：第一次去纽约应该怎么玩 - OpenAA",
+    "desc": "纽约必去景点清单：时代广场、中央公园、洛克菲勒观景台、中央车站、布鲁克林大桥、DUMBO、9·11纪念馆、自由女神像，含门票、预约与游玩时间建议。",
+    "lede": "第一次去纽约，景点不在多在精。这8个地标覆盖了纽约的天际线、历史与城市气质，帮你按区域组合，少走冤枉路。",
+    "cardDesc": "8大地标怎么选、怎么组合、要不要预约",
+    "imageId": "times-square",
+    "readMinutes": 10,
+    "datePublished": "2026-10-10",
+    "lastVerifiedAt": "2026-10-10",
+    "sections": [
+      {
+        "type": "h2",
+        "text": "怎么选：先看这张表"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "<strong>免费公共区域</strong>：时代广场、中央公园、中央车站大厅、布鲁克林大桥步行道、DUMBO、9·11纪念广场——都不用买票"
+          },
+          {
+            "html": "<strong>收费但值得</strong>：Top of the Rock观景台（成人起价$42）、自由女神像渡轮（需预约）"
+          },
+          {
+            "html": "<strong>要提前预约</strong>：Top of the Rock、自由女神像（尤其皇冠/基座名额极少）"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "8个景点逐个说"
+      },
+      {
+        "type": "h3",
+        "text": "1. Times Square 时代广场"
+      },
+      {
+        "type": "p",
+        "html": "露天公共广场，<strong>免费</strong>，24小时可去。白天人挤人，晚上霓虹灯全开才是本体。预留30–60分钟，顺路看即可，不必专程久留。"
+      },
+      {
+        "type": "h3",
+        "text": "2. Central Park 中央公园"
+      },
+      {
+        "type": "p",
+        "html": "<strong>免费</strong>，全天开放。太大走不完，第一次去建议只玩南段：Columbus Circle进，走到Bethesda Terrace和Bow Bridge，2–3小时。想省力可租单车。"
+      },
+      {
+        "type": "h3",
+        "text": "3. Top of the Rock 洛克菲勒观景台"
+      },
+      {
+        "type": "p",
+        "html": "纽约最好的观景台之一，能同时看到中央公园和帝国大厦。<strong>成人票起价$42</strong>，强烈建议<strong>提前在线预约</strong>时段，日落时段最抢手。预留1.5–2小时。"
+      },
+      {
+        "type": "h3",
+        "text": "4. Grand Central Terminal 中央车站"
+      },
+      {
+        "type": "p",
+        "html": "大厅<strong>免费</strong>参观，星空穹顶值得抬头看10分钟。地下一层有 food court，适合中午顺路吃饭。和时代广场、洛克菲勒在同一片，步行可达。"
+      },
+      {
+        "type": "h3",
+        "text": "5. Brooklyn Bridge 布鲁克林大桥"
+      },
+      {
+        "type": "p",
+        "html": "步行道<strong>免费</strong>，全程约40分钟。建议从曼哈顿侧（City Hall附近）走向布鲁克林，迎着天际线走。傍晚去，光线最好。"
+      },
+      {
+        "type": "h3",
+        "text": "6. DUMBO"
+      },
+      {
+        "type": "p",
+        "html": "布鲁克林大桥下的街区，Washington Street拍曼哈顿大桥框景是经典机位。<strong>免费</strong>，和大桥安排在同一半天。"
+      },
+      {
+        "type": "h3",
+        "text": "7. 9/11 Memorial 纪念广场"
+      },
+      {
+        "type": "p",
+        "html": "室外纪念水池<strong>免费</strong>，肃穆安静，预留30–45分钟。旁边的9·11博物馆收费且内容沉重，时间紧可只看广场。"
+      },
+      {
+        "type": "h3",
+        "text": "8. Statue of Liberty 自由女神像"
+      },
+      {
+        "type": "p",
+        "html": "必须坐官方渡轮上岛，<strong>需提前预约</strong>（现场票经常售罄）。只想远看：坐<strong>免费</strong>的Staten Island渡轮路过拍照就够了，单程25分钟。"
+      },
+      {
+        "type": "h2",
+        "text": "怎么组合（省走路版）"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "<strong>中城半日</strong>：中央公园南段 → 洛克菲勒观景台 → 时代广场 → 中央车站（全在步行圈）"
+          },
+          {
+            "html": "<strong>下城+布鲁克林半日</strong>：9·11纪念广场 → 步行上布鲁克林大桥 → DUMBO → 可选Staten Island渡轮看女神像"
+          }
+        ]
+      },
+      {
+        "type": "tips",
+        "html": "8个景点一天走不完。第一次来建议选中城半日+下城半日拼成一天，或分两天慢慢玩。"
+      }
+    ],
+    "related": [
+      "one-day-itinerary",
+      "free-things-to-do",
+      "photo-spots"
+    ],
+    "sources": [
+      {
+        "name": "NYC Tourism官方",
+        "url": "https://www.nyctourism.com/"
+      },
+      {
+        "name": "Top of the Rock官网",
+        "url": "https://www.topoftherocknyc.com/"
+      }
+    ]
+  },
+  {
+    "slug": "one-day-itinerary",
+    "h1": "纽约一日游攻略：经典景点路线、交通安排与时间规划",
+    "shortTitle": "纽约经典一日游",
+    "seoTitle": "纽约一日游攻略：经典景点路线、交通安排与时间规划 - OpenAA",
+    "desc": "纽约一日游完整路线：按时间段排好的可执行行程，含每站停留时间、交通衔接、预约提醒、预算参考和雨天备选。",
+    "lede": "只有一天时间？这条路线按地理位置排好，中城+下城精华全覆盖，地铁衔接顺路，不赶路也能走完。",
+    "cardDesc": "可执行的一日路线：时间、交通、预算全规划好",
+    "imageId": "brooklyn-bridge",
+    "readMinutes": 12,
+    "datePublished": "2026-10-10",
+    "lastVerifiedAt": "2026-10-10",
+    "sections": [
+      {
+        "type": "h2",
+        "text": "这条路线适合谁"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "第一次来纽约、只有1天时间的游客"
+          },
+          {
+            "html": "体力中等，能走1.5万–2万步"
+          },
+          {
+            "html": "出发时间：建议早上8:30前到第一站"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "主路线（按时间排）"
+      },
+      {
+        "type": "timeline",
+        "items": [
+          {
+            "time": "8:30",
+            "html": "<strong>中央公园南段</strong>（免费）：Columbus Circle进，走到Bethesda Terrace，约1.5小时"
+          },
+          {
+            "time": "10:30",
+            "html": "<strong>Top of the Rock</strong>（约$42，需预约）：观景台看曼哈顿全景，约1.5小时"
+          },
+          {
+            "time": "12:30",
+            "html": "午餐：洛克菲勒周边或走到<strong>中央车站</strong>地下一层 food court（免费参观大厅）"
+          },
+          {
+            "time": "14:00",
+            "html": "地铁到 <strong>9·11纪念广场</strong>（免费）：肃穆参观，约45分钟"
+          },
+          {
+            "time": "15:30",
+            "html": "步行上<strong>布鲁克林大桥</strong>（免费）：走向布鲁克林侧，约40分钟"
+          },
+          {
+            "time": "16:30",
+            "html": "<strong>DUMBO</strong>（免费）：Washington Street拍照，河边休息"
+          },
+          {
+            "time": "18:00",
+            "html": "返回曼哈顿，<strong>时代广场</strong>看夜景（免费），晚餐后结束"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "交通衔接"
+      },
+      {
+        "type": "p",
+        "html": "全天靠地铁+步行，OMNY单程$3。用同一张卡刷，周票价上限$35封顶。中央公园→洛克菲勒步行；下城各点之间步行或1–2站地铁。"
+      },
+      {
+        "type": "h2",
+        "text": "预算参考"
+      },
+      {
+        "type": "infobox",
+        "html": "<strong>约$60–80/人</strong>：Top of the Rock约$42 + 地铁$6–9 + 午餐$15–25。不含购物和小费。"
+      },
+      {
+        "type": "h2",
+        "text": "需要提前做的"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "Top of the Rock <strong>提前在线预约</strong>时段"
+          },
+          {
+            "html": "查MTA App确认周末线路无施工改道"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "雨天备选"
+      },
+      {
+        "type": "p",
+        "html": "把中央公园和大桥换成室内：大都会博物馆 + 中央车站 + 时代广场室内商场。详见<a href=\"/travel/new-york/rainy-day/\">雨天指南</a>。"
+      },
+      {
+        "type": "h2",
+        "text": "走不动了删哪里"
+      },
+      {
+        "type": "p",
+        "html": "优先删DUMBO（大桥走完可直接返回）；其次把中央公园压缩到只看Bethesda Terrace。9·11广场和大桥是精华，尽量保留。"
+      },
+      {
+        "type": "tips",
+        "html": "带老人/小孩：删掉大桥步行（改坐地铁到DUMBO），每2小时安排一次坐下休息，参考<a href=\"/travel/new-york/family-travel/\">亲子游攻略</a>。"
+      }
+    ],
+    "related": [
+      "best-attractions",
+      "transportation",
+      "travel-budget",
+      "rainy-day"
+    ],
+    "sources": [
+      {
+        "name": "NYC Tourism官方",
+        "url": "https://www.nyctourism.com/"
+      },
+      {
+        "name": "MTA官方",
+        "url": "https://new.mta.info/"
+      }
+    ]
+  },
+  {
+    "slug": "free-things-to-do",
+    "h1": "纽约免费景点攻略：免费观光、步行路线与省钱建议",
+    "shortTitle": "纽约免费景点",
+    "seoTitle": "纽约免费景点攻略：免费观光、步行路线与省钱建议 - OpenAA",
+    "desc": "纽约免费景点全攻略：中央公园、布鲁克林大桥、High Line、免费渡轮等，区分完全免费与限时免费，附一日游组合与省钱技巧。",
+    "lede": "纽约完全可以不花门票玩一整天。这篇把真正免费的景点、限时免费的政策和容易踩的坑一次讲清。",
+    "cardDesc": "不花门票玩一天：免费清单+限时免费政策",
+    "imageId": "high-line",
+    "readMinutes": 9,
+    "datePublished": "2026-10-10",
+    "lastVerifiedAt": "2026-10-10",
+    "sections": [
+      {
+        "type": "h2",
+        "text": "完全免费，随便去"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "<strong>中央公园</strong>：全天开放，免费"
+          },
+          {
+            "html": "<strong>布鲁克林大桥步行道</strong>：免费，全程约40分钟"
+          },
+          {
+            "html": "<strong>High Line高线公园</strong>：废弃铁路改的高架公园，免费"
+          },
+          {
+            "html": "<strong>时代广场、中央车站大厅、DUMBO</strong>：公共区域免费"
+          },
+          {
+            "html": "<strong>9·11纪念广场</strong>（室外水池）：免费"
+          },
+          {
+            "html": "<strong>Staten Island渡轮</strong>：免费，路过自由女神像拍照"
+          },
+          {
+            "html": "<strong>布鲁克林大桥公园</strong>：河边看天际线，免费"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "限时/条件免费（别跑空）"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "部分博物馆有<strong>特定时段免费</strong>或建议捐款入场，政策常变，出行前查官网"
+          },
+          {
+            "html": "“建议捐款”不等于强制，但请尊重场馆规则"
+          },
+          {
+            "html": "免费时段通常人多，可能需提前预约"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "免费一日游组合"
+      },
+      {
+        "type": "timeline",
+        "items": [
+          {
+            "time": "上午",
+            "html": "中央公园南段（免费）→ 步行到中央车站（免费）"
+          },
+          {
+            "time": "中午",
+            "html": "中央车站 food court 吃饭（自费）"
+          },
+          {
+            "time": "下午",
+            "html": "地铁到下城 → 9·11纪念广场（免费）→ 步行布鲁克林大桥（免费）→ DUMBO拍照（免费）"
+          },
+          {
+            "time": "傍晚",
+            "html": "Staten Island渡轮往返看女神像（免费，约1小时）"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "还是要花的钱"
+      },
+      {
+        "type": "infobox",
+        "html": "<strong>免费行程日花费约$20–35/人</strong>：地铁$6–9 + 午餐$15–25。渡轮、公园、大桥都不收钱。"
+      },
+      {
+        "type": "tips",
+        "html": "“免费”指入场免费，里面的特展、导览、餐饮都另收费。看到“Free Admission”先看小字适用范围。"
+      }
+    ],
+    "related": [
+      "one-day-itinerary",
+      "best-attractions",
+      "travel-budget"
+    ],
+    "sources": [
+      {
+        "name": "NYC Tourism官方",
+        "url": "https://www.nyctourism.com/"
+      },
+      {
+        "name": "NYC DCLA（文化事务部）",
+        "url": "https://www.nyc.gov/site/dcla/index.page"
+      }
+    ]
+  },
+  {
+    "slug": "family-travel",
+    "h1": "纽约亲子游攻略：适合家庭的景点、路线与出行建议",
+    "shortTitle": "纽约亲子游",
+    "seoTitle": "纽约亲子游攻略：适合家庭的景点、路线与出行建议 - OpenAA",
+    "desc": "纽约亲子游指南：分年龄推荐景点、推车友好路线、室内外搭配、儿童票政策与雨天备选，帮家庭轻松规划纽约行。",
+    "lede": "带孩子玩纽约，节奏比景点重要。这篇按年龄给建议，路线留足休息时间，不把一天排满。",
+    "cardDesc": "分年龄景点推荐+推车友好路线+实用设施信息",
+    "imageId": "bethesda-fountain",
+    "readMinutes": 10,
+    "datePublished": "2026-10-10",
+    "lastVerifiedAt": "2026-10-10",
+    "sections": [
+      {
+        "type": "h2",
+        "text": "分年龄怎么玩"
+      },
+      {
+        "type": "h3",
+        "text": "3–6岁：短平快"
+      },
+      {
+        "type": "p",
+        "html": "中央公园（动物园、旋转木马）、美国自然历史博物馆（恐龙馆是永恒的爱）、布鲁克林大桥公园（看船看桥）。每个点1.5–2小时就够，中间必须午睡或回酒店休息。"
+      },
+      {
+        "type": "h3",
+        "text": "7–12岁：可以走路线了"
+      },
+      {
+        "type": "p",
+        "html": "9·11纪念广场（讲历史要看孩子接受度）、Top of the Rock（观景台孩子一般很喜欢）、Staten Island渡轮（免费坐船看女神像）。一天2–3个点为上限。"
+      },
+      {
+        "type": "h2",
+        "text": "推车、卫生间、休息"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "中央公园、博物馆、大型商场都有<strong>无障碍卫生间和母婴室</strong>，地铁站不一定有"
+          },
+          {
+            "html": "推车坐地铁：选有电梯的站（MTA App可查无障碍站点），高峰期避开"
+          },
+          {
+            "html": "每2小时安排一次坐下休息：公园长椅、博物馆休息区、food court都是好选择"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "室内外搭配"
+      },
+      {
+        "type": "p",
+        "html": "上午户外（公园、大桥）→ 中午室内吃饭休息 → 下午博物馆或商场。夏天避开正午暴晒，冬天把户外压缩到上午。"
+      },
+      {
+        "type": "h2",
+        "text": "儿童票与预约"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "多数景点<strong>5岁以下免费</strong>，6–12岁儿童票，具体以官网为准"
+          },
+          {
+            "html": "热门博物馆和观景台建议<strong>提前预约</strong>，免排队对带娃家庭太重要了"
+          },
+          {
+            "html": "部分场馆对推车尺寸有限制，大型推车出行前查官网FAQ"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "雨天备选"
+      },
+      {
+        "type": "p",
+        "html": "美国自然历史博物馆、大都会博物馆、中央车站大厅都是室内好去处。详见<a href=\"/travel/new-york/rainy-day/\">雨天指南</a>。"
+      },
+      {
+        "type": "tips",
+        "html": "别把\"适合儿童\"理解成\"所有孩子都喜欢\"。出发前给孩子看照片，让他们自己选1–2个最想去的，参与感能减少一半的哭闹。"
+      }
+    ],
+    "related": [
+      "best-attractions",
+      "rainy-day",
+      "one-day-itinerary"
+    ],
+    "sources": [
+      {
+        "name": "NYC Tourism官方（家庭游）",
+        "url": "https://www.nyctourism.com/"
+      },
+      {
+        "name": "美国自然历史博物馆官网",
+        "url": "https://www.amnh.org/"
+      }
+    ]
+  },
+  {
+    "slug": "rainy-day",
+    "h1": "纽约下雨天去哪里玩？室内景点与行程安排",
+    "shortTitle": "纽约雨天指南",
+    "seoTitle": "纽约下雨天去哪里玩？室内景点与行程安排 - OpenAA",
+    "desc": "纽约雨天室内攻略：大都会博物馆、自然历史博物馆、MoMA、中央车站等，按区域组合，含开放时间、门票与预约注意事项。",
+    "lede": "纽约下雨天别躺酒店。这篇给你按区域排好的室内行程，博物馆、车站、商场全覆盖。",
+    "cardDesc": "博物馆+室内地标：按区域排好的雨天行程",
+    "imageId": "top-of-rock",
+    "readMinutes": 8,
+    "datePublished": "2026-10-10",
+    "lastVerifiedAt": "2026-10-10",
+    "sections": [
+      {
+        "type": "h2",
+        "text": "博物馆三巨头"
+      },
+      {
+        "type": "h3",
+        "text": "大都会艺术博物馆（The Met）"
+      },
+      {
+        "type": "p",
+        "html": "世界级大馆，逛一天都不够。雨天建议只看2–3个展厅（埃及馆、美国馆必看）。门票政策以官网为准，部分人群有优惠。"
+      },
+      {
+        "type": "h3",
+        "text": "美国自然历史博物馆"
+      },
+      {
+        "type": "p",
+        "html": "恐龙馆、海洋馆，带孩子首选。热门，需提前查官网预约要求。"
+      },
+      {
+        "type": "h3",
+        "text": "MoMA现代艺术博物馆"
+      },
+      {
+        "type": "p",
+        "html": "中城，星空、梦露等名作所在地。艺术爱好者必去，预留2–3小时。"
+      },
+      {
+        "type": "h2",
+        "text": "不花钱的室内地标"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "<strong>中央车站大厅</strong>：星空穹顶+food court，免费，能待1小时"
+          },
+          {
+            "html": "<strong>纽约公共图书馆总馆</strong>：玫瑰阅览室壮观，免费（部分区域需预约）"
+          },
+          {
+            "html": "<strong>Oculus世贸交通枢纽</strong>：白色骨架建筑，拍照好看，免费"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "按区域组合"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "<strong>上东区线</strong>：The Met → 中央公园（雨小可散步）→ 回酒店"
+          },
+          {
+            "html": "<strong>中城线</strong>：MoMA → 中央车站 → 时代广场室内商场"
+          },
+          {
+            "html": "<strong>下城线</strong>：9·11博物馆 → Oculus → 布鲁克林大桥公园（雨停去看天际线）"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "雨天交通提醒"
+      },
+      {
+        "type": "p",
+        "html": "雨天地铁站台湿滑，穿防滑鞋。短距离可打车，但雨天溢价高。MTA App查线路是否因天气改道。"
+      },
+      {
+        "type": "tips",
+        "html": "博物馆闭馆日多为周一/周二（各馆不同），出行前务必查官网当日开放状态，别跑空。"
+      }
+    ],
+    "related": [
+      "best-attractions",
+      "family-travel",
+      "one-day-itinerary"
+    ],
+    "sources": [
+      {
+        "name": "The Met官网",
+        "url": "https://www.metmuseum.org/"
+      },
+      {
+        "name": "美国自然历史博物馆官网",
+        "url": "https://www.amnh.org/"
+      },
+      {
+        "name": "MoMA官网",
+        "url": "https://www.moma.org/"
+      }
+    ]
+  },
+  {
+    "slug": "travel-budget",
+    "h1": "纽约旅游要花多少钱？交通、景点、餐饮与预算参考",
+    "shortTitle": "纽约旅游预算",
+    "seoTitle": "纽约旅游要花多少钱？交通、景点、餐饮与预算参考 - OpenAA",
+    "desc": "纽约旅游预算指南：低/中/高三档方案，交通景点餐饮分项明细，免费组合省钱法，所有金额注明核实日期。",
+    "lede": "纽约可贵可省。这篇给你三档预算方案，每笔钱花在哪、怎么省，一次算清。",
+    "cardDesc": "三档预算方案：每笔花费明细+省钱技巧",
+    "imageId": "memorial-911",
+    "readMinutes": 9,
+    "datePublished": "2026-10-10",
+    "lastVerifiedAt": "2026-10-10",
+    "sections": [
+      {
+        "type": "h2",
+        "text": "三档方案（按人/天，不含住宿机票）"
+      },
+      {
+        "type": "h3",
+        "text": "省钱档：约$30–50"
+      },
+      {
+        "type": "p",
+        "html": "全免费景点（中央公园、大桥、渡轮）+ 地铁$6–9 + 简餐$15–25。详见<a href=\"/travel/new-york/free-things-to-do/\">免费景点攻略</a>。"
+      },
+      {
+        "type": "h3",
+        "text": "标准档：约$80–130"
+      },
+      {
+        "type": "p",
+        "html": "1个收费景点（如Top of the Rock约$42）+ 地铁$6–9 + 正餐$30–50 + 咖啡小食$10–15。"
+      },
+      {
+        "type": "h3",
+        "text": " thoải mái档：$180+"
+      },
+      {
+        "type": "p",
+        "html": "2个收费景点 + 打车若干次 + 餐厅正餐$60+。"
+      },
+      {
+        "type": "h2",
+        "text": "分项明细（2026年10月核实）"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "<strong>交通</strong>：地铁/公交单程$3.00；周上限$35；JFK进城约$11.75；LaGuardia约$3"
+          },
+          {
+            "html": "<strong>景点</strong>：Top of the Rock成人起价$42；多数博物馆$25–35；免费景点$0"
+          },
+          {
+            "html": "<strong>餐饮</strong>：快餐/简餐$15–25；普通餐厅$30–60；记得加小费15–20%"
+          },
+          {
+            "html": "<strong>容易忽略的</strong>：小费（餐饮15–20%）、瓶装水（景点区$3–5）、手机充电宝"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "省钱技巧"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "同一张OMNY卡刷满12次触发周上限，3天以上行程稳赚"
+          },
+          {
+            "html": "免费景点+1个收费观景台是性价比最高的组合"
+          },
+          {
+            "html": "午餐吃food court（中央车站、时代广场周边），比坐餐厅省一半"
+          },
+          {
+            "html": "Staten Island渡轮免费看女神像，别花冤枉钱坐游船（除非要上岛）"
+          }
+        ]
+      },
+      {
+        "type": "infobox",
+        "html": "以上金额为2026年10月核实，币种美元。酒店和机票属估算，随季节浮动大，出行前请重新查询。"
+      },
+      {
+        "type": "tips",
+        "html": "纽约消费税约8.875%，标价通常不含税，结账金额会比标价高一截，预算时留10%余量。"
+      }
+    ],
+    "related": [
+      "free-things-to-do",
+      "one-day-itinerary",
+      "transportation"
+    ],
+    "sources": [
+      {
+        "name": "MTA官方票价表",
+        "url": "https://dev.mta.info/document/195636"
+      },
+      {
+        "name": "NYC Tourism官方",
+        "url": "https://www.nyctourism.com/"
+      }
+    ]
+  },
+  {
+    "slug": "photo-spots",
+    "h1": "纽约拍照打卡地点推荐：经典地标与步行摄影路线",
+    "shortTitle": "纽约拍照打卡",
+    "seoTitle": "纽约拍照打卡地点推荐：经典地标与步行摄影路线 - OpenAA",
+    "desc": "纽约拍照打卡攻略：DUMBO、布鲁克林高地、Top of the Rock等经典机位，日间夜景拍摄建议，附步行路线与安全提醒。",
+    "lede": "纽约每个街区都能出片。这篇给你验证过的经典机位，按步行路线排好，日间夜景都覆盖。",
+    "cardDesc": "经典机位+步行路线：日间夜景拍摄建议",
+    "imageId": "dumbo-bridge",
+    "readMinutes": 8,
+    "datePublished": "2026-10-10",
+    "lastVerifiedAt": "2026-10-10",
+    "sections": [
+      {
+        "type": "h2",
+        "text": "经典机位清单"
+      },
+      {
+        "type": "h3",
+        "text": "DUMBO Washington Street"
+      },
+      {
+        "type": "p",
+        "html": "曼哈顿大桥框住帝国大厦的经典机位。工作日上午人少，周末要排队。免费。"
+      },
+      {
+        "type": "h3",
+        "text": "Brooklyn Heights Promenade"
+      },
+      {
+        "type": "p",
+        "html": "河滨步道看曼哈顿天际线全景，日落时分最美。免费。"
+      },
+      {
+        "type": "h3",
+        "text": "Top of the Rock"
+      },
+      {
+        "type": "p",
+        "html": "俯瞰中央公园+帝国大厦同框，约$42。日落时段需提前预约，是拍夜景最稳的选择。"
+      },
+      {
+        "type": "h3",
+        "text": "布鲁克林大桥步行道"
+      },
+      {
+        "type": "p",
+        "html": "桥上拍钢索+天际线。傍晚光线柔和，人比中午少。免费。"
+      },
+      {
+        "type": "h3",
+        "text": "时代广场夜景"
+      },
+      {
+        "type": "p",
+        "html": "天黑后霓虹全开，站在广场中央拍。注意保管好随身物品。免费。"
+      },
+      {
+        "type": "h3",
+        "text": "中央车站大厅"
+      },
+      {
+        "type": "p",
+        "html": "星空穹顶+大钟，复古大片感。免费，但部分区域可能限流。"
+      },
+      {
+        "type": "h2",
+        "text": "半日步行摄影路线"
+      },
+      {
+        "type": "timeline",
+        "items": [
+          {
+            "time": "15:00",
+            "html": "布鲁克林大桥（曼哈顿侧上桥，边走边拍）"
+          },
+          {
+            "time": "16:00",
+            "html": "DUMBO Washington Street机位"
+          },
+          {
+            "time": "17:30",
+            "html": "Brooklyn Heights Promenade等日落"
+          },
+          {
+            "time": "19:00",
+            "html": "回曼哈顿时报广场拍夜景"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "拍摄提醒"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "别为拍照占用车道、堵住人行道，纽约人走路很快"
+          },
+          {
+            "html": "三脚架在部分景点/博物馆内禁用，查好规则再带"
+          },
+          {
+            "html": "夜景拍摄注意随身财物，偏僻机位结伴去"
+          },
+          {
+            "html": "观景台玻璃反光：镜头贴近玻璃可减少反光"
+          }
+        ]
+      },
+      {
+        "type": "tips",
+        "html": "日出拍布鲁克林大桥人最少，日落拍天际线颜色最好。同一机位早晚各去一次，完全是两张照片。"
+      }
+    ],
+    "related": [
+      "best-attractions",
+      "one-day-itinerary",
+      "free-things-to-do"
+    ],
+    "sources": [
+      {
+        "name": "NYC Tourism官方",
+        "url": "https://www.nyctourism.com/"
+      }
+    ]
+  },
+  {
+    "slug": "day-trips",
+    "h1": "纽约周边一日游推荐：交通方式、行程与出发建议",
+    "shortTitle": "纽约周边一日游",
+    "seoTitle": "纽约周边一日游推荐：交通方式、行程与出发建议 - OpenAA",
+    "desc": "纽约周边一日游指南：按公共交通/自驾分类目的地，含交通方式、行程时长、季节提醒，先学会怎么选目的地。",
+    "lede": "纽约周边可玩的地方很多，但选错交通方式会浪费一整天。这篇先教你怎么选，再给具体目的地。",
+    "cardDesc": "怎么选目的地：公交可达 vs 自驾清单",
+    "imageId": "statue-liberty",
+    "readMinutes": 10,
+    "datePublished": "2026-10-10",
+    "lastVerifiedAt": "2026-10-10",
+    "sections": [
+      {
+        "type": "h2",
+        "text": "先学会选目的地"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "<strong>没车</strong>：只选火车/公交直达的，查好末班车时间"
+          },
+          {
+            "html": "<strong>有车</strong>：可选范围大，但周末出城堵车，7点前出发"
+          },
+          {
+            "html": "<strong>通用原则</strong>：单程交通控制在1.5小时内，否则一天都在赶路"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "公共交通可达"
+      },
+      {
+        "type": "h3",
+        "text": "Coney Island（布鲁克林）"
+      },
+      {
+        "type": "p",
+        "html": "地铁D/F/N/Q直达，约1小时。海滩+游乐园，夏天去。免费海滩，游乐设施另收费。"
+      },
+      {
+        "type": "h3",
+        "text": "Flushing Meadows（皇后区）"
+      },
+      {
+        "type": "p",
+        "html": "地铁7号线直达。Unisphere地球仪+公园，半天就够，适合家庭。"
+      },
+      {
+        "type": "h3",
+        "text": "Cold Spring（哈德逊河谷）"
+      },
+      {
+        "type": "p",
+        "html": "Metro-North火车从Grand Central出发，约1.5小时。小镇+徒步，秋天红叶季最美。火车票价按距离计，出行前查MTA官网。"
+      },
+      {
+        "type": "h2",
+        "text": "适合自驾"
+      },
+      {
+        "type": "h3",
+        "text": "Bear Mountain"
+      },
+      {
+        "type": "p",
+        "html": "开车约1.5小时。徒步+山顶看哈德逊河，秋叶季人多，7点前到才有停车位。"
+      },
+      {
+        "type": "h3",
+        "text": "Woodbury Outlets"
+      },
+      {
+        "type": "p",
+        "html": "开车约1小时。奥特莱斯购物，也有从曼哈顿出发的大巴。"
+      },
+      {
+        "type": "h3",
+        "text": "Storm King艺术中心"
+      },
+      {
+        "type": "p",
+        "html": "开车约1.5小时。户外大型雕塑公园，需购票，建议官网预约。"
+      },
+      {
+        "type": "h2",
+        "text": "出发前检查清单"
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "html": "查火车/公交<strong>周末时刻表</strong>（和平时不一样）"
+          },
+          {
+            "html": "查目的地<strong>开放状态</strong>（季节性关闭很常见）"
+          },
+          {
+            "html": "自驾查<strong>停车</strong>：热门景点停车位有限，违停罚单很贵"
+          },
+          {
+            "html": "带足水和食物，郊区选择少"
+          }
+        ]
+      },
+      {
+        "type": "tips",
+        "html": "秋叶季（10月中下旬）是哈德逊河谷最美的时候，也是人最多的时候。想清净就选工作日，或反方向去长岛海滩。"
+      }
+    ],
+    "related": [
+      "transportation",
+      "one-day-itinerary",
+      "travel-budget"
+    ],
+    "sources": [
+      {
+        "name": "MTA Metro-North官网",
+        "url": "https://new.mta.info/agency/metro-north-railroad"
+      },
+      {
+        "name": "NYC Tourism官方",
+        "url": "https://www.nyctourism.com/"
+      }
+    ]
+  }
+]
