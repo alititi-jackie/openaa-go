@@ -55,9 +55,9 @@ for (const [from, href] of links) {
   if (!urlSet.has(path) && !urlSet.has(path + '/')) { dead++; err(`死链: ${from} -> ${href}`); }
 }
 
-// sitemap
-const sm = readFileSync(join(root, 'sitemap.xml'), 'utf-8');
-const smUrls = [...sm.matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => m[1]);
+// sitemap（根目录）
+const sm = readFileSync(join(root, '..', 'sitemap.xml'), 'utf-8');
+const smUrls = [...sm.matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => m[1]).filter((u) => u.includes('/places/'));
 if (new Set(smUrls).size !== smUrls.length) err('sitemap 有重复 URL');
 for (const u of smUrls) {
   const p = new URL(u).pathname;

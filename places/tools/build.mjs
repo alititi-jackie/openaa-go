@@ -403,13 +403,18 @@ D('faq');
   console.log(`search-index: ${idx.length} 条`);
 }
 
-/* ---------------- sitemap 增量 ---------------- */
+/* ---------------- sitemap：只写根目录 ---------------- */
 {
   const today = new Date().toISOString().slice(0, 10);
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    sitemapUrls.map((u) => `  <url>\n    <loc>${u}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`).join('\n') +
-    `\n</urlset>\n`;
-  writeFileSync(out('sitemap.xml'), xml);
-  console.log(`sitemap: ${sitemapUrls.length} URLs`);
+  const mainSmPath = join(root, '..', 'sitemap.xml');
+  try {
+    let mainSm = readFileSync(mainSmPath, 'utf-8');
+    // 移除旧的 places 条目
+    mainSm = mainSm.replace(/  <url>\n    <loc>https:\/\/go\.openaa\.com\/places\/[^<]*<\/loc>\n    <lastmod>[^<]*<\/lastmod>\n  <\/url>\n?/g, '');
+    const entries = sitemapUrls.map((u) => `  <url>\n    <loc>${u}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`).join('\n');
+    mainSm = mainSm.replace('</urlset>', entries + '\n</urlset>');
+    writeFileSync(mainSmPath, mainSm);
+    console.log(`根 sitemap 已同步，共 ${sitemapUrls.length} 个 places URL`);
+  } catch (e) { console.warn('根 sitemap 同步跳过:', e.message); }
 }
 console.log('构建完成');
