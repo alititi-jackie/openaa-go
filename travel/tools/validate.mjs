@@ -33,7 +33,7 @@ for (const im of images) {
 }
 for (const a of articles) {
   if (a.imageId && !imgIds.has(a.imageId)) err(`文章 ${a.slug} 的图片 ${a.imageId} 未登记`);
-  if (!a.lastVerifiedAt) err(`文章 ${a.slug} 缺核实日期`);
+  if (!a.lastUpdatedAt) err(`文章 ${a.slug} 缺内容更新时间`);
   if (!a.sources || !a.sources.length) err(`文章 ${a.slug} 缺来源`);
 }
 
