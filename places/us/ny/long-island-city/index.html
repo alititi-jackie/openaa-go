@@ -73,12 +73,19 @@ h2.sec{font-size:20px;margin:32px 0 12px;padding-bottom:8px;border-bottom:2px so
 <dt>其他名称</dt><dd>LIC</dd>
 </dl>
 <div class="btnrow">
-<button class="btn" onclick="navigator.clipboard.writeText('Long Island City').then(()=>alert('已复制英文名称'))">复制英文名称</button>
-<button class="btn" onclick="navigator.clipboard.writeText('长岛市 Long Island City, New York').then(()=>alert('已复制'))">复制完整描述</button>
+<button class="btn" data-copy="Long Island City">复制英文名称</button>
+<button class="btn" data-copy="长岛市 Long Island City, New York">复制完整描述</button>
 </div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    navigator.clipboard.writeText(b.getAttribute('data-copy')).then(function () { alert('已复制'); });
+  });
+});
+</script>
 <div class="btnrow">
-<a class="btn" href="https://www.google.com/maps/search/?api=1&query=40.7447,-73.9485" target="_blank" rel="noopener">Google Maps</a>
-<a class="btn" href="https://maps.apple.com/?q=Long%20Island%20City%2C%20NY&ll=40.7447,-73.9485" target="_blank" rel="noopener">Apple Maps</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=40.7447,-73.9485" target="_blank" rel="noopener">Google Maps</a>
+<a class="btn" href="https://maps.apple.com/?q=Long%20Island%20City%2C%20NY&amp;ll=40.7447,-73.9485" target="_blank" rel="noopener">Apple Maps</a>
 </div>
 <p style="color:#6b7280;font-size:13px">地图定位为地点代表坐标，不代表行政边界。</p>
 <h2 class="sec">同州相关地区</h2><div class="cards"><a class="card" href="/places/us/ny/new-york/">

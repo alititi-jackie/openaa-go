@@ -73,12 +73,19 @@ h2.sec{font-size:20px;margin:32px 0 12px;padding-bottom:8px;border-bottom:2px so
 <dt>其他名称</dt><dd>赌城</dd>
 </dl>
 <div class="btnrow">
-<button class="btn" onclick="navigator.clipboard.writeText('Las Vegas').then(()=>alert('已复制英文名称'))">复制英文名称</button>
-<button class="btn" onclick="navigator.clipboard.writeText('拉斯维加斯 Las Vegas, Nevada').then(()=>alert('已复制'))">复制完整描述</button>
+<button class="btn" data-copy="Las Vegas">复制英文名称</button>
+<button class="btn" data-copy="拉斯维加斯 Las Vegas, Nevada">复制完整描述</button>
 </div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    navigator.clipboard.writeText(b.getAttribute('data-copy')).then(function () { alert('已复制'); });
+  });
+});
+</script>
 <div class="btnrow">
-<a class="btn" href="https://www.google.com/maps/search/?api=1&query=36.2335,-115.264" target="_blank" rel="noopener">Google Maps</a>
-<a class="btn" href="https://maps.apple.com/?q=Las%20Vegas%2C%20NV&ll=36.2335,-115.264" target="_blank" rel="noopener">Apple Maps</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=36.2335,-115.264" target="_blank" rel="noopener">Google Maps</a>
+<a class="btn" href="https://maps.apple.com/?q=Las%20Vegas%2C%20NV&amp;ll=36.2335,-115.264" target="_blank" rel="noopener">Apple Maps</a>
 </div>
 <p style="color:#6b7280;font-size:13px">地图定位为地点代表坐标，不代表行政边界。</p>
 
