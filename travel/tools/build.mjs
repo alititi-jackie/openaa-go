@@ -28,7 +28,7 @@ const CSS = `
 body{margin:0 auto;max-width:1040px;min-height:100dvh;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;color:#111827;background:#fff;line-height:1.8;box-shadow:0 0 40px rgba(15,23,42,.12)}
 @media(max-width:1040px){body{box-shadow:none}}
 a{color:#2563eb}.wrap{max-width:960px;margin:0 auto;padding:0 16px}
-.topbar{border-bottom:1px solid #e5e7eb;background:#fff}
+.topbar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e5e7eb;box-shadow:0 2px 8px rgba(15,23,42,.04)}
 .topbar-in{display:flex;align-items:center;gap:8px;padding:10px 0}
 .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:#111827;font-weight:800;font-size:18px}
 .brand img{width:30px;height:30px}.brand .open{color:#2563eb}
@@ -87,12 +87,12 @@ ${jsonld ? `<script type="application/ld+json">${jsonld.replace(/</g, '\\u003c')
 <div class="topbar-in">
 <a class="brand" href="/travel/"><img src="/logo.png" alt="OpenAA"><span><span class="open">Open</span>AA · 美国旅游攻略</span></a>
 </div>
-<nav class="subnav" aria-label="旅游栏目导航">
+</div></header>
+<div class="wrap"><nav class="subnav" aria-label="旅游栏目导航">
 <a href="/travel/" class="${nav === 'home' ? 'on' : ''}">首页</a>
 <a href="/travel/new-york/" class="${nav === 'ny' ? 'on' : ''}">纽约攻略</a>
 <a href="https://go.openaa.com/">返回 Go 首页</a>
-</nav>
-</div></header>
+</nav></div>
 <main class="wrap">${body}</main>
 <footer class="footer"><div class="wrap">
 <a href="https://openaa.com/" target="_blank" rel="noopener">OpenAA 华人生活平台</a>
