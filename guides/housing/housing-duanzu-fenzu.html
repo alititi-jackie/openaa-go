@@ -21,12 +21,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans G
 a{color:var(--accent)}
 #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-deep));z-index:99}
 /* ---- header ---- */
-.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar{position:sticky;top:0;z-index:100;isolation:isolate;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:880px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .site-logo{width:34px;height:34px;border-radius:50%;flex:none;display:block}
 .brand-tx{display:flex;align-items:center;gap:9px}
-.brand-tx .vdiv{width:1px;height:20px;background:#dfe1e5;flex:none}
+.brand-tx .brand-dot{width:4px;height:4px;border-radius:50%;background:#9ca3af;flex:none}
 .brand-tx b{font-size:19px;color:#111;font-weight:800}
 .brand-tx b em{font-style:normal;color:#2563eb}
 .brand-tx small{font-size:13px;color:var(--muted);font-weight:400}
@@ -102,6 +102,18 @@ h1{font-size:23px}.cta-card{padding:20px}.cta-title{font-size:19px}.cta-emoji{fo
 .idx-sec ul{columns:1}
 .open-link{display:none}
 }
+/* ---- unified OpenAA guide header actions ---- */
+.header-actions{display:flex;align-items:center;gap:6px;flex:none}
+.icon-action{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid transparent;border-radius:10px;background:transparent;color:#52525b;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:color .15s,border-color .15s}
+.icon-action svg{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon-action:hover{color:#2563eb;border-color:#e5e7eb}
+.icon-action:focus{outline:none}
+.icon-action:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}
+.share-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:120;max-width:calc(100vw - 32px);padding:10px 14px;border-radius:10px;background:#202124;color:#fff;font-size:14px;line-height:1.5;box-shadow:0 8px 28px rgba(0,0,0,.16);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,visibility .18s}
+.share-toast.is-visible{opacity:1;visibility:visible}
+@media(max-width:640px){
+.topbar .in{padding:8px 14px}.brand{gap:8px}.site-logo{width:32px;height:32px}.brand-tx{gap:7px}.brand-tx b{font-size:18px}.brand-tx small{font-size:12px}.header-actions{gap:2px}.icon-action{width:36px;height:36px}
+}
 </style>
 <script>
 addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%'},{passive:true});
@@ -110,8 +122,10 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <body>
 <div id="progress"></div>
 <div class="topbar"><div class="in">
-<a class="brand" href="../index.html" aria-label="OpenAA生活指南首页"><img class="site-logo" src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-tx"><b><em>Open</em>AA</b><i class="vdiv"></i><small>生活指南</small></span></a>
-<a class="open-link" href="https://openaa.com?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=nav" target="_blank" rel="noopener">OpenAA.com →</a>
+<a class="brand" href="../index.html" aria-label="OpenAA生活指南首页"><img class="site-logo" src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-tx"><b><em>Open</em>AA</b><i class="brand-dot" aria-hidden="true"></i><small>生活指南</small></span></a>
+<div class="header-actions">
+<a class="icon-action" href="https://go.openaa.com/" aria-label="返回 OpenAA Go 首页" title="OpenAA Go 首页"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg></a>
+<button class="icon-action" type="button" id="share-page" aria-label="分享当前页面" title="分享当前页面"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.7 10.7 6.6-4.4"></path><path d="m8.7 13.3 6.6 4.4"></path></svg></button></div>
 </div></div>
 <div class="wrap">
 <div class="crumb"><a href="../index.html">指南首页</a> &nbsp;›&nbsp; <a href="../index.html#housing">🏠 房屋租售</a> &nbsp;›&nbsp; 正文</div>
@@ -138,5 +152,6 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <nav class="related"><h2>🏠 房屋租售更多指南</h2><ul><li><a href="../jobs/jobs-fabu-zhaopin-qudao.html">在美国哪里发招聘信息？华人老板招工渠道对比</a></li><li><a href="../jobs/jobs-canguan-zhaogong-fabu.html">纽约中餐馆招工去哪发？老板3天招到人的实操</a></li><li><a href="../jobs/jobs-naichadian-zhaogong.html">纽约奶茶店/华人超市招工信息去哪看？</a></li><li><a href="housing-fangdong-fabu-qudao.html">美国房东去哪里发布租房信息？招租渠道对比</a></li><li><a href="housing-falasheng-chuzu-fabu.html">法拉盛单房出租去哪发？房东直租全流程</a></li><li><a href="../marketplace/marketplace-bie-zhi-fa-weixinqun.html">别只发微信群：在美国卖二手的新思路</a></li><li><a href="../marketplace/marketplace-biyeji-chu-jiaju.html">毕业季出家具去哪发？留学生搬家清仓攻略</a></li><li><a href="../marketplace/marketplace-ershouqun-zenme-jin.html">纽约华人二手群怎么进？汇总+防坑</a></li><li><a href="../services/services-xuanchuan-huoke.html">华人在美国怎么宣传自己的服务？装修/月嫂/保洁获客渠道对比</a></li><li><a href="../services/services-shuigong-diangong-jiedan.html">华人水管工电工怎么在美国找客户？老师傅接单攻略</a></li><li><a href="../services/services-dianhua-huizong.html">纽约华人服务电话汇总：装修月嫂保洁驾校</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ <a href="https://openaa.com/housing?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=post-guides&utm_content=housing-duanzu-fenzu" target="_blank" rel="noopener">OpenAA.com</a></footer>
 </div>
+<div id="share-toast" class="share-toast" role="status" aria-live="polite"></div><script>(function(){var button=document.getElementById('share-page'),toast=document.getElementById('share-toast');if(!button||!toast)return;var timer;function show(message){toast.textContent=message;toast.classList.add('is-visible');clearTimeout(timer);timer=setTimeout(function(){toast.classList.remove('is-visible')},2200)}function fallback(url){var f=document.createElement('textarea');f.value=url;f.setAttribute('readonly','');f.style.position='fixed';f.style.left='-9999px';document.body.appendChild(f);f.focus();f.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}f.remove();show(ok?'页面链接已复制':'请复制浏览器地址栏中的链接')}async function copy(){var url=window.location.href;if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(url);show('页面链接已复制');return}catch(e){}}fallback(url)}button.addEventListener('click',async function(){if(typeof navigator.share==='function'){try{await navigator.share({title:document.title,url:window.location.href});return}catch(e){if(e&&e.name==='AbortError')return}}await copy()})})();</script>
 </body>
 </html>

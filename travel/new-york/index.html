@@ -17,13 +17,25 @@
 body{margin:0 auto;max-width:1040px;min-height:100dvh;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;color:#111827;background:#fff;line-height:1.8;box-shadow:0 0 40px rgba(15,23,42,.12)}
 @media(max-width:1040px){body{box-shadow:none}}
 a{color:#2563eb}.wrap{max-width:960px;margin:0 auto;padding:0 16px}
-.topbar{border-bottom:1px solid #e5e7eb;background:#fff}
-.topbar-in{display:flex;align-items:center;gap:8px;padding:10px 0}
-.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:#111827;font-weight:800;font-size:18px}
-.brand img{width:30px;height:30px}.brand .open{color:#2563eb}
-.subnav{display:flex;gap:4px;overflow-x:auto;padding:8px 0;border-top:1px solid #f3f4f6}
+.topbar{position:sticky;top:0;z-index:100;isolation:isolate;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#111827;font-weight:800;flex:none}
+.brand img{width:34px;height:34px;border-radius:50%;flex:none;display:block}.brand-name{display:flex;align-items:center;gap:8px}.brand-name b{font-size:19px;color:#111;font-weight:800}.brand-name b em{font-style:normal;color:#2563eb}.brand-name .brand-dot{width:4px;height:4px;border-radius:50%;background:#9ca3af;flex:none}.brand-name small{font-size:13px;color:#6b7280;font-weight:400}
+.subnav{display:flex;gap:4px;overflow-x:auto;padding:8px 0;margin:0 auto 2px}
 .subnav a{white-space:nowrap;padding:6px 12px;border-radius:999px;text-decoration:none;color:#4b5563;font-size:14px}
 .subnav a:hover,.subnav a.on{background:#eff6ff;color:#1d4ed8}
+/* Unified sticky OpenAA header actions */
+.header-actions{display:flex;align-items:center;gap:6px;flex:none}
+.icon-action{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid transparent;border-radius:10px;background:transparent;color:#52525b;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:color .15s,border-color .15s}
+.icon-action svg{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon-action:hover{color:#2563eb;border-color:#e5e7eb}
+.icon-action:focus{outline:none}
+.icon-action:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}
+.share-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:120;max-width:calc(100vw - 32px);padding:10px 14px;border-radius:10px;background:#202124;color:#fff;font-size:14px;line-height:1.5;box-shadow:0 8px 28px rgba(0,0,0,.16);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,visibility .18s}
+.share-toast.is-visible{opacity:1;visibility:visible}
+@media(max-width:640px){
+.topbar-in{padding:8px 0}.brand{gap:8px}.brand img{width:32px;height:32px}.brand-name{gap:7px}.brand-name b{font-size:18px}.brand-name small{font-size:12px}.header-actions{gap:2px}.icon-action{width:36px;height:36px}
+}
 .hero{padding:28px 0 16px}.hero h1{font-size:26px;margin:0 0 8px}.hero .lede{color:#4b5563;font-size:16px;margin:0}
 .article h1{font-size:26px;margin:20px 0 8px}.article .meta{color:#6b7280;font-size:13px;margin-bottom:16px}
 .article h2{font-size:20px;margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid #eff6ff}
@@ -54,16 +66,14 @@ a{color:#2563eb}.wrap{max-width:960px;margin:0 auto;padding:0 16px}
 
 </head>
 <body>
-<header class="topbar"><div class="wrap">
-<div class="topbar-in">
-<a class="brand" href="/travel/"><img src="/logo.png" alt="OpenAA"><span><span class="open">Open</span>AA · 美国旅游攻略</span></a>
-</div>
-<nav class="subnav" aria-label="旅游栏目导航">
+<header class="topbar"><div class="wrap"><div class="topbar-in"><a class="brand" href="/travel/" aria-label="美国旅游攻略首页"><img src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-name"><b><em>Open</em>AA</b><i class="brand-dot" aria-hidden="true"></i><small>美国旅游攻略</small></span></a><div class="header-actions">
+<a class="icon-action" href="https://go.openaa.com/" aria-label="返回 OpenAA Go 首页" title="OpenAA Go 首页"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg></a>
+<button class="icon-action" type="button" id="share-page" aria-label="分享当前页面" title="分享当前页面"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.7 10.7 6.6-4.4"></path><path d="m8.7 13.3 6.6 4.4"></path></svg></button>
+</div></div></div></header>
+<div class="wrap"><nav class="subnav" aria-label="旅游栏目导航">
 <a href="/travel/" class="">首页</a>
 <a href="/travel/new-york/" class="on">纽约攻略</a>
-<a href="https://go.openaa.com/">返回 Go 首页</a>
-</nav>
-</div></header>
+</nav></div>
 <main class="wrap"><nav class="breadcrumb" aria-label="面包屑"><a href="/travel/">旅游首页</a> &gt; 纽约旅游攻略</nav><div class="hero"><h1>纽约旅游攻略</h1><p class="lede">第一次来纽约？从经典一日游路线开始，按主题找攻略：免费景点、亲子游、雨天室内、交通、预算、拍照和周边一日游。</p></div>
 <div class="cards"><a class="card" href="/travel/new-york/transportation/"><div class="pad"><div class="zh">纽约公共交通攻略</div><div class="desc">OMNY支付、票价、换乘、机场交通一次讲清</div></div></a><a class="card" href="/travel/new-york/best-attractions/"><div class="pad"><div class="zh">纽约必去景点</div><div class="desc">8大地标怎么选、怎么组合、要不要预约</div></div></a><a class="card" href="/travel/new-york/one-day-itinerary/"><div class="pad"><div class="zh">纽约经典一日游</div><div class="desc">可执行的一日路线：时间、交通、预算全规划好</div></div></a><a class="card" href="/travel/new-york/free-things-to-do/"><div class="pad"><div class="zh">纽约免费景点</div><div class="desc">不花门票玩一天：免费清单+限时免费政策</div></div></a><a class="card" href="/travel/new-york/family-travel/"><div class="pad"><div class="zh">纽约亲子游</div><div class="desc">分年龄景点推荐+推车友好路线+实用设施信息</div></div></a><a class="card" href="/travel/new-york/rainy-day/"><div class="pad"><div class="zh">纽约雨天指南</div><div class="desc">博物馆+室内地标：按区域排好的雨天行程</div></div></a><a class="card" href="/travel/new-york/travel-budget/"><div class="pad"><div class="zh">纽约旅游预算</div><div class="desc">三档预算方案：每笔花费明细+省钱技巧</div></div></a><a class="card" href="/travel/new-york/photo-spots/"><div class="pad"><div class="zh">纽约拍照打卡</div><div class="desc">经典机位+步行路线：日间夜景拍摄建议</div></div></a><a class="card" href="/travel/new-york/day-trips/"><div class="pad"><div class="zh">纽约周边一日游</div><div class="desc">怎么选目的地：公交可达 vs 自驾清单</div></div></a></div></main>
 <footer class="footer"><div class="wrap">
@@ -73,5 +83,33 @@ a{color:#2563eb}.wrap{max-width:960px;margin:0 auto;padding:0 16px}
 <a href="https://go.openaa.com/" target="_blank" rel="noopener">Go 导航</a>
 <p>OpenAA · 美国华人生活平台</p>
 </div></footer>
+<div id="share-toast" class="share-toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  var button=document.getElementById('share-page');
+  var toast=document.getElementById('share-toast');
+  if(!button||!toast)return;
+  var hideTimer;
+  function showToast(message){toast.textContent=message;toast.classList.add('is-visible');clearTimeout(hideTimer);hideTimer=setTimeout(function(){toast.classList.remove('is-visible');},2200);}
+  function fallbackCopy(url){
+    var field=document.createElement('textarea');field.value=url;field.setAttribute('readonly','');
+    field.style.position='fixed';field.style.left='-9999px';document.body.appendChild(field);
+    field.focus();field.select();var copied=false;try{copied=document.execCommand('copy');}catch(e){}
+    field.remove();showToast(copied?'页面链接已复制':'请复制浏览器地址栏中的链接');
+  }
+  async function copyCurrentUrl(){
+    var url=window.location.href;
+    if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(url);showToast('页面链接已复制');return;}catch(e){}}
+    fallbackCopy(url);
+  }
+  button.addEventListener('click',async function(){
+    if(typeof navigator.share==='function'){
+      try{await navigator.share({title:document.title,url:window.location.href});return;}
+      catch(error){if(error&&error.name==='AbortError')return;}
+    }
+    await copyCurrentUrl();
+  });
+})();
+</script>
 </body>
 </html>

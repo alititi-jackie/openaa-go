@@ -21,12 +21,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans G
 a{color:var(--accent)}
 #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-deep));z-index:99}
 /* ---- header ---- */
-.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar{position:sticky;top:0;z-index:100;isolation:isolate;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:880px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .site-logo{width:34px;height:34px;border-radius:50%;flex:none;display:block}
 .brand-tx{display:flex;align-items:center;gap:9px}
-.brand-tx .vdiv{width:1px;height:20px;background:#dfe1e5;flex:none}
+.brand-tx .brand-dot{width:4px;height:4px;border-radius:50%;background:#9ca3af;flex:none}
 .brand-tx b{font-size:19px;color:#111;font-weight:800}
 .brand-tx b em{font-style:normal;color:#2563eb}
 .brand-tx small{font-size:13px;color:var(--muted);font-weight:400}
@@ -103,6 +103,16 @@ h1{font-size:23px}.cta-card{padding:20px}.cta-title{font-size:19px}.cta-emoji{fo
 .idx-sec ul{columns:1}
 .open-link{display:none}
 }
+/* ---- unified OpenAA guide header actions ---- */
+.header-actions{display:flex;align-items:center;gap:6px;flex:none}
+.icon-action{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid transparent;border-radius:10px;background:transparent;color:#52525b;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:color .15s,border-color .15s}
+.icon-action svg{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon-action:hover{color:#2563eb;border-color:#e5e7eb}
+.icon-action:focus{outline:none}
+.icon-action:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}
+.share-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:120;max-width:calc(100vw - 32px);padding:10px 14px;border-radius:10px;background:#202124;color:#fff;font-size:14px;line-height:1.5;box-shadow:0 8px 28px rgba(0,0,0,.16);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,visibility .18s}
+.share-toast.is-visible{opacity:1;visibility:visible}
+@media(max-width:640px){.topbar .in{padding:8px 14px}.brand{gap:8px}.site-logo{width:32px;height:32px}.brand-tx{gap:7px}.brand-tx b{font-size:18px}.brand-tx small{font-size:12px}.header-actions{gap:2px}.icon-action{width:36px;height:36px}}
 </style>
 <script>
 addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%'},{passive:true});
@@ -111,8 +121,8 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <body style="--accent:#16a34a;--accent-deep:#14532d;--accent-soft:#e6f6ec">
 <div id="progress"></div>
 <div class="topbar"><div class="in">
-<a class="brand" href="../index.html" aria-label="OpenAA生活指南首页"><img class="site-logo" src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-tx"><b><em>Open</em>AA</b><i class="vdiv"></i><small>生活指南</small></span></a>
-<a class="open-link" href="https://openaa.com?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=nav" target="_blank" rel="noopener">OpenAA.com →</a>
+<a class="brand" href="../index.html" aria-label="OpenAA生活指南首页"><img class="site-logo" src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-tx"><b><em>Open</em>AA</b><i class="brand-dot" aria-hidden="true"></i><small>生活指南</small></span></a>
+<div class="header-actions"><a class="icon-action" href="https://go.openaa.com/" aria-label="返回 OpenAA Go 首页" title="OpenAA Go 首页"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg></a><button class="icon-action" type="button" id="share-page" aria-label="分享当前页面" title="分享当前页面"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.7 10.7 6.6-4.4"></path><path d="m8.7 13.3 6.6 4.4"></path></svg></button></div>
 </div></div>
 <div class="wrap">
 <div class="crumb"><a href="../index.html">指南首页</a> &nbsp;›&nbsp; <a href="../index.html#housing">🏠 房屋</a> &nbsp;›&nbsp; 正文</div>
@@ -138,5 +148,6 @@ addEventListener('scroll',function(){var h=document.documentElement;var p=h.scro
 <nav class="related"><h2>🏠 房屋板块更多指南</h2><ul><li><a href="housing-niuyue-zufang-qudao.html">纽约租房去哪找？4个靠谱渠道</a></li><li><a href="housing-zufang-fangpian.html">纽约租房防骗：6种常见套路</a></li><li><a href="housing-yajin-tuikuan.html">美国租房押金能退吗？退押金攻略</a></li><li><a href="housing-lease-hetong.html">美国lease签约前必看的10条</a></li><li><a href="housing-falasheng-zufang.html">法拉盛租房多少钱？2026行情</a></li><li><a href="housing-hezu-zhuyi.html">在美国跟人合租要注意什么？</a></li><li><a href="housing-fangdong-shaixuan.html">在美国当房东怎么筛选租客？</a></li><li><a href="housing-zuba-chuli.html">遇到租霸怎么办？房东应对指南</a></li><li><a href="housing-huaren-zhinan.html">在美华人租房全指南（2026版）</a></li></ul></nav>
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ <a href="https://openaa.com?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=nav" target="_blank" rel="noopener">OpenAA.com</a></footer>
 </div>
+<div id="share-toast" class="share-toast" role="status" aria-live="polite"></div><script>(function(){var b=document.getElementById('share-page'),t=document.getElementById('share-toast');if(!b||!t)return;var timer;function show(m){t.textContent=m;t.classList.add('is-visible');clearTimeout(timer);timer=setTimeout(function(){t.classList.remove('is-visible')},2200)}function fallback(u){var f=document.createElement('textarea');f.value=u;f.setAttribute('readonly','');f.style.position='fixed';f.style.left='-9999px';document.body.appendChild(f);f.focus();f.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}f.remove();show(ok?'页面链接已复制':'请复制浏览器地址栏中的链接')}async function copy(){var u=window.location.href;if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(u);show('页面链接已复制');return}catch(e){}}fallback(u)}b.addEventListener('click',async function(){if(typeof navigator.share==='function'){try{await navigator.share({title:document.title,url:window.location.href});return}catch(e){if(e&&e.name==='AbortError')return}}await copy()})})();</script>
 </body>
 </html>
