@@ -119,8 +119,9 @@ function renderArticle(a) {
   const img = imgById[a.imageId];
   const jsonld = JSON.stringify({
     '@context': 'https://schema.org', '@type': 'Article',
-    headline: a.title, description: a.desc,
+    headline: a.h1, description: a.desc,
     image: img ? img.imageUrl : undefined,
+    mainEntityOfPage: `https://go.openaa.com/travel/new-york/${a.slug}/`,
     datePublished: a.datePublished, dateModified: a.lastUpdatedAt,
     author: { '@type': 'Organization', name: 'OpenAA' },
   });
