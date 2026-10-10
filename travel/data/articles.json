@@ -4,8 +4,8 @@
     "h1": "纽约地铁和公交怎么坐？游客交通、支付与换乘指南",
     "shortTitle": "纽约公共交通攻略",
     "seoTitle": "纽约地铁和公交怎么坐？游客交通、支付与换乘指南 - OpenAA",
-    "desc": "纽约地铁公交游客指南：OMNY支付方式、$3单程票价、周票价上限$35、免费换乘规则、JFK/LaGuardia/Newark机场交通，附MTA官方查询渠道。",
-    "lede": "纽约地铁和公交是游客最划算的出行方式。2026年起全面使用OMNY支付，单程$3，掌握换乘规则和机场交通，一天玩转纽约不心疼钱包。",
+    "desc": "纽约地铁与公交实用指南：OMNY支付、$3基础票价、7天票价上限、免费换乘，以及JFK、LaGuardia和Newark机场公共交通路线。动态票价与服务请以官方页面为准。",
+    "lede": "纽约地铁和本地公交适合大多数市内出行。本文说明 OMNY 支付、当前票价、换乘规则，以及从 JFK、LaGuardia 和 Newark 机场进城时如何比较路线与费用。",
     "cardDesc": "OMNY支付、票价、换乘、机场交通一次讲清",
     "imageId": "grand-central",
     "readMinutes": 8,
@@ -19,21 +19,11 @@
       {
         "type": "list",
         "items": [
-          {
-            "html": "<strong>单程$3.00</strong>：地铁、本地公交、Select Bus统一价，2026年1月4日起生效"
-          },
-          {
-            "html": "<strong>用OMNY支付</strong>：MetroCard已于2026年1月1日停用，现在刷银行卡、手机或OMNY卡"
-          },
-          {
-            "html": "<strong>周票价上限$35</strong>：同一支付方式7天内付满12次后，当周剩下行程免费，自动生效不用预购"
-          },
-          {
-            "html": "<strong>免费换乘</strong>：地铁↔本地公交2小时内免费换乘（须用同一OMNY支付方式）"
-          },
-          {
-            "html": "<strong>机场交通</strong>：JFK约$11.75、LaGuardia约$3、Newark约$16–18到曼哈顿"
-          }
+          "<strong>基础票价</strong>：纽约地铁、本地公交和 Select Bus Service 全票价为 $3.00；快速公交另计",
+          "<strong>支付方式</strong>：可用非接触式银行卡、手机钱包或 OMNY 卡；MetroCard 过渡安排以 MTA 最新公告为准",
+          "<strong>7天票价上限</strong>：符合条件的地铁和本地公交付费累计达到 $35 后，该周期内符合条件的后续行程免费",
+          "<strong>免费换乘</strong>：符合条件的地铁与公交换乘通常须在首次刷卡后 2 小时内，并使用完全相同的支付方式",
+          "<strong>机场交通</strong>：三个机场路线和票价不同，AirTrain、通勤铁路、地铁与机场巴士费用应分开计算"
         ]
       },
       {
@@ -42,7 +32,7 @@
       },
       {
         "type": "p",
-        "html": "OMNY是MTA的非接触支付系统。进站时把<strong>银行卡、手机（Apple Pay/Google Pay）或OMNY卡</strong>贴在闸机读卡器上，听到"
+        "html": "OMNY 是 MTA 的非接触式支付系统。乘坐地铁时，将<strong>非接触式银行卡、手机/智能手表中的支付卡，或 OMNY 卡</strong>贴近闸机读卡器；乘坐公交时，在上车处的读卡器刷卡。确认读卡器提示成功后再通过。若使用手机钱包，请保持同一设备和同一张钱包卡支付。"
       },
       {
         "type": "p",
@@ -50,7 +40,7 @@
       },
       {
         "type": "infobox",
-        "html": "<strong>OMNY周票价上限</strong>：滚动7天内，用同一支付方式付满12次（$3×12=$36，实际按$35封顶），之后当周行程免费。玩3天以上大概率能触发，适合行程紧凑的游客。"
+        "html": "<strong>OMNY 七天票价上限：</strong>从首次符合条件的刷卡开始计算一个 7 天周期。全票价乘客在符合条件的地铁、本地公交等行程中累计支付达到 $35 后，该周期内符合规则的后续行程免费。请使用完全相同的银行卡、手机/设备及钱包中的同一张卡；不同支付方式的记录不会合并。免费换乘、团体同行的额外乘客及快速公交等行程有各自规则，不能把所有刷卡次数都算作封顶次数。"
       },
       {
         "type": "h2",
@@ -62,7 +52,7 @@
       },
       {
         "type": "p",
-        "html": "AirTrain到Jamaica站或Howard Beach站（<strong>$8.75</strong>，航站楼之间免费），再转地铁进曼哈顿（<strong>$3.00</strong>），合计<strong>约$11.75</strong>，全程50–70分钟。赶时间可AirTrain转LIRR到Penn Station，更快但贵几美元。"
+        "html": "JFK 可乘 AirTrain 前往 Jamaica 或 Howard Beach，再转地铁；也可在 Jamaica 转乘 LIRR 前往曼哈顿。AirTrain 费用、地铁票价和 LIRR 票价应分别核算，且 AirTrain 收费政策可能按日期和乘车方式变化。出发前请查看 <a href=\"https://www.jfkairport.com/to-from-airport/air-train\" target=\"_blank\" rel=\"noopener\">JFK 官方 AirTrain 说明</a>及 <a href=\"https://www.mta.info/fares\" target=\"_blank\" rel=\"noopener\">MTA 票价页面</a>，不要仅凭旧的合计价格做预算。"
       },
       {
         "type": "h3",
@@ -70,7 +60,7 @@
       },
       {
         "type": "p",
-        "html": "<strong>Q70公交免费</strong>（2022年5月起），坐到Jackson Heights转E/F/M/R/7号线，全程只付<strong>$3.00</strong>地铁票，是三个机场里最便宜的。"
+        "html": "<strong>Q70 LGA Link 免费接驳巴士</strong>连接 LaGuardia 的指定航站楼与 Jackson Heights–Roosevelt Avenue、74 St–Broadway 等交通枢纽；之后再换乘地铁或其他交通工具。到曼哈顿的总费用通常是后续乘车费用，不应把 Q70 本身写成收费巴士。出发前请查看 <a href=\"https://www.laguardiaairport.com/transportation/public-transport\" target=\"_blank\" rel=\"noopener\">LaGuardia 官方公共交通说明</a>，确认实际航站楼、路线和服务状态。"
       },
       {
         "type": "h3",
@@ -78,7 +68,7 @@
       },
       {
         "type": "p",
-        "html": "AirTrain转NJ Transit到纽约Penn Station，<strong>约$16–18</strong>（已含AirTrain费用），25–35分钟。预算紧可走PATH（$2.90）经Newark Penn转车，慢一些。"
+        "html": "从 Newark Liberty International Airport 前往曼哈顿，可比较 AirTrain 接 NJ TRANSIT 前往 New York Penn Station、机场巴士及其他公共交通组合。票价、施工、换乘和总耗时会变化；购票时确认票种是否包含 AirTrain，并以 <a href=\"https://www.newarkairport.com/to-from-airport/public-transportation\" target=\"_blank\" rel=\"noopener\">Newark Liberty 官方公共交通页面</a>和运营商当日信息为准。不要把 PATH 单独票价当作从机场出发的全程费用。"
       },
       {
         "type": "h2",
@@ -87,18 +77,10 @@
       {
         "type": "list",
         "items": [
-          {
-            "html": "地铁↔本地公交<strong>2小时内免费换乘</strong>，必须用同一OMNY支付方式"
-          },
-          {
-            "html": "单程票（售票机$3.50）<strong>不含换乘</strong>，不如直接刷OMNY"
-          },
-          {
-            "html": "65岁以上/残障人士优惠票$1.50，需办Reduced Fare卡"
-          },
-          {
-            "html": "快线公交$7.25，一般游客用不上"
-          }
+          "地铁与本地公交的符合条件换乘通常须在首次刷卡后 2 小时内，并使用完全相同的支付方式；具体例外以 OMNY 官方规则为准",
+          "售票机单程票与 OMNY 刷卡的价格、换乘资格不同，购票前先核对 MTA 当前票价说明",
+          "Reduced-Fare 优惠仅适用于符合资格并完成相应注册/使用要求的人群；不要只凭年龄或外观判断",
+          "快速公交票价高于普通地铁/本地公交；若使用快速公交，应单独核算费用及票价上限规则"
         ]
       },
       {
@@ -107,7 +89,7 @@
       },
       {
         "type": "p",
-        "html": "纽约地铁周末常有施工改道。出行前用<strong>MTA官方App</strong>（原MYmta）或Google Maps查实时路线，App会推服务提醒。深夜部分线路会改道，看清站内告示再上车。"
+        "html": "纽约地铁和公交可能因周末施工、突发事件或天气调整。出发前查看 <a href=\"https://new.mta.info/\" target=\"_blank\" rel=\"noopener\">MTA 官网</a>的 Service Status，或使用 MTA 官方应用核对线路、站点和无障碍信息；Google Maps 可作辅助，但以运营方当日公告为准。"
       },
       {
         "type": "tips",
@@ -121,12 +103,24 @@
     ],
     "sources": [
       {
-        "name": "MTA官方票价表",
-        "url": "https://dev.mta.info/document/195636"
+        "name": "MTA 票价与 OMNY 说明",
+        "url": "https://www.mta.info/fares"
       },
       {
-        "name": "MTA OMNY官方",
-        "url": "https://omny.info/"
+        "name": "OMNY 七天票价上限",
+        "url": "https://omny.info/fares"
+      },
+      {
+        "name": "OMNY 票价上限常见问题",
+        "url": "https://omny.info/faq/fare-cap"
+      },
+      {
+        "name": "LaGuardia 机场公共交通",
+        "url": "https://www.laguardiaairport.com/transportation/public-transport"
+      },
+      {
+        "name": "JFK 机场 AirTrain",
+        "url": "https://www.jfkairport.com/to-from-airport/air-train"
       }
     ]
   },
@@ -738,8 +732,8 @@
     "h1": "纽约旅游要花多少钱？交通、景点、餐饮与预算参考",
     "shortTitle": "纽约旅游预算",
     "seoTitle": "纽约旅游要花多少钱？交通、景点、餐饮与预算参考 - OpenAA",
-    "desc": "纽约旅游预算指南：低/中/高三档方案，交通景点餐饮分项明细，免费组合省钱法，所有金额注明核实日期。",
-    "lede": "纽约可贵可省。这篇给你三档预算方案，每笔钱花在哪、怎么省，一次算清。",
+    "desc": "纽约旅游预算参考：按每人每天估算交通、景点、餐饮、小费与税费，比较省钱、标准和舒适型行程。金额为规划区间，不是实时报价。",
+    "lede": "纽约旅行费用差异很大。本文按每人每天、不含住宿和往返机票的口径，拆分交通、景点、餐饮和额外支出，并提供可按自己行程调整的估算方法。",
     "cardDesc": "三档预算方案：每笔花费明细+省钱技巧",
     "imageId": "memorial-911",
     "readMinutes": 9,
@@ -768,11 +762,11 @@
       },
       {
         "type": "h3",
-        "text": " thoải mái档：$180+"
+        "text": "舒适型：约 $180 以上"
       },
       {
         "type": "p",
-        "html": "2个收费景点 + 打车若干次 + 餐厅正餐$60+。"
+        "html": "可安排 2 个收费景点、部分打车和坐餐厅用餐。约 $180 以上只是初步规划区间，需根据实际门票、车费、餐饮、小费和税费重新计算；如果选择高价餐厅或多个热门体验，花费可能明显更高。"
       },
       {
         "type": "h2",
@@ -781,18 +775,10 @@
       {
         "type": "list",
         "items": [
-          {
-            "html": "<strong>交通</strong>：地铁/公交单程$3.00；周上限$35；JFK进城约$11.75；LaGuardia约$3"
-          },
-          {
-            "html": "<strong>景点</strong>：Top of the Rock成人起价$42；多数博物馆$25–35；免费景点$0"
-          },
-          {
-            "html": "<strong>餐饮</strong>：快餐/简餐$15–25；普通餐厅$30–60；记得加小费15–20%"
-          },
-          {
-            "html": "<strong>容易忽略的</strong>：小费（餐饮15–20%）、瓶装水（景点区$3–5）、手机充电宝"
-          }
+          "<strong>交通</strong>：纽约地铁/本地公交全票价为 $3.00；OMNY 七天上限为 $35，但只适用于符合规则的行程。JFK、LGA、EWR 的进城费用取决于具体路线，应单独核算",
+          "<strong>景点</strong>：免费公共景点可为 $0；观景台、博物馆和特别体验按官网当日票价计算，不要把旧的单一价格当作固定价",
+          "<strong>餐饮</strong>：按快餐、简餐或坐餐厅分别估算；餐厅账单可能另有税费和小费，实际金额依店家与服务情况而异",
+          "<strong>额外支出</strong>：市内交通之外的机场铁路、寄存、饮料、购物、预约项目和临时打车都可能增加预算"
         ]
       },
       {
@@ -802,27 +788,19 @@
       {
         "type": "list",
         "items": [
-          {
-            "html": "同一张OMNY卡刷满12次触发周上限，3天以上行程稳赚"
-          },
-          {
-            "html": "免费景点+1个收费观景台是性价比最高的组合"
-          },
-          {
-            "html": "午餐吃food court（中央车站、时代广场周边），比坐餐厅省一半"
-          },
-          {
-            "html": "Staten Island渡轮免费看女神像，别花冤枉钱坐游船（除非要上岛）"
-          }
+          "只有符合 OMNY 规则的付费行程才计入七天票价上限；同一支付方式很重要，额外同行乘客、免费换乘和快速公交等有不同规则",
+          "免费公共景点搭配一个收费景点，可以控制门票支出，但需把交通、餐饮和税费计入总预算",
+          "午餐选择 food court 或简餐通常更容易控制开支，但实际价格取决于店家和地点",
+          "Staten Island Ferry 免费且不在自由女神像岛停靠；如要上岛，应另购官方渡轮票"
         ]
       },
       {
         "type": "infobox",
-        "html": "以上金额为2026年10月核实，币种美元。酒店和机票属估算，随季节浮动大，出行前请重新查询。"
+        "html": "本文预算是用于行前规划的估算区间，不是商家报价。交通票价请查 <a href=\"https://www.mta.info/fares\" target=\"_blank\" rel=\"noopener\">MTA 票价页面</a>与 <a href=\"https://omny.info/fares\" target=\"_blank\" rel=\"noopener\">OMNY 官方票价上限</a>；景点、酒店、机票和餐饮费用以预订或消费当天的官方/商家信息为准。酒店与机票不包含在上述日预算内。"
       },
       {
         "type": "tips",
-        "html": "纽约消费税约8.875%，标价通常不含税，结账金额会比标价高一截，预算时留10%余量。"
+        "html": "纽约市销售税率可能因商品和服务类别而异，餐厅账单、酒店税费及其他收费也可能采用不同规则。不要把 8.875% 当成所有旅行支出的统一税率；预订时查看结账明细，并为适用的小费和附加费用留出余量。"
       }
     ],
     "related": [
