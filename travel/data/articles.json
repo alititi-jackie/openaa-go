@@ -10,7 +10,6 @@
     "imageId": "grand-central",
     "readMinutes": 8,
     "datePublished": "2026-10-10",
-    "lastVerifiedAt": "2026-10-10",
     "sections": [
       {
         "type": "h2",
@@ -122,7 +121,8 @@
         "name": "JFK 机场 AirTrain",
         "url": "https://www.jfkairport.com/to-from-airport/air-train"
       }
-    ]
+    ],
+    "lastUpdatedAt": "2026-10-10"
   },
   {
     "slug": "best-attractions",
@@ -135,7 +135,6 @@
     "imageId": "times-square",
     "readMinutes": 10,
     "datePublished": "2026-10-10",
-    "lastVerifiedAt": "2026-10-10",
     "sections": [
       {
         "type": "h2",
@@ -257,7 +256,8 @@
         "name": "Top of the Rock官网",
         "url": "https://www.topoftherocknyc.com/"
       }
-    ]
+    ],
+    "lastUpdatedAt": "2026-10-10"
   },
   {
     "slug": "one-day-itinerary",
@@ -270,7 +270,6 @@
     "imageId": "brooklyn-bridge",
     "readMinutes": 12,
     "datePublished": "2026-10-10",
-    "lastVerifiedAt": "2026-10-10",
     "sections": [
       {
         "type": "h2",
@@ -374,7 +373,8 @@
         "name": "MTA官方",
         "url": "https://new.mta.info/"
       }
-    ]
+    ],
+    "lastUpdatedAt": "2026-10-10"
   },
   {
     "slug": "free-things-to-do",
@@ -387,7 +387,6 @@
     "imageId": "high-line",
     "readMinutes": 9,
     "datePublished": "2026-10-10",
-    "lastVerifiedAt": "2026-10-10",
     "sections": [
       {
         "type": "h2",
@@ -489,7 +488,8 @@
         "name": "NYC DCLA（文化事务部）",
         "url": "https://www.nyc.gov/site/dcla/index.page"
       }
-    ]
+    ],
+    "lastUpdatedAt": "2026-10-10"
   },
   {
     "slug": "family-travel",
@@ -502,7 +502,6 @@
     "imageId": "bethesda-fountain",
     "readMinutes": 10,
     "datePublished": "2026-10-10",
-    "lastVerifiedAt": "2026-10-10",
     "sections": [
       {
         "type": "h2",
@@ -583,7 +582,8 @@
         "name": "美国自然历史博物馆官网",
         "url": "https://www.amnh.org/"
       }
-    ]
+    ],
+    "lastUpdatedAt": "2026-10-10"
   },
   {
     "slug": "rainy-day",
@@ -596,7 +596,6 @@
     "imageId": "top-of-rock",
     "readMinutes": 8,
     "datePublished": "2026-10-10",
-    "lastVerifiedAt": "2026-10-10",
     "sections": [
       {
         "type": "h2",
@@ -693,7 +692,8 @@
         "name": "MoMA官网",
         "url": "https://www.moma.org/"
       }
-    ]
+    ],
+    "lastUpdatedAt": "2026-10-10"
   },
   {
     "slug": "travel-budget",
@@ -706,7 +706,6 @@
     "imageId": "memorial-911",
     "readMinutes": 9,
     "datePublished": "2026-10-10",
-    "lastVerifiedAt": "2026-10-10",
     "sections": [
       {
         "type": "h2",
@@ -785,7 +784,8 @@
         "name": "NYC Tourism官方",
         "url": "https://www.nyctourism.com/"
       }
-    ]
+    ],
+    "lastUpdatedAt": "2026-10-10"
   },
   {
     "slug": "photo-spots",
@@ -798,7 +798,6 @@
     "imageId": "dumbo-bridge",
     "readMinutes": 8,
     "datePublished": "2026-10-10",
-    "lastVerifiedAt": "2026-10-10",
     "sections": [
       {
         "type": "h2",
@@ -901,7 +900,8 @@
         "name": "NYC Tourism官方",
         "url": "https://www.nyctourism.com/"
       }
-    ]
+    ],
+    "lastUpdatedAt": "2026-10-10"
   },
   {
     "slug": "day-trips",
@@ -914,7 +914,6 @@
     "imageId": "statue-liberty",
     "readMinutes": 10,
     "datePublished": "2026-10-10",
-    "lastVerifiedAt": "2026-10-10",
     "sections": [
       {
         "type": "h2",
@@ -1030,6 +1029,7 @@
         "name": "NYC Tourism官方",
         "url": "https://www.nyctourism.com/"
       }
-    ]
+    ],
+    "lastUpdatedAt": "2026-10-10"
   }
 ]
