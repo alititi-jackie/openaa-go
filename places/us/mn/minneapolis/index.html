@@ -17,11 +17,11 @@
 body{margin:0 auto;max-width:1040px;min-height:100dvh;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;color:#111827;background:#fff;line-height:1.75;box-shadow:0 0 40px rgba(15,23,42,.12)}
 @media(max-width:1040px){body{box-shadow:none}}
 a{color:#2563eb}.wrap{max-width:960px;margin:0 auto;padding:0 16px}
-.topbar{border-bottom:1px solid #e5e7eb;background:#fff}
-.topbar-in{display:flex;align-items:center;gap:12px;padding:10px 0}
-.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:#111827;font-weight:800;font-size:18px}
-.brand img{width:30px;height:30px}.brand .open{color:#2563eb}
-.subnav{display:flex;gap:4px;overflow-x:auto;padding:8px 0;border-top:1px solid #f3f4f6}
+.topbar{position:sticky;top:0;z-index:100;isolation:isolate;border-bottom:1px solid #e5e7eb;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#111827;font-weight:800;flex:none}
+.brand img{width:34px;height:34px;border-radius:50%;flex:none;display:block}.brand-name{display:flex;align-items:center;gap:8px}.brand-name b{font-size:19px;color:#111;font-weight:800}.brand-name b em{font-style:normal;color:#2563eb}.brand-name .brand-dot{width:4px;height:4px;border-radius:50%;background:#9ca3af;flex:none}.brand-name small{font-size:13px;color:#6b7280;font-weight:400}
+.subnav{display:flex;gap:4px;overflow-x:auto;padding:8px 0;margin:0 auto 2px}
 .subnav a{white-space:nowrap;padding:6px 12px;border-radius:999px;text-decoration:none;color:#4b5563;font-size:14px}
 .subnav a:hover,.subnav a.on{background:#eff6ff;color:#1d4ed8}
 .hero{text-align:center;padding:36px 0 24px}
@@ -47,22 +47,28 @@ h2.sec{font-size:20px;margin:32px 0 12px;padding-bottom:8px;border-bottom:2px so
 .footer a{color:#6b7280;margin:0 8px;text-decoration:none}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media(max-width:640px){.hero h1{font-size:22px}.info{grid-template-columns:100px 1fr}}
+
+/* unified sticky OpenAA header */
+.topbar{position:sticky;top:0;z-index:100;isolation:isolate;border-bottom:1px solid #e5e7eb;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#111827;font-weight:800;flex:none}.brand img{width:34px;height:34px;border-radius:50%;flex:none;display:block}
+.brand-name{display:flex;align-items:center;gap:8px}.brand-name b{font-size:19px;color:#111;font-weight:800}.brand-name b em{font-style:normal;color:#2563eb}.brand-name .brand-dot{width:4px;height:4px;border-radius:50%;background:#9ca3af;flex:none}.brand-name small{font-size:13px;color:#6b7280;font-weight:400}
+.subnav{display:flex;gap:4px;overflow-x:auto;padding:8px 0;margin:0 auto 2px}
+.header-actions{display:flex;align-items:center;gap:6px;flex:none}.icon-action{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid transparent;border-radius:10px;background:transparent;color:#52525b;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:color .15s,border-color .15s}
+.icon-action svg{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.icon-action:hover{color:#2563eb;border-color:#e5e7eb}.icon-action:focus{outline:none}.icon-action:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}
+.share-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:120;max-width:calc(100vw - 32px);padding:10px 14px;border-radius:10px;background:#202124;color:#fff;font-size:14px;line-height:1.5;box-shadow:0 8px 28px rgba(0,0,0,.16);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,visibility .18s}.share-toast.is-visible{opacity:1;visibility:visible}
+@media(max-width:640px){.topbar-in{padding:8px 0}.brand{gap:8px}.brand img{width:32px;height:32px}.brand-name{gap:7px}.brand-name b{font-size:18px}.brand-name small{font-size:12px}.header-actions{gap:2px}.icon-action{width:36px;height:36px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Place","name":"Minneapolis","alternateName":"明尼阿波利斯","geo":{"@type":"GeoCoordinates","latitude":44.9633,"longitude":-93.2683},"containedInPlace":{"@type":"State","name":"Minnesota"}}</script>
 </head>
 <body>
-<header class="topbar"><div class="wrap">
-<div class="topbar-in">
-<a class="brand" href="/places/"><img src="/logo.png" alt="OpenAA"><span><span class="open">Open</span>AA · 美国中文地名大全</span></a>
-</div>
-<nav class="subnav" aria-label="地名栏目导航">
+<header class="topbar"><div class="wrap"><div class="topbar-in"><a class="brand" href="/places/" aria-label="美国中文地名大全首页"><img src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-name"><b><em>Open</em>AA</b><i class="brand-dot" aria-hidden="true"></i><small>美国中文地名大全</small></span></a><div class="header-actions"><a class="icon-action" href="https://go.openaa.com/" aria-label="返回 OpenAA Go 首页" title="OpenAA Go 首页"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg></a><button class="icon-action" id="share-page" type="button" aria-label="分享当前页面" title="分享当前页面"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.7 10.7 6.6-4.4"></path><path d="m8.7 13.3 6.6 4.4"></path></svg></button></div></div></div></header>
+<div class="wrap"><nav class="subnav" aria-label="地名栏目导航">
 <a href="/places/" class="">首页</a>
 <a href="/places/states/" class="">美国州名</a>
 <a href="/places/chinese-names/" class="">华人常用地名</a>
 <a href="/places/search/" class="">搜索</a>
-<a href="https://go.openaa.com/">返回 Go 首页</a>
-</nav>
-</div></header>
+</nav></div>
 <main class="wrap"><nav class="breadcrumb" aria-label="面包屑"><a href="/places/">地名首页</a> &gt; <a href="/places/states/minnesota/">明尼苏达州</a> &gt; 明尼阿波利斯</nav>
 <h1>明尼阿波利斯 Minneapolis</h1>
 <dl class="info">
@@ -98,5 +104,6 @@ document.querySelectorAll('[data-copy]').forEach(function (b) {
 <a href="https://tools.openaa.com/" target="_blank" rel="noopener">工具库</a>
 <p>OpenAA · 美国华人生活平台</p>
 </div></footer>
+<div id="share-toast" class="share-toast" role="status" aria-live="polite"></div><script>(function(){var b=document.getElementById('share-page'),t=document.getElementById('share-toast');if(!b||!t)return;var timer;function show(m){t.textContent=m;t.classList.add('is-visible');clearTimeout(timer);timer=setTimeout(function(){t.classList.remove('is-visible')},2200)}function fallback(u){var f=document.createElement('textarea');f.value=u;f.setAttribute('readonly','');f.style.position='fixed';f.style.left='-9999px';document.body.appendChild(f);f.focus();f.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}f.remove();show(ok?'页面链接已复制':'请复制浏览器地址栏中的链接')}async function copy(){var u=location.href;if(navigator.clipboard&&isSecureContext){try{await navigator.clipboard.writeText(u);show('页面链接已复制');return}catch(e){}}fallback(u)}b.addEventListener('click',async function(){if(navigator.share){try{await navigator.share({title:document.title,url:location.href});return}catch(e){if(e&&e.name==='AbortError')return}}await copy()})})();</script>
 </body>
 </html>
