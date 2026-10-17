@@ -21,38 +21,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans G
 a{color:var(--accent)}
 #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-deep));z-index:99}
 /* ---- header ---- */
-.topbar{position:sticky;top:0;z-index:100;isolation:isolate;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:880px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .site-logo{width:34px;height:34px;border-radius:50%;flex:none;display:block}
 .brand-tx{display:flex;align-items:center;gap:9px}
-.brand-tx .brand-dot{width:4px;height:4px;border-radius:50%;background:#9ca3af;flex:none}
+.brand-tx .vdiv{width:1px;height:20px;background:#dfe1e5;flex:none}
 .brand-tx b{font-size:19px;color:#111;font-weight:800}
 .brand-tx b em{font-style:normal;color:#2563eb}
 .brand-tx small{font-size:13px;color:var(--muted);font-weight:400}
 .open-link{font-size:14px;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 16px;background:#fff}
 .open-link:hover{color:#2563eb;border-color:#2563eb}
-
-/* ---- unified OpenAA guide header actions ---- */
-.header-actions{display:flex;align-items:center;gap:6px;flex:none}
-.icon-action{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:1px solid transparent;border-radius:10px;background:transparent;color:#52525b;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:color .15s,border-color .15s}
-.icon-action svg{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.icon-action:hover{color:#2563eb;border-color:#e5e7eb}
-.icon-action:focus{outline:none}
-.icon-action:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}
-.share-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:120;max-width:calc(100vw - 32px);padding:10px 14px;border-radius:10px;background:#202124;color:#fff;font-size:14px;line-height:1.5;box-shadow:0 8px 28px rgba(0,0,0,.16);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,visibility .18s}
-.share-toast.is-visible{opacity:1;visibility:visible}
-@media(max-width:640px){
-  .topbar .in{padding:8px 14px}
-  .brand{gap:8px}
-  .site-logo{width:32px;height:32px}
-  .brand-tx{gap:7px}
-  .brand-tx b{font-size:18px}
-  .brand-tx small{font-size:12px}
-  .header-actions{gap:2px}
-  .icon-action{width:36px;height:36px}
-}
-
 .wrap{max-width:880px;margin:0 auto;padding:0 20px 60px}
 .crumb{margin:22px 0 14px;font-size:13px;color:var(--muted)}
 .crumb a{color:var(--muted);text-decoration:none}.crumb a:hover{color:var(--accent)}
@@ -156,15 +135,8 @@ document.querySelectorAll('.idx-sec').forEach(function(sec){
 <body>
 <div id="progress"></div>
 <div class="topbar"><div class="in">
-<a class="brand" href="./index.html" aria-label="OpenAA生活指南首页"><img class="site-logo" src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-tx"><b><em>Open</em>AA</b><i class="brand-dot" aria-hidden="true"></i><small>生活指南</small></span></a>
-<div class="header-actions">
-<a class="icon-action" href="https://go.openaa.com/" aria-label="返回 OpenAA Go 首页" title="OpenAA Go 首页">
-<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg>
-</a>
-<button class="icon-action" type="button" id="share-page" aria-label="分享当前页面" title="分享当前页面">
-<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.7 10.7 6.6-4.4"></path><path d="m8.7 13.3 6.6 4.4"></path></svg>
-</button>
-</div>
+<a class="brand" href="./index.html" aria-label="OpenAA生活指南首页"><img class="site-logo" src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-tx"><b><em>Open</em>AA</b><i class="vdiv"></i><small>生活指南</small></span></a>
+<a class="open-link" href="https://openaa.com?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=nav" target="_blank" rel="noopener">OpenAA.com →</a>
 </div></div>
 <div class="wrap">
 <a class="hero" href="https://openaa.com?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=guides-hub" target="_blank" rel="noopener" aria-label="进入 OpenAA.com">
@@ -181,62 +153,9 @@ document.querySelectorAll('.idx-sec').forEach(function(sec){
 
 <section class="idx-sec collapsed" id="search" style="--accent:#7c3aed;--accent-soft:#f0e9fd;--accent-deep:#4c1d95"><h2>🔎 搜索技巧</h2><div class="sec-body"><div class="sec-inner"><div class="sub"><a href="https://go.openaa.com/?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=guides-hub&utm_content=hub" target="_blank" rel="noopener">打开搜索入口 →</a></div><ul><li><a href="search/search-baidu-vs-google.html"><span class="n">1</span>在美国用百度还是谷歌？在美华人搜索习惯解析</a></li><li><a href="search/search-baidu-meiguo-zenmban.html"><span class="n">2</span>百度在美国能用吗？打不开、速度慢的解决办法</a></li><li><a href="search/search-bing-vs-google.html"><span class="n">3</span>Bing国际版和谷歌哪个好？在美华人搜英文对比</a></li><li><a href="search/search-yige-sousuokuang.html"><span class="n">4</span>一个搜索框切换百度谷歌Bing：中英文搜索全搞定</a></li><li><a href="search/search-iphone-tianjia-zhumian.html"><span class="n">5</span>iPhone如何把网站添加到主屏幕？三步变成App</a></li><li><a href="search/search-anzhuo-fangdao-zhuomian.html"><span class="n">6</span>安卓手机把网站放到桌面：一键添加教程</a></li><li><a href="search/search-diannao-zhuomian-kuaijie.html"><span class="n">7</span>电脑桌面创建网站快捷方式：Chrome/Edge/Safari教程</a></li><li><a href="search/search-huaren-changyong-wangzhan.html"><span class="n">8</span>美国华人常用网站导航：DMV/工作/二手/新闻直达</a></li><li><a href="search/search-dakai-jiuneng-sou.html"><span class="n">9</span>打开就能搜：适合在美华人的中英文搜索入口</a></li><li><a href="search/search-2026-shangwang-rukou.html"><span class="n">10</span>2026在美华人上网入口推荐：导航站横评</a></li></ul></div></div></section>
 
+<section class="idx-sec collapsed" id="asylum" style="--accent:#0d9488;--accent-soft:#e6f7f5;--accent-deep:#0f766e"><h2>🛂 庇护年费</h2><div class="sec-body"><div class="sec-inner"><div class="sub"><a href="https://openaa.com/news/uscis-annual-asylum-fee-payment-guide?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=guides-hub&utm_content=hub" target="_blank" rel="noopener">查看教程 →</a></div><ul><li><a href="asylum/asylum-nianfei-zhinan.html"><span class="n">1</span>2026美国庇护年费全指南：$105、谁要交、怎么交一次讲清</a></li><li><a href="asylum/asylum-shei-xuyao-jiao.html"><span class="n">2</span>庇护年费谁要交、谁不用交？I-589 pending满一年判定标准</a></li><li><a href="asylum/asylum-wangshang-chaxun-jiaofei.html"><span class="n">3</span>庇护年费网上查询+付款实操：A Number和收据号填写中文图解</a></li><li><a href="asylum/asylum-30tian-qixian.html"><span class="n">4</span>庇护年费30天期限：错过缴费会怎样？拒案/工卡/递解风险</a></li><li><a href="asylum/asylum-yijia-yifen.html"><span class="n">5</span>庇护年费一家只交一份：按申请计费规则详解</a></li><li><a href="asylum/asylum-meiyou-jianmian.html"><span class="n">6</span>庇护年费没有减免：为什么不能申请waiver？交不起怎么办</a></li><li><a href="asylum/asylum-yimin-fating.html"><span class="n">7</span>移民法庭庇护年费指南：法官命令、缴费流程与USCIS的区别</a></li><li><a href="asylum/asylum-gongka-yingxiang.html"><span class="n">8</span>庇护年费和工卡的关系：欠缴会影响EAD吗？</a></li><li><a href="asylum/asylum-shangsu-bia.html"><span class="n">9</span>上诉/BIA阶段也要交庇护年费？Matter of L-F-R-解读</a></li><li><a href="asylum/asylum-fangpian.html"><span class="n">10</span>庇护年费防骗：假冒USCIS缴费短信和钓鱼网站识别</a></li></ul></div></div></section>
+
 <footer>© 2026 OpenAA · 在美华人生活指南 ｜ <a href="https://openaa.com?utm_source=go.openaa.com&utm_medium=guides&utm_campaign=nav" target="_blank" rel="noopener">OpenAA.com</a></footer>
 </div>
-
-<div id="share-toast" class="share-toast" role="status" aria-live="polite"></div>
-<script>
-(function(){
-  var button=document.getElementById('share-page');
-  var toast=document.getElementById('share-toast');
-  if(!button||!toast)return;
-  var hideTimer;
-  function showToast(message){
-    toast.textContent=message;
-    toast.classList.add('is-visible');
-    clearTimeout(hideTimer);
-    hideTimer=setTimeout(function(){toast.classList.remove('is-visible');},2200);
-  }
-  function fallbackCopy(url){
-    var field=document.createElement('textarea');
-    field.value=url;
-    field.setAttribute('readonly','');
-    field.style.position='fixed';
-    field.style.left='-9999px';
-    field.style.top='0';
-    document.body.appendChild(field);
-    field.focus();
-    field.select();
-    var copied=false;
-    try{copied=document.execCommand('copy');}catch(e){}
-    field.remove();
-    showToast(copied?'页面链接已复制':'请复制浏览器地址栏中的链接');
-  }
-  async function copyCurrentUrl(){
-    var url=window.location.href;
-    if(navigator.clipboard&&window.isSecureContext){
-      try{
-        await navigator.clipboard.writeText(url);
-        showToast('页面链接已复制');
-        return;
-      }catch(e){}
-    }
-    fallbackCopy(url);
-  }
-  button.addEventListener('click',async function(){
-    var data={title:document.title,url:window.location.href};
-    if(typeof navigator.share==='function'){
-      try{
-        await navigator.share(data);
-        return;
-      }catch(error){
-        if(error&&error.name==='AbortError')return;
-      }
-    }
-    await copyCurrentUrl();
-  });
-})();
-</script>
-
 </body>
 </html>

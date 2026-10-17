@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://go.openaa.com/guides/index.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://go.openaa.com/guides/index.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://go.openaa.com/guides/dmv/dmv-5xiaoshi-kecheng.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://go.openaa.com/guides/dmv/dmv-6dian-shenfen.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://go.openaa.com/guides/dmv/dmv-bishi-zhongwen.html</loc><lastmod>2026-10-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -93,4 +93,14 @@
   <url><loc>https://go.openaa.com/guides/services/services-xuanchuan-huoke.html</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://go.openaa.com/guides/services/services-shuigong-diangong-jiedan.html</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://go.openaa.com/guides/services/services-dianhua-huizong.html</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://go.openaa.com/guides/asylum/asylum-nianfei-zhinan.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://go.openaa.com/guides/asylum/asylum-shei-xuyao-jiao.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://go.openaa.com/guides/asylum/asylum-wangshang-chaxun-jiaofei.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://go.openaa.com/guides/asylum/asylum-30tian-qixian.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://go.openaa.com/guides/asylum/asylum-yijia-yifen.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://go.openaa.com/guides/asylum/asylum-meiyou-jianmian.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://go.openaa.com/guides/asylum/asylum-yimin-fating.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://go.openaa.com/guides/asylum/asylum-gongka-yingxiang.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://go.openaa.com/guides/asylum/asylum-shangsu-bia.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://go.openaa.com/guides/asylum/asylum-fangpian.html</loc><lastmod>2026-10-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
