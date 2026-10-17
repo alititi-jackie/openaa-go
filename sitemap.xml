@@ -950,4 +950,9 @@
     <loc>https://go.openaa.com/travel/new-york/day-trips/</loc>
     <lastmod>2026-10-10</lastmod>
   </url>
+  <url><loc>https://go.openaa.com/guides/openaa/openaa-official-domains.html</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://go.openaa.com/guides/openaa/what-is-openaa.html</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://go.openaa.com/guides/openaa/openaa-app-guide.html</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://go.openaa.com/guides/openaa/openaa-site-navigation.html</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://go.openaa.com/guides/openaa/openaa-brand-and-services.html</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
