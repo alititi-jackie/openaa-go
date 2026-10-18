@@ -70,6 +70,32 @@ function walk(dir) {
 }
 
 
+function normalizeBreadcrumb(html, file) {
+  const relative = path.relative(root, file).split(path.sep).join("/");
+  if (relative === "index.html") {
+    html = html.replace(/<(?:nav|div)\\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\\s\\S]*?<\\/(?:nav|div)>/i, "");
+    return { html, found: true };
+  }
+  const folder = relative.split("/")[0];
+  const label = categoryLabels[folder];
+  if (!label) return { html, found: false };
+  const crumb = '<nav class="guide-crumb" aria-label="面包屑"><a href="https://go.openaa.com/">OpenAA Go</a> › <a href="https://go.openaa.com/guides/">生活指南</a> › <span aria-current="page">' + label + '</span></nav>';
+  const pattern = /<(?:nav|div)\\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\\s\\S]*?<\\/(?:nav|div)>/i;
+  if (pattern.test(html)) html = html.replace(pattern, crumb);
+  else if (/<div\\s+class=["']wrap["'][^>]*>/i.test(html)) html = html.replace(/<div\\s+class=["']wrap["'][^>]*>/i, match => match + "\\n" + crumb);
+  else if (/<body\\b[^>]*>/i.test(html)) html = html.replace(/<body\\b[^>]*>/i, match => match + "\\n" + crumb);
+  else return { html, found: false };
+  return { html, found: true };
+}
+
+function normalizeFooter(html) {
+  const footerPattern = /<footer\\b[^>]*>[\\s\\S]*?©\\s*20\\d{2}\\s+OpenAA[\\s\\S]*?<\\/footer>/i;
+  if (footerPattern.test(html)) html = html.replace(footerPattern, footer);
+  else if (/<\\/body>/i.test(html)) html = html.replace(/<\\/body>/i, footer + "\\n</body>");
+  else return { html, found: false };
+  return { html, found: true };
+}
+
 function normalize(file) {
   let html = fs.readFileSync(file, "utf8");
   const original = html;
