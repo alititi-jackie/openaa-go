@@ -114,12 +114,6 @@ function normalize(file) {
   }
 
   if (/<style\b[^>]*>[\s\S]*?<\/style>/i.test(html)) {
-    html = html.replace(/<\/style>/i, sharedCss + "\n" + sharedCrumbCss + "\n</style>");
-  } else {
-    html = html.replace(/<\/head>/i, "<style>" + sharedCss + "\n" + sharedCrumbCss + "</style>\n</head>");
-  }
-
-  if (/<style\b[^>]*>[\s\S]*?<\/style>/i.test(html)) {
     html = html.replace(/<\/style>/i, sharedCss + "\n" + breadcrumbCss + "\n</style>");
   } else {
     html = html.replace(/<\/head>/i, "<style>" + sharedCss + "\n" + breadcrumbCss + "</style>\n</head>");
