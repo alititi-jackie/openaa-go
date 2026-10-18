@@ -180,7 +180,10 @@ function normalize(file) {
 
   // Remove old share toast and share-page handlers, then install exactly one accessible implementation.
   html = html.replace(/<div\b(?=[^>]*\bid=["']share-toast["'])[^>]*>[\s\S]*?<\/div>\s*/gi, "");
-  html = html.replace(/<script\b[^>]*>[\s\S]*?(?:getElementById\(["']share-page["']\)|getElementById\(['"]share-page['"]\))[\s\S]*?<\/script>\s*/gi, "");
+  html = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, block => {
+    const isShareHandler = /share-page/.test(block) && /(?:navigator\.share|clipboard|execCommand|shareBound|addEventListener)/.test(block);
+    return isShareHandler ? "" : block;
+  });
   html = html.replace(header, header + '\n<div id="share-toast" class="share-toast" role="status" aria-live="polite"></div>');
   html = html.replace(/<\/body>/i, sharedScript + "\n</body>");
   html = normalizeHomepageMetadata(html, isIndex);
