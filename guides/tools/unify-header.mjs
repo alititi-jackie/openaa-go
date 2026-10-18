@@ -156,15 +156,15 @@ function normalize(file) {
     const label = categoryLabels[folder];
     if (!label) return { file, changed: false, skipped: true, reason: "no category mapping for " + folder };
     const crumb = '<nav class="guide-crumb" aria-label="面包屑"><a href="https://go.openaa.com/">OpenAA Go</a> › <a href="https://go.openaa.com/guides/">生活指南</a> › <span aria-current="page">' + label + '</span></nav>';
-    const crumbPattern = /<nav\\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\\s\\S]*?<\\/nav>|<div\\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\\s\\S]*?<\\/div>/i;
+    const crumbPattern = /<nav\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\s\S]*?<\/nav>|<div\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\s\S]*?<\/div>/i;
     if (crumbPattern.test(html)) html = html.replace(crumbPattern, crumb);
-    else if (/<div\\s+class=["']wrap["'][^>]*>/i.test(html)) html = html.replace(/<div\\s+class=["']wrap["'][^>]*>/i, match => match + "\\n" + crumb);
-    else if (/<body\\b[^>]*>/i.test(html)) html = html.replace(/<body\\b[^>]*>/i, match => match + "\\n" + crumb);
+    else if (/<div\s+class=["']wrap["'][^>]*>/i.test(html)) html = html.replace(/<div\s+class=["']wrap["'][^>]*>/i, match => match + "\n" + crumb);
+    else if (/<body\b[^>]*>/i.test(html)) html = html.replace(/<body\b[^>]*>/i, match => match + "\n" + crumb);
     else return { file, changed: false, skipped: true, reason: "cannot place breadcrumb safely" };
   }
-  const footerPattern = /<footer\\b[^>]*>[\\s\\S]*?<\\/footer>/i;
+  const footerPattern = /<footer\b[^>]*>[\s\S]*?<\/footer>/i;
   if (footerPattern.test(html)) html = html.replace(footerPattern, footer);
-  else if (/<\\/body>/i.test(html)) html = html.replace(/<\\/body>/i, footer + "\\n</body>");
+  else if (/<\/body>/i.test(html)) html = html.replace(/<\/body>/i, footer + "\n</body>");
   else return { file, changed: false, skipped: true, reason: "cannot place footer safely" };
 
   if (html !== original) fs.writeFileSync(file, html, "utf8");
