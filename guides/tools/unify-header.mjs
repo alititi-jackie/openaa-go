@@ -64,7 +64,7 @@ function walk(dir) {
 function normalize(file) {
   let html = fs.readFileSync(file, "utf8");
   const original = html;
-  const divHeader = /<div\s+class=["']topbar["']>\s*<div\s+class=["']in["']>[\s\S]*?<\/div>\s*<\/div>/i;
+  const divHeader = /<div\s+class=["']topbar["']>\s*<div\s+class=["']in["']>[\s\S]*?^\s*<\/div>\s*<\/div>/im;
   const semanticHeader = /<header\s+class=["']topbar["']>[\s\S]*?<\/header>/i;
   if (divHeader.test(html)) html = html.replace(divHeader, header);
   else if (semanticHeader.test(html)) html = html.replace(semanticHeader, header);
