@@ -93,6 +93,12 @@ function normalize(file) {
     html = html.replace(/<\/head>/i, "<style>" + sharedCss + "\n" + sharedCrumbCss + "</style>\n</head>");
   }
 
+  if (/<style\b[^>]*>[\s\S]*?<\/style>/i.test(html)) {
+    html = html.replace(/<\/style>/i, sharedCss + "\n" + breadcrumbCss + "\n</style>");
+  } else {
+    html = html.replace(/<\/head>/i, "<style>" + sharedCss + "\n" + breadcrumbCss + "</style>\n</head>");
+  }
+
   // Remove legacy share toast nodes and handlers so every page has one implementation.
   html = html.replace(/<div\s+id=["']share-toast["'][^>]*>[\s\S]*?<\/div>\s*/gi, "");
   html = html.replace(/<script\b[^>]*>\s*\(function\(\)\s*\{\s*var b=document\.getElementById\(['"]share-page['"]\)[\s\S]*?<\/script>\s*/gi, "");
