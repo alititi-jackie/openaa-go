@@ -70,89 +70,125 @@ function walk(dir) {
 }
 
 
-function normalizeBreadcrumb(html, file) {
+function replaceBreadcrumb(html, file) {
   const relative = path.relative(root, file).split(path.sep).join("/");
-  if (relative === "index.html") {
-    html = html.replace(/<(?:nav|div)\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\s\S]*?<\/(?:nav|div)>/i, "");
-    return { html, found: true };
-  }
+  const isIndex = relative === "index.html";
+  const crumbPattern = /<(nav|div)\b(?=[^>]*\bclass=["'][^"']*\bcrumb\b[^"']*["'])[^>]*>[\s\S]*?<\/\1>/gi;
+  html = html.replace(crumbPattern, "");
+  if (isIndex) return { html, ok: true };
   const folder = relative.split("/")[0];
   const label = categoryLabels[folder];
-  if (!label) return { html, found: false };
-  const crumb = '<nav class="guide-crumb" aria-label="面包屑"><a href="https://go.openaa.com/">OpenAA Go</a> › <a href="https://go.openaa.com/guides/">生活指南</a> › <span aria-current="page">' + label + '</span></nav>';
-  const pattern = /<(?:nav|div)\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\s\S]*?<\/(?:nav|div)>/i;
-  if (pattern.test(html)) html = html.replace(pattern, crumb);
-  else if (/<div\s+class=["']wrap["'][^>]*>/i.test(html)) html = html.replace(/<div\s+class=["']wrap["'][^>]*>/i, match => match + "\n" + crumb);
-  else if (/<body\b[^>]*>/i.test(html)) html = html.replace(/<body\b[^>]*>/i, match => match + "\n" + crumb);
-  else return { html, found: false };
-  return { html, found: true };
+  if (!label) return { html, ok: false, reason: "no category mapping for " + folder };
+  const crumb = '<nav class="guide-crumb" aria-label="面包屑"><a href="' + baseUrl + '/">OpenAA Go</a> › <a href="' + baseUrl + '/guides/">生活指南</a> › <span aria-current="page">' + label + '</span></nav>';
+  if (/<div\s+class=["']wrap["'][^>]*>/i.test(html)) {
+    html = html.replace(/<div\s+class=["']wrap["'][^>]*>/i, match => match + "\n" + crumb);
+  } else if (/<body\b[^>]*>/i.test(html)) {
+    html = html.replace(/<body\b[^>]*>/i, match => match + "\n" + crumb);
+  } else {
+    return { html, ok: false, reason: "cannot place breadcrumb safely" };
+  }
+  return { html, ok: true };
 }
 
-function normalizeFooter(html) {
-  const footerPattern = /<footer\b[^>]*>[\s\S]*?©\s*20\d{2}\s+OpenAA[\s\S]*?<\/footer>/i;
-  if (footerPattern.test(html)) html = html.replace(footerPattern, footer);
-  else if (/<\/body>/i.test(html)) html = html.replace(/<\/body>/i, footer + "\n</body>");
-  else return { html, found: false };
-  return { html, found: true };
+function replaceCopyrightFooter(html) {
+  const footerPattern = /<footer\b[^>]*>[\s\S]*?<\/footer>/gi;
+  const matches = [...html.matchAll(footerPattern)];
+  const copyright = matches.find(match => /©\s*20\d{2}\s+OpenAA/i.test(match[0]));
+  if (copyright) {
+    html = html.slice(0, copyright.index) + footer + html.slice(copyright.index + copyright[0].length);
+  } else if (/<\/body>/i.test(html)) {
+    html = html.replace(/<\/body>/i, footer + "\n</body>");
+  } else {
+    return { html, ok: false, reason: "cannot place copyright footer safely" };
+  }
+  return { html, ok: true };
+}
+
+function normalizeHomepageMetadata(html, isIndex) {
+  if (!isIndex) return html;
+  html = html.replace(/(<link\s+rel=["']canonical["']\s+href=["'])https:\/\/go\.openaa\.com\/guides\/index\.html(["'][^>]*>)/i, "$1https://go.openaa.com/guides/$2");
+  html = html.replace(/(<meta\s+property=["']og:url["']\s+content=["'])https:\/\/go\.openaa\.com\/guides\/index\.html(["'][^>]*>)/i, "$1https://go.openaa.com/guides/$2");
+  const jsonLdPattern = /<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi;
+  html = html.replace(jsonLdPattern, (whole, raw) => {
+    let data;
+    try { data = JSON.parse(raw); } catch { return whole; }
+    if (data["@type"] !== "ItemList" || !Array.isArray(data.itemListElement)) return whole;
+    data.itemListElement = data.itemListElement.map((item, index) => ({ ...item, position: index + 1 }));
+    return '<script type="application/ld+json">' + JSON.stringify(data) + "</script>";
+  });
+  return html;
+}
+
+function validatePage(html, file) {
+  const relative = path.relative(root, file).split(path.sep).join("/");
+  const isIndex = relative === "index.html";
+  const errors = [];
+  const topbars = (html.match(/<div\s+class=["']topbar["']/gi) || []).length;
+  const toasts = (html.match(/id=["']share-toast["']/gi) || []).length;
+  const shareButtons = (html.match(/id=["']share-page["']/gi) || []).length;
+  const crumbs = (html.match(/<nav\s+class=["'][^"']*\bguide-crumb\b[^"']*["']/gi) || []).length;
+  const footers = (html.match(/<footer\s+class=["'][^"']*\bguide-footer\b[^"']*["']/gi) || []).length;
+  if (topbars !== 1) errors.push("expected one shared topbar, found " + topbars);
+  if (toasts !== 1) errors.push("expected one share toast, found " + toasts);
+  if (shareButtons !== 1) errors.push("expected one share button, found " + shareButtons);
+  if (footers !== 1) errors.push("expected one copyright footer, found " + footers);
+  if (isIndex ? crumbs !== 0 : crumbs !== 1) errors.push("unexpected breadcrumb count: " + crumbs);
+  const canonicals = [...html.matchAll(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/gi)];
+  if (canonicals.length !== 1) errors.push("expected one canonical URL, found " + canonicals.length);
+  const scripts = [...html.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)];
+  for (let i = 0; i < scripts.length; i++) {
+    try { JSON.parse(scripts[i][1]); } catch { errors.push("invalid JSON-LD block " + (i + 1)); }
+  }
+  if (isIndex) {
+    const itemList = scripts.map(match => { try { return JSON.parse(match[1]); } catch { return null; } }).find(data => data && data["@type"] === "ItemList");
+    if (!itemList || !Array.isArray(itemList.itemListElement)) errors.push("homepage ItemList is missing");
+    else {
+      const positions = itemList.itemListElement.map(item => item.position);
+      if (new Set(positions).size !== positions.length) errors.push("homepage ItemList positions are not unique");
+      if (positions.some((position, index) => position !== index + 1)) errors.push("homepage ItemList positions are not sequential");
+    }
+  }
+  return errors;
 }
 
 function normalize(file) {
   let html = fs.readFileSync(file, "utf8");
   const original = html;
+  const relative = path.relative(root, file).split(path.sep).join("/");
+  const isIndex = relative === "index.html";
   const divHeader = /<div\s+class=["']topbar["']>\s*<div\s+class=["']in["']>[\s\S]*?^\s*<\/div>\s*<\/div>/im;
   const semanticHeader = /<header\s+class=["']topbar["']>[\s\S]*?<\/header>/i;
   if (divHeader.test(html)) html = html.replace(divHeader, header);
   else if (semanticHeader.test(html)) html = html.replace(semanticHeader, header);
-  else return { file, changed: false, skipped: true, reason: "no recognized topbar" };
+  else return { file, changed: false, error: "no recognized topbar" };
 
-  const crumbResult = normalizeBreadcrumb(html, file);
+  const crumbResult = replaceBreadcrumb(html, file);
   html = crumbResult.html;
-  const footerResult = normalizeFooter(html);
-  html = footerResult.html;
-  if (!crumbResult.found || !footerResult.found) {
-    return { file, changed: false, skipped: true, reason: !crumbResult.found ? "breadcrumb missing" : "copyright footer missing" };
-  }
+  if (!crumbResult.ok) return { file, changed: false, error: crumbResult.reason };
 
+  const footerResult = replaceCopyrightFooter(html);
+  html = footerResult.html;
+  if (!footerResult.ok) return { file, changed: false, error: footerResult.reason };
+
+  // Generated shared CSS is always the final block in the first stylesheet. Remove it before reinserting to keep builds idempotent.
+  html = html.replace(/\/\* Shared OpenAA guide header: generated by guides\/tools\/unify-header\.mjs \*\/[\s\S]*?(?=\s*<\/style>)/g, "");
   if (/<style\b[^>]*>[\s\S]*?<\/style>/i.test(html)) {
     html = html.replace(/<\/style>/i, sharedCss + "\n" + breadcrumbCss + "\n</style>");
   } else {
     html = html.replace(/<\/head>/i, "<style>" + sharedCss + "\n" + breadcrumbCss + "</style>\n</head>");
   }
 
-  // Remove legacy share toast nodes and handlers so every page has one implementation.
-  html = html.replace(/<div\s+id=["']share-toast["'][^>]*>[\s\S]*?<\/div>\s*/gi, "");
-  html = html.replace(/<script\b[^>]*>\s*\(function\(\)\s*\{\s*var b=document\.getElementById\(['"]share-page['"]\)[\s\S]*?<\/script>\s*/gi, "");
-  html = html.replace(/<script\b[^>]*>\s*\(function\(\)\s*\{\s*var button=document\.getElementById\(['"]share-page['"]\)[\s\S]*?<\/script>\s*/gi, "");
-  html = html.replace(/<script\b[^>]*>\s*\(function\(\)\s*\{\s*var button=document\.getElementById\(["']share-page["']\)[\s\S]*?<\/script>\s*/gi, "");
+  // Remove old share toast and share-page handlers, then install exactly one accessible implementation.
+  html = html.replace(/<div\b(?=[^>]*\bid=["']share-toast["'])[^>]*>[\s\S]*?<\/div>\s*/gi, "");
+  html = html.replace(/<script\b[^>]*>[\s\S]*?(?:getElementById\(["']share-page["']\)|getElementById\(['"]share-page['"]\))[\s\S]*?<\/script>\s*/gi, "");
+  html = html.replace(header, header + '\n<div id="share-toast" class="share-toast" role="status" aria-live="polite"></div>');
+  html = html.replace(/<\/body>/i, sharedScript + "\n</body>");
+  html = normalizeHomepageMetadata(html, isIndex);
 
-  // Insert the single status toast directly after the normalized header.
-  if (!html.includes('id="share-toast"')) {
-    html = html.replace(header, header + '\n<div id="share-toast" class="share-toast" role="status" aria-live="polite"></div>');
-  }
-  if (!html.includes('button.dataset.shareBound="true"')) {
-    html = html.replace(/<\/body>/i, sharedScript + "\n</body>");
-  }
-  // Normalize breadcrumb and footer on article pages only; keep guides/index.html free of a redundant breadcrumb.
-  const relative = path.relative(root, file).split(path.sep).join("/");
-  const isIndex = relative === "index.html";
-  if (!isIndex) {
-    const folder = relative.split("/")[0];
-    const label = categoryLabels[folder];
-    if (!label) return { file, changed: false, skipped: true, reason: "no category mapping for " + folder };
-    const crumb = '<nav class="guide-crumb" aria-label="面包屑"><a href="https://go.openaa.com/">OpenAA Go</a> › <a href="https://go.openaa.com/guides/">生活指南</a> › <span aria-current="page">' + label + '</span></nav>';
-    const crumbPattern = /<nav\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\s\S]*?<\/nav>|<div\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\s\S]*?<\/div>/i;
-    if (crumbPattern.test(html)) html = html.replace(crumbPattern, crumb);
-    else if (/<div\s+class=["']wrap["'][^>]*>/i.test(html)) html = html.replace(/<div\s+class=["']wrap["'][^>]*>/i, match => match + "\n" + crumb);
-    else if (/<body\b[^>]*>/i.test(html)) html = html.replace(/<body\b[^>]*>/i, match => match + "\n" + crumb);
-    else return { file, changed: false, skipped: true, reason: "cannot place breadcrumb safely" };
-  }
-  const footerPattern = /<footer\b[^>]*>[\s\S]*?<\/footer>/i;
-  if (footerPattern.test(html)) html = html.replace(footerPattern, footer);
-  else if (/<\/body>/i.test(html)) html = html.replace(/<\/body>/i, footer + "\n</body>");
-  else return { file, changed: false, skipped: true, reason: "cannot place footer safely" };
-
+  const errors = validatePage(html, file);
+  if (errors.length) return { file, changed: false, error: errors.join("; ") };
   if (html !== original) fs.writeFileSync(file, html, "utf8");
-  return { file, changed: html !== original, skipped: false };
+  return { file, changed: html !== original, error: null };
 }
 
 if (!fs.existsSync(root)) {
@@ -160,14 +196,18 @@ if (!fs.existsSync(root)) {
   process.exit(1);
 }
 const files = walk(root);
+if (files.length === 0) {
+  console.error("ERROR: No guide HTML files found.");
+  process.exit(1);
+}
 const results = files.map(normalize);
-const skipped = results.filter(result => result.skipped);
+const errors = results.filter(result => result.error);
 const changed = results.filter(result => result.changed);
 console.log("Guide HTML files scanned: " + files.length);
 console.log("Pages normalized: " + changed.length);
-console.log("Pages without recognized topbar: " + skipped.length);
-for (const item of skipped) console.log("SKIP " + path.relative(process.cwd(), item.file) + " — " + item.reason);
-if (skipped.length > 0) {
-  console.error("ERROR: Every HTML page under guides/ must have a recognized topbar. Review skipped pages before deployment.");
+console.log("Pages with validation errors: " + errors.length);
+for (const item of errors) console.error("ERROR " + path.relative(process.cwd(), item.file) + " — " + item.error);
+if (errors.length > 0) {
+  console.error("ERROR: Guide validation failed; deployment must stop until every page passes.");
   process.exit(1);
 }
