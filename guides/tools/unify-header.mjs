@@ -73,7 +73,7 @@ function walk(dir) {
 function replaceBreadcrumb(html, file) {
   const relative = path.relative(root, file).split(path.sep).join("/");
   const isIndex = relative === "index.html";
-  const crumbPattern = /<(nav|div)\b(?=[^>]*\bclass=["'][^"']*\bcrumb\b[^"']*["'])[^>]*>[\s\S]*?<\/\1>/gi;
+  const crumbPattern = /<(nav|div)\b(?=[^>]*\bclass=["'][^"']*crumb[^"']*["'])[^>]*>[\s\S]*?<\/\1>/gi;
   html = html.replace(crumbPattern, "");
   if (isIndex) return { html, ok: true };
   const folder = relative.split("/")[0];
