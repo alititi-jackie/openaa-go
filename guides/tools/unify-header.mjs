@@ -70,48 +70,6 @@ function walk(dir) {
 }
 
 
-const categoryLabels = {
-  asylum: "移民指南", dmv: "DMV 指南", housing: "房屋指南",
-  jobs: "招聘指南", marketplace: "二手指南", navigation: "生活导航",
-  news: "新闻指南", openaa: "OpenAA 品牌专题", search: "搜索指南",
-  services: "本地服务指南"
-};
-const sharedCrumbCss = [
-  "/* Shared guide breadcrumb and footer */",
-  ".guide-crumb{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:18px 0 14px;color:var(--muted,#6b7280);font-size:13px;line-height:1.7}",
-  ".guide-crumb a{color:var(--muted,#6b7280);text-decoration:none}",
-  ".guide-crumb a:hover{color:var(--accent,#2563eb);text-decoration:underline}",
-  ".guide-crumb .crumb-sep{color:#9ca3af}",
-  ".guide-footer{text-align:center;color:var(--muted,#6b7280);font-size:13px;line-height:1.8;padding:24px 12px;margin-top:24px;border-top:1px solid var(--line,#e5e7eb)}",
-  ".guide-footer a{color:inherit;text-decoration:none}",
-  ".guide-footer a:hover{color:var(--accent,#2563eb);text-decoration:underline}",
-  "@media(max-width:560px){.guide-crumb{gap:5px;margin:14px 0 12px;font-size:12px}.guide-footer{padding:20px 10px;font-size:12px}}"
-].join("\n");
-
-function getCategory(file) {
-  const relative = path.relative(root, file).split(path.sep);
-  return categoryLabels[relative.length > 1 ? relative[0] : ""] || "生活指南";
-}
-function normalizeBreadcrumb(html, file) {
-  const relative = path.relative(root, file).split(path.sep).join("/");
-  if (relative.toLowerCase() === "index.html") {
-    html = html.replace(/<(?:nav|div)\b[^>]*class=["'][^"']*\bcrumb\b[^"']*["'][^>]*>[\s\S]*?<\/(?:nav|div)>/i, "");
-    return { html, found: true };
-  }
-  const crumb = '<nav class="guide-crumb" aria-label="面包屑"><a href="https://go.openaa.com/">OpenAA Go</a><span class="crumb-sep" aria-hidden="true">›</span><a href="https://go.openaa.com/guides/">生活指南</a><span class="crumb-sep" aria-hidden="true">›</span><span aria-current="page">' + getCategory(file) + '</span></nav>';
-  const pattern = /<(nav|div)\b[^>]*class=["'][^"']*\bcrumb\b[^"']*["'][^>]*>[\s\S]*?<\/\1>/i;
-  if (pattern.test(html)) return { html: html.replace(pattern, crumb), found: true };
-  if (html.includes('class="guide-crumb"')) return { html, found: true };
-  return { html, found: false };
-}
-function normalizeFooter(html) {
-  const canonical = '<footer class="guide-footer">© 2026 OpenAA · 在美华人生活指南 ｜ <a href="https://openaa.com/">OpenAA.com</a></footer>';
-  const pattern = /<footer\b[^>]*>[\s\S]*?©\s*2026\s+OpenAA[\s\S]*?<\/footer>/i;
-  if (pattern.test(html)) return { html: html.replace(pattern, canonical), found: true };
-  if (html.includes('class="guide-footer"')) return { html, found: true };
-  return { html, found: false };
-}
-
 function normalize(file) {
   let html = fs.readFileSync(file, "utf8");
   const original = html;
