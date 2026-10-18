@@ -15,7 +15,7 @@ const breadcrumbCss = [
 '.guide-footer{max-width:880px;margin:28px auto 0;padding:22px 20px;text-align:center;color:var(--muted,#6b7280);font-size:13px;line-height:1.7;border-top:1px solid var(--line,#e5e7eb)}',
 '.guide-footer a{color:inherit;text-decoration:none}.guide-footer a:hover{color:#2563eb}',
 '@media(max-width:640px){.guide-crumb{margin:14px auto 12px;padding:0 14px;font-size:12px}.guide-footer{margin-top:22px;padding:18px 14px}}'
-].join("\\n");
+].join("\n");
 const header = [
 '<div class="topbar"><div class="in">',
 '<a class="brand" href="' + baseUrl + '/guides/" aria-label="OpenAA生活指南首页"><img class="site-logo" src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-tx"><b><em>Open</em>AA</b><i class="brand-dot" aria-hidden="true"></i><small>生活指南</small></span></a>',
