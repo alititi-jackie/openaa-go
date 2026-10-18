@@ -41,6 +41,8 @@ jobs:
           node-version: '20'
       - name: Unify all guide page headers
         run: node guides/tools/unify-header.mjs
+      - name: Validate guide links and fragments
+        run: node guides/tools/check-links.mjs
       - name: Build and validate travel pages
         run: |
           node travel/tools/build.mjs
