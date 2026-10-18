@@ -1,13 +1,21 @@
 #!/usr/bin/env node
 /**
- * Normalize all static OpenAA guide pages to the shared sticky header.
- * Runs before GitHub Pages uploads the static repository.
+ * Normalize shared guide header, breadcrumb, and footer during static build.
  */
 import fs from "node:fs";
 import path from "node:path";
 
 const root = path.resolve("guides");
 const baseUrl = "https://go.openaa.com";
+const footer = '<footer class="guide-footer">© 2026 OpenAA · 在美华人生活指南 ｜ <a href="https://openaa.com/">OpenAA.com</a></footer>';
+const categoryLabels = { asylum: "移民与庇护指南", dmv: "DMV 指南", housing: "房屋指南", jobs: "招聘指南", marketplace: "二手市场指南", navigation: "生活导航指南", news: "新闻资讯指南", openaa: "OpenAA 品牌专题", search: "搜索与上网指南", services: "本地服务指南" };
+const breadcrumbCss = [
+'.guide-crumb{max-width:880px;margin:18px auto 14px;padding:0 20px;color:var(--muted,#6b7280);font-size:13px;line-height:1.7;overflow-wrap:anywhere}',
+'.guide-crumb a{color:inherit;text-decoration:none}.guide-crumb a:hover{color:#2563eb}',
+'.guide-footer{max-width:880px;margin:28px auto 0;padding:22px 20px;text-align:center;color:var(--muted,#6b7280);font-size:13px;line-height:1.7;border-top:1px solid var(--line,#e5e7eb)}',
+'.guide-footer a{color:inherit;text-decoration:none}.guide-footer a:hover{color:#2563eb}',
+'@media(max-width:640px){.guide-crumb{margin:14px auto 12px;padding:0 14px;font-size:12px}.guide-footer{margin-top:22px;padding:18px 14px}}'
+].join("\\n");
 const header = [
 '<div class="topbar"><div class="in">',
 '<a class="brand" href="' + baseUrl + '/guides/" aria-label="OpenAA生活指南首页"><img class="site-logo" src="/logo.png" width="34" height="34" alt="OpenAA"><span class="brand-tx"><b><em>Open</em>AA</b><i class="brand-dot" aria-hidden="true"></i><small>生活指南</small></span></a>',
@@ -89,6 +97,25 @@ function normalize(file) {
   if (!html.includes('button.dataset.shareBound="true"')) {
     html = html.replace(/<\/body>/i, sharedScript + "\n</body>");
   }
+  // Normalize breadcrumb and footer on article pages only; keep guides/index.html free of a redundant breadcrumb.
+  const relative = path.relative(root, file).split(path.sep).join("/");
+  const isIndex = relative === "index.html";
+  if (!isIndex) {
+    const folder = relative.split("/")[0];
+    const label = categoryLabels[folder];
+    if (!label) return { file, changed: false, skipped: true, reason: "no category mapping for " + folder };
+    const crumb = '<nav class="guide-crumb" aria-label="面包屑"><a href="https://go.openaa.com/">OpenAA Go</a> › <a href="https://go.openaa.com/guides/">生活指南</a> › <span aria-current="page">' + label + '</span></nav>';
+    const crumbPattern = /<nav\\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\\s\\S]*?<\\/nav>|<div\\s+class=["'][^"']*crumb[^"']*["'][^>]*>[\\s\\S]*?<\\/div>/i;
+    if (crumbPattern.test(html)) html = html.replace(crumbPattern, crumb);
+    else if (/<div\\s+class=["']wrap["'][^>]*>/i.test(html)) html = html.replace(/<div\\s+class=["']wrap["'][^>]*>/i, match => match + "\\n" + crumb);
+    else if (/<body\\b[^>]*>/i.test(html)) html = html.replace(/<body\\b[^>]*>/i, match => match + "\\n" + crumb);
+    else return { file, changed: false, skipped: true, reason: "cannot place breadcrumb safely" };
+  }
+  const footerPattern = /<footer\\b[^>]*>[\\s\\S]*?<\\/footer>/i;
+  if (footerPattern.test(html)) html = html.replace(footerPattern, footer);
+  else if (/<\\/body>/i.test(html)) html = html.replace(/<\\/body>/i, footer + "\\n</body>");
+  else return { file, changed: false, skipped: true, reason: "cannot place footer safely" };
+
   if (html !== original) fs.writeFileSync(file, html, "utf8");
   return { file, changed: html !== original, skipped: false };
 }
